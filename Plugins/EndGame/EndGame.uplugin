@@ -18,11 +18,20 @@
 			"Name": "EndGame",
 			"Type": "Developer",
 			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "SQEXSEAD",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
 		{
 			"Name": "Paper2D",
+			"Enabled": true
+		},
+		{
+			"Name": "AnimationBudgetAllocator",
 			"Enabled": true
 		}
 	]
