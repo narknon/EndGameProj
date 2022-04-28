@@ -1,11 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimInstance -FallbackName=AnimInstance
-#include "EndAnimResidentBlend.h"
 #include "EndAnimInstanceInterface.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
+#include "EndAnimStructs.h"
 #include "EEndLocomotionAnim.h"
-#include "EndLocomotionAnimSetting.h"
 #include "EEndAnimBehaviorMatchingType.h"
 #include "EEndLocomotionState.h"
 #include "Animation/AnimInstance.h"

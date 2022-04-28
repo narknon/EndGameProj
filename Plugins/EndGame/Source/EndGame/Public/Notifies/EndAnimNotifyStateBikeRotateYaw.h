@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotifyState -FallbackName=AnimNotifyState
 #include "EEndBikeRotateYawType.h"
+#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "EndAnimNotifyStateBikeRotateYaw.generated.h"
 
 UCLASS(CollapseCategories, EditInlineNew)

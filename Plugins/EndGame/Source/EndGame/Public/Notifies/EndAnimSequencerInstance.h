@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=AnimGraphRuntime -ObjectName=AnimSequencerInstance -FallbackName=AnimSequencerInstance
+#include "AnimSequencerInstance.h"
 #include "EndAnimInstanceInterface.h"
 #include "EndAnimSequencerInstance.generated.h"
 

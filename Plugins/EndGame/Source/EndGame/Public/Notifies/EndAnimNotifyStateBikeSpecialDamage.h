@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotifyState -FallbackName=AnimNotifyState
 #include "EEndBattleDamageSourcePositionBaseType.h"
+#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "EndAnimNotifyStateBikeSpecialDamage.generated.h"
 
 UCLASS(CollapseCategories, EditInlineNew)

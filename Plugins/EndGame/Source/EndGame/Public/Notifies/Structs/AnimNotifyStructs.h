@@ -2,6 +2,8 @@
 #include "CoreMinimal.h"
 #include "AnimNotifyStructs.generated.h"
 
+///// Notify States
+
 USTRUCT(BlueprintType)
 struct FEndOverrideLocomotionSetting
 {
@@ -174,3 +176,7 @@ struct FEndPlayParticleActorInfo
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
 	FName                                       m_SocketName;                                             // 0x0004(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
+
+
+///// Notifies
+
