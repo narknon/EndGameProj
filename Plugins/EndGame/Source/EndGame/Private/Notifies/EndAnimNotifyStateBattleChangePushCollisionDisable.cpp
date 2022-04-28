@@ -1,0 +1,5 @@
+#include "EndAnimNotifyStateBattleChangePushCollisionDisable.h"
+
+UEndAnimNotifyStateBattleChangePushCollisionDisable::UEndAnimNotifyStateBattleChangePushCollisionDisable() {
+}
+
