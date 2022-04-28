@@ -1,8 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "ESQEXSEADAutoSeMotionSoundType.h"
+#include "Animation/AnimNotifies/AnimNotify.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotify -FallbackName=AnimNotify
 //CROSS-MODULE INCLUDE V2: -ModuleName=SQEXSEAD -ObjectName=ESQEXSEADAutoSeMotionSoundType -FallbackName=ESQEXSEADAutoSeMotionSoundType
-//CROSS-MODULE INCLUDE V2: -ModuleName=SQEXSEAD -ObjectName=SQEXSEADSoundKey -FallbackName=SQEXSEADSoundKey
+#include "SQEXSEAD_StructsAndEnums.h"
 #include "EndAnimNotifyPlayCharacterFootSound.generated.h"
 
 UCLASS(CollapseCategories)

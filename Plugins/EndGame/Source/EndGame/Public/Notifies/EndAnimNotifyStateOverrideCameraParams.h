@@ -1,7 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotifyState -FallbackName=AnimNotifyState
-#include "EndFieldCameraOverrideParam.h"
+#include "AlphaBlend.h"
+#include "EndAnimStructs.h"
+#include "Animation/AnimNotifies/AnimNotifyState.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAlphaBlendOption -FallbackName=EAlphaBlendOption
 #include "EndAnimNotifyStateOverrideCameraParams.generated.h"
 

@@ -2,9 +2,10 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotifyState -FallbackName=AnimNotifyState
-#include "EndPlayParticleActorInfo.h"
+#include "AnimNotifyStructs.h"
 #include "EEndAnimNotifyEffectCharaPropertyReplaceType.h"
 #include "EEndAnimNotifyEffectCharaPropertyAttachType.h"
+#include "Animation/AnimNotifies/AnimNotifyState.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "EndAnimNotifyStateEffectCharaProperty.generated.h"
 

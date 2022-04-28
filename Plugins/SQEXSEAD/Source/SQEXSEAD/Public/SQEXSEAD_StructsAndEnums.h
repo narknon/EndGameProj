@@ -77,6 +77,22 @@ enum ESQEXSEADSoundOutputPort
 //---------------------------------------------------------------------------
 
 USTRUCT(BlueprintType)
+// ScriptStruct SQEXSEAD.SQEXSEADSoundKey
+// 0x0038
+struct FSQEXSEADSoundKey
+{
+		GENERATED_BODY()
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FSQEXSEADSoundKey")
+	TSoftObjectPtr<class USQEXSEADSound>               SoundRef;                                                 // 0x0000(0x0028) (Edit, BlueprintVisible)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FSQEXSEADSoundKey")
+	int                                                SoundIndex;                                               // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "FSQEXSEADSoundKey")
+	FName                                       SoundName;                                                // 0x002C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+
+};
+
+USTRUCT(BlueprintType)
 struct FSQEXSEADBGMControlTrackKey
 {
 	GENERATED_BODY()

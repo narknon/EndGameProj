@@ -19,11 +19,6 @@
 			"Type": "Developer",
 			"LoadingPhase": "Default"
 		},
-		{
-			"Name": "SQEXSEAD",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
 	],
 	"Plugins": [
 		{
@@ -33,6 +28,14 @@
 		{
 			"Name": "AnimationBudgetAllocator",
 			"Enabled": true
-		}
+		},
+		{
+			"Name": "SQEXSEAD",
+			"Enabled": true
+		},
+		{
+			"Name": "HappySadFaceLipSync",
+			"Enabled": true
+		},
 	]
 }
