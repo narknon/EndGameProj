@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-EndCascade.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\Unreal\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"O:\TutorialEnd\End\Plugins\EndEditor\Effect\EndCascade\Intermediate\Build\Win64\UE4Editor\Development\EndCascade\Module.EndCascade.cpp.obj"
+"E:\Unreal\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\EndCascade\PCLaunch.rc.res"
+"E:\Unreal\UE_4.18\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"O:\TutorialEnd\End\Plugins\EndEditor\Effect\EndCascade\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-EndCascade.lib"

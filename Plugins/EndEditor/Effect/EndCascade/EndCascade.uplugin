@@ -1,0 +1,29 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "EndCascade",
+  "Description": "EndCascade",
+  "Category": "EndGame",
+  "CreatedBy": "saku sakuer",
+  "CreatedByURL": "",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "CanContainContent": true,
+  "IsBetaVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "EndCascade",
+      "Type": "Editor",
+      "LoadingPhase": "Default"
+    },
+  ],
+  "Plugins": [
+    {
+      "Name": "SQEXSEAD",
+      "Enabled": true
+    }
+  ]
+}
