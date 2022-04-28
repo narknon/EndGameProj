@@ -48,6 +48,9 @@ SourceArt/**/*.tga
 # Binary Files
 Binaries/*
 Plugins/*/Binaries/*
+Plugins/*/*/*/Binaries/*
+
+Plugins\EnginePlugins\Runtime\AnimationBudgetAllocator\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-AnimationBudgetAllocator.suppressed.exp
 
 # Builds
 Build/*
@@ -69,8 +72,9 @@ Saved/*
 # Compiled source files for the engine to use
 Intermediate/*
 Plugins/*/Intermediate/*
+Plugins/*/*/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
 
-End\Plugins\*\*\*\Intermediate\*
+
