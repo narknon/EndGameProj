@@ -1,0 +1,5 @@
+#include "EndAnimNotifyStateBattleDamageReactionTimeAdjust.h"
+
+UEndAnimNotifyStateBattleDamageReactionTimeAdjust::UEndAnimNotifyStateBattleDamageReactionTimeAdjust() {
+}
+
