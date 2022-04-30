@@ -11,7 +11,7 @@ public:
     UPROPERTY(EditAnywhere)
     float ExtraRadius;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FAlphaBlend BlendIn;
     
     UPROPERTY(EditAnywhere)

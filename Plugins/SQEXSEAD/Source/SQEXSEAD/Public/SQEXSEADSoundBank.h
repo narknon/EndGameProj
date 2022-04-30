@@ -5,11 +5,11 @@
 
 class UAssetImportData;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class USQEXSEADSoundBank : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAssetImportData* AssetImportData;
     
     USQEXSEADSoundBank();

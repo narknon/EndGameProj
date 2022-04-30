@@ -5,11 +5,11 @@
 
 class USQEXSEADSound;
 
-UCLASS()
+UCLASS(Blueprintable)
 class USQEXSEAD_BGM : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEXSEADSound* Sound_;
     
     USQEXSEAD_BGM();

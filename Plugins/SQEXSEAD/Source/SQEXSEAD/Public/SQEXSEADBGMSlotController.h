@@ -1,13 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESQEXSEAD_BGMStoreBehaviour.h"
-#include "SQEXSEAD_StructsAndEnums.h"
+#include "SQEXSEAD_BGMOptions.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "ESQEXSEAD_BGMStoreBehaviour.h"
+#include "SQEXSEAD_Timing.h"
 #include "SQEXSEADBGMSlotController.generated.h"
 
 class USoundBase;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SQEXSEAD_API USQEXSEADBGMSlotController : public UObject {
     GENERATED_BODY()
 public:

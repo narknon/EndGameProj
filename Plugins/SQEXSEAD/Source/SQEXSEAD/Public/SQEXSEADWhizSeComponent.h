@@ -3,43 +3,43 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 #include "SQEXSEADWhizSeComponent.generated.h"
 
+class UMeshComponent;
 class USoundBase;
 class USQEXSEADAudioComponent;
-class UMeshComponent;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SQEXSEAD_API USQEXSEADWhizSeComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* WhizSoundAsset;
     
-    UPROPERTY(BlueprintReadOnly, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName WhizSoundName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     float ApproachJudgmentDistance;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     float ApproachJudgmentVelocity;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bFollow: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AttachPointName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bOnlyOnce: 1;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bUseRelativeVelocity: 1;
     
 private:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USQEXSEADAudioComponent* MyAudioComponent;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UMeshComponent* MyMeshComponent;
     
 public:

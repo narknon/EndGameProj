@@ -3,14 +3,14 @@
 #include "SQEXSEADSound.h"
 #include "SQEXSEADMusic.generated.h"
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class USQEXSEADMusic : public USQEXSEADSound {
     GENERATED_BODY()
 public:
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, int32> SectionNameIndexTable;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, int32> ModeNameIndexTable;
     
     USQEXSEADMusic();

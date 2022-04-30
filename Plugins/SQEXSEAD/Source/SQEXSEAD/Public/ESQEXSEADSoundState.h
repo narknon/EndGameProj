@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ESQEXSEADSoundState.generated.h"
 
-UENUM(BlueprintType)
-enum class ESQEXSEADSoundState : uint8 {
+UENUM()
+enum class ESQEXSEADSoundState {
     Invalid,
     Ready,
     Playing,

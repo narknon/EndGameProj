@@ -1,37 +1,36 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
 #include "SQEXSEADAutoSeComponent.generated.h"
 
-class USkeletalMeshComponent;
 class USQEXSEADAutoSeComponentCallback;
 class USQEXSEADAutoSeComponentSetting;
 class UPawnMovementComponent;
 class USQEXSEADAutoSeComponentAssetTable;
 class USQEXSEADAutoSeDetectionSetting;
+class USkeletalMeshComponent;
 
-UCLASS(BlueprintType, meta=(BlueprintSpawnableComponent))
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class SQEXSEAD_API USQEXSEADAutoSeComponent : public UActorComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USQEXSEADAutoSeComponentCallback* AutoSeCallback;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEXSEADAutoSeComponentSetting* SettingData;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEXSEADAutoSeComponentAssetTable* AssetTable;
     
-    UPROPERTY(BlueprintReadOnly, EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEXSEADAutoSeDetectionSetting* DetectionSetting;
     
 private:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* CachedMeshReference;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UPawnMovementComponent* CachedMovementComponent;
     
 public:

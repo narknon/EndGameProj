@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESQEXSEADCategoryVolumeLayers.h"
-#include "SQEXSEAD_StructsAndEnums.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EAttachLocation -FallbackName=EAttachLocation
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+#include "SQEXSEAD_BGMOptions.h"
+#include "ESQEXSEADCategoryVolumeLayers.h"
 #include "SQEXSEADStatics.generated.h"
 
 class USQEXSEADAudioComponent;
@@ -15,7 +15,7 @@ class USoundAttenuation;
 class USoundConcurrency;
 class USQEXSEADBGMSlotController;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SQEXSEAD_API USQEXSEADStatics : public UObject {
     GENERATED_BODY()
 public:

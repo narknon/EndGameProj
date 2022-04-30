@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEXSEADAutoSeResult.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 namespace ESQEXSEADAutoSeResult {
     enum Type {
         Success,

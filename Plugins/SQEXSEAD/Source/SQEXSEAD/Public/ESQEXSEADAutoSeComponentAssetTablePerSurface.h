@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEXSEADAutoSeComponentAssetTablePerSurface.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 namespace ESQEXSEADAutoSeComponentAssetTablePerSurface {
     enum Type {
         Walk,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEXSEADLayoutType.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 namespace ESQEXSEADLayoutType {
     enum Type {
         Point,

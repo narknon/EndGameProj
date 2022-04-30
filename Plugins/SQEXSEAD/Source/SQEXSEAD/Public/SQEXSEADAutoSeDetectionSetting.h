@@ -1,32 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SQEXSEADAnimNotifyState_ChangeAutoSeEnable.h"
-#include "Engine/DataAsset.h"
+#include "SQEXSEADAutoSeDetectorSettings.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
 #include "SQEXSEADAutoSeDetectionSetting.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class SQEXSEAD_API USQEXSEADAutoSeDetectionSetting : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSQEXSEADAutoSeDetectorSettings Settings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSQEXSEADAutoSeDetectorSettings SettingsForMOMode;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseAnalyzerSettingForMotionOnlyMode;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDistanceClippingEnable;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     float ClippingDistance;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bFollowMeshVisibility;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bForceDetectListenerTeleportRuntime;
     
     USQEXSEADAutoSeDetectionSetting();

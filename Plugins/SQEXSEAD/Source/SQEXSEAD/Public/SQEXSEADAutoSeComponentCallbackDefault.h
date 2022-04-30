@@ -3,7 +3,7 @@
 #include "SQEXSEADAutoSeComponentCallback.h"
 #include "SQEXSEADAutoSeComponentCallbackDefault.generated.h"
 
-UCLASS(NonTransient)
+UCLASS(Blueprintable, NonTransient)
 class SQEXSEAD_API USQEXSEADAutoSeComponentCallbackDefault : public USQEXSEADAutoSeComponentCallback {
     GENERATED_BODY()
 public:

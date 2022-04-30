@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SQEXSEAD_StructsAndEnums.h"
-#include "GameFramework/Volume.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Volume -FallbackName=Volume
+#include "SQEXSEADAudioVolumeEvent.h"
 #include "SQEXSEADAudioVolume.generated.h"
 
 class USoundBase;
@@ -9,107 +9,107 @@ class USQEXSEADVolumeComponent;
 class USoundAttenuation;
 class ASQEXSEADAudioVolume;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SQEXSEAD_API ASQEXSEADAudioVolume : public AVolume {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USQEXSEADVolumeComponent* VolumeComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     uint8 bEnabled: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     int32 EffectPresetNumber;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     float EffectFadeTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundBase* Sound;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SoundName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     float SoundVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     float SoundFadeInTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SoundFadeInCurveNumber;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     float SoundFadeOutTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SoundFadeOutCurveNumber;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bOccludeExteriorAudioVolumeSounds: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated)
     float AudioVolumeSoundOcclusionVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated)
     float AudioVolumeSoundOcclusionLPF;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated)
     float AudioVolumeSoundOcclusionFadeInTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated)
     float AudioVolumeSoundOcclusionFadeOutTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated)
     float AudioVolumeSoundOcclusionLPFFadeInTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated)
     float AudioVolumeSoundOcclusionLPFFadeOutTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bEnableUnoccludedObstruction: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated)
     float ObstructionVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated)
     float ObstructionLPF;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated)
     float InternalObstructionVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated)
     float InternalObstructionLPF;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(EditAnywhere, Replicated)
     float ObstructionFadeTime;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     float Priority;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bUseObstructionParamsSeparatePriority: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     float ObstructionParamsSeparatePriority;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     int32 GroupingID;
     
-    UPROPERTY(Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<ASQEXSEADAudioVolume*> GroupedAudioVolumes;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundAttenuation* OverridingAttenuationSettings;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FSQEXSEADAudioVolumeEvent> AudioVolumeEvents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bUseEncompass: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bSyncActorHidden: 1;
     
     ASQEXSEADAudioVolume();

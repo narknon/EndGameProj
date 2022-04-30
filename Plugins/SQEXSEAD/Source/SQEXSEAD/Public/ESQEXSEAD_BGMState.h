@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEXSEAD_BGMState.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 enum class ESQEXSEAD_BGMState : uint8 {
     Invalid,
     NotReady,

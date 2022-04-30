@@ -16,10 +16,10 @@ public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EEndBattleCameraCutEndType::Type> CutEndType;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FAlphaBlend BeginBlend;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FAlphaBlend EndBlend;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

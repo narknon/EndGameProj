@@ -5,14 +5,14 @@
 
 class USQEXSEADLayoutComponent;
 
-UCLASS(MinimalAPI)
+UCLASS(Blueprintable, MinimalAPI)
 class ASQEXSEADLayoutSound : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Instanced, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USQEXSEADLayoutComponent* LayoutComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bSyncActorHidden: 1;
     
     ASQEXSEADLayoutSound();

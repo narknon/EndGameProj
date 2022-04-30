@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEXSEADCategoryVolumeLayers.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 namespace ESQEXSEADCategoryVolumeLayers {
     enum Type {
         Debug,

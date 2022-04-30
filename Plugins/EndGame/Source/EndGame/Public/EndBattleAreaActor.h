@@ -10,6 +10,18 @@ class UEndCationAreaBoxComponent;
 class UEndNavModifierComponent;
 class UEndTextRenderComponent;
 
+USTRUCT(Blueprintable)
+struct FNavPriorRegistInfo
+{
+    GENERATED_BODY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32                                          NavUniqueId;                                              // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FVector>                             AffectedPolyCenters;                                      // 0x0008(0x0010) (ZeroConstructor)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<int32>                                   AffectedObjId;                                            // 0x0018(0x0010) (ZeroConstructor)
+};
+
 UCLASS(Blueprintable)
 class AEndBattleAreaActor : public AActor, public INavRelevantInterface {
     GENERATED_BODY()

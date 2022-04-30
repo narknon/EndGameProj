@@ -1,27 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESQEXSEAD_BGMState.h"
+#include "SQEXSEAD_BGMOptions.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
-#include "SQEXSEAD_StructsAndEnums.h"
+#include "ESQEXSEAD_BGMState.h"
 #include "SQEXSEADBGMSlot.generated.h"
 
 class USQEXSEAD_BGM;
 
-UCLASS()
+UCLASS(Blueprintable)
 class SQEXSEAD_API USQEXSEADBGMSlot : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESQEXSEAD_BGMState State;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSQEXSEAD_BGMOptions DefaultOptions_;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEXSEAD_BGM* BGM_;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEXSEAD_BGM* PrevBGM_;
     
 public:

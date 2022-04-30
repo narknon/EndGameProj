@@ -1,56 +1,57 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SQEXSEAD_StructsAndEnums.h"
-#include "Sound/SoundWave.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SoundWave -FallbackName=SoundWave
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ECollisionChannel -FallbackName=ECollisionChannel
+#include "SQEXSEADSoundIndexInfo.h"
 #include "SQEXSEADSound.generated.h"
 
 class USQEXSEADSoundBank;
 class USQEXSEADSoundAliasNameSetting;
 
-UCLASS(EditInlineNew, MinimalAPI)
+UCLASS(Blueprintable, EditInlineNew, MinimalAPI)
 class USQEXSEADSound : public USoundWave {
     GENERATED_BODY()
 public:
-    UPROPERTY(AssetRegistrySearchable, EditAnywhere)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bForcedIgnore;
     
-    UPROPERTY(AssetRegistrySearchable, EditAnywhere)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseKohrogiAttenuation;
     
-    UPROPERTY(AssetRegistrySearchable, BlueprintReadOnly)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEXSEADSoundBank* ReferenceBank;
     
-    UPROPERTY(AssetRegistrySearchable, EditAnywhere)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 SoundIndex;
     
-    UPROPERTY(AssetRegistrySearchable, EditAnywhere)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bOverrideStopFadeTime;
     
     UPROPERTY(AssetRegistrySearchable, EditAnywhere)
     float StopFadeTime;
     
-    UPROPERTY(AssetRegistrySearchable, EditAnywhere)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIsUISound;
     
     UPROPERTY(AssetRegistrySearchable, EditAnywhere)
     float PauseFadeTime;
     
-    UPROPERTY(AssetRegistrySearchable, EditAnywhere)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIgnoreAudioVolumeAttenuation;
     
-    UPROPERTY(AssetRegistrySearchable, EditAnywhere)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bEnableSEADTracingOcclusion;
     
     UPROPERTY(AssetRegistrySearchable, EditAnywhere)
     TEnumAsByte<ECollisionChannel> SEADOcclusionTraceChannel;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FName, FSQEXSEADSoundIndexInfo> SoundNameIndexTable;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USQEXSEADSoundAliasNameSetting* SoundNameAliasSetting;
     
-    UPROPERTY(AssetRegistrySearchable, EditAnywhere)
+    UPROPERTY(AssetRegistrySearchable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bStreamingAsset_PlatformPS4;
     
     USQEXSEADSound();

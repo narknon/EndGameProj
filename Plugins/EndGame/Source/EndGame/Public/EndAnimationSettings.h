@@ -7,7 +7,7 @@
 #include "UObject/NoExportTypes.h"
 #include "EndAnimationSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class ENDGAME_API UEndAnimationSettings : public UObject {
     GENERATED_BODY()
 public:

@@ -1,28 +1,27 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SQEXSEADAutoSeDetectionSetting.h"
-#include "SQEXSEAD_StructsAndEnums.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Object -FallbackName=Object
+#include "SQEXSEAD_BGMSlotSetting.h"
 #include "SQEXSEADBGMManager.generated.h"
 
 class USQEXSEADBGMSlot;
 class USQEXSEADBGMSlotController;
 
-UCLASS(DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Game)
 class SQEXSEAD_API USQEXSEADBGMManager : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SQEXSEADBGMManager")
-    TArray<class USQEXSEADBGMSlot*> Slots_;
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SQEXSEADBGMManager")
-    TArray<class USQEXSEADBGMSlotController*> Controllers_;
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SQEXSEADBGMManager")
-    class USQEXSEADBGMSlot* PlayingSlot_;
-
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SQEXSEADBGMManager")
-    TArray<struct FSQEXSEAD_BGMSlotSetting> SlotSettings_;
+private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<USQEXSEADBGMSlot*> Slots_;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<USQEXSEADBGMSlotController*> Controllers_;
+    
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FSQEXSEAD_BGMSlotSetting> SlotSettings_;
     
 public:
     USQEXSEADBGMManager();
 };
+

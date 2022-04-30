@@ -12,7 +12,7 @@ public:
     UPROPERTY(EditAnywhere)
     FBoneReference TargetBone;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FAxis EndPointDirection;
     
     UPROPERTY(EditAnywhere)

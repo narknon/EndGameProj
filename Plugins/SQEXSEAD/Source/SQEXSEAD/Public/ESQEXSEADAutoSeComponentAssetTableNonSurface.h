@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEXSEADAutoSeComponentAssetTableNonSurface.generated.h"
 
-UENUM(BlueprintType)
+UENUM()
 namespace ESQEXSEADAutoSeComponentAssetTableNonSurface {
     enum Type {
         RustleArm,

@@ -1,21 +1,22 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
-#include "SQEXSEAD_StructsAndEnums.h"
-#include "Engine/DataAsset.h"
+#include "SQEXSEADAutoSeComponentAssetTablePerSurface.h"
+#include "SQEXSEADAutoSeComponentAssetTableNonSurface.h"
+#include "SQEXSEADSurfaceAssetReferenceTableData.h"
 #include "SQEXSEADAutoSeComponentAssetTable.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SQEXSEAD_API USQEXSEADAutoSeComponentAssetTable : public UDataAsset {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere)
     FSQEXSEADAutoSeComponentAssetTablePerSurface PerSurfaceInfos[63];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSQEXSEADAutoSeComponentAssetTableNonSurface NonSurfaceInfos;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSQEXSEADSurfaceAssetReferenceTableData AuxSurfaceAssetTable;
     
     USQEXSEADAutoSeComponentAssetTable();
