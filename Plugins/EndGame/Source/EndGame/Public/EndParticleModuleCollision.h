@@ -3,13 +3,14 @@
 #include "Particles/Collision/ParticleModuleCollision.h"
 #include "EndParticleModuleCollision.generated.h"
 
+/*
 UCLASS(Blueprintable, meta=(DisplayName = "EnActor Collision"))
 class UEnParticleModuleCollision : public UParticleModuleCollisionBase
 {
 	GENERATED_BODY()
 public:
 	UEnParticleModuleCollision();
-};
+};*/
 
 /*UCLASS(Blueprintable, meta=(DisplayName = "EnActor Collision"))
 class UEnParticleModuleCollision : public UParticleModuleCollisionBase
@@ -55,14 +56,14 @@ public:
 };*/
 
 UCLASS(Blueprintable)
-class UEndParticleModuleCollision : public UEnParticleModuleCollision {
+class UEndParticleModuleCollision : public UParticleModuleCollision {
     GENERATED_BODY()
-public:
+/*public:
     UPROPERTY(EditAnywhere)
     float m_HitOffsetNormalScale;
     
     UPROPERTY(EditAnywhere)
-    float m_FreezeTranslationVelocityLength;
+    float m_FreezeTranslationVelocityLength;*/
     
     UEndParticleModuleCollision();
 };

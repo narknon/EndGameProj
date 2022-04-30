@@ -1,10 +1,10 @@
 #include "EndParticleModuleTypeDataTrail.h"
 
-UEnParticleModuleTypeDataAnimTrail::UEnParticleModuleTypeDataAnimTrail() {
-}
+/*UEnParticleModuleTypeDataAnimTrail::UEnParticleModuleTypeDataAnimTrail() {
+}*/
 
 UEndParticleModuleTypeDataTrail::UEndParticleModuleTypeDataTrail() {
-    this->m_MaxParticle = 0;
-    this->m_EnableFlipV = false;
+    /*this->m_MaxParticle = 0;
+    this->m_EnableFlipV = false;*/
 }
 

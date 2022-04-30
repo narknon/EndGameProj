@@ -4,13 +4,13 @@
 #include "Particles/TypeData/ParticleModuleTypeDataGpu.h"
 #include "EndParticleModuleTypeDataGpu.generated.h"
 
-UCLASS(Blueprintable, EditInlineNew)
-class UEnParticleModuleTypeDataGpu : public UEnParticleModuleTypeDataBase
+/*UCLASS(Blueprintable, EditInlineNew)
+class UEnParticleModuleTypeDataGpu : public UParticleModuleTypeDataBase
 {
     GENERATED_BODY()
 public:
     UEnParticleModuleTypeDataGpu();
-};
+};*/
 
 
 UCLASS(Blueprintable, EditInlineNew)

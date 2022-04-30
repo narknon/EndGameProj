@@ -1,7 +1,7 @@
 #include "EndParticleModuleCollision.h"
 
-UEnParticleModuleCollision::UEnParticleModuleCollision() {
-}
+/*UEnParticleModuleCollision::UEnParticleModuleCollision() {
+}*/
 
 /*UEnParticleModuleCollision::UEnParticleModuleCollision()
 {
@@ -22,7 +22,7 @@ UEnParticleModuleCollision::UEnParticleModuleCollision() {
 }*/
 
 UEndParticleModuleCollision::UEndParticleModuleCollision() {
-    this->m_HitOffsetNormalScale = 1;
-    this->m_FreezeTranslationVelocityLength = 1;
+    /*this->m_HitOffsetNormalScale = 1;
+    this->m_FreezeTranslationVelocityLength = 1;*/
 }
 

@@ -1,7 +1,7 @@
 #include "VfxParticleModuleTypeDataActor.h"
 
-UEnParticleModuleTypeDataBase::UEnParticleModuleTypeDataBase() {
-}
+/*UEnParticleModuleTypeDataBase::UEnParticleModuleTypeDataBase() {
+}*/
 
 UVfxParticleModuleTypeDataActor::UVfxParticleModuleTypeDataActor() {
 }

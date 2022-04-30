@@ -5,20 +5,20 @@
 #include "Distributions/DistributionFloat.h"
 #include "EndParticleModuleTypeDataTrail.generated.h"
 
-UCLASS(Blueprintable, meta=(DisplayName = "EnParticleModuleTypeDataAnimTrail"))
+/*UCLASS(Blueprintable, meta=(DisplayName = "EnParticleModuleTypeDataAnimTrail"))
 class UEnParticleModuleTypeDataAnimTrail : public UParticleModuleTypeDataBase
 {
     GENERATED_BODY()
 public:
     UEnParticleModuleTypeDataAnimTrail();
-};
+};*/
 
 
 UCLASS(Blueprintable, EditInlineNew)
-class UEndParticleModuleTypeDataTrail : public UEnParticleModuleTypeDataAnimTrail {
+class UEndParticleModuleTypeDataTrail : public UParticleModuleTypeDataAnimTrail {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    /*UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionVector m_PointA;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -43,7 +43,7 @@ public:
     FName m_RefPointNameA;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FName m_RefPointNameB;
+    FName m_RefPointNameB;*/
     
     UEndParticleModuleTypeDataTrail();
 };

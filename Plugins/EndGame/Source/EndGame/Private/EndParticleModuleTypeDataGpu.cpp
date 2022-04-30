@@ -1,7 +1,7 @@
 #include "EndParticleModuleTypeDataGpu.h"
 
-UEnParticleModuleTypeDataGpu::UEnParticleModuleTypeDataGpu() {
-}
+/*UEnParticleModuleTypeDataGpu::UEnParticleModuleTypeDataGpu() {
+}*/
 
 
 UEndParticleModuleTypeDataGpu::UEndParticleModuleTypeDataGpu() {
