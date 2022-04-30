@@ -2,10 +2,13 @@
 
 class AActor;
 
-
-FVector UEndBattleNavQueryContext::GetTargetLocationContext(AActor* Actor) const {
-    return FVector{};
+UEnEnvQueryContext_BlueprintBase::UEnEnvQueryContext_BlueprintBase() {
 }
+
+
+/*FVector UEndBattleNavQueryContext::GetTargetLocationContext(AActor* Actor) const {
+    return FVector{};
+}*/
 
 UEndBattleNavQueryContext::UEndBattleNavQueryContext() {
 }
