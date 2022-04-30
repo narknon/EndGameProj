@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotify -FallbackName=AnimNotify
 #include "SQEXSEADAnimNotifyPlayAutoSeParams.h"
+#include "Animation/AnimNotifies/AnimNotify.h"
 #include "SQEXSEADAnimNotify_PlayAutoSe.generated.h"
 
 UCLASS(Blueprintable, CollapseCategories)

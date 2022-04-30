@@ -8,7 +8,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEndParticleModuleVelocityWind : public UEndParticleModuleBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionFloat m_WindScale;
     
     UEndParticleModuleVelocityWind();

@@ -1,5 +1,5 @@
 #include "EndNavGenerateOnlyTerrainVolume.h"
 
-AEndNavGenerateOnlyTerrainVolume::AEndNavGenerateOnlyTerrainVolume() {
+AEndNavGenerateOnlyTerrainVolume::AEndNavGenerateOnlyTerrainVolume(const FObjectInitializer& ObjectInitializer) : AEndNavSimpleTerrainVolume(ObjectInitializer){
 }
 

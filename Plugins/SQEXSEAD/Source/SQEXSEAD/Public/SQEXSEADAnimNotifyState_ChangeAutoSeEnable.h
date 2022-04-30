@@ -3,6 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNotifyState -FallbackName=AnimNotifyState
 #include "ESQEXSEADChangeAutoSeEnableNotifyEndBehavior.h"
 #include "SQEXSEADAutoSeMotionSoundFilter.h"
+#include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "SQEXSEADAnimNotifyState_ChangeAutoSeEnable.generated.h"
 
 UCLASS(Blueprintable, CollapseCategories, EditInlineNew)

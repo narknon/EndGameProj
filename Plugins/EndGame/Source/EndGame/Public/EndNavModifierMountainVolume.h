@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class AEndNavModifierMountainVolume : public AEndNavModifierVolumeBase {
     GENERATED_BODY()
 public:
-    AEndNavModifierMountainVolume();
+    AEndNavModifierMountainVolume(const FObjectInitializer& ObjectInitializer);
 };
 

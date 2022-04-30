@@ -1,5 +1,5 @@
 #include "EndNavModifierFootBGMVolume.h"
 
-AEndNavModifierFootBGMVolume::AEndNavModifierFootBGMVolume() {
+AEndNavModifierFootBGMVolume::AEndNavModifierFootBGMVolume(const FObjectInitializer& ObjectInitializer) : AEndNavModifierVolumeBase(ObjectInitializer){
 }
 

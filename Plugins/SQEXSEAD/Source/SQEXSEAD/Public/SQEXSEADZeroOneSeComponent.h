@@ -3,6 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
 #include "ESQEXSEADZeroOneProperties.h"
 #include "ESQEXSEADAudioStartTimings.h"
+#include "Components/ActorComponent.h"
 #include "SQEXSEADZeroOneSeComponent.generated.h"
 
 class USoundBase;

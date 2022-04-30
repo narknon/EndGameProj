@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
 #include "SQEXSEADRandomSoundSetting.h"
+#include "Engine/DataAsset.h"
 #include "SQEXSEADSoundAliasNameSetting.generated.h"
 
 UCLASS(Blueprintable)

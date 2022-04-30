@@ -9,7 +9,7 @@ class AEndBattleAIEN2010Controller : public AEndBattleAIController, public IEndP
     GENERATED_BODY()
 public:
     AEndBattleAIEN2010Controller();
-    
+    float OnGetCurrentBlendSpaceInput_Implementation();
     // Fix for true pure virtual functions not being implemented
 };
 

@@ -13,6 +13,6 @@ protected:
     ECollisionProfileType CollisionProfileType;
     
 public:
-    AEndNavSwitchingVolume();
+    AEndNavSwitchingVolume(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=DataAsset -FallbackName=DataAsset
 #include "SQEXSEADAutoSeComponentInitParams.h"
+#include "Engine/DataAsset.h"
 #include "SQEXSEADAutoSeComponentSetting.generated.h"
 
 UCLASS(Blueprintable)

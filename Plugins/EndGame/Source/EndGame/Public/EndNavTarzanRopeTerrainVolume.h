@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class AEndNavTarzanRopeTerrainVolume : public AEndNavSimpleTerrainVolume {
     GENERATED_BODY()
 public:
-    AEndNavTarzanRopeTerrainVolume();
+    AEndNavTarzanRopeTerrainVolume(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -4,6 +4,7 @@
 #include "SQEXSEADAutoSeComponentAssetTablePerSurface.h"
 #include "SQEXSEADAutoSeComponentAssetTableNonSurface.h"
 #include "SQEXSEADSurfaceAssetReferenceTableData.h"
+#include "Engine/DataAsset.h"
 #include "SQEXSEADAutoSeComponentAssetTable.generated.h"
 
 UCLASS(Blueprintable)

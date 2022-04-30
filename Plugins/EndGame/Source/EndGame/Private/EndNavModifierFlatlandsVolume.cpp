@@ -1,5 +1,5 @@
 #include "EndNavModifierFlatlandsVolume.h"
 
-AEndNavModifierFlatlandsVolume::AEndNavModifierFlatlandsVolume() {
+AEndNavModifierFlatlandsVolume::AEndNavModifierFlatlandsVolume(const FObjectInitializer& ObjectInitializer) : AEndNavModifierVolumeBase(ObjectInitializer){
 }
 

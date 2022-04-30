@@ -1,5 +1,5 @@
 #include "EndNavSimpleTerrainVolume.h"
 
-AEndNavSimpleTerrainVolume::AEndNavSimpleTerrainVolume() {
+AEndNavSimpleTerrainVolume::AEndNavSimpleTerrainVolume(const FObjectInitializer& ObjectInitializer) : AEndNavBlockingModifierVolume(ObjectInitializer){
 }
 

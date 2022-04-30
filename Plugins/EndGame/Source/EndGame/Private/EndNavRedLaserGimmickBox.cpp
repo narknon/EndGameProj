@@ -1,5 +1,5 @@
 #include "EndNavRedLaserGimmickBox.h"
 
-AEndNavRedLaserGimmickBox::AEndNavRedLaserGimmickBox() {
+AEndNavRedLaserGimmickBox::AEndNavRedLaserGimmickBox(const FObjectInitializer& ObjectInitializer) : AEndNavBlockingModifierVolume(ObjectInitializer){
 }
 

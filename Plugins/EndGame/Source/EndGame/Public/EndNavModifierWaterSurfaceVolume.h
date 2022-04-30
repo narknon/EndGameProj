@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class AEndNavModifierWaterSurfaceVolume : public AEndNavModifierVolumeBase {
     GENERATED_BODY()
 public:
-    AEndNavModifierWaterSurfaceVolume();
+    AEndNavModifierWaterSurfaceVolume(const FObjectInitializer& ObjectInitializer);
 };
 

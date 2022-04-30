@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class AEndNavModifierFlatlandsVolume : public AEndNavModifierVolumeBase {
     GENERATED_BODY()
 public:
-    AEndNavModifierFlatlandsVolume();
+    AEndNavModifierFlatlandsVolume(const FObjectInitializer& ObjectInitializer);
 };
 

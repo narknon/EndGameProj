@@ -8,7 +8,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEndEnvQueryGenerator_AIPCOnTerrainSensor : public UEnvQueryGenerator_ProjectedPoints {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FAIDataProviderFloatValue SpaceBetween;
     
     UEndEnvQueryGenerator_AIPCOnTerrainSensor();

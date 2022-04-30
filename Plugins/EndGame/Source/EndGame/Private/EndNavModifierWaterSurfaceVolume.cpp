@@ -1,5 +1,5 @@
 #include "EndNavModifierWaterSurfaceVolume.h"
 
-AEndNavModifierWaterSurfaceVolume::AEndNavModifierWaterSurfaceVolume() {
+AEndNavModifierWaterSurfaceVolume::AEndNavModifierWaterSurfaceVolume(const FObjectInitializer& ObjectInitializer) : AEndNavModifierVolumeBase(ObjectInitializer){
 }
 

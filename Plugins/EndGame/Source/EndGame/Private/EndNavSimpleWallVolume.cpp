@@ -1,5 +1,5 @@
 #include "EndNavSimpleWallVolume.h"
 
-AEndNavSimpleWallVolume::AEndNavSimpleWallVolume() {
+AEndNavSimpleWallVolume::AEndNavSimpleWallVolume(const FObjectInitializer& ObjectInitializer) : AEndNavBlockingModifierVolume(ObjectInitializer){
 }
 

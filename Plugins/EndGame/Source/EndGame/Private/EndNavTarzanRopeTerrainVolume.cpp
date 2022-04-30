@@ -1,5 +1,5 @@
 #include "EndNavTarzanRopeTerrainVolume.h"
 
-AEndNavTarzanRopeTerrainVolume::AEndNavTarzanRopeTerrainVolume() {
+AEndNavTarzanRopeTerrainVolume::AEndNavTarzanRopeTerrainVolume(const FObjectInitializer& ObjectInitializer) : AEndNavSimpleTerrainVolume(ObjectInitializer){
 }
 

@@ -3,7 +3,7 @@
 void AEndBattleLevelSequenceActor::OnStop() {
 }
 
-AEndBattleLevelSequenceActor::AEndBattleLevelSequenceActor() {
+AEndBattleLevelSequenceActor::AEndBattleLevelSequenceActor(const FObjectInitializer& ObjectInitializer) : ALevelSequenceActor(ObjectInitializer){
     this->CameraActor = NULL;
 }
 

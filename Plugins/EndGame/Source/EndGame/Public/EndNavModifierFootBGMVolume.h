@@ -10,6 +10,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName _footBGMSetID;
     
-    AEndNavModifierFootBGMVolume();
+    AEndNavModifierFootBGMVolume(const FObjectInitializer& ObjectInitializer);
 };
 

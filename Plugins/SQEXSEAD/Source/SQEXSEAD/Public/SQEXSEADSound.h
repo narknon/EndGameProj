@@ -3,6 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SoundWave -FallbackName=SoundWave
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ECollisionChannel -FallbackName=ECollisionChannel
 #include "SQEXSEADSoundIndexInfo.h"
+#include "Sound/SoundWave.h"
 #include "SQEXSEADSound.generated.h"
 
 class USQEXSEADSoundBank;

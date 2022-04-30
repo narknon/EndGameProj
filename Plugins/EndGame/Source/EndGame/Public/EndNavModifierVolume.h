@@ -47,6 +47,6 @@ public:
     UPROPERTY(EditAnywhere)
     float WallJumpExtentHeight;
     
-    AEndNavModifierVolume();
+    AEndNavModifierVolume(const FObjectInitializer& ObjectInitializer);
 };
 

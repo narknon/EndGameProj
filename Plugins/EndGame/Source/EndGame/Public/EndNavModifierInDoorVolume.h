@@ -26,6 +26,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EEndDashType DashType;
     
-    AEndNavModifierInDoorVolume();
+    AEndNavModifierInDoorVolume(const FObjectInitializer& ObjectInitializer);
 };
 

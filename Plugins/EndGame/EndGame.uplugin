@@ -18,6 +18,16 @@
 			"Name": "EndGame",
 			"Type": "Developer",
 			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "KineDriverRt",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "BonamikRt",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
@@ -27,6 +37,10 @@
 		},
 		{
 			"Name": "AnimationBudgetAllocator",
+			"Enabled": true
+		},
+				{
+			"Name": "BodyDriverPlugin",
 			"Enabled": true
 		},
 		{

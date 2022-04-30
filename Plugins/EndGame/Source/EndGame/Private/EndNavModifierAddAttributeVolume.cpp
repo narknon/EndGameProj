@@ -1,5 +1,5 @@
 #include "EndNavModifierAddAttributeVolume.h"
 
-AEndNavModifierAddAttributeVolume::AEndNavModifierAddAttributeVolume() {
+AEndNavModifierAddAttributeVolume::AEndNavModifierAddAttributeVolume(const FObjectInitializer& ObjectInitializer) : AEndNavModifierVolumeBase(ObjectInitializer){
 }
 

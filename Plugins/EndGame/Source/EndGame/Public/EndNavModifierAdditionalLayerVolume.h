@@ -13,6 +13,6 @@ private:
     EEndNavLayerType LayerType;
     
 public:
-    AEndNavModifierAdditionalLayerVolume();
+    AEndNavModifierAdditionalLayerVolume(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class AEndNavSimpleWallVolume : public AEndNavBlockingModifierVolume {
     GENERATED_BODY()
 public:
-    AEndNavSimpleWallVolume();
+    AEndNavSimpleWallVolume(const FObjectInitializer& ObjectInitializer);
 };
 

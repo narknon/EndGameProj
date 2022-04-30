@@ -13,41 +13,41 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_MaxTrailCount;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionFloat m_MaxTrailLength;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionFloat m_TrailFadeAlpha;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FRawDistributionVector m_BaseVelocity;
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRawDistributionFloat m_BaseVelocity;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FRawDistributionVector m_BaseAcceleration;
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRawDistributionFloat m_BaseAcceleration;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionFloat m_SrcVelocityScale;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EVfxTrajectoryRenderAxisOption m_RenderAxisOption;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionFloat m_TrailWidth;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FRawDistributionVector m_TrailColor;
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRawDistributionFloat m_TrailColor;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionFloat m_TrailAlpha;
     
     UPROPERTY(EditAnywhere)
     float m_fTextureTileDistance;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FRawDistributionVector m_TrailRandomUv;
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRawDistributionFloat m_TrailRandomUv;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FRawDistributionVector m_TrailRandomUvScroll;
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRawDistributionFloat m_TrailRandomUvScroll;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 m_bRenderGeometry: 1;

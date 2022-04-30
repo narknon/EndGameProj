@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class AEndNavGenerateOnlyTerrainVolume : public AEndNavSimpleTerrainVolume {
     GENERATED_BODY()
 public:
-    AEndNavGenerateOnlyTerrainVolume();
+    AEndNavGenerateOnlyTerrainVolume(const FObjectInitializer& ObjectInitializer);
 };
 

@@ -1,6 +1,6 @@
 #include "EndNavModifierInDoorVolume.h"
 
-AEndNavModifierInDoorVolume::AEndNavModifierInDoorVolume() {
+AEndNavModifierInDoorVolume::AEndNavModifierInDoorVolume(const FObjectInitializer& ObjectInitializer) : AEndNavModifierVolumeBase(ObjectInitializer){
     this->CameraType = EEndFieldCameraInDoorType::Town;
     this->OverridePriorityType = EEndFieldCameraInDoorPriorityType::Town;
     this->SpecificMoveType = EEndSpecificMoveType::Walk;

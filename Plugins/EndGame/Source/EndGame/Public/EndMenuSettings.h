@@ -6,7 +6,7 @@
 #include "UObject/NoExportTypes.h"
 #include "EndMenuSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=DefaultEndMenu)
 class ENDGAME_API UEndMenuSettings : public UObject {
     GENERATED_BODY()
 public:

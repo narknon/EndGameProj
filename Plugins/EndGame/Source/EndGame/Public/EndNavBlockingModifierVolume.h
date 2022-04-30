@@ -17,6 +17,6 @@ protected:
     EEndNavAreaType NavAreaType;
     
 public:
-    AEndNavBlockingModifierVolume();
+    AEndNavBlockingModifierVolume(const FObjectInitializer& ObjectInitializer);
 };
 

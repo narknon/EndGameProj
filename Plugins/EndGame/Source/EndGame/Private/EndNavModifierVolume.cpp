@@ -1,6 +1,6 @@
 #include "EndNavModifierVolume.h"
 
-AEndNavModifierVolume::AEndNavModifierVolume() {
+AEndNavModifierVolume::AEndNavModifierVolume(const FObjectInitializer& ObjectInitializer) : AEndNavModifierVolumeBase(ObjectInitializer){
     this->Type = EModifierVolumeType::CoverPc;
     this->WallAffiliationID = 0;
     this->Wall = 0;

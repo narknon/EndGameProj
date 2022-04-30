@@ -8,10 +8,10 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEndParticleModuleTypeDataBeam : public UParticleModuleTypeDataBeam2 {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionVector m_RandomUV;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionVector m_RandomUVSpeed;
     
     UEndParticleModuleTypeDataBeam();

@@ -1,0 +1,5 @@
+#include "SQEX_AnimNotifyState_Bonamik_ReinitializeSimulationPose.h"
+
+USQEX_AnimNotifyState_Bonamik_ReinitializeSimulationPose::USQEX_AnimNotifyState_Bonamik_ReinitializeSimulationPose() {
+}
+

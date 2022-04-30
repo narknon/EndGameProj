@@ -2,7 +2,7 @@
 
 UEndParticleModulePoint::UEndParticleModulePoint() {
     this->m_PointName = TEXT("Point_1");
-    this->m_Kind = EELK_Self;
+    this->m_Kind = EEndEffectLocationKind::EELK_Self;
     this->m_RotationMatrixOrder = EVfxRotationMatrixOrder::Default;
     this->m_BlendTime = 1;
     this->m_BlendExp = 1;

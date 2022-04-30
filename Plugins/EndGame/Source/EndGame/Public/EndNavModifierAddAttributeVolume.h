@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class AEndNavModifierAddAttributeVolume : public AEndNavModifierVolumeBase {
     GENERATED_BODY()
 public:
-    AEndNavModifierAddAttributeVolume();
+    AEndNavModifierAddAttributeVolume(const FObjectInitializer& ObjectInitializer);
 };
 

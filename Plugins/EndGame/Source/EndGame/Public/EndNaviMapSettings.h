@@ -4,7 +4,7 @@
 #include "UObject/NoExportTypes.h"
 #include "EndNaviMapSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=DefaultGame)
 class ENDGAME_API UEndNaviMapSettings : public UObject {
     GENERATED_BODY()
 public:

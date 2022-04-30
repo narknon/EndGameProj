@@ -1,6 +1,6 @@
 #include "EndNavSwitchingVolume.h"
 
-AEndNavSwitchingVolume::AEndNavSwitchingVolume() {
+AEndNavSwitchingVolume::AEndNavSwitchingVolume(const FObjectInitializer& ObjectInitializer) : AEndNavModifierVolumeBase(ObjectInitializer){
     this->CollisionProfileType = ECollisionProfileType::Wall;
 }
 

@@ -1,0 +1,12 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "ESQEX_Bonamik_PossessionMode.generated.h"
+
+UENUM()
+enum ESQEX_Bonamik_PossessionMode {
+    ESQEX_Bonamik_PSSMODE_SWING_Y,
+    ESQEX_Bonamik_PSSMODE_SWING_Z,
+    ESQEX_Bonamik_PSSMODE_RANDOM_ROLL,
+    ESQEX_Bonamik_PSSMODE_MAX UMETA(Hidden),
+};
+

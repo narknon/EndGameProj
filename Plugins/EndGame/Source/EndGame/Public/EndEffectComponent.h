@@ -5,6 +5,25 @@
 #include "UObject/NoExportTypes.h"
 #include "EndEffectComponent.generated.h"
 
+UENUM(Blueprintable)
+// Enum Engine.EEndEffectCategory
+enum class EEndEffectCategory : uint8
+{
+    None,
+    Field,
+    Battle,
+    Event,
+    Menu,
+    Level,
+    Resident,
+    AnimNotify,
+    Blueprint,
+    FieldLaser,
+    ParticleSystemComponent,
+    Debug,
+    Max
+};
+
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ENDGAME_API UEndEffectComponent : public UActorComponent {
     GENERATED_BODY()

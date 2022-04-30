@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class AEndNavRedLaserGimmickBox : public AEndNavBlockingModifierVolume {
     GENERATED_BODY()
 public:
-    AEndNavRedLaserGimmickBox();
+    AEndNavRedLaserGimmickBox(const FObjectInitializer& ObjectInitializer);
 };
 

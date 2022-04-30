@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Volume -FallbackName=Volume
 #include "SQEXSEADAudioVolumeEvent.h"
+#include "GameFramework/Volume.h"
 #include "SQEXSEADAudioVolume.generated.h"
 
 class USoundBase;

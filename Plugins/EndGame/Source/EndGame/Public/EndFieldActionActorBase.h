@@ -4,6 +4,7 @@
 #include "EndNavLinkProxy.h"
 #include "UObject/NoExportTypes.h"
 #include "AffectedActorGroup.h"
+#include "EndBattleAreaActor.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavPriorRegistInfo -FallbackName=NavPriorRegistInfo
 #include "EndFieldActionActorBase.generated.h"
 

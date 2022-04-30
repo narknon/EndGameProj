@@ -1,5 +1,5 @@
 #include "EndNavModifierMountainVolume.h"
 
-AEndNavModifierMountainVolume::AEndNavModifierMountainVolume() {
+AEndNavModifierMountainVolume::AEndNavModifierMountainVolume(const FObjectInitializer& ObjectInitializer) : AEndNavModifierVolumeBase(ObjectInitializer){
 }
 

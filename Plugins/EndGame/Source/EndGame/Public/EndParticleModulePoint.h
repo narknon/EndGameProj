@@ -6,8 +6,23 @@
 #include "Distributions/DistributionVector.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EndEffectSocketName -FallbackName=EndEffectSocketName
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EVfxRotationMatrixOrder -FallbackName=EVfxRotationMatrixOrder
+#include "EndParticleModuleEventSpawnEffect.h"
 #include "UObject/NoExportTypes.h"
 #include "EndParticleModulePoint.generated.h"
+
+UENUM(Blueprintable)
+// Enum Engine.EVfxRotationMatrixOrder
+enum class EVfxRotationMatrixOrder : uint8
+{
+    Default,
+    X_Y_Z,
+    X_Z_Y,
+    Y_X_Z,
+    Y_Z_X,
+    Z_X_Y,
+    Z_Y_X,
+    EVfxRotationMatrixOrder_MAX,
+};
 
 UCLASS(Blueprintable, EditInlineNew)
 class ENDGAME_API UEndParticleModulePoint : public UEndParticleModuleBase {
@@ -19,10 +34,10 @@ public:
     UPROPERTY(EditAnywhere)
     TEnumAsByte<EEndEffectLocationKind> m_Kind;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionVector m_Location;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionVector m_Rotation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

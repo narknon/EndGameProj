@@ -3,7 +3,7 @@
 #include "UObject/Object.h"
 #include "EndSystemSettings.generated.h"
 
-UCLASS(Blueprintable)
+UCLASS(Blueprintable, Config=EndSystemSettings)
 class ENDGAME_API UEndSystemSettings : public UObject {
     GENERATED_BODY()
 public:
