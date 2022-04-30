@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EndBattleNavQueryContext.h"
 #include "UObject/NoExportTypes.h"
 #include "EnvironmentQuery/Contexts/EnvQueryContext_BlueprintBase.h"
 #include "EndBattleEnvQueryContext.generated.h"
@@ -10,7 +11,7 @@ class AEndCharacter;
 class UEndEnvQueryComponent;
 
 UCLASS(Blueprintable, EditInlineNew)
-class UEndBattleEnvQueryContext : public UEnvQueryContext_BlueprintBase {
+class UEndBattleEnvQueryContext : public UEnEnvQueryContext_BlueprintBase {
     GENERATED_BODY()
 public:
     UEndBattleEnvQueryContext();
