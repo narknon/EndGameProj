@@ -1,10 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Widget.h"
 #include "Templates/SubclassOf.h"
+#include "Layout/Margin.h"
+#include "Components/Widget.h"
+#include "Types/SlateEnums.h"
 #include "EndListBox.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UEndListBox : public UWidget {
     GENERATED_BODY()
 public:
@@ -30,17 +32,17 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnSetupItem OnSetupItem;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnPressedItem OnPressedItem;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnSelectedIndexChanged OnSelectedIndexChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<UWidget*> ContentWidgets;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<UWidget*> CachedWidgets;
     
 public:

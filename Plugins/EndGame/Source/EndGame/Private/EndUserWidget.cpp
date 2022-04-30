@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #include "EndUserWidget.h"
 
 class UWidgetAnimation;
@@ -33,7 +31,7 @@ void UEndUserWidget::SetLocationInScene(FVector InLocation) {
 }
 
 bool UEndUserWidget::SetFocusToChild(UWidget* InWidget, EFocusCause InFocusCause) {
-	return false;
+    return false;
 }
 
 void UEndUserWidget::ReverseAnimationEx(const UWidgetAnimation* InAnimation) {
@@ -55,7 +53,7 @@ void UEndUserWidget::PlayAnimationToEx(UWidgetAnimation* InAnimation, float Star
 }
 
 bool UEndUserWidget::PlayAnimationToByName(FName InAnimationName, float StartAtTime, float EndAtTime, int32 NumLoopsToPlay, TEnumAsByte<EUMGSequencePlayMode::Type> PlayMode, float PlaybackSpeed) {
-	return false;
+    return false;
 }
 
 void UEndUserWidget::PlayAnimationExAutoReverse(UWidgetAnimation* InAnimation, float StartAtTime, int32 NumLoopsToPlay, TEnumAsByte<EUMGSequencePlayMode::Type> PlayMode, float PlaybackSpeed, float ReverseSpeed) {
@@ -65,79 +63,79 @@ void UEndUserWidget::PlayAnimationEx(UWidgetAnimation* InAnimation, float StartA
 }
 
 bool UEndUserWidget::PlayAnimationByName(FName InAnimationName, float StartAtTime, int32 NumLoopsToPlay, TEnumAsByte<EUMGSequencePlayMode::Type> PlayMode, float PlaybackSpeed) {
-	return false;
+    return false;
 }
 
 float UEndUserWidget::PauseAnimationEx(const UWidgetAnimation* InAnimation) {
-	return 0.0f;
+    return 0.0f;
 }
 
 float UEndUserWidget::PauseAnimationByName(FName InAnimationName) {
-	return 0.0f;
+    return 0.0f;
 }
 
 bool UEndUserWidget::IsPlayingAnimationIgnoreStopped() const {
-	return false;
+    return false;
 }
 
 bool UEndUserWidget::IsPlayingAnimationEx() const {
-	return false;
+    return false;
 }
 
 bool UEndUserWidget::IsInViewportEx() const {
-	return false;
+    return false;
 }
 
 bool UEndUserWidget::IsAnyAnimationPlayingEx() const {
-	return false;
+    return false;
 }
 
 bool UEndUserWidget::IsAnimationPlayingForwardEx(const UWidgetAnimation* InAnimation) {
-	return false;
+    return false;
 }
 
 bool UEndUserWidget::IsAnimationPlayingForwardByName(FName InAnimationName) {
-	return false;
+    return false;
 }
 
 bool UEndUserWidget::IsAnimationPlayingEx(const UWidgetAnimation* InAnimation) const {
-	return false;
+    return false;
 }
 
 bool UEndUserWidget::IsAnimationPlayingByName(FName InAnimationName) const {
-	return false;
+    return false;
 }
 
 int32 UEndUserWidget::GetZOrderInViewport() const {
-	return 0;
+    return 0;
 }
 
 FRotator UEndUserWidget::GetRotationInScene() const {
-	return FRotator{};
+    return FRotator{};
 }
 
 FVector UEndUserWidget::GetLocationInScene() const {
-	return FVector{};
+    return FVector{};
 }
 
 UWidget* UEndUserWidget::GetFocusedChildWidget() const {
-	return NULL;
+    return NULL;
 }
 
 float UEndUserWidget::GetAnimationStartTimeByName(FName InAnimationName) const {
-	return 0.0f;
+    return 0.0f;
 }
 
 float UEndUserWidget::GetAnimationEndTimeByName(FName InAnimationName) const {
-	return 0.0f;
+    return 0.0f;
 }
 
 float UEndUserWidget::GetAnimationCurrentTimeEx(const UWidgetAnimation* InAnimation) const {
-	return 0.0f;
+    return 0.0f;
 }
 
 float UEndUserWidget::GetAnimationCurrentTimeByName(FName InAnimationName) const {
-	return 0.0f;
+    return 0.0f;
 }
 
 void UEndUserWidget::AddToViewportEx(int32 ZOrder) {
@@ -147,14 +145,15 @@ void UEndUserWidget::AddToScene(const FVector& InLocation, const FRotator& InRot
 }
 
 bool UEndUserWidget::AddToPlayerScreenEx(int32 ZOrder) {
-	return false;
+    return false;
 }
 
 void UEndUserWidget::AddToOffscreen(int32 ZOrder) {
 }
 
 UEndUserWidget::UEndUserWidget() : UUserWidget(FObjectInitializer::Get()) {
-	this->bPauseable = false;
-	this->bAnimationDuplication = false;
-	this->bSupportsPromotionVideo = true;
+    this->bPauseable = false;
+    this->bAnimationDuplication = false;
+    this->bSupportsPromotionVideo = true;
 }
+

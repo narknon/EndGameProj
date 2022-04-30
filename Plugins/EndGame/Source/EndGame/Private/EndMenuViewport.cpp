@@ -1,13 +1,11 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #include "EndMenuViewport.h"
+#include "Templates/SubclassOf.h"
 
-
-class AActor;
 class UWorld;
+class AActor;
 
 AActor* UEndMenuViewport::Spawn(TSubclassOf<AActor> ActorClass) {
-	return NULL;
+    return NULL;
 }
 
 void UEndMenuViewport::SetViewRotation(FRotator Rotation) {
@@ -17,15 +15,15 @@ void UEndMenuViewport::SetViewLocation(FVector Location) {
 }
 
 FRotator UEndMenuViewport::GetViewRotation() const {
-	return FRotator{};
+    return FRotator{};
 }
 
 UWorld* UEndMenuViewport::GetViewportWorld() const {
-	return NULL;
+    return NULL;
 }
 
 FVector UEndMenuViewport::GetViewLocation() const {
-	return FVector{};
+    return FVector{};
 }
 
 UEndMenuViewport::UEndMenuViewport() {

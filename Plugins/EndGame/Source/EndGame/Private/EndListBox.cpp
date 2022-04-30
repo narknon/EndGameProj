@@ -31,7 +31,7 @@ UWidget* UEndListBox::GetChildAt(int32 Index) const {
 UEndListBox::UEndListBox() {
     this->Orientation = Orient_Vertical;
     this->ContentClass = NULL;
-    this->ItemCount = 0.00f;
-    this->DesiredCount = 0.00f;
+    this->ItemCount = 0;
+    this->DesiredCount = 0;
 }
 

@@ -1,28 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PanelWidget.h"
+#include "Components/PanelWidget.h"
+#include "UObject/NoExportTypes.h"
+#include "Camera/CameraTypes.h"
+#include "Components/Widget.h"
 #include "EndCanvasPanel.generated.h"
 
-class UWidget;
 class UEndCanvasPanelSlot;
+class UWidget;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ENDGAME_API UEndCanvasPanel : public UPanelWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor ContentColorAndOpacity;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetLinearColor ContentColorAndOpacityDelegate;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bExplicitChildZOrder;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     TEnumAsByte<ECameraProjectionMode::Type> ProjectionMode;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(EditAnywhere)
     float FieldOfView;
     
     UEndCanvasPanel();

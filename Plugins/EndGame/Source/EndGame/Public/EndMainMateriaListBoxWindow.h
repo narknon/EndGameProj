@@ -5,7 +5,7 @@
 
 class UWidget;
 
-UCLASS(EditInlineNew)
+UCLASS(Blueprintable, EditInlineNew)
 class UEndMainMateriaListBoxWindow : public UEndUserWidget {
     GENERATED_BODY()
 public:
@@ -24,3 +24,4 @@ private:
     void OnCommandMateriaCellSetup(UWidget* ItemWidget, int32 ItemIndex);
     
 };
+

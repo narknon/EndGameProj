@@ -1,12 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "Layout/Margin.h"
+#include "Styling/SlateTypes.h"
+#include "Components/Widget.h"
+#include "UObject/NoExportTypes.h"
+#include "Styling/SlateTypes.h"
+#include "Types/SlateEnums.h"
+#include "Components/SlateWrapperTypes.h"
 #include "EEndMenuScrollBarPosition.h"
-#include "SlateTypes.h"
-#include "Widget.h"
+#include "Input/Events.h"
 #include "EndVirtualScrollBox.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UEndVirtualScrollBox : public UWidget {
     GENERATED_BODY()
 public:
@@ -75,23 +81,23 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnMeasureItem OnMeasureItem;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnPressedItem OnPressedItem;
     
-    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FOnSelectedIndexChanged OnSelectedIndexChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<UWidget*> ContentWidgets;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<UWidget*> CachedWidgets;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UWidget* CursorWidget;
     
-    UPROPERTY(BlueprintReadWrite, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     UWidget* CachedCursor;
     
 public:

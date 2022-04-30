@@ -1,8 +1,8 @@
 #include "EndMenuAPI.h"
 
-class UUserWidget;
 class UObject;
 class UMaterialInterface;
+class UUserWidget;
 class AActor;
 class UWidget;
 class UWidgetAnimation;

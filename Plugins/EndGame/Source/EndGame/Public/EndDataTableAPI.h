@@ -1,14 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EEndDataTableDebugFlag.h"
+#include "UObject/Object.h"
 #include "EDataTableType.h"
+#include "EEndDataTableDebugFlag.h"
 #include "EEquipmentType.h"
 #include "EPlayerType.h"
 #include "EndDataTableAPI.generated.h"
 
 class AEndAssetActor;
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class UEndDataTableAPI : public UObject {
     GENERATED_BODY()
 public:
@@ -19,10 +20,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static void SetDebugFlag(EEndDataTableDebugFlag Flag);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsExistDataTableFromTypeBP(EDataTableType Type);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsExistDataTableBP();
     
     UFUNCTION(BlueprintCallable)
@@ -49,13 +50,13 @@ public:
     UFUNCTION(BlueprintCallable)
     static TArray<FString> GetTestCutSceneEnviSetNameList(const TArray<FString>& CutSceneNames);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetResidentParameterStringBP(const FName ID, const FString& DefaultValue);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FName GetResidentParameterNameBP(const FName ID, FName DefaultValue);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetResidentParameterIntegerBP(const FName ID, int32 DefaultValue);
     
     UFUNCTION(BlueprintPure)

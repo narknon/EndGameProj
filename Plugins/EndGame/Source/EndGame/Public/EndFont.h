@@ -1,31 +1,32 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "UObject/Object.h"
 #include "EndGlyphInfo.h"
 #include "EndFont.generated.h"
 
 class UTexture2D;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ENDGAME_API UEndFont : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UTexture2D*> Textures;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     TMap<uint16, FEndGlyphInfo> GlyphTable;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(EditAnywhere)
     TMap<FString, uint16> IconTable;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Size;
     
-    UPROPERTY(VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 OutlineSize;
     
 protected:
-    UPROPERTY(Transient, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TArray<UTexture2D*> AllTextures;
     
 public:

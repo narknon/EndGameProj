@@ -16,3 +16,4 @@ void UEndMainMateriaListBoxWindow::OnCommandMateriaCellSetup(UWidget* ItemWidget
 
 UEndMainMateriaListBoxWindow::UEndMainMateriaListBoxWindow() {
 }
+

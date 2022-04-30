@@ -1,32 +1,38 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AnimNotifyStructs.h"
+#include "EndPhysicalConstraintSetting_ContactCharacter.h"
+#include "EndPhysicalConstraintSetting_AnimPositionVelocity.h"
+#include "EndPhysicalConstraintBoneSetting.h"
 #include "Engine/DataAsset.h"
+#include "EndPhysicalConstraintSetting_LastPosition.h"
+#include "EndPhysicalConstraintSetting_AnimPosition.h"
+#include "EndPhysicalConstraintSetting_Distance.h"
+#include "EndPhysicalConstraintSetting_RandomImpulse.h"
 #include "EndPhysicalConstraintSetting.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class ENDGAME_API UEndPhysicalConstraintSetting : public UDataAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEndPhysicalConstraintBoneSetting> BoneSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PositionIterationCount;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 VelocityIterationCount;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bSimulateComponentSpace;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bTwoStageOrientRotation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bIgnoreActorVelocity;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseConstantDeltaTime;
     
     UPROPERTY(EditAnywhere)
@@ -35,38 +41,39 @@ public:
     UPROPERTY(EditAnywhere)
     float ContactTargetRadius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUpdateKinematicBonesToAnim;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bApplyBoneBlendRate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName UniqueEvalName;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEndPhysicalConstraintSetting_LastPosition> LastPositionSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEndPhysicalConstraintSetting_AnimPosition> AnimPositionSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEndPhysicalConstraintSetting_AnimPositionVelocity> AnimPositionVelocitySettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEndPhysicalConstraintSetting_Distance> DistanceSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEndPhysicalConstraintSetting_RandomImpulse> RandomImpulseSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEndPhysicalConstraintSetting_AnimPosition> PostAnimPositionSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEndPhysicalConstraintSetting_Distance> PostDistanceSettings;
     
-    UPROPERTY(BlueprintReadOnly, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FEndPhysicalConstraintSetting_ContactCharacter> ContactCharacterSettings;
     
     UEndPhysicalConstraintSetting();
 };
+

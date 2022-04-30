@@ -5,11 +5,11 @@
 
 class UObject;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ENDGAME_API AEndAssetActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UObject*> AssetUserData;
     
     AEndAssetActor();
