@@ -12,6 +12,8 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEnEnvQueryContext_BlueprintBase : public UObject
 {
     GENERATED_BODY()
+public:
+    UEnEnvQueryContext_BlueprintBase();
 };
 
 UCLASS(Blueprintable, EditInlineNew)
