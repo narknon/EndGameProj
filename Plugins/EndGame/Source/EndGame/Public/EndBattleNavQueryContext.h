@@ -17,7 +17,7 @@ public:
 };
 
 UCLASS(Blueprintable, EditInlineNew)
-class UEndBattleNavQueryContext : public UEnvQueryContext_BlueprintBase {
+class UEndBattleNavQueryContext : public UEnEnvQueryContext_BlueprintBase {
     GENERATED_BODY()
 public:
     UEndBattleNavQueryContext();

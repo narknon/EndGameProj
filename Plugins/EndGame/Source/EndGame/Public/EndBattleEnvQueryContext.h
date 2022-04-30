@@ -15,7 +15,7 @@ class UEndBattleEnvQueryContext : public UEnEnvQueryContext_BlueprintBase {
     GENERATED_BODY()
 public:
     UEndBattleEnvQueryContext();
-    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
+    /*UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ProvideLocationsSet(UObject* QuerierObject, AActor* QuerierActor, TArray<FVector>& ResultingLocationSet) const;
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -25,7 +25,7 @@ public:
     TArray<FVector> GetTargetLocationContexts(UEndEnvQueryComponent* InQuery, bool InParty, float InDistance) const;
     
     UFUNCTION(BlueprintPure)
-    TArray<AEndCharacter*> GetTargetContexts(UEndEnvQueryComponent* InQuery, bool InParty, float InDistance) const;
+    TArray<AEndCharacter*> GetTargetContexts(UEndEnvQueryComponent* InQuery, bool InParty, float InDistance) const;*/
     
 };
 
