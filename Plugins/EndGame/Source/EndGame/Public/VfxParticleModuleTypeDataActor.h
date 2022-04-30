@@ -8,6 +8,8 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEnParticleModuleTypeDataBase : public UParticleModule
 {
     GENERATED_UCLASS_BODY()
+public:
+    UEnParticleModuleTypeDataBase();
 };
 
 

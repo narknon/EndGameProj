@@ -7,6 +7,8 @@ UCLASS(Blueprintable, meta=(DisplayName = "EnActor Collision"))
 class UEnParticleModuleCollision : public UParticleModuleCollisionBase
 {
 	GENERATED_BODY()
+public:
+	UEnParticleModuleCollision();
 };
 
 /*UCLASS(Blueprintable, meta=(DisplayName = "EnActor Collision"))

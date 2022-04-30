@@ -1,12 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "VfxParticleModuleTypeDataActor.h"
 #include "Particles/TypeData/ParticleModuleTypeDataGpu.h"
 #include "EndParticleModuleTypeDataGpu.generated.h"
 
-
 UCLASS(Blueprintable, EditInlineNew)
-class UEnParticleModuleTypeDataGpu : public UParticleModuleTypeDataGpu {
+class UEnParticleModuleTypeDataGpu : public UEnParticleModuleTypeDataBase
+{
     GENERATED_BODY()
+public:
+    UEnParticleModuleTypeDataGpu();
 };
 
 
