@@ -7,6 +7,12 @@ UCLASS(Blueprintable, meta=(DisplayName = "EnActor Collision"))
 class UEnParticleModuleCollision : public UParticleModuleCollisionBase
 {
 	GENERATED_BODY()
+};
+
+/*UCLASS(Blueprintable, meta=(DisplayName = "EnActor Collision"))
+class UEnParticleModuleCollision : public UParticleModuleCollisionBase
+{
+	GENERATED_BODY()
 public:	
 	UPROPERTY(EditAnywhere)
 	FRawDistributionVector                      DampingFactor;                                            // 0x0038(0x0060) (Edit)
@@ -44,7 +50,7 @@ public:
 	float                                              MaxCollisionDistance;                                     // 0x01F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
     
     UEnParticleModuleCollision();
-};
+};*/
 
 UCLASS(Blueprintable)
 class UEndParticleModuleCollision : public UEnParticleModuleCollision {

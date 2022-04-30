@@ -5,8 +5,15 @@
 #include "Distributions/DistributionFloat.h"
 #include "EndParticleModuleTypeDataTrail.generated.h"
 
+UCLASS(Blueprintable, meta=(DisplayName = "EnActor Collision"))
+class UEnParticleModuleTypeDataAnimTrail : public UParticleModuleTypeDataBase
+{
+    GENERATED_BODY()
+};
+
+
 UCLASS(Blueprintable, EditInlineNew)
-class UEndParticleModuleTypeDataTrail : public UParticleModuleTypeDataAnimTrail {
+class UEndParticleModuleTypeDataTrail : public UEnParticleModuleTypeDataAnimTrail {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))

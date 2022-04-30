@@ -1,6 +1,9 @@
 #include "EndParticleModuleCollision.h"
 
-UEnParticleModuleCollision::UEnParticleModuleCollision()
+UEnParticleModuleCollision::UEnParticleModuleCollision() {
+}
+
+/*UEnParticleModuleCollision::UEnParticleModuleCollision()
 {
     bSpawnModule = true;
     bUpdateModule = true;
@@ -16,7 +19,7 @@ UEnParticleModuleCollision::UEnParticleModuleCollision()
     bIgnoreSourceActor = true;
     bIgnoreTriggerVolumes = true;
     CollisionTypes.Add(UEngineTypes::ConvertToObjectType(ECC_WorldStatic));
-}
+}*/
 
 UEndParticleModuleCollision::UEndParticleModuleCollision() {
     this->m_HitOffsetNormalScale = 1;
