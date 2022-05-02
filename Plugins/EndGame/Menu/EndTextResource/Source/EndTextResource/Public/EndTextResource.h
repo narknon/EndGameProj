@@ -4,7 +4,7 @@
 #include "EndTextResourceInfo.h"
 #include "EndTextResource.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(Blueprintable)
 class ENDTEXTRESOURCE_API UEndTextResource : public UObject {
     GENERATED_BODY()
 public:
