@@ -2,22 +2,24 @@
 	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
-	"FriendlyName": "EndTextResource",
-	"Description": "",
-	"Category": "Other",
-	"CreatedBy": "",
+	"FriendlyName": "END Text Resource Plugin",
+	"Description": "A plugin for END text resources.",
+	"Category": "Misc",
+	"CreatedBy": "tmouri",
 	"CreatedByURL": "",
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"SupportURL": "",
-	"CanContainContent": true,
+	"EnabledByDefault": true,
+	"CanContainContent": false,
 	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
 	"Installed": false,
 	"Modules": [
 		{
 			"Name": "EndTextResource",
-			"Type": "Developer",
-			"LoadingPhase": "Default"
+			"Type": "RuntimeNoCommandlet",
+			"LoadingPhase": "PreDefault"
 		}
 	]
 }
