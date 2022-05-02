@@ -50,7 +50,6 @@ Binaries/*
 Plugins/*/Binaries/*
 Plugins/*/*/*/Binaries/*
 
-Plugins\EnginePlugins\Runtime\AnimationBudgetAllocator\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-AnimationBudgetAllocator.suppressed.exp
 
 # Builds
 Build/*
