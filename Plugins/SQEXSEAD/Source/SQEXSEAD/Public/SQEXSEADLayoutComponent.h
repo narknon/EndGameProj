@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PrimitiveComponent -FallbackName=PrimitiveComponent
 #include "SQEXSEADLayoutInfo.h"
+#include "Components/PrimitiveComponent.h"
 #include "SQEXSEADLayoutComponent.generated.h"
 
 class USoundBase;
