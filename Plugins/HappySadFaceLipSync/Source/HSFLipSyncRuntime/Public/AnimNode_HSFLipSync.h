@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "HSFLipSyncInput.h"
+#include "Animation/AnimNodeBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AnimNode_Base -FallbackName=AnimNode_Base
 #include "AnimNode_HSFLipSync.generated.h"
 

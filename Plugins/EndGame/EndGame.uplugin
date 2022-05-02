@@ -50,6 +50,10 @@
 		{
 			"Name": "HappySadFaceLipSync",
 			"Enabled": true
+		},
+		{
+			"Name": "EndTextResource",
+			"Enabled": true
 		}
 	]
 }
