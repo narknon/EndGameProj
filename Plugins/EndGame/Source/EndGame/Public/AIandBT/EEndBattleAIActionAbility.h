@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleAIActionAbility.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndBattleAIActionAbility : uint8 {
     eCharaSpec,
     eActionName,

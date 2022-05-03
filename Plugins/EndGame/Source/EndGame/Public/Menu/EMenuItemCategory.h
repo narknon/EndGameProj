@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMenuItemCategory.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EMenuItemCategory : uint8 {
     GamePlay,
     CameraController,

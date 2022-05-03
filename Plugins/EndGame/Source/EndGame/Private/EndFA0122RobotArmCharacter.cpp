@@ -1,6 +1,8 @@
 #include "EndFA0122RobotArmCharacter.h"
 
-AEndFA0122RobotArmCharacter::AEndFA0122RobotArmCharacter() {
+#include "EndSkeletalMeshComponent.h"
+
+AEndFA0122RobotArmCharacter::AEndFA0122RobotArmCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UEndSkeletalMeshComponent>(ACharacter::MeshComponentName)) {
     this->TurningSoundAsset = NULL;
     this->StopTurningSoundAsset = NULL;
     this->ElevatingSoundAsset = NULL;

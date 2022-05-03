@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBattleActType.generated.h"
 
-UENUM()
-enum class EEndBattleActType {
+UENUM(BlueprintType)
+enum class EEndBattleActType : uint8 {
     Move,
     Moves,
     Turn,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndMenuFieldTargetState.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndMenuFieldTargetState : uint8 {
     None,
     On,

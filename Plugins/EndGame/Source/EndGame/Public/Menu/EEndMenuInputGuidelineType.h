@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndMenuInputGuidelineType.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndMenuInputGuidelineType : uint8 {
     Attack,
     BindUnleash,

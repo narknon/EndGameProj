@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndAIBehaviorTag.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndAIBehaviorTag : uint8 {
     Move,
     LookAt,

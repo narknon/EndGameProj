@@ -2,6 +2,7 @@
 #include "EndFootAttributeComponent.h"
 #include "EndCapsuleOverlapComponent.h"
 #include "EndEnvQueryComponent.h"
+#include "EndSkeletalMeshComponent.h"
 
 void AEndCharacter::UseHookShotSimple(const FVector& landingLocation, const FRotator& LandingRotation) {
 }
@@ -90,7 +91,7 @@ void AEndCharacter::DisableRagdollPhysics(float FadeOutTime, bool bCenterActorTo
 void AEndCharacter::DisableKineDriver() {
 }
 
-AEndCharacter::AEndCharacter() {
+AEndCharacter::AEndCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UEndSkeletalMeshComponent>(ACharacter::MeshComponentName)) {
     this->bResidentEffectIgnoreWorldPause = false;
     this->FieldAIControllerClass = NULL;
     this->FieldAIController = NULL;

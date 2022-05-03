@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndAiMoveType.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndAiMoveType : uint8 {
     RUN,
     DASH,

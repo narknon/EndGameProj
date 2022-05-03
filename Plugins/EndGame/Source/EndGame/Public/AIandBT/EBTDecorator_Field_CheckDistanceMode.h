@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBTDecorator_Field_CheckDistanceMode.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EBTDecorator_Field_CheckDistanceMode : uint8 {
     Distance3D,
     Distance2D,

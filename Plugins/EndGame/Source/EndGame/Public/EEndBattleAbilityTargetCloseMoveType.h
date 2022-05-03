@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleAbilityTargetCloseMoveType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleAbilityTargetCloseMoveType : uint8 {
     Stop,
     None,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EAIPCTargetLocationType.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EAIPCTargetLocationType : uint8 {
     TargetCursor,
     TargetApproach,

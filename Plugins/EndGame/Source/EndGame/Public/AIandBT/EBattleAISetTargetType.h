@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBattleAISetTargetType.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EBattleAISetTargetType : uint8 {
     UCPC,
     FarPC,

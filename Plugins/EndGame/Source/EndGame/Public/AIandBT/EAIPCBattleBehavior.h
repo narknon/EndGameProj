@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EAIPCBattleBehavior.generated.h"
 
-UENUM()
-enum class EAIPCBattleBehavior {
+UENUM(BlueprintType)
+enum class EAIPCBattleBehavior : uint8 {
     ePlayerControl,
     eGuard,
     eBackToBattleArea,

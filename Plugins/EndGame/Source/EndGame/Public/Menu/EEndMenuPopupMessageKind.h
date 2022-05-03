@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndMenuPopupMessageKind.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndMenuPopupMessageKind : uint8 {
     None,
     Damage,

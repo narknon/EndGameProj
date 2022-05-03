@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndActivityInitResult.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndActivityInitResult : uint8 {
     None,
     Title,

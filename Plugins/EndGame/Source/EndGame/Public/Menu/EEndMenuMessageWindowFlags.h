@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndMenuMessageWindowFlags.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndMenuMessageWindowFlags : uint8 {
     None,
     LeftAlignedOptions,

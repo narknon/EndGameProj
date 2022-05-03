@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndFieldAILeadState.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndFieldAILeadState : uint8 {
     STATE_WAIT,
     STATE_MOVE,

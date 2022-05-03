@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndAiAbilitySuspendFactor.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndAiAbilitySuspendFactor : uint8 {
     TimeOut,
     DamageReaction,

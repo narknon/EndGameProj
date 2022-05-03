@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCameraPoleStateType.generated.h"
 
-UENUM()
-enum class EEndCameraPoleStateType {
+UENUM(BlueprintType)
+enum class EEndCameraPoleStateType : uint8 {
     BlendIn,
     Move,
     BlendOut,

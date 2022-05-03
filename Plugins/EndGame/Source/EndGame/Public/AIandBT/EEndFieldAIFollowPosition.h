@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndFieldAIFollowPosition.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndFieldAIFollowPosition : uint8 {
     FORWARD,
     BACKWARD,

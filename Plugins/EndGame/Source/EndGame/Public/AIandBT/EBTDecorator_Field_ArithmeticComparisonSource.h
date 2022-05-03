@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBTDecorator_Field_ArithmeticComparisonSource.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EBTDecorator_Field_ArithmeticComparisonSource : uint8 {
     Blackboard,
     ActorProperty,

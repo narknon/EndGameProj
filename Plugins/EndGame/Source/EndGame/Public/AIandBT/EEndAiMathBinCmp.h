@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndAiMathBinCmp.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndAiMathBinCmp : uint8 {
     BinEqual,
     BinNotEqual,

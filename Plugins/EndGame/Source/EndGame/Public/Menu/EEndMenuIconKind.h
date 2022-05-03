@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndMenuIconKind.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndMenuIconKind : uint8 {
     None,
     Item,

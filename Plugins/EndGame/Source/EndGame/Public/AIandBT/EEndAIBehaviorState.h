@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndAIBehaviorState.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndAIBehaviorState : uint8 {
     Pending,
     Playing,

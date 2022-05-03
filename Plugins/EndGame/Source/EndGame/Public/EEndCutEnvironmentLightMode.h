@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCutEnvironmentLightMode.generated.h"
 
-UENUM()
-enum class EEndCutEnvironmentLightMode {
+UENUM(BlueprintType)
+enum class EEndCutEnvironmentLightMode : uint8 {
     CELM_All,
     CELM_Part,
     CELM_Max,

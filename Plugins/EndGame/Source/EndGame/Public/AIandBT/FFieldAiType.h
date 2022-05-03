@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "FFieldAiType.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class FFieldAiType : uint8 {
     FFieldAiType_EMPTY,
     FFieldAiType_NONE,

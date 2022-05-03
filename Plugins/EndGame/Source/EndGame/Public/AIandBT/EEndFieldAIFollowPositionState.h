@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndFieldAIFollowPositionState.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndFieldAIFollowPositionState : uint8 {
     STATE_MOVE,
     STATE_GOAL_ROT,

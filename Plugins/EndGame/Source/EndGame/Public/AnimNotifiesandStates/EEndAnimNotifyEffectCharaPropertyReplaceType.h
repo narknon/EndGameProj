@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndAnimNotifyEffectCharaPropertyReplaceType.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndAnimNotifyEffectCharaPropertyReplaceType : uint8 {
     Character,
     Weapon1,

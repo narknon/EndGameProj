@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EAIPCRecognitionVolumeType.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EAIPCRecognitionVolumeType : uint8 {
     eCombatZone,
     eInaccessibleZone,

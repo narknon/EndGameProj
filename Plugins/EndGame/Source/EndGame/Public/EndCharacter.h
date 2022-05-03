@@ -225,7 +225,7 @@ protected:
     bool IgnoreRagdollPhysics;
     
 public:
-    AEndCharacter();
+    AEndCharacter(const FObjectInitializer& ObjectInitializer);
     UFUNCTION(BlueprintCallable)
     void UseHookShotSimple(const FVector& landingLocation, const FRotator& LandingRotation);
     

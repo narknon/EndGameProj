@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndAnimNotifyBattleDamageOwnerFilterType.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndAnimNotifyBattleDamageOwnerFilterType : uint8 {
     eALL,
     ePlayer,

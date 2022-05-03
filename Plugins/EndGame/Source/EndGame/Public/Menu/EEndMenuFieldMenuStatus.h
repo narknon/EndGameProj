@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndMenuFieldMenuStatus.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndMenuFieldMenuStatus : uint8 {
     IsWaitMode,
     IsWaitModeCmd,

@@ -16,6 +16,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AEndVE0003CarriageCharacter* Carriage;
     
-    AEndVE0009ChocoboCharacter();
+    AEndVE0009ChocoboCharacter(const FObjectInitializer& ObjectInitializer);
 };
 

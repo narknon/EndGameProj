@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndMenuFieldPaneType.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndMenuFieldPaneType : uint8 {
     Command,
     Status,

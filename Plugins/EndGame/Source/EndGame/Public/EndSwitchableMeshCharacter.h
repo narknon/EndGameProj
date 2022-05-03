@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class AEndSwitchableMeshCharacter : public AEndCharacter {
     GENERATED_BODY()
 public:
-    AEndSwitchableMeshCharacter();
+    AEndSwitchableMeshCharacter(const FObjectInitializer& ObjectInitializer);
 };
 

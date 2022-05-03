@@ -52,6 +52,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     USQEXSEADSound* ContainerHitSoundAsset;
     
-    AEndFA0122RobotArmCharacter();
+    AEndFA0122RobotArmCharacter(const FObjectInitializer& ObjectInitializer);
 };
 

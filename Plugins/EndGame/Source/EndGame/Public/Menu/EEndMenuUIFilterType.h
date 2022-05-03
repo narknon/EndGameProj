@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndMenuUIFilterType.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndMenuUIFilterType : uint8 {
     WaitMode,
     Dying,

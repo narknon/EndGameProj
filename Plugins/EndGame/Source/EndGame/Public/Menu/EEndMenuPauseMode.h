@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndMenuPauseMode.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndMenuPauseMode : uint8 {
     Normal,
     Simple,

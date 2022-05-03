@@ -2,16 +2,16 @@
 #include "CoreMinimal.h"
 #include "EEndMenuPopupMessageFlags.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndMenuPopupMessageFlags : uint8 {
     None,
     Critical,
     OverTime,
-    Guarded = 0x4,
-    Chain = 0x8,
-    Area = 0x10,
-    Whack = 0x20,
-    Burst = 0x40,
-    AttributeWeak = 0x80,
+    Guarded,
+    Chain,
+    Area,
+    Whack,
+    Burst,
+    AttributeWeak,
 };
 

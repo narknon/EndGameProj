@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndAiAbilitySuspendTiming.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndAiAbilitySuspendTiming : uint8 {
     PreparingRange,
     SettingRange,

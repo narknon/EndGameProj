@@ -77,3 +77,5 @@ Plugins/*/*/*/Intermediate/*
 DerivedDataCache/*
 
 
+*.response
+Plugins/Menu/EndTextResource/Intermediate/Build/Win64/UE4/Shipping/EndTextResource/Module.EndTextResource.gen.cpp

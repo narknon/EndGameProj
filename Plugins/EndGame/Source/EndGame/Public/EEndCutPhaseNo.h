@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCutPhaseNo.generated.h"
 
-UENUM()
-enum class EEndCutPhaseNo {
+UENUM(BlueprintType)
+enum class EEndCutPhaseNo : uint8 {
     Nothing,
     LevelLoading,
     CharaSpecLoading,

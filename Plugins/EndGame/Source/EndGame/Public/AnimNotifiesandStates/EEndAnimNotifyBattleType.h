@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndAnimNotifyBattleType.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndAnimNotifyBattleType : uint8 {
     StartSummon,
 };

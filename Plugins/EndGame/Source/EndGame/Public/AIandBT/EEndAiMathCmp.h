@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndAiMathCmp.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndAiMathCmp : uint8 {
     Equal,
     Less,

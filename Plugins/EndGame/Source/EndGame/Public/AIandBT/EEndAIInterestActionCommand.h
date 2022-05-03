@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndAIInterestActionCommand.generated.h"
 
-UENUM()
+UENUM(Blueprintable)
 enum class EEndAIInterestActionCommand : uint8 {
     Approach,
     PlayAnimation,
