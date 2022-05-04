@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPlayerType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPlayerType : uint8 {
     EPlayerType_CLOUD,
     EPlayerType_BARRET,
