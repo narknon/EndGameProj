@@ -100,6 +100,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSQEX_KineDriverConnectEZParamLinkLinear> ConnectEZParamLinkLinearBody;
     
-    USQEX_KineDriverData();
+    USQEX_KineDriverData(const FObjectInitializer& ObjectInitializer);
 };
 
