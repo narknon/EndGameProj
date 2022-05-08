@@ -18,7 +18,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEndParticleModuleTypeDataTrail : public UParticleModuleTypeDataAnimTrail {
     GENERATED_BODY()
 public:
-    /*UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionVector m_PointA;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -43,7 +43,7 @@ public:
     FName m_RefPointNameA;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FName m_RefPointNameB;*/
+    FName m_RefPointNameB;
     
     UEndParticleModuleTypeDataTrail();
 };
