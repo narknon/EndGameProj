@@ -10,18 +10,7 @@ public class EndEditorTarget : TargetRules
 		Type = TargetType.Editor;
 
 		ExtraModuleNames.AddRange( new string[] {
-			"AnimationBudgetAllocator",
-			"BodyDriverPlugin",
-			"BonamikRt",
-			"ClothingSystemRuntime",
 			"EndGame",
-			"GeometryCache",
-			"HSFLipSyncEditor",
-			"HSFLipSyncRuntime",
-			"KBDRt",
-			"KineDriverEd",
-			"KineDriverRt",
-			"SQEXSEAD",
 		});
 	}
 }
