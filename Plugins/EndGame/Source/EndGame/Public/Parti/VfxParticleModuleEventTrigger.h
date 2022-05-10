@@ -24,7 +24,7 @@ class ENDGAME_API UVfxParticleModuleEventTrigger : public UParticleModuleEventBa
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere)
-    TEnumAsByte<EVfxParticleEventTriggerType> m_TriggerType;
+    EVfxParticleEventTriggerType m_TriggerType;
     
     UPROPERTY(EditAnywhere)
     float m_TriggerTime;

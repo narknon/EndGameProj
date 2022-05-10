@@ -32,7 +32,7 @@ public:
     FName m_PointName;
     
     UPROPERTY(EditAnywhere)
-    TEnumAsByte<EEndEffectLocationKind> m_Kind;
+    EEndEffectLocationKind m_Kind;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionVector m_Location;

@@ -75,7 +75,7 @@ public:
     FEndEffectAttachInfo m_AttachInfo;
     
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "EndParticleModuleEventSpawn")
-    TEnumAsByte<EEndEffectLocationKind> m_AttachActorKind;
+    EEndEffectLocationKind m_AttachActorKind;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEndEffectSocketName m_AttachSocketName;
