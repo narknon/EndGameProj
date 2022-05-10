@@ -9,6 +9,15 @@ public class EndEditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 
-		ExtraModuleNames.AddRange( new string[] { "End" } );
+		ExtraModuleNames.AddRange( new string[] {
+			"BonamikRt",
+			"ClothingSystemRuntime",
+			"EndGame",
+			"GeometryCache",
+			"KBDRt",
+			"KineDriverEd",
+			"KineDriverRt",
+			"SQEXSEAD",
+		});
 	}
 }

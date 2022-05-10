@@ -9,6 +9,15 @@ public class EndTarget : TargetRules
 	{
 		Type = TargetType.Game;
 
-		ExtraModuleNames.AddRange( new string[] { "End" } );
+		ExtraModuleNames.AddRange( new string[] { 
+			"BonamikRt",
+			"ClothingSystemRuntime",
+			"EndGame",
+			"GeometryCache",
+			"KBDRt",
+			"KineDriverEd",
+			"KineDriverRt",
+			"SQEXSEAD",
+		});
 	}
 }

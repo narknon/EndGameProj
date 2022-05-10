@@ -1,13 +1,66 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.18",
+	"EngineAssociation": "{44A21647-47D9-3FD3-3EFB-988EB55AC578}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
 		{
-			"Name": "End",
+			"Name": "EndGame",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"AIModule",
+				"Engine"
+			]
+		},
+		{
+			"Name": "KineDriverRt",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"UnrealEd"
+			]
+		},
+		{
+			"Name": "BonamikRt",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"UnrealEd"
+			]
+		},
+		{
+			"Name": "KBDRt",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"UnrealEd"
+			]
 		}
+	],
+	"Plugins": [
+		{
+			"Name": "AnimationBudgetAllocator",
+			"Enabled": true
+		},
+		{
+			"Name": "BodyDriverPlugin",
+			"Enabled": true
+		},
+		{
+			"Name": "HappySadFaceLipSync",
+			"Enabled": true
+		},
+		{
+			"Name": "Paper2D",
+			"Enabled": true
+		},
+		{
+			"Name": "SQEXSEAD",
+			"Enabled": true
+		}
+	],
+	"TargetPlatforms": [
+		"WindowsNoEditor"
 	]
 }
