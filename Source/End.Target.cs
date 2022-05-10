@@ -10,10 +10,14 @@ public class EndTarget : TargetRules
 		Type = TargetType.Game;
 
 		ExtraModuleNames.AddRange( new string[] { 
+			"AnimationBudgetAllocator",
+			"BodyDriverPlugin",
 			"BonamikRt",
 			"ClothingSystemRuntime",
 			"EndGame",
 			"GeometryCache",
+			"HSFLipSyncEditor",
+			"HSFLipSyncRuntime",
 			"KBDRt",
 			"KineDriverEd",
 			"KineDriverRt",

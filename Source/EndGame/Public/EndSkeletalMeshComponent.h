@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EndPhysicalConstraintEvaluator.h"
+#include "SkeletalMeshComponentBudgeted.h"
 #include "EndSkeletalMeshComponent.generated.h"
 
 class USkeletalMeshComponent;

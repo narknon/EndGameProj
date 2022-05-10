@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "AnimNode_BodyDriver.h"
 #include "AnimNode_EndBodyDriver.generated.h"
 
 USTRUCT(BlueprintType)
