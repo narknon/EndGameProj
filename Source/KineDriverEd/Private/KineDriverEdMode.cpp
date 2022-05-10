@@ -1,34 +1,34 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
-#include "KineDriverEdEdMode.h"
-#include "KineDriverEdEdModeToolkit.h"
+#include "KineDriverEdMode.h"
+#include "KineDriverEdModeToolkit.h"
 #include "Toolkits/ToolkitManager.h"
 #include "EditorModeManager.h"
 
-const FEditorModeID FKineDriverEdEdMode::EM_KineDriverEdEdModeId = TEXT("EM_KineDriverEdEdMode");
+const FEditorModeID FKineDriverEdMode::EM_KineDriverEdModeId = TEXT("EM_KineDriverEdMode");
 
-FKineDriverEdEdMode::FKineDriverEdEdMode()
+FKineDriverEdMode::FKineDriverEdMode()
 {
 
 }
 
-FKineDriverEdEdMode::~FKineDriverEdEdMode()
+FKineDriverEdMode::~FKineDriverEdMode()
 {
 
 }
 
-void FKineDriverEdEdMode::Enter()
+void FKineDriverEdMode::Enter()
 {
 	FEdMode::Enter();
 
 	if (!Toolkit.IsValid() && UsesToolkits())
 	{
-		Toolkit = MakeShareable(new FKineDriverEdEdModeToolkit);
+		Toolkit = MakeShareable(new FKineDriverEdModeToolkit);
 		Toolkit->Init(Owner->GetToolkitHost());
 	}
 }
 
-void FKineDriverEdEdMode::Exit()
+void FKineDriverEdMode::Exit()
 {
 	if (Toolkit.IsValid())
 	{
@@ -40,7 +40,7 @@ void FKineDriverEdEdMode::Exit()
 	FEdMode::Exit();
 }
 
-bool FKineDriverEdEdMode::UsesToolkits() const
+bool FKineDriverEdMode::UsesToolkits() const
 {
 	return true;
 }

@@ -5,13 +5,13 @@
 #include "CoreMinimal.h"
 #include "EdMode.h"
 
-class FKineDriverEdEdMode : public FEdMode
+class FKineDriverEdMode : public FEdMode
 {
 public:
-	const static FEditorModeID EM_KineDriverEdEdModeId;
+	const static FEditorModeID EM_KineDriverEdModeId;
 public:
-	FKineDriverEdEdMode();
-	virtual ~FKineDriverEdEdMode();
+	FKineDriverEdMode();
+	virtual ~FKineDriverEdMode();
 
 	// FEdMode interface
 	virtual void Enter() override;

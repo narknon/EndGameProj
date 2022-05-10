@@ -1,19 +1,19 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
-#include "KineDriverEdEdModeToolkit.h"
-#include "KineDriverEdEdMode.h"
+#include "KineDriverEdModeToolkit.h"
+#include "KineDriverEdMode.h"
 #include "Engine/Selection.h"
 #include "Widgets/Input/SButton.h"
 #include "Widgets/Text/STextBlock.h"
 #include "EditorModeManager.h"
 
-#define LOCTEXT_NAMESPACE "FKineDriverEdEdModeToolkit"
+#define LOCTEXT_NAMESPACE "FKineDriverEdModeToolkit"
 
-FKineDriverEdEdModeToolkit::FKineDriverEdEdModeToolkit()
+FKineDriverEdModeToolkit::FKineDriverEdModeToolkit()
 {
 }
 
-void FKineDriverEdEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolkitHost)
+void FKineDriverEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolkitHost)
 {
 	struct Locals
 	{
@@ -106,19 +106,19 @@ void FKineDriverEdEdModeToolkit::Init(const TSharedPtr<IToolkitHost>& InitToolki
 	FModeToolkit::Init(InitToolkitHost);
 }
 
-FName FKineDriverEdEdModeToolkit::GetToolkitFName() const
+FName FKineDriverEdModeToolkit::GetToolkitFName() const
 {
-	return FName("KineDriverEdEdMode");
+	return FName("KineDriverEdMode");
 }
 
-FText FKineDriverEdEdModeToolkit::GetBaseToolkitName() const
+FText FKineDriverEdModeToolkit::GetBaseToolkitName() const
 {
-	return NSLOCTEXT("KineDriverEdEdModeToolkit", "DisplayName", "KineDriverEdEdMode Tool");
+	return NSLOCTEXT("KineDriverEdModeToolkit", "DisplayName", "KineDriverEdMode Tool");
 }
 
-class FEdMode* FKineDriverEdEdModeToolkit::GetEditorMode() const
+class FEdMode* FKineDriverEdModeToolkit::GetEditorMode() const
 {
-	return GLevelEditorModeTools().GetActiveMode(FKineDriverEdEdMode::EM_KineDriverEdEdModeId);
+	return GLevelEditorModeTools().GetActiveMode(FKineDriverEdMode::EM_KineDriverEdModeId);
 }
 
 #undef LOCTEXT_NAMESPACE

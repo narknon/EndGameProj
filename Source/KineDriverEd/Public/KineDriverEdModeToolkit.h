@@ -5,11 +5,11 @@
 #include "CoreMinimal.h"
 #include "Toolkits/BaseToolkit.h"
 
-class FKineDriverEdEdModeToolkit : public FModeToolkit
+class FKineDriverEdModeToolkit : public FModeToolkit
 {
 public:
 
-	FKineDriverEdEdModeToolkit();
+	FKineDriverEdModeToolkit();
 	
 	/** FModeToolkit interface */
 	virtual void Init(const TSharedPtr<IToolkitHost>& InitToolkitHost) override;
