@@ -5,16 +5,9 @@
 
 class USceneComponent;
 
-UCLASS(Blueprintable, EditInlineNew)
-class UEnPhysicsHandleComponent : public UObject
-{
-    GENERATED_BODY()
-public:
-    UEnPhysicsHandleComponent();
-};
 
 UCLASS(Blueprintable, CollapseCategories, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
-class UEndPhysicsHandleComponent : public UEnPhysicsHandleComponent {
+class UEndPhysicsHandleComponent : public UPhysicsHandleComponent {
     GENERATED_BODY()
 public:
 private:
