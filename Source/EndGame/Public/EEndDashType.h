@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndDashType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndDashType : uint8 {
     Enable,
     Disable,

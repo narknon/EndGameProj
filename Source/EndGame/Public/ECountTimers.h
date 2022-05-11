@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ECountTimers.generated.h"
 
-UENUM()
-enum class ECountTimers {
+UENUM(BlueprintType)
+enum class ECountTimers : uint8 {
     CountUpLatestMove,
     CountUpLatestPosition,
     CountUpPhase,

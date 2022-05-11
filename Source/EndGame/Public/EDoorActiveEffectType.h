@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDoorActiveEffectType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDoorActiveEffectType : uint8 {
     ActiveNone,
     ActiveLeft,

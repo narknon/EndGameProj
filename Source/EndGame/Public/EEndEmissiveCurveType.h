@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndEmissiveCurveType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndEmissiveCurveType : uint8 {
     Curve00,
     Curve01,

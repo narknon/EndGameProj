@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EJumpStartType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EJumpStartType : uint8 {
     FixCoordinates,
     FixDirectionEnterToExit,

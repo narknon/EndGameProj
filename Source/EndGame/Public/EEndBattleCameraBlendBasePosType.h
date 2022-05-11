@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleCameraBlendBasePosType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleCameraBlendBasePosType : uint8 {
     Aim,
     Eye,

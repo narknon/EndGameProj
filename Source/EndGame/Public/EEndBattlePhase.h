@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBattlePhase.generated.h"
 
-UENUM()
-enum class EEndBattlePhase {
+UENUM(BlueprintType)
+enum class EEndBattlePhase : uint8 {
     Phase01,
     Phase02,
     Phase03,

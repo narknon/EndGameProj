@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleTargetCharaBaseLockType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleTargetCharaBaseLockType : uint8 {
     Ability,
     Combo,

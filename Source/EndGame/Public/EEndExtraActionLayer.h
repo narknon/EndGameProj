@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndExtraActionLayer.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndExtraActionLayer : uint8 {
     HighPriority,
     Default,

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBattleSummonAppearFXType.generated.h"
 
-UENUM()
-enum class EEndBattleSummonAppearFXType {
+UENUM(BlueprintType)
+enum class EEndBattleSummonAppearFXType : uint8 {
     Small,
     Medium,
     Large,

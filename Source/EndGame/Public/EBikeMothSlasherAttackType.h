@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBikeMothSlasherAttackType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBikeMothSlasherAttackType : uint8 {
     None,
     Default,

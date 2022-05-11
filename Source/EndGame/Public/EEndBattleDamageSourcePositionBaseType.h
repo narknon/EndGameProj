@@ -2,19 +2,19 @@
 #include "CoreMinimal.h"
 #include "EEndBattleDamageSourcePositionBaseType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleDamageSourcePositionBaseType : uint8 {
     Owner,
     OwnerWeapon1,
     OwnerWeapon2,
     OwnerWeapon3,
     OwnerWeapon4,
-    Target = 0xA,
+    Target,
     TargetWeapon1,
     TargetWeapon2,
     TargetWeapon3,
     TargetWeapon4,
-    ParentDamageSource = 0x14,
+    ParentDamageSource,
     HitPosition,
     TargetLocation,
     FieldLocation,

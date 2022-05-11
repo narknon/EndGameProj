@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETargetChoosingSort.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETargetChoosingSort : uint8 {
     eCloserToMyself,
     eCloserToLeader,

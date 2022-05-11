@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBattleInterceptAbility.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EBattleInterceptAbility {
     enum Type {
         eNone,

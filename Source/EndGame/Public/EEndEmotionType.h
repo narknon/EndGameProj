@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndEmotionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndEmotionType : uint8 {
     Unknown,
     Calm,

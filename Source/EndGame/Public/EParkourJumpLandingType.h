@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EParkourJumpLandingType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EParkourJumpLandingType : uint8 {
     ParkourJumpLandingAuto,
     ParkourJumpLandingStand,

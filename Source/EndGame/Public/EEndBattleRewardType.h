@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleRewardType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleRewardType : uint8 {
     Exp,
     Ap,

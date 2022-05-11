@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndDebugFlag.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndDebugFlag : uint8 {
     IgnoreLocationDataTable,
     EntryLocationFieldTest,

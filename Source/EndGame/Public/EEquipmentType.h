@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEquipmentType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEquipmentType : uint8 {
     EEquipmentType_PLAYER,
     EEquipmentType_WEAPON,

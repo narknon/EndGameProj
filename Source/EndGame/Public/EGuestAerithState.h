@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGuestAerithState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGuestAerithState : uint8 {
     Hide,
     Warning,

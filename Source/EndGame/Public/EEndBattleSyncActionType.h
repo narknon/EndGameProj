@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleSyncActionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleSyncActionType : uint8 {
     None,
     Catch,

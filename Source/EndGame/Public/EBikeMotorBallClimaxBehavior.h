@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBikeMotorBallClimaxBehavior.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBikeMotorBallClimaxBehavior : uint8 {
     Standard,
     Chase_Mine,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESummonBattleBehavior.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ESummonBattleBehavior : uint8 {
     eAppear,
     eReadyToFight,

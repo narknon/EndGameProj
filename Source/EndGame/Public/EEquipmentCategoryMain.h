@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEquipmentCategoryMain.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEquipmentCategoryMain : uint8 {
     Weapon,
     Armor,

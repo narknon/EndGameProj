@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleSceneCountLifeCycleType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleSceneCountLifeCycleType : uint8 {
     eNone,
     eCountUp,

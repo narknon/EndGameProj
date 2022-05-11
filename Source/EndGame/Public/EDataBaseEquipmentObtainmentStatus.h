@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EDataBaseEquipmentObtainmentStatus.generated.h"
 
-UENUM()
-enum class EDataBaseEquipmentObtainmentStatus {
+UENUM(BlueprintType)
+enum class EDataBaseEquipmentObtainmentStatus : uint8 {
     Undiscovered,
     Obtained,
     Displayed,

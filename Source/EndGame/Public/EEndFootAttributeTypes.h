@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndFootAttributeTypes.generated.h"
 
-UENUM()
-enum class EEndFootAttributeTypes {
+UENUM(BlueprintType)
+enum class EEndFootAttributeTypes : uint8 {
     None,
     Metal_Parts,
     Metal_Floor,

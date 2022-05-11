@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ESummonAbilityExecuteState.generated.h"
 
-UENUM()
-enum class ESummonAbilityExecuteState {
+UENUM(BlueprintType)
+enum class ESummonAbilityExecuteState : uint8 {
     eNone,
     eRequesting,
     eInAction,

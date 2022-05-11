@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBehaviorRequest.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EBehaviorRequest {
     enum Type {
         eGuard,

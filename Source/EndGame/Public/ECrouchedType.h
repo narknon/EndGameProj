@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECrouchedType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECrouchedType : uint8 {
     FixCoordinates,
     FixDirection,

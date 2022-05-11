@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameSpeed.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameSpeed : uint8 {
     EGameSpeed_SYSTEM,
     EGameSpeed_BATTLE,

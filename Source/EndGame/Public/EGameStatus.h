@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameStatus.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameStatus : uint8 {
     EGameStatus_INIT_RESIDENT_RESOURCE,
     EGameStatus_INIT_EDITOR_GAME_PALY,

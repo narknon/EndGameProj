@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDataTableType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDataTableType : uint8 {
     EDataTableType_FILED,
     EDataTableType_RESIDNET,

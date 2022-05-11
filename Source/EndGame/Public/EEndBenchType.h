@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBenchType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBenchType : uint8 {
     NormalChair,
     ScarletChair,

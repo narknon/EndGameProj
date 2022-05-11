@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleEasySpawnEnableRagdollType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleEasySpawnEnableRagdollType : uint8 {
     Deaded,
     Spawned,

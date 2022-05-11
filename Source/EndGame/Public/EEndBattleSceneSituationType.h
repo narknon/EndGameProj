@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleSceneSituationType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleSceneSituationType : uint8 {
     None,
     Event,

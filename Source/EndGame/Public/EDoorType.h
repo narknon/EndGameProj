@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDoorType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDoorType : uint8 {
     NormalDoor,
     PressDoor,

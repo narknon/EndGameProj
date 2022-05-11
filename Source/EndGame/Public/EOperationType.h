@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EOperationType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EOperationType : uint8 {
     DownButton,
     WallButton,

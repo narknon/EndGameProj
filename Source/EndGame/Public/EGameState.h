@@ -15,6 +15,6 @@ enum class EGameState : uint8 {
     EGameState_MENU_IDLE,
     EGameState_UNINIT_PERSISTENT,
     EGameState_PAUSE_IDLE_STARTCHAPTER,
-    EGameState_MAX = 0x20,
+    EGameState_MAX UMETA(Hidden),
 };
 

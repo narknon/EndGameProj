@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndFieldFlag.generated.h"
 
-UENUM()
-enum class EEndFieldFlag {
+UENUM(BlueprintType)
+enum class EEndFieldFlag : uint8 {
     ActionStartChapter,
     StartUninitParsistant,
     LocationJumpBlack,

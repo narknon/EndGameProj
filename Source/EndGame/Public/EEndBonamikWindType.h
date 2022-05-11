@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBonamikWindType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBonamikWindType : uint8 {
     Directional,
     Wave,

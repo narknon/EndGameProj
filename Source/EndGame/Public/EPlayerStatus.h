@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPlayerStatus.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPlayerStatus : uint8 {
     EPlayerType_NONE,
     EPlayerType_PARTY,

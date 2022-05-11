@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ECenterBoneEvaluationType.generated.h"
 
-UENUM()
-enum class ECenterBoneEvaluationType {
+UENUM(BlueprintType)
+enum class ECenterBoneEvaluationType : uint8 {
     TranslationAndRotation,
     Translation,
     Rotation,

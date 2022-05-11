@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EPartyLeaderType.generated.h"
 
-UENUM()
-enum class EPartyLeaderType {
+UENUM(BlueprintType)
+enum class EPartyLeaderType : uint8 {
     EPartyLeaderType_Current,
     EPartyLeaderType_ForceField,
 };

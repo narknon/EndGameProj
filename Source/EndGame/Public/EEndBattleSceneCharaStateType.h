@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "EEndBattleSceneCharaStateType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleSceneCharaStateType : uint8 {
     Dead,
     SyncAction,
     Stun,
-    DebuffStart = 0x32,
-    StatusChangePoison = 0x32,
+    DebuffStart,
+    StatusChangePoison,
     StatusChangeFury,
     StatusChangeSadness,
     StatusChangeSilence,

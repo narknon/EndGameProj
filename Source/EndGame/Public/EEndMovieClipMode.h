@@ -4,7 +4,7 @@
 
 UENUM()
 enum class EEndMovieClipMode {
-    Load = 0x1,
+    Load,
     Play,
     Draw,
 };

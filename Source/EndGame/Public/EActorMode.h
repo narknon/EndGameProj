@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EActorMode.generated.h"
 
-UENUM()
-enum class EActorMode {
+UENUM(BlueprintType)
+enum class EActorMode : uint8 {
     EActorMode_NONE,
     EActorMode_FIELD,
     EActorMode_FIELD_PLAN,

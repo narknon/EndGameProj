@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleAttributeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleAttributeType : uint8 {
     Fire,
     Ice,
@@ -12,6 +12,6 @@ enum class EEndBattleAttributeType : uint8 {
     Holy,
     Dark,
     Max,
-    None = 0x7,
+    None,
 };
 

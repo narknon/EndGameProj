@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndFinishBattleType.generated.h"
 
-UENUM()
-enum class EEndFinishBattleType {
+UENUM(BlueprintType)
+enum class EEndFinishBattleType : uint8 {
     None,
     Battle2Cinema,
 };

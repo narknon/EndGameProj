@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEquipType.generated.h"
 
-UENUM()
-enum class EEquipType {
+UENUM(BlueprintType)
+enum class EEquipType : uint8 {
     Weapon,
     Bangle,
     Accessory,

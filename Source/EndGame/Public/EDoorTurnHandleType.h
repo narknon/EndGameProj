@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EDoorTurnHandleType.generated.h"
 
-UENUM()
-enum class EDoorTurnHandleType {
+UENUM(BlueprintType)
+enum class EDoorTurnHandleType : uint8 {
     None,
     TurnHandleRight,
     TurnHandleLeft,

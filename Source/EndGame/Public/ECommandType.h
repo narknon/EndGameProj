@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ECommandType.generated.h"
 
-UENUM()
-enum class ECommandType {
+UENUM(BlueprintType)
+enum class ECommandType : uint8 {
     ECommandType_ABILITY,
     ECommandType_MAGIC,
     ECommandType_LIMIT,

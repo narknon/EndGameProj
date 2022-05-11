@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleAbilityCommandType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleAbilityCommandType : uint8 {
     None,
     Ability,

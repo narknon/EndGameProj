@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERideMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERideMode : uint8 {
     Ride,
     GetOff,

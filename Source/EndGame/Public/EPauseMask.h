@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPauseMask.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPauseMask : uint8 {
     EPauseMask_DEBUG,
     EPauseMask_SYSTEM,

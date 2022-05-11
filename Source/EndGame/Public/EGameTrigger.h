@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameTrigger.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameTrigger : uint8 {
     EGameTrigger_NONE,
     EGameTrigger_BOOT,

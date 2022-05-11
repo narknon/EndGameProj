@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndOverrideAnimationLayer.generated.h"
 
-UENUM()
-enum class EEndOverrideAnimationLayer {
+UENUM(BlueprintType)
+enum class EEndOverrideAnimationLayer : uint8 {
     Layer00,
     Layer01,
     Layer02,

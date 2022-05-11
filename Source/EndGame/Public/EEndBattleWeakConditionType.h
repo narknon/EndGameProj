@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleWeakConditionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleWeakConditionType : uint8 {
     Anything,
     Fire,

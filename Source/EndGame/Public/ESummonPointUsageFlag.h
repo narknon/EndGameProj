@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ESummonPointUsageFlag.generated.h"
 
-UENUM()
-enum class ESummonPointUsageFlag {
+UENUM(BlueprintType)
+enum class ESummonPointUsageFlag : uint8 {
     eSpawn_All,
     eSpawn_Ifrit,
     eSpawn_Chocobo,

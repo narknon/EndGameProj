@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EDebugCallerType.generated.h"
 
-UENUM()
-enum class EDebugCallerType {
+UENUM(BlueprintType)
+enum class EDebugCallerType : uint8 {
     Action,
     Animation,
     Bike,

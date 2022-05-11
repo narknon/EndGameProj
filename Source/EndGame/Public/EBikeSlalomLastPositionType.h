@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EBikeSlalomLastPositionType.generated.h"
 
-UENUM()
-enum class EBikeSlalomLastPositionType {
+UENUM(BlueprintType)
+enum class EBikeSlalomLastPositionType : uint8 {
     None,
     SameSideOfPlayer,
     OtherSideOfPlayer,

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ECommandRequestHideType.generated.h"
 
-UENUM()
-enum class ECommandRequestHideType {
+UENUM(BlueprintType)
+enum class ECommandRequestHideType : uint8 {
     OK,
     NG,
 };

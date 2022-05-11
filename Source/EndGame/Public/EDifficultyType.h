@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDifficultyType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDifficultyType : uint8 {
     EASY,
     NORMAL,

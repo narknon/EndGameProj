@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleBreakableRelationVolumeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleBreakableRelationVolumeType : uint8 {
     NavModifier,
     Blocking,

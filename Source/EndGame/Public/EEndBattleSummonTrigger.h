@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBattleSummonTrigger.generated.h"
 
-UENUM()
-enum class EEndBattleSummonTrigger {
+UENUM(BlueprintType)
+enum class EEndBattleSummonTrigger : uint8 {
     BurstChance,
     Burst,
     BurstHit,

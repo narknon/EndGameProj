@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETargetChoosingTag.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETargetChoosingTag : uint8 {
     eSameAsLeader,
     eCurrentOne,

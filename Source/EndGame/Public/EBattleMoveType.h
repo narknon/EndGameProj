@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBattleMoveType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EBattleMoveType {
     enum Type {
         eBM_NONE,

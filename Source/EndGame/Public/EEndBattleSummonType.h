@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleSummonType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleSummonType : uint8 {
     Ifrit,
     Chocobo,
@@ -10,10 +10,10 @@ enum class EEndBattleSummonType : uint8 {
     DebuChocobo,
     Leviathan,
     Bahamut,
-    Carbuncle = 0xC,
+    Carbuncle,
     Cactuar,
     Hinachocobo,
     Ramuh,
-    None = 0x1F,
+    None,
 };
 

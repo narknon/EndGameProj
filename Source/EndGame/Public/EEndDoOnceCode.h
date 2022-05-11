@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndDoOnceCode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndDoOnceCode : uint8 {
     Execute,
     Reset,

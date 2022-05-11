@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EActorMoveMode.generated.h"
 
-UENUM()
-enum class EActorMoveMode {
+UENUM(BlueprintType)
+enum class EActorMoveMode : uint8 {
     Ground,
     Fly,
     Other,

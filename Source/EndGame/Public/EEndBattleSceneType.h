@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBattleSceneType.generated.h"
 
-UENUM()
-enum class EEndBattleSceneType {
+UENUM(BlueprintType)
+enum class EEndBattleSceneType : uint8 {
     Normal,
     Boss,
     VR,

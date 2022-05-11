@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBattleYuffieAttributeBuffType.generated.h"
 
-UENUM()
-enum class EEndBattleYuffieAttributeBuffType {
+UENUM(BlueprintType)
+enum class EEndBattleYuffieAttributeBuffType : uint8 {
     None,
     Fire,
     Ice,

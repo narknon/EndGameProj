@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBattleMessageTarget.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EBattleMessageTarget {
     enum Type {
         eAll,

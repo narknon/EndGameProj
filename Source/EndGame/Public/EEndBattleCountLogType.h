@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleCountLogType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleCountLogType : uint8 {
     NormalAttackInvoke,
     NormalAttackHitSuccess,

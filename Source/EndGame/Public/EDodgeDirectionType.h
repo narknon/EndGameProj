@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EDodgeDirectionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EDodgeDirectionType : uint8 {
     TOWARD,
     AWAY,

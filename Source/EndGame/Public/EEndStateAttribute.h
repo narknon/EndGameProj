@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndStateAttribute.generated.h"
 
-UENUM()
-enum class EEndStateAttribute {
+UENUM(BlueprintType)
+enum class EEndStateAttribute : uint8 {
     OnOff,
     BeginOverlapTrigger,
     Effect,

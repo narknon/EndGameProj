@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndEmissiveModifierType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndEmissiveModifierType : uint8 {
     Overlay,
     Scale,

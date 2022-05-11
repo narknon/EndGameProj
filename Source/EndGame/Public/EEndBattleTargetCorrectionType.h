@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleTargetCorrectionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleTargetCorrectionType : uint8 {
     Normal,
     BackwardLine,

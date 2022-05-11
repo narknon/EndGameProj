@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndHandType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndHandType : uint8 {
     All,
     Left,

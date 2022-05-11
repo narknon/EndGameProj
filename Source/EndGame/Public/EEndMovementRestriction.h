@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndMovementRestriction.generated.h"
 
-UENUM()
-enum class EEndMovementRestriction {
+UENUM(BlueprintType)
+enum class EEndMovementRestriction : uint8 {
     None,
     WalkOnlyToDestination,
     ForceWalkToDestination,

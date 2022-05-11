@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCutSelectWidgetOption.generated.h"
 
-UENUM()
-enum class EEndCutSelectWidgetOption {
+UENUM(BlueprintType)
+enum class EEndCutSelectWidgetOption : uint8 {
     CESW_None,
     CESW_LessThanHard,
     CESW_Max,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBikeAllyCharacterType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBikeAllyCharacterType : uint8 {
     Default,
     Main,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECurtainActiveEffectType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECurtainActiveEffectType : uint8 {
     CurtainActiveNone,
     CurtainActiveLeft,

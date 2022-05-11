@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEncountEnemyAccessorType.generated.h"
 
-UENUM()
-enum class EEncountEnemyAccessorType {
+UENUM(BlueprintType)
+enum class EEncountEnemyAccessorType : uint8 {
     EnemyAccesor,
     EncountEnemyAccessor,
     EncountAndPreEncountEnemyAccessor,

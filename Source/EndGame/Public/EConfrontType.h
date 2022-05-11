@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EConfrontType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EConfrontType : uint8 {
     COMBAT,
     CAUTION,

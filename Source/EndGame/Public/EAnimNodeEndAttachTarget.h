@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EAnimNodeEndAttachTarget.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EAnimNodeEndAttachTarget : uint8 {
     Self,
     OwnerCharacter,

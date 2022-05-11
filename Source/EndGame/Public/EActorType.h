@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EActorType.generated.h"
 
-UENUM()
-enum class EActorType {
+UENUM(BlueprintType)
+enum class EActorType : uint8 {
     EActorType_PLAYER,
     EActorType_PARTY,
     EActorType_GUEST,

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleReactionInfluenceType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleReactionInfluenceType : uint8 {
     Instant,
     RadiusShort,

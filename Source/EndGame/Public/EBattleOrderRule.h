@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBattleOrderRule.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EBattleOrderRule {
     enum Type {
         eNone,

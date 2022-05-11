@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleAttackDirectionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleAttackDirectionType : uint8 {
     Front,
     Right,

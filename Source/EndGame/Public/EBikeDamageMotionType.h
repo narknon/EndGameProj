@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EBikeDamageMotionType.generated.h"
 
-UENUM()
-enum class EBikeDamageMotionType {
+UENUM(BlueprintType)
+enum class EBikeDamageMotionType : uint8 {
     Normal,
     Explosion,
     KnockBack_LR1,

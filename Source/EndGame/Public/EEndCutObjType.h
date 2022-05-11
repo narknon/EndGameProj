@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndCutObjType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EEndCutObjType {
     enum Type {
         Character,

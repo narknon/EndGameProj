@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndEffectInterpolateKind.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndEffectInterpolateKind : uint8 {
     Linear,
     EaseInOut,

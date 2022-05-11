@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndEffectEventKind.generated.h"
 
-UENUM(Blueprintable)
+UENUM(BlueprintType)
 enum EEndEffectEventKind {
     EE_EK_Begin,
     EE_EK_End,

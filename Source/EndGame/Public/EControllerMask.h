@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EControllerMask.generated.h"
 
-UENUM()
-enum class EControllerMask {
+UENUM(BlueprintType)
+enum class EControllerMask : uint8 {
     SYSTEM,
     BATTLE_SUSPEND,
     BATTLE_STATUS,

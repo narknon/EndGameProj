@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ECollisionProfileType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ECollisionProfileType : uint8 {
     Wall,
     Pc_Wall,

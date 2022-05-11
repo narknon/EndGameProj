@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EBikeDirection.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EBikeDirection : uint8 {
     None,
     Front,

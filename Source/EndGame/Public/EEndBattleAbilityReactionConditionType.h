@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleAbilityReactionConditionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleAbilityReactionConditionType : uint8 {
     None,
     Hit,
