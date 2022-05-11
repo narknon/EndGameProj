@@ -40,6 +40,7 @@ public class EndGame : ModuleRules
             "GameplayTasks",
             "InputCore",
 			"KBDRt",
+			"KineDriverEd",
 			"KineDriverRt",
 			"HSFLipSyncEditor",
 			"HSFLipSyncRuntime",

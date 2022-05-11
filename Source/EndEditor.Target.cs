@@ -11,6 +11,7 @@ public class EndEditorTarget : TargetRules
 
 		ExtraModuleNames.AddRange( new string[] {
 			"EndGame",
+			"KineDriverEd",
 		});
 	}
 }

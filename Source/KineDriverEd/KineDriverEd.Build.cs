@@ -25,6 +25,8 @@ public class KineDriverEd : ModuleRules {
             "CoreUObject",
             "Engine",
 			"KineDriverRt",
+			"Slate",
+			"SlateCore",
 			"UnrealEd",
         });
     }
