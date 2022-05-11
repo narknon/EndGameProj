@@ -6,18 +6,6 @@ public class KineDriverEd : ModuleRules {
     public KineDriverEd(ReadOnlyTargetRules Target) : base(Target) {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         
-		PublicIncludePaths.AddRange(
-            new string[]
-            {
-                "KineDriverEd/Public"
-            });
-
-        PrivateIncludePaths.AddRange(
-            new string[] 
-            {
-				"KineDriverEd/Private"
-			});
-		
         PublicDependencyModuleNames.AddRange(new string[] {
 			"AnimGraphRuntime",
             "AnimationCore",
@@ -25,7 +13,11 @@ public class KineDriverEd : ModuleRules {
             "CoreUObject",
             "Engine",
 			"KineDriverRt",
+			"Slate",
+			"SlateCore",
+			"InputCore",
 			"UnrealEd",
+			"LevelEditor",
         });
     }
 }

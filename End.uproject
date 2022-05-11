@@ -14,14 +14,6 @@
 			]
 		},
 		{
-			"Name": "KineDriverEd",
-			"Type": "Editor",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"UnrealEd"
-			]
-		},
-		{
 			"Name": "KineDriverRt",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
