@@ -12,8 +12,6 @@ public class AssetDumper : ModuleRules
     public AssetDumper(ReadOnlyTargetRules Target) : base(Target)
     {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
-        bLegacyPublicIncludePaths = false;
-        ShadowVariableWarningLevel = WarningLevel.Off;
 
         PublicDependencyModuleNames.AddRange(new[] {
 	        "Core", 
@@ -33,7 +31,6 @@ public class AssetDumper : ModuleRules
         });
 
         PrivateDependencyModuleNames.AddRange(new[] {
-	        "PhysicsCore",
 	        "RHI", 
 	        "MediaAssets"
         });
@@ -54,17 +51,6 @@ public class AssetDumper : ModuleRules
         PublicAdditionalLibraries.Add(Path.Combine(libraryFolder, "zlib-md.lib"));
         PublicAdditionalLibraries.Add(Path.Combine(libraryFolder, "detex.lib"));
         
-        var projectName = Target.ProjectFile.GetFileNameWithoutAnyExtensions();
-        if (projectName == "FactoryGame") {
-	        PublicDefinitions.Add("WITH_CSS_ENGINE_PATCHES=1");
-        }
-
-        var pluginsDirectory = DirectoryReference.Combine(Target.ProjectFile.Directory, "Plugins");
-        var smlPluginDirectory = DirectoryReference.Combine(pluginsDirectory, "SML");
         
-        if (Directory.Exists(smlPluginDirectory.FullName)) {
-	        PrivateDependencyModuleNames.Add("SML");
-	        PublicDefinitions.Add("METHOD_PATCHING_SUPPORTED=1");
-        }
     }
 }

@@ -23,7 +23,8 @@ public class AssetGenerator : ModuleRules
 			"UnrealEd",
             "UMGEditor",
 			"BlueprintGraph",
-            "MovieSceneTracks"
+            "MovieSceneTracks",
+            "AssetDumper"
         });
         
 		PrivateDependencyModuleNames.AddRange(new[] {
