@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Tickable.h"
 #include "Toolkit/AssetGeneration/AssetTypeGenerator.h"
 
 class SNotificationItem;

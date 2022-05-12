@@ -10,7 +10,7 @@ void UMediaTextureAssetSerializer::SerializeAsset(TSharedRef<FSerializationConte
 	
 	//Do not serialize any UTexture properties, they are controlled automatically
 	UStruct* Struct = UTexture::StaticClass();
-	for (TFieldIterator<FProperty> It(Struct); It; ++It) {
+	for (TFieldIterator<UProperty> It(Struct); It; ++It) {
 		Serializer->DisablePropertySerialization(Struct, *It->GetName());
 	}
 	

@@ -194,7 +194,7 @@ void UObjectHierarchySerializer::SerializeObjectPropertiesIntoObject(UObject* Ob
 	TArray<int32> ReferencedSubobjects;
 
 	//Serialize actual object property values
-    for (FProperty* Property = ObjectClass->PropertyLink; Property; Property = Property->PropertyLinkNext) {
+    for (UProperty* Property = ObjectClass->PropertyLink; Property; Property = Property->PropertyLinkNext) {
         if (PropertySerializer->ShouldSerializeProperty(Property)) {
             const void* PropertyValue = Property->ContainerPtrToValuePtr<void>(Object);
             TSharedRef<FJsonValue> PropertyValueJson = PropertySerializer->SerializePropertyValue(Property, PropertyValue, &ReferencedSubobjects);
@@ -299,7 +299,7 @@ bool UObjectHierarchySerializer::AreObjectPropertiesUpToDate(const TSharedPtr<FJ
 
 	//Iterate all properties and return false if our values do not match existing ones
 	//This will also try to deserialize objects in "read only" mode, incrementing ObjectsNotUpToDate when existing object fields mismatch
-	for (FProperty* Property = ObjectClass->PropertyLink; Property; Property = Property->PropertyLinkNext) {
+	for (UProperty* Property = ObjectClass->PropertyLink; Property; Property = Property->PropertyLinkNext) {
 		const FString PropertyName = Property->GetName();
 		
 		if (PropertySerializer->ShouldSerializeProperty(Property) && Properties->HasField(PropertyName)) {
@@ -354,7 +354,7 @@ void UObjectHierarchySerializer::FlushPropertiesIntoObject(const int32 ObjectInd
 
 void UObjectHierarchySerializer::DeserializeObjectProperties(const TSharedPtr<FJsonObject>& Properties, UObject* Object) {
     UClass* ObjectClass = Object->GetClass();
-    for (FProperty* Property = ObjectClass->PropertyLink; Property; Property = Property->PropertyLinkNext) {
+    for (UProperty* Property = ObjectClass->PropertyLink; Property; Property = Property->PropertyLinkNext) {
         const FString PropertyName = Property->GetName();
     	
         if (PropertySerializer->ShouldSerializeProperty(Property) && Properties->HasField(PropertyName)) {

@@ -2,8 +2,9 @@
 #include "FileHelpers.h"
 #include "Toolkit/AssetGeneration/AssetDumpViewWidget.h"
 #include "Toolkit/AssetGeneration/AssetGenerationProcessor.h"
-#include "AssetRegistry/AssetRegistryModule.h"
+#include "AssetRegistryModule.h"
 #include "ShaderCompiler.h"
+#include "Engine/Engine.h"
 #include "HAL/PlatformApplicationMisc.h"
 #include "Toolkit/AssetGeneration/AssetGenerationUtil.h"
 
@@ -211,9 +212,9 @@ int32 UAssetGeneratorCommandlet::Main(const FString& Params) {
 	UE_LOG(LogAssetGeneratorCommandlet, Display, TEXT("Starting generation of %d game assets"), ResultPackagesToGenerate.Num());
 
 	//Synchronize asset registry state with the current assets we have on the disk
-	ClearEmptyGamePackagesLoadedDuringDisregardGC();
+	/*ClearEmptyGamePackagesLoadedDuringDisregardGC();
 	IAssetRegistry::GetChecked().SearchAllAssets(true);
-	ProcessDeferredCommands();
+	ProcessDeferredCommands();*/
 
 	FAssetGeneratorGCController AssetGeneratorGCController{};
 	AssetGeneratorGCController.ConditionallyCollectGarbage();
@@ -222,7 +223,7 @@ int32 UAssetGeneratorCommandlet::Main(const FString& Params) {
 	Configuration.bTickOnTheSide = true;
 	TSharedPtr<FAssetGenerationProcessor> GenerationProcessor = FAssetGenerationProcessor::CreateAssetGenerator(Configuration, ResultPackagesToGenerate);
 	
-	while (!GenerationProcessor->HasFinishedAssetGeneration() && !IsEngineExitRequested()) {
+	/*while (!GenerationProcessor->HasFinishedAssetGeneration() && !IsEngineExitRequested()) {
 		int32 GeneratedPkgCount = 0;
 		GenerationProcessor->TickOnTheSide(GeneratedPkgCount);
 
@@ -244,7 +245,7 @@ int32 UAssetGeneratorCommandlet::Main(const FString& Params) {
 			ProcessDeferredCommands();
 			AssetGeneratorGCController.ConditionallyCollectGarbage();
 		}
-	}
+	}*/
 
 	//Save any packages that are still in memory and have dirty flag
 	TArray<UPackage*> InMemoryDirtyPackages;
@@ -257,7 +258,7 @@ int32 UAssetGeneratorCommandlet::Main(const FString& Params) {
 		}
 	}
 
-	if (InMemoryDirtyPackages.Num()) {
+	/*if (InMemoryDirtyPackages.Num()) {
 		UE_LOG(LogAssetGeneratorCommandlet, Display, TEXT("Saving %d in-memory dirty packages after the asset generation is done"), InMemoryDirtyPackages.Num());
 
 		for (UPackage* Package : InMemoryDirtyPackages) {
@@ -268,7 +269,7 @@ int32 UAssetGeneratorCommandlet::Main(const FString& Params) {
 	}
 
 	//Synchronize asset registry state with all of the new packages we created
-	IAssetRegistry::GetChecked().SearchAllAssets(true);
+	IAssetRegistry::GetChecked().SearchAllAssets(true);*/
 	
 	UE_LOG(LogAssetGeneratorCommandlet, Display, TEXT("Asset generation finished successfully"));
 	return 0;
@@ -285,18 +286,20 @@ void UAssetGeneratorCommandlet::ProcessDeferredCommands() {
 	GEngine->DeferredCommands.Empty();
 }
 
-void UAssetGeneratorCommandlet::ClearEmptyGamePackagesLoadedDuringDisregardGC() {
+void UAssetGeneratorCommandlet::ClearEmptyGamePackagesLoadedDuringDisregardGC()
+{
 	//Some packages get loaded through the config system during the initial load, which then
 	//marks them as GC disregarded, so they end up being loaded as empty rooted packages when actual referenced
 	//packages on disk do not exist. Here we track down these packages and delete them, because they
 	//interfere with the asset generator by the commandlet
-	for(TObjectIterator<UPackage> It; It; ++It) {
+	for(TObjectIterator<UPackage> It; It; ++It)
+	{
 		UPackage* Package = *It;
 		if (!Package->GetName().StartsWith(TEXT("/Game/"))) {
 			continue;
 		}
 		
-		int32 ExistingObjectsNum = 0;
+		/*int32 ExistingObjectsNum = 0;
 		ForEachObjectWithPackage(Package, [&](UObject* Object){
 			ExistingObjectsNum++;
 			return false;
@@ -314,6 +317,7 @@ void UAssetGeneratorCommandlet::ClearEmptyGamePackagesLoadedDuringDisregardGC() 
 		Package->SetFlags(RF_Transient);
 		Package->Rename(*NewUniquePackageName.ToString(), NULL, REN_DoNothing);
 		//Package->MarkPendingKill();
+	}*/
+		//CollectGarbage(RF_Standalone);
 	}
-	//CollectGarbage(RF_Standalone);
 }

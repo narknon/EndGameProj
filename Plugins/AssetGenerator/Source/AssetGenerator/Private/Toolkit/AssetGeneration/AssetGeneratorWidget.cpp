@@ -172,7 +172,7 @@ TSharedRef<SWidget> SAssetGeneratorWidget::CreateSettingsCategory() {
 			]
 			+SHorizontalBox::Slot().AutoWidth().HAlign(HAlign_Center).VAlign(VAlign_Center)[
 				SNew(SButton)
-				.Text(INVTEXT("..."))
+				.Text("...")
 				.OnClicked_Raw(this, &SAssetGeneratorWidget::OnBrowseOutputPathPressed)
 			]
 		]

@@ -1,5 +1,6 @@
 #include "Toolkit/AssetTypeGenerator/AnimSequenceGenerator.h"
 #include "AutomatedAssetImportData.h"
+#include "Package.h"
 #include "Dom/JsonObject.h"
 #include "Toolkit/ObjectHierarchySerializer.h"
 #include "EditorFramework/AssetImportData.h"
@@ -49,7 +50,7 @@ UAnimSequence* UAnimSequenceGenerator::ImportAnimation(UPackage* Package, const 
 
 void UAnimSequenceGenerator::ReimportAnimationFromSource(UAnimSequence* Asset) {
 	UClass* ReimportFbxAnimSequenceFactoryClass = FindObjectChecked<UClass>(NULL, TEXT("/Script/UnrealEd.ReimportFbxAnimSequenceFactory"));
-	UReimportFbxAnimSequenceFactory* AnimationFactory = static_cast<UReimportFbxAnimSequenceFactory*>(NewObject<UObject>(GetTransientPackage(), ReimportFbxAnimSequenceFactoryClass));
+	UReimportFbxAnimSequenceFactory* AnimationFactory = static_cast<UReimportFbxAnimSequenceFactory*>(NewObject<UObject>(ReimportFbxAnimSequenceFactoryClass));
 	
 	AnimationFactory->SetAutomatedAssetImportData(NewObject<UAutomatedAssetImportData>(AnimationFactory));
 	AnimationFactory->SetDetectImportTypeOnImport(false);
@@ -60,6 +61,11 @@ void UAnimSequenceGenerator::ReimportAnimationFromSource(UAnimSequence* Asset) {
 	AnimationFactory->SetReimportPaths(Asset, {AssetFbxFilePath});
 	AnimationFactory->Reimport(Asset);
 	MarkAssetChanged();
+}
+
+FString UAnimSequenceGenerator::LexToString(const FMD5Hash& fmd5_hash) const
+{
+	return {};
 }
 
 void UAnimSequenceGenerator::SetupFbxImportSettings(UFbxImportUI* ImportUI) const {

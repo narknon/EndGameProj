@@ -6,6 +6,7 @@
 #include "Toolkit/AssetGeneration/AssetGenerationUtil.h"
 #include "AnimationGraph.h"
 #include "AnimationGraphSchema.h"
+#include "AssetTypeCategories.h"
 #include "BlueprintCompilationManager.h"
 #include "EdGraphSchema_K2_Actions.h"
 #include "K2Node_CallParentFunction.h"
@@ -15,6 +16,7 @@
 #include "Engine/SimpleConstructionScript.h"
 #include "Kismet2/KismetEditorUtilities.h"
 #include "Animation/AnimBlueprint.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 
 #define LOCTEXT_NAMESPACE "AssetGenerator"
 
@@ -520,30 +522,34 @@ UK2Node_Event* FBlueprintGeneratorUtils::CreateCustomEventNode(UBlueprint* Bluep
 	return CustomEventNode;
 }
 
-UK2Node_FunctionResult* FBlueprintGeneratorUtils::CreateFunctionResultNode(const UK2Node_FunctionEntry* FunctionEntry, bool bAutoConnectNode) {
+/*UK2Node_FunctionResult* FBlueprintGeneratorUtils::CreateFunctionResultNode(const UK2Node_FunctionEntry* FunctionEntry, bool bAutoConnectNode) {
 	UEdGraph* Graph = FunctionEntry->GetGraph();
 	const UEdGraphSchema_K2* GraphSchema = CastChecked<UEdGraphSchema_K2>(Graph->GetSchema());
 	FGraphNodeCreator<UK2Node_FunctionResult> NodeCreator(*Graph);
 	
-	UK2Node_FunctionResult* ReturnNode = NodeCreator.CreateNode();
+	/*UK2Node_FunctionResult* ReturnNode = NodeCreator.CreateNode();
 	ReturnNode->FunctionReference = FunctionEntry->FunctionReference;
 	ReturnNode->NodePosX = FunctionEntry->NodePosX + FunctionEntry->NodeWidth + 256;
 	ReturnNode->NodePosY = FunctionEntry->NodePosY;
 	NodeCreator.Finalize();
 
 	const UFunction* FunctionSignature = FunctionEntry->FindSignatureFunction();
-	ReturnNode->CreateUserDefinedPinsForFunctionEntryExit(FunctionSignature, false);
+	ReturnNode->CreateUserDefinedPinsForFunctionEntryExit(FunctionSignature, false);#1#
 
 	//Auto-connect execution pins if we have been asked to
 	if (bAutoConnectNode) {
 		UEdGraphPin* EntryNodeExec = GraphSchema->FindExecutionPin(*FunctionEntry, EGPD_Output);
+		/*
 		UEdGraphPin* ResultNodeExec = GraphSchema->FindExecutionPin(*ReturnNode, EGPD_Input);
+		#1#
 
 		EntryNodeExec->BreakAllPinLinks(true);
+		/*
 		EntryNodeExec->MakeLinkTo(ResultNodeExec);
+	#1#
 	}
 	return ReturnNode;
-}
+}*/
 
 UK2Node_FunctionEntry* FBlueprintGeneratorUtils::CreateFunctionGraph(UBlueprint* Blueprint, const FName& FunctionName) {
 	//If we already have a function graph with the same name, return function from it
@@ -577,7 +583,7 @@ UK2Node_FunctionEntry* FBlueprintGeneratorUtils::CreateFunctionGraph(UBlueprint*
 	return FunctionEntries[0];
 }
 
-UK2Node* FBlueprintGeneratorUtils::CreateFunctionOverride(UBlueprint* Blueprint, UFunction* Function, bool bOverrideAsEvent, bool bCreateParentCall) {
+/*UK2Node* FBlueprintGeneratorUtils::CreateFunctionOverride(UBlueprint* Blueprint, UFunction* Function, bool bOverrideAsEvent, bool bCreateParentCall) {
 	const FName FunctionName = Function->GetFName();
 	UClass* FunctionOwnerClass = Function->GetOuterUClass()->GetAuthoritativeClass();
 	
@@ -598,7 +604,7 @@ UK2Node* FBlueprintGeneratorUtils::CreateFunctionOverride(UBlueprint* Blueprint,
 				return ExistingNode;
 			}
 			
-			if (ExecPin->HasAnyConnections()) {
+			/*if (ExecPin->HasAnyConnections()) {
 				//If we have connections, we want to determine all of the connected nodes and make sure none of them is marked as disabled
 				for (const UEdGraphPin* ConnectedPin : ExecPin->LinkedTo) {
 					UEdGraphNode* OwningNode = ConnectedPin->GetOwningNode();
@@ -612,7 +618,7 @@ UK2Node* FBlueprintGeneratorUtils::CreateFunctionOverride(UBlueprint* Blueprint,
 				if (bCreateParentCall) {
 					CreateParentFunctionCall(Blueprint, Function, ExistingNode, NULL);
 				}
-			}
+			}#1#
 		}
 
 		//If node exists and it's not a ghost node, we just return early
@@ -620,29 +626,31 @@ UK2Node* FBlueprintGeneratorUtils::CreateFunctionOverride(UBlueprint* Blueprint,
 			return ExistingNode;
 		}
 		
-		UK2Node_Event* Event = FEdGraphSchemaAction_K2NewNode::SpawnNode<UK2Node_Event>(EventGraph, EventGraph->GetGoodPlaceForNewNode(), EK2NewNodeFlags::None,
+		/*UK2Node_Event* Event = FEdGraphSchemaAction_K2NewNode::SpawnNode<UK2Node_Event>(EventGraph, EventGraph->GetGoodPlaceForNewNode(), EK2NewNodeFlags::None,
 			[&](UK2Node_Event* NewInstance){
         	NewInstance->EventReference.SetExternalMember(FunctionName, FunctionOwnerClass);
-        	NewInstance->bOverrideFunction = true;
-        });
+        	NewInstance->bOverrideFunction = true;#1#
+        };
 
-		if (bCreateParentCall) {
+		/*if (bCreateParentCall) {
 			CreateParentFunctionCall(Blueprint, Function, Event, NULL);
 		}
-		return Event;
+		return Event;#1#
 	}
 
 	//Otherwise create function override using separate graph
 	//Returning existing function node if we already have an override
-	if (const UEdGraph* ExistingGraph = FindObject<UEdGraph>(Blueprint, *FunctionName.ToString())) {
+	/*if (
+FName FunctionName;
+const UEdGraph* ExistingGraph = FindObject<UEdGraph>(EAssetTypeCategories::Blueprint, *FunctionName.ToString())) {
 		TArray<UK2Node_FunctionEntry*> FunctionEntries;
 		ExistingGraph->GetNodesOfClass(FunctionEntries);
 		
-		return FunctionEntries[0];
+		return FunctionEntries[0];#1#
 	}
 		
 	//Implement the function graph and spawn default nodes
-	UEdGraph* NewGraph = FBlueprintEditorUtils::CreateNewGraph(Blueprint, FunctionName, UEdGraph::StaticClass(), UEdGraphSchema_K2::StaticClass());
+	UEdGraph* NewGraph = FBlueprintEditorUtils::CreateNewGraph(EAssetTypeCategories::Blueprint, FunctionName, UEdGraph::StaticClass(), UEdGraphSchema_K2::StaticClass());
 	const UEdGraphSchema_K2* GraphSchema = CastChecked<const UEdGraphSchema_K2>(NewGraph->GetSchema());
 	
 	GraphSchema->CreateDefaultNodesForGraph(*NewGraph);
@@ -669,7 +677,7 @@ UK2Node* FBlueprintGeneratorUtils::CreateFunctionOverride(UBlueprint* Blueprint,
 		CreateParentFunctionCall(Blueprint, Function, FunctionEntry, FunctionResult);
 	}
 	return FunctionEntry;
-}
+}*/
 
 FName FBlueprintGeneratorUtils::GetFunctionNameForNode(UK2Node* Node) {
 	if (const UK2Node_Event* Event = Cast<UK2Node_Event>(Node)) {
@@ -681,7 +689,7 @@ FName FBlueprintGeneratorUtils::GetFunctionNameForNode(UK2Node* Node) {
 	return NAME_None;
 }
 
-UFunction* FBlueprintGeneratorUtils::FindFunctionInParentClassOrInterfaces(UBlueprint* Blueprint, const FName& FunctionName) {
+/*UFunction* FBlueprintGeneratorUtils::FindFunctionInParentClassOrInterfaces(UBlueprint* Blueprint, const FName& FunctionName) {
 	//Attempt to find function inside of the implemented interfaces first
 	UFunction* ResultFunction = FBlueprintEditorUtils::GetInterfaceFunction(Blueprint, FunctionName);
 
@@ -703,7 +711,7 @@ UFunction* FBlueprintGeneratorUtils::FindFunctionInParentClassOrInterfaces(UBlue
 		}
 	}
 	return ResultFunction;
-}
+}*/
 
 
 bool FBlueprintGeneratorUtils::CreateNewBlueprintFunctions(UBlueprint* Blueprint, const TArray<FDeserializedFunction>& Functions, const TFunctionRef<bool(const FDeserializedFunction& Function)>& FunctionFilter, bool bCreateFunctionOverrides) {
@@ -850,7 +858,7 @@ bool FBlueprintGeneratorUtils::CreateNewBlueprintFunctions(UBlueprint* Blueprint
 	return bChangedFunctionsOrParameters;
 }
 
-bool FBlueprintGeneratorUtils::CreateBlueprintVariablesForProperties(UBlueprint* Blueprint, const TArray<FDeserializedProperty>& Properties,
+/*bool FBlueprintGeneratorUtils::CreateBlueprintVariablesForProperties(UBlueprint* Blueprint, const TArray<FDeserializedProperty>& Properties,
                                                                      const TMap<FName, FDeserializedFunction>& Functions, const TFunctionRef<bool(const FDeserializedProperty& Property)>& PropertyFilter) {
 	TSet<FName> ObsoleteBlueprintProperties;
 	bool bChangedProperties = false;
@@ -953,7 +961,7 @@ bool FBlueprintGeneratorUtils::CreateBlueprintVariablesForProperties(UBlueprint*
 		return ObsoleteBlueprintProperties.Contains(Desc.VarName);
 	});
 	return bChangedProperties;
-}
+}*/
 
 bool FBlueprintGeneratorUtils::SetFunctionEntryParameters(UK2Node_EditablePinBase* FunctionEntry, const FDeserializedFunction& Function, bool bIsFunctionEntry) {
 	TArray<FDeserializedProperty> ParameterArray;
@@ -979,11 +987,11 @@ bool FBlueprintGeneratorUtils::SetFunctionEntryParameters(UK2Node_EditablePinBas
 		const FDeserializedProperty& Property = ParameterArray[i];
 
 		//Cleanup properties if names or pin types of one of them do not match
-		if (UserPinInfo->PinName != Property.PropertyName ||
+		/*if (UserPinInfo->PinName != Property.PropertyName ||
 			UserPinInfo->PinType != Property.GraphPinType) {
 			bNeedToDeleteExistingPins = true;
 			break;
-		}
+		}*/
 
 		//TEMPFIX: If current user pins have the invalid __WorldContext pin generated, we need to regenerate pins
 		if (UserPinInfo->PinName == TEXT("__WorldContext")) {
@@ -1006,9 +1014,9 @@ bool FBlueprintGeneratorUtils::SetFunctionEntryParameters(UK2Node_EditablePinBas
 		const FDeserializedProperty& Property = ParameterArray[i];
 
 		//Skip the pin if it represents a compiler-generated world context pin
-		if (Property.PropertyName != TEXT("__WorldContext")) {
+		/*if (Property.PropertyName != TEXT("__WorldContext")) {
 			FunctionEntry->CreateUserDefinedPin(Property.PropertyName, Property.GraphPinType, EGPD_Output);	
-		}
+		}*/
 	}
 
 	//We have changed something as long as first pin index is not the last one

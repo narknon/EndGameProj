@@ -173,7 +173,7 @@ bool FSkeletonCompareData::ApplySkeletonChanges(USkeleton* Skeleton) const {
 	}
 
 	//MAKE SURE BONE TREE HAS THE CORRECT SIZE
-	FProperty* BoneTreeProperty = USkeleton::StaticClass()->FindPropertyByName(TEXT("BoneTree"));
+	UProperty* BoneTreeProperty = USkeleton::StaticClass()->FindPropertyByName(TEXT("BoneTree"));
 	TArray<FBoneNode>* ExistingBoneTree = BoneTreeProperty->ContainerPtrToValuePtr<TArray<FBoneNode>>(Skeleton);
 	
 	if (ExistingBoneTree->Num() != BoneTree.Num()) {

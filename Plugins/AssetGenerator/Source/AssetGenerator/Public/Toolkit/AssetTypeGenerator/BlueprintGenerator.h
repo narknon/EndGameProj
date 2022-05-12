@@ -1,5 +1,7 @@
 ﻿#pragma once
 #include "CoreMinimal.h"
+#include "EndDescriptionWindow.h"
+#include "K2Node.h"
 #include "Toolkit/AssetGeneration/AssetGenerationUtil.h"
 #include "Toolkit/AssetGeneration/AssetTypeGenerator.h"
 #include "BlueprintGenerator.generated.h"
@@ -8,6 +10,7 @@ UCLASS()
 class ASSETGENERATOR_API UBlueprintGenerator : public UAssetTypeGenerator {
 GENERATED_BODY()
 protected:
+UPackage* CreatePackage(const TCHAR* in_outer);
 	virtual void CreateAssetPackage() override;
 	virtual void OnExistingPackageLoaded() override;
 

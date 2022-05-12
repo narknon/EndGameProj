@@ -150,5 +150,5 @@ public:
 	static TArray<TSubclassOf<UAssetTypeGenerator>> GetAllGenerators();
 
 	/** Finds generator capable of generating asset of the given class */
-	static TSubclassOf<UAssetTypeGenerator> FindGeneratorForClass(FName AssetClass);
+	static UClass* FindGeneratorForClass(FName AssetClass);
 };

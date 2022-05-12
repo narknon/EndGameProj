@@ -2,7 +2,6 @@
 #include "CoreMinimal.h"
 
 #include "Engine/Font.h"
-#include "Materials/MaterialLayersFunctions.h"
 #include "Toolkit/AssetGeneration/AssetTypeGenerator.h"
 #include "MaterialGenerator.generated.h"
 
@@ -26,11 +25,11 @@ struct FSimpleFontParameterValue {
 	}
 };
 
-template<typename T>
+/*template<typename T>
 struct TMaterialParameter {
 	FMaterialParameterInfo ParameterInfo;
 	T ParameterValue;
-};
+};*/
 
 template<typename T>
 struct TParameterValueChange {
@@ -41,14 +40,14 @@ struct TParameterValueChange {
 
 struct FMaterialLayoutChangeInfo {
 	//Removed Parameters
-	TArray<FMaterialParameterInfo> RemovedMaterialParameters;
+	/*TArray<FMaterialParameterInfo> RemovedMaterialParameters;*/
 
 	//Added parameters with their values
-	TArray<TMaterialParameter<float>> NewScalarParameters;
+	/*TArray<TMaterialParameter<float>> NewScalarParameters;
 	TArray<TMaterialParameter<FLinearColor>> NewVectorParameters;
 	TArray<TMaterialParameter<UTexture*>> NewTextureParameters;
 	TArray<TMaterialParameter<FSimpleFontParameterValue>> NewFontParameters;
-	TArray<TMaterialParameter<URuntimeVirtualTexture*>> NewVirtualTextureParameters;
+	TArray<TMaterialParameter<URuntimeVirtualTexture*>> NewVirtualTextureParameters;*/
 
 	//Parameter value changes
 	TArray<TParameterValueChange<float>> ScalarParameterValueChanges;
@@ -95,11 +94,11 @@ struct FMaterialLayoutChangeInfo {
 	                                         bRemovedVirtualTextureOutput(false) {}
 };
 
-struct FIndexedParameterInfo {
+/*struct FIndexedParameterInfo {
 	FMaterialParameterInfo ParameterInfo;
 	EMaterialParameterType ParameterType;
 	int32 ParameterIndex;
-};
+};*/
 
 UCLASS(MinimalAPI)
 class UMaterialGenerator : public UAssetTypeGenerator {
@@ -126,7 +125,9 @@ protected:
 	
 	static void DetectMaterialExpressionChanges(const FMaterialCachedExpressionData& OldData, const FMaterialCachedExpressionData& NewData, FMaterialLayoutChangeInfo& ChangeInfo);
 	static void DetectMaterialParameterChanges(const FMaterialCachedParameters& OldParams, const FMaterialCachedParameters& NewParams, FMaterialLayoutChangeInfo& ChangeInfo);
+	/*
 	static void AddNewParameterInfo(const FMaterialCachedParameters& Params, int32 Index, EMaterialParameterType Type, const FMaterialParameterInfo& ParameterInfo, FMaterialLayoutChangeInfo& ChangeInfo);
+	*/
 	static void CompareParameterValues(const FMaterialCachedParameters& OldParams, const FMaterialCachedParameters& NewParams, int32 IndexOld, int32 IndexNew, EMaterialParameterType Type, FName ParameterName, FMaterialLayoutChangeInfo& ChangeInfo);
 
 	static void CreateGeneratedMaterialComment(UMaterial* Material);

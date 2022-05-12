@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include "SubclassOf.h"
 #include "Toolkit/AssetGeneration/AssetTypeGenerator.h"
 #include "TextureGenerator.generated.h"
 

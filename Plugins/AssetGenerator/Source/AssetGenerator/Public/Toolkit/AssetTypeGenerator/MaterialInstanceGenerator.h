@@ -21,5 +21,5 @@ protected:
 public:
 	virtual FName GetAssetClass() override;
 private:
-	FProperty* AssetUserDataProperty;
+	UProperty* AssetUserDataProperty;
 };

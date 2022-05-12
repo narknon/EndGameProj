@@ -79,7 +79,7 @@ public:
 
 #define OVERRIDE_SERIALIZATION(Class, PropertyName, SerializerBody) \
 	Serializer->SetCustomSerializer(FAssetTypeSerializerMacros_Internals::GetStaticStructOrClass<Class>(), GET_MEMBER_NAME_CHECKED(Class, PropertyName), \
-		[=](FProperty* Property, const void* PropertyValue_Internal) { SerializerBody });
+		[=](UProperty* Property, const void* PropertyValue_Internal) { SerializerBody });
 
 #define ARRAY_PROPERTY_VALUE(ElementType) const TArray<ElementType>& PropertyValue = *(const TArray<ElementType>*) PropertyValue_Internal;
 #define ELEMENT_PROPERTY_VALUE(ElementType) const ElementType* PropertyValue = *(const ElementType*) PropertyValue_Internal;

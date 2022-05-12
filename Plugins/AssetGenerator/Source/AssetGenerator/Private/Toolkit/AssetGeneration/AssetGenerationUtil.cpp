@@ -1,4 +1,6 @@
 ﻿#include "Toolkit/AssetGeneration/AssetGenerationUtil.h"
+
+#include "EdGraphSchema_K2.h"
 #include "Dom/JsonObject.h"
 #include "Engine/MemberReference.h"
 #include "Toolkit/ObjectHierarchySerializer.h"
@@ -6,7 +8,7 @@
 
 void GetPropertyCategoryInfo(const TSharedPtr<FJsonObject> PropertyObject, FName& OutCategory, FName& OutSubCategory, UObject*& OutSubCategoryObject, bool& bOutIsWeakPointer, class UObjectHierarchySerializer* ObjectSerializer);
 
-bool HasAllPropertyFlags(EPropertyFlags PropertyFlags, EPropertyFlags FlagsToCheck) {
+bool HasAllPropertyFlags(uint64 PropertyFlags, uint64 FlagsToCheck) {
 	return (PropertyFlags & FlagsToCheck) == FlagsToCheck;
 }
 
@@ -45,18 +47,18 @@ bool FAssetGenerationUtil::PopulateStructVariable(const TSharedPtr<FJsonObject>&
 	OutStructVariable.ContainerType = VariablePinType.ContainerType;
 
 	//Set flags that can be deduced from compiled property flags
-	const EPropertyFlags PropertyFlags = (EPropertyFlags) FCString::Atoi64(*PropertyObject->GetStringField(TEXT("PropertyFlags")));
-	OutStructVariable.bEnableSaveGame = HasAllPropertyFlags(PropertyFlags, CPF_SaveGame);
-	OutStructVariable.bDontEditOnInstance = HasAllPropertyFlags(PropertyFlags, CPF_DisableEditOnInstance);
+	const uint64 PropertyFlags = (uint64) FCString::Atoi64(*PropertyObject->GetStringField(TEXT("PropertyFlags")));
+	/*OutStructVariable.bEnableSaveGame = HasAllPropertyFlags(PropertyFlags, CPF_SaveGame);
+	OutStructVariable.bDontEditOnInstance = HasAllPropertyFlags(PropertyFlags, CPF_DisableEditOnInstance);*/
 	
 	return true;
 }
 
-void FAssetGenerationUtil::GetPropertyDependencies(const TSharedPtr<FJsonObject> PropertyObject, UObjectHierarchySerializer* ObjectSerializer, TArray<FString>& OutDependencies) {
+/*void FAssetGenerationUtil::GetPropertyDependencies(const TSharedPtr<FJsonObject> PropertyObject, UObjectHierarchySerializer* ObjectSerializer, TArray<FString>& OutDependencies) {
 	const FString ObjectClass = PropertyObject->GetStringField(TEXT("ObjectClass"));
-	FFieldClass* FieldClass = FFieldClass::GetNameToFieldClassMap().FindChecked(*ObjectClass);
+	FFieldRemapInfo* FieldClass = FFieldRemapInfo::GetNameToFieldClassMap().FindChecked(*ObjectClass);
 	
-	if (FieldClass->IsChildOf(FMapProperty::StaticClass())) {
+	if (FieldClass->IsChildOf(UMapProperty::StaticClass())) {
 
 		const TSharedPtr<FJsonObject> ValueProperty = PropertyObject->GetObjectField(TEXT("ValueProp"));
 		const TSharedPtr<FJsonObject> KeyProperty = PropertyObject->GetObjectField(TEXT("KeyProp"));
@@ -97,13 +99,13 @@ void FAssetGenerationUtil::GetPropertyDependencies(const TSharedPtr<FJsonObject>
 			ObjectSerializer->CollectObjectPackages(ObjectClassIndex, OutDependencies);
 		}
 	}
-}
+}*/
 
 FDeserializedProperty::FDeserializedProperty(const TSharedPtr<FJsonObject>& Object, UObjectHierarchySerializer* ObjectSerializer) {
 	check(Object->GetStringField(TEXT("FieldKind")) == TEXT("Property"));
 	
 	this->PropertyName = FName(*Object->GetStringField(TEXT("ObjectName")));
-	this->PropertyFlags = (EPropertyFlags) FCString::Atoi64(*Object->GetStringField(TEXT("PropertyFlags")));
+	this->PropertyFlags = (uint64) FCString::Atoi64(*Object->GetStringField(TEXT("PropertyFlags")));
 	this->ArrayDim = Object->GetIntegerField(TEXT("ArrayDim"));
 	
 	this->RepNotifyFunc = FName(*Object->GetStringField(TEXT("RepNotifyFunc")));
@@ -158,18 +160,20 @@ FDeserializedFunction::FDeserializedFunction(const TSharedPtr<FJsonObject>& Obje
 	this->bIsDelegateSignatureFunction = FunctionNameString.EndsWith(HEADER_GENERATED_DELEGATE_SIGNATURE_SUFFIX);
 }
 
-void FAssetGenerationUtil::ConvertPropertyObjectToGraphPinType(const TSharedPtr<FJsonObject> PropertyObject, FEdGraphPinType& OutPinType, class UObjectHierarchySerializer* ObjectSerializer) {
+/*void FAssetGenerationUtil::ConvertPropertyObjectToGraphPinType(const TSharedPtr<FJsonObject> PropertyObject, FEdGraphPinType& OutPinType, class UObjectHierarchySerializer* ObjectSerializer) {
 	OutPinType.PinSubCategory = NAME_None;
 	const FString ObjectClass = PropertyObject->GetStringField(TEXT("ObjectClass"));
 	const FString ObjectName = PropertyObject->GetStringField(TEXT("ObjectName"));
-	const EPropertyFlags PropertyFlags = (EPropertyFlags) FCString::Atoi64(*PropertyObject->GetStringField(TEXT("PropertyFlags")));
+	const uint64 PropertyFlags = (uint64) FCString::Atoi64(*PropertyObject->GetStringField(TEXT("PropertyFlags")));
 	
+	/*
 	FFieldClass* FieldClass = FFieldClass::GetNameToFieldClassMap().FindChecked(*ObjectClass);
+	#1#
 	TSharedPtr<FJsonObject> ResultProperty = PropertyObject;
 	
 	OutPinType.ContainerType = EPinContainerType::None;
 	
-	if (FieldClass->IsChildOf(FMapProperty::StaticClass())) {
+	if (FieldClass->IsChildOf(UMapProperty::StaticClass())) {
 
 		const TSharedPtr<FJsonObject> ValueProperty = PropertyObject->GetObjectField(TEXT("ValueProp"));
 		ResultProperty = PropertyObject->GetObjectField(TEXT("KeyProp"));
@@ -178,17 +182,19 @@ void FAssetGenerationUtil::ConvertPropertyObjectToGraphPinType(const TSharedPtr<
 		bool bIsWeakPtr = false;
 		FEdGraphTerminalType& PinValueType = OutPinType.PinValueType;
 		
+		/*
 		GetPropertyCategoryInfo(ValueProperty, PinValueType.TerminalCategory, PinValueType.TerminalSubCategory, SubCategoryObject, bIsWeakPtr, ObjectSerializer);
+		#1#
 		PinValueType.TerminalSubCategoryObject = SubCategoryObject;
 		OutPinType.ContainerType = EPinContainerType::Map;
 
-	} else if (FieldClass->IsChildOf(FSetProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(USetProperty::StaticClass())) {
 		
 		const TSharedPtr<FJsonObject> ElementType = PropertyObject->GetObjectField(TEXT("ElementType"));
 		ResultProperty = ElementType;
 		OutPinType.ContainerType = EPinContainerType::Set;
 		
-	} else if (FieldClass->IsChildOf(FArrayProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UArrayProperty::StaticClass())) {
 
 		const TSharedPtr<FJsonObject> InnerProperty = PropertyObject->GetObjectField(TEXT("Inner"));
 		ResultProperty = InnerProperty;
@@ -201,48 +207,50 @@ void FAssetGenerationUtil::ConvertPropertyObjectToGraphPinType(const TSharedPtr<
 
 	//We actually do not want to set SignatureFunction on delegates, they need special handling in blueprints
 	//because that function in fact will not even exist without delegate in first place
-	if (FieldClass->IsChildOf(FMulticastDelegateProperty::StaticClass())) {
+	if (FieldClass->IsChildOf(UMulticastDelegateProperty::StaticClass())) {
 		OutPinType.PinCategory = UEdGraphSchema_K2::PC_MCDelegate;
 		
-	} else if (FieldClass->IsChildOf(FDelegateProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UDelegateProperty::StaticClass())) {
 		OutPinType.PinCategory = UEdGraphSchema_K2::PC_Delegate;
 		
 	} else {
 		UObject* SubCategoryObject = nullptr;
 		bool bIsWeakPointer = false;
+		/*
 		GetPropertyCategoryInfo(ResultProperty, OutPinType.PinCategory, OutPinType.PinSubCategory, SubCategoryObject, bIsWeakPointer, ObjectSerializer);
+		#1#
 		OutPinType.bIsWeakPointer = bIsWeakPointer;
 		OutPinType.PinSubCategoryObject = SubCategoryObject;
 	}
-}
+}*/
 
-void GetPropertyCategoryInfo(const TSharedPtr<FJsonObject> PropertyObject, FName& OutCategory, FName& OutSubCategory, UObject*& OutSubCategoryObject, bool& bOutIsWeakPointer, class UObjectHierarchySerializer* ObjectSerializer) {
+/*void GetPropertyCategoryInfo(const TSharedPtr<FJsonObject> PropertyObject, FName& OutCategory, FName& OutSubCategory, UObject*& OutSubCategoryObject, bool& bOutIsWeakPointer, class UObjectHierarchySerializer* ObjectSerializer) {
 	const FString ObjectClass = PropertyObject->GetStringField(TEXT("ObjectClass"));
 	const FString ObjectName = PropertyObject->GetStringField(TEXT("ObjectName"));
-	FFieldClass* FieldClass = FFieldClass::GetNameToFieldClassMap().FindChecked(*ObjectClass);
+	FFieldRemapInfo* FieldClass = FFieldRemapInfo::GetNameToFieldClassMap().FindChecked(*ObjectClass);
 	
-	if (FieldClass->IsChildOf(FInterfaceProperty::StaticClass())) {
+	if (FieldClass->IsChildOf(UInterfaceProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_Interface;
 		const int32 InterfaceClassIndex = PropertyObject->GetIntegerField(TEXT("InterfaceClass"));
 		OutSubCategoryObject = ObjectSerializer->DeserializeObject(InterfaceClassIndex);
 		
-	} else if (FieldClass->IsChildOf(FClassProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UClassProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_Class;
 		const int32 MetaClassIndex = PropertyObject->GetIntegerField(TEXT("MetaClass"));
 		OutSubCategoryObject = ObjectSerializer->DeserializeObject(MetaClassIndex);
 		
-	} else if (FieldClass->IsChildOf(FSoftClassProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(USoftClassProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_SoftClass;
 		const int32 MetaClassIndex = PropertyObject->GetIntegerField(TEXT("MetaClass"));
 		OutSubCategoryObject = ObjectSerializer->DeserializeObject(MetaClassIndex);
 		
-	} else if (FieldClass->IsChildOf(FObjectPropertyBase::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UObjectPropertyBase::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_Object;
 		const int32 ObjectClassIndex = PropertyObject->GetIntegerField(TEXT("PropertyClass"));
 		OutSubCategoryObject = ObjectSerializer->DeserializeObject(ObjectClassIndex);
-		bOutIsWeakPointer = FieldClass->IsChildOf(FWeakObjectProperty::StaticClass());
+		bOutIsWeakPointer = FieldClass->IsChildOf(UWeakObjectProperty::StaticClass());
 		
-	} else if (FieldClass->IsChildOf(FStructProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UStructProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_Struct;
 		const int32 StructObjectIndex = PropertyObject->GetIntegerField(TEXT("Struct"));
 		UScriptStruct* Struct = CastChecked<UScriptStruct>(ObjectSerializer->DeserializeObject(StructObjectIndex));
@@ -256,44 +264,44 @@ void GetPropertyCategoryInfo(const TSharedPtr<FJsonObject> PropertyObject, FName
 			}
 		}
 		
-	} else if (FieldClass->IsChildOf(FFloatProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UFloatProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_Float;
 
-	} else if (FieldClass->IsChildOf(FInt64Property::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UInt64Property::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_Int64;
 		
-	} else if (FieldClass->IsChildOf(FIntProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UIntProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_Int;
 		
-	} else if (FieldClass->IsChildOf(FByteProperty::StaticClass())){
+	} else if (FieldClass->IsChildOf(UByteProperty::StaticClass())){
 		OutCategory = UEdGraphSchema_K2::PC_Byte;
 		const int32 EnumObjectIndex = PropertyObject->GetIntegerField(TEXT("Enum"));
 		OutSubCategoryObject = ObjectSerializer->DeserializeObject(EnumObjectIndex);
 		
-	} else if (FieldClass->IsChildOf(FEnumProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UEnumProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_Byte;
 		const int32 EnumObjectIndex = PropertyObject->GetIntegerField(TEXT("Enum"));
 		OutSubCategoryObject = ObjectSerializer->DeserializeObject(EnumObjectIndex);
 		
-	} else if (FieldClass->IsChildOf(FNameProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UNameProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_Name;
 		
-	} else if (FieldClass->IsChildOf(FBoolProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UBoolProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_Boolean;
 		
-	} else if (FieldClass->IsChildOf(FStrProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UStrProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_String;
 		
-	} else if (FieldClass->IsChildOf(FTextProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UTextProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_Text;
 
-	} else if (FieldClass->IsChildOf(FFieldPathProperty::StaticClass())) {
+	} else if (FieldClass->IsChildOf(UFieldPathProperty::StaticClass())) {
 		OutCategory = UEdGraphSchema_K2::PC_FieldPath;
 		
 	} else {
 		OutCategory = TEXT("bad_type");
 	}
-}
+}*/
 
 bool FAssetGenerationUtil::AreStructDescriptionsEqual(const FStructVariableDescription& A, const FStructVariableDescription& B) {
 	return A.VarName == B.VarName &&
@@ -304,15 +312,15 @@ bool FAssetGenerationUtil::AreStructDescriptionsEqual(const FStructVariableDescr
         A.SubCategoryObject == B.SubCategoryObject &&
         A.PinValueType == B.PinValueType &&
         A.ContainerType == B.ContainerType &&
-        A.bDontEditOnInstance == B.bDontEditOnInstance &&
-        A.bEnableSaveGame == B.bEnableSaveGame &&
+        /*A.bDontEditOnInstance == B.bDontEditOnInstance &&
+        A.bEnableSaveGame == B.bEnableSaveGame &&*/
         A.bEnable3dWidget == B.bEnable3dWidget &&
         A.bEnableMultiLineText == B.bEnableMultiLineText &&
         A.ToolTip == B.ToolTip;
 }
 
 bool FAssetGenerationUtil::IsFunctionSignatureRelevantProperty(const TSharedPtr<FJsonObject>& PropertyObject) {
-	EPropertyFlags PropertyFlags = (EPropertyFlags) FCString::Atoi64(*PropertyObject->GetStringField(TEXT("PropertyFlags")));
+	uint64 PropertyFlags = (uint64) FCString::Atoi64(*PropertyObject->GetStringField(TEXT("PropertyFlags")));
 	return (PropertyFlags & (CPF_Parm | CPF_OutParm | CPF_ReturnParm)) != 0;
 }
 

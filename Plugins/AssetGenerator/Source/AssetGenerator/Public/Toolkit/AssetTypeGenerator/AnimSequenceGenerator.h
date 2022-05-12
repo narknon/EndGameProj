@@ -8,6 +8,7 @@ UCLASS(MinimalAPI)
 class UAnimSequenceGenerator : public UAssetTypeGenerator {
 	GENERATED_BODY()
 protected:
+	UPackage* CreatePackage(const TCHAR* in_outer);
 	virtual void CreateAssetPackage() override;
 	virtual void OnExistingPackageLoaded() override;
 	
@@ -16,6 +17,7 @@ protected:
 	
 	UAnimSequence* ImportAnimation(UPackage* Package, const FName& AssetName, const EObjectFlags ObjectFlags);
 	void ReimportAnimationFromSource(UAnimSequence* Asset);
+	FString LexToString(const FMD5Hash& fmd5_hash) const;
 	bool IsAnimationSourceUpToDate(UAnimSequence* Asset) const;
 
 	void SetupFbxImportSettings(class UFbxImportUI* ImportUI) const;

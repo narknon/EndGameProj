@@ -36,7 +36,7 @@ UObject* DeserializeObjectRef(const FString& ObjectPath, UClass* SelfScope) {
 	return LoadedObject;
 }
 
-FEdGraphPinType FPropertyTypeHelper::DeserializeGraphPinType(const TSharedRef<FJsonObject>& PinJson, UClass* SelfScope) {
+FEdGraphPinType UPropertyTypeHelper::DeserializeGraphPinType(const TSharedRef<FJsonObject>& PinJson, UClass* SelfScope) {
 
 	FEdGraphPinType GraphPinType;
 	GraphPinType.PinCategory = *PinJson->GetStringField(TEXT("PinCategory"));
@@ -94,7 +94,7 @@ FString SerializeObjectRef(UObject* Object, UClass* SelfScope) {
 	return SelfScope && Object == SelfScope ? TEXT("<SELF>") : Object->GetPathName();
 }
 
-TSharedRef<FJsonObject> FPropertyTypeHelper::SerializeGraphPinType(const FEdGraphPinType& GraphPinType, UClass* SelfScope) {
+TSharedRef<FJsonObject> UPropertyTypeHelper::SerializeGraphPinType(const FEdGraphPinType& GraphPinType, UClass* SelfScope) {
 
 	TSharedRef<FJsonObject> TypeEntry = MakeShareable(new FJsonObject());
 	TypeEntry->SetStringField(TEXT("PinCategory"), GraphPinType.PinCategory.ToString());
@@ -149,9 +149,9 @@ TSharedRef<FJsonObject> FPropertyTypeHelper::SerializeGraphPinType(const FEdGrap
 	return TypeEntry;
 }
 
-bool GetPropertyCategoryInfo(const FProperty* TestProperty, FName& OutCategory, FName& OutSubCategory, UObject*& OutSubCategoryObject, bool& bOutIsWeakPointer);
+bool GetPropertyCategoryInfo(const UProperty* TestProperty, FName& OutCategory, FName& OutSubCategory, UObject*& OutSubCategoryObject, bool& bOutIsWeakPointer);
 
-bool FPropertyTypeHelper::ConvertPropertyToPinType(const FProperty* Property, /*out*/ FEdGraphPinType& TypeOut) {
+bool UPropertyTypeHelper::ConvertPropertyToPinType(const UProperty* Property, /*out*/ FEdGraphPinType& TypeOut) {
 	if (Property == nullptr) {
 		TypeOut.PinCategory = TEXT("bad_type");
 		return false;
@@ -163,7 +163,7 @@ bool FPropertyTypeHelper::ConvertPropertyToPinType(const FProperty* Property, /*
 	const FMapProperty* MapProperty = CastField<const FMapProperty>(Property);
 	const FSetProperty* SetProperty = CastField<const FSetProperty>(Property);
 	const FArrayProperty* ArrayProperty = CastField<const FArrayProperty>(Property);
-	const FProperty* TestProperty = Property;
+	const UProperty* TestProperty = Property;
 	if (MapProperty) {
 		TestProperty = MapProperty->KeyProp;
 
@@ -209,7 +209,7 @@ bool FPropertyTypeHelper::ConvertPropertyToPinType(const FProperty* Property, /*
 	return true;
 }
 
-bool GetPropertyCategoryInfo(const FProperty* TestProperty, FName& OutCategory, FName& OutSubCategory, UObject*& OutSubCategoryObject, bool& bOutIsWeakPointer) {
+bool GetPropertyCategoryInfo(const UProperty* TestProperty, FName& OutCategory, FName& OutSubCategory, UObject*& OutSubCategoryObject, bool& bOutIsWeakPointer) {
 	if (const FInterfaceProperty* InterfaceProperty = CastField<const FInterfaceProperty>(TestProperty)) {
 		OutCategory = PC_Interface;
 		OutSubCategoryObject = InterfaceProperty->InterfaceClass;

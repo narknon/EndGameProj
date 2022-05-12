@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Engine/SkeletalMesh.h"
 #include "Toolkit/AssetGeneration/AssetTypeGenerator.h"
 #include "SkeletalMeshGenerator.generated.h"
 

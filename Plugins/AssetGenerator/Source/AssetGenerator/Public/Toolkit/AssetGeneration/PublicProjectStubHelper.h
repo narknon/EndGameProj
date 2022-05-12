@@ -1,10 +1,13 @@
 ﻿#pragma once
 #include "CoreMinimal.h"
+#include "SecureHash.h"
+#include "Animation/Skeleton.h"
 
 class ASSETGENERATOR_API FStubFileInfo {
 	FString FullFilePath;
 	FString FileHash;
 public:
+	const wchar_t* LexToString(const FMD5Hash& fmd5_hash);
 	FStubFileInfo(const FString& FileName);
 
 	FORCEINLINE FString GetFullFilePath() const { return FullFilePath; }

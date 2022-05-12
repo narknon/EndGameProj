@@ -115,7 +115,7 @@ void UUserDefinedStructGenerator::FinalizeAssetCDO() {
 	//Record read default values into the map, serializing them as exported text
 	TMap<FString, FString> SerializedStructDefaults;
 	
-	for (FProperty* Property = Struct->PropertyLink; Property; Property = Property->PropertyLinkNext) {
+	for (UProperty* Property = Struct->PropertyLink; Property; Property = Property->PropertyLinkNext) {
 		FString ExportedPropertyText;
 		const void* PropertyValue = Property->ContainerPtrToValuePtr<void>(InstanceMemory);
 		

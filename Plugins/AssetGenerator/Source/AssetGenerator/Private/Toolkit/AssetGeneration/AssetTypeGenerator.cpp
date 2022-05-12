@@ -1,5 +1,6 @@
 #include "Toolkit/AssetGeneration/AssetTypeGenerator.h"
 #include "FileHelpers.h"
+#include "UObjectHash.h"
 #include "Toolkit/ObjectHierarchySerializer.h"
 #include "Toolkit/PropertySerializer.h"
 #include "Toolkit/AssetGeneration/AssetGenerationUtil.h"
@@ -161,7 +162,7 @@ FGeneratorStateAdvanceResult UAssetTypeGenerator::AdvanceGenerationState() {
 		TArray<UPackage*> PackagesToSave;
 		PackagesToSave.Add(AssetPackage);
 		GetAdditionalPackagesToSave(PackagesToSave);
-		UEditorLoadingAndSavingUtils::SavePackages(PackagesToSave, false);
+		UEditorLoadingAndSavingUtils::SaveDirtyPackages(true, true, false);
 		
 		this->bAssetChanged = false;
 		this->bHasAssetEverBeenChanged = true;
@@ -268,7 +269,7 @@ FAssetTypeGeneratorRegistry::FAssetTypeGeneratorRegistry() {
 	}
 }
 
-TSubclassOf<UAssetTypeGenerator> UAssetTypeGenerator::FindGeneratorForClass(const FName AssetClass) {
+UClass* UAssetTypeGenerator::FindGeneratorForClass(const FName AssetClass) {
 	const TWeakObjectPtr<UClass>* Class = FAssetTypeGeneratorRegistry::Get().Generators.Find(AssetClass);
 	return Class ? (*Class).Get() : NULL;
 }

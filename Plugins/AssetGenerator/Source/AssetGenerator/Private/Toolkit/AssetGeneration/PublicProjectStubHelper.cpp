@@ -1,10 +1,19 @@
 ﻿#include "Toolkit/AssetGeneration/PublicProjectStubHelper.h"
+
+#include "GenericPlatformFile.h"
+#include "PlatformFilemanager.h"
+#include "SecureHash.h"
 #include "Interfaces/IPluginManager.h"
 
 FStubFileInfo FPublicProjectStubHelper::EditorCube(TEXT("EditorCube.fbx"));
 FStubFileInfo FPublicProjectStubHelper::DefaultTexture(TEXT("DefaultTexture.png"));
 FStubFileInfo FPublicProjectStubHelper::DefaultSkeletalMesh(TEXT("DefaultSkeletalMesh.fbx"));
 TStubAssetInfo<USkeleton> FPublicProjectStubHelper::DefaultSkeletalMeshSkeleton(TEXT("/Engine/EditorMeshes/SkeletalMesh/DefaultSkeletalMesh_Skeleton"));
+
+const wchar_t* FStubFileInfo::LexToString(const FMD5Hash& fmd5_hash)
+{
+	return nullptr;
+}
 
 FStubFileInfo::FStubFileInfo(const FString& FileName) {
 	this->FullFilePath = FPublicProjectStubHelper::ResolveStubFilePath(FileName);

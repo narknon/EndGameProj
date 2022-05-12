@@ -81,9 +81,9 @@ void FAssetHelper::SerializeStruct(TSharedPtr<FJsonObject> OutObject, UStruct* S
     while (ChildField) {
         const TSharedPtr<FJsonObject> FieldObject = MakeShareable(new FJsonObject());
 
-        if (ChildField->IsA<FProperty>()) {
+        if (ChildField->IsA<UProperty>()) {
             FieldObject->SetStringField(TEXT("FieldKind"), TEXT("Property"));
-            SerializeProperty(FieldObject, Cast<FProperty>(ChildField), ObjectHierarchySerializer);
+            SerializeProperty(FieldObject, Cast<UProperty>(ChildField), ObjectHierarchySerializer);
         } else {
             checkf(0, TEXT("Unsupported ChildProperties object type: %s"), *ChildField->GetClass()->GetName());
         }
@@ -111,7 +111,7 @@ void FAssetHelper::SerializeScriptStruct(TSharedPtr<FJsonObject> OutObject, UScr
     OutObject->SetNumberField(TEXT("StructFlags"), Struct->StructFlags);
 }
 
-void FAssetHelper::SerializeProperty(TSharedPtr<FJsonObject> OutObject, FProperty* Property, UObjectHierarchySerializer* ObjectHierarchySerializer) {
+void FAssetHelper::SerializeProperty(TSharedPtr<FJsonObject> OutObject, UProperty* Property, UObjectHierarchySerializer* ObjectHierarchySerializer) {
     OutObject->SetStringField(TEXT("ObjectClass"), Property->GetClass()->GetName());
     OutObject->SetStringField(TEXT("ObjectName"), Property->GetName());
     

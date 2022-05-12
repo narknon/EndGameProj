@@ -272,7 +272,7 @@ TSharedPtr<FKismetCompiledStatement> FKismetBytecodeTransformer::ProcessStatemen
         //Deserialize type from instruction data directly, because figuring out persistent frame layout is hard
         //from this point by variable name inside it. It's much easier just to read pre-recorded information
         Result->LHS = MakeShareable(new FKismetTerminal());
-        Result->LHS->Type = FPropertyTypeHelper::DeserializeGraphPinType(PropertyType.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
+        Result->LHS->Type = UPropertyTypeHelper::DeserializeGraphPinType(PropertyType.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
         Result->LHS->AssociatedVarProperty = PropertyName;
 
         Result->RHS.Add(ProcessExpression(Expression));
@@ -321,8 +321,8 @@ TSharedPtr<FKismetCompiledStatement> FKismetBytecodeTransformer::ProcessStatemen
         TArray<TSharedPtr<FJsonValue>> Parameters = Statement->GetArrayField(TEXT("Parameters"));
 
         int32 NumParams = 0;
-        for (TFieldIterator<FProperty> PropIt(Result->FunctionToCall); PropIt && (PropIt->PropertyFlags & CPF_Parm); ++PropIt) {
-           FProperty* FuncParamProperty = *PropIt;
+        for (TFieldIterator<UProperty> PropIt(Result->FunctionToCall); PropIt && (PropIt->PropertyFlags & CPF_Parm); ++PropIt) {
+           UProperty* FuncParamProperty = *PropIt;
 
             //Skip return values because they are handled in a special way when we happened to be an expression in EX_Let statement
             if (!FuncParamProperty->HasAnyPropertyFlags(CPF_ReturnParm)) {
@@ -477,7 +477,7 @@ TSharedPtr<FKismetTerminal> FKismetBytecodeTransformer::ProcessExpression(TShare
         ContextTerminal->ContextType = FKismetTerminal::EContextType_Struct;
         
         TSharedPtr<FKismetTerminal> StructMemberTerminal = MakeShareable(new FKismetTerminal());
-        StructMemberTerminal->Type = FPropertyTypeHelper::DeserializeGraphPinType(PropertyType.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
+        StructMemberTerminal->Type = UPropertyTypeHelper::DeserializeGraphPinType(PropertyType.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
         StructMemberTerminal->AssociatedVarProperty = PropertyName;
 
         StructMemberTerminal->Context = ContextTerminal;
@@ -506,7 +506,7 @@ TSharedPtr<FKismetTerminal> FKismetBytecodeTransformer::ProcessExpression(TShare
 
         //We can resolve type of variable by simply looking up through properties associated with UFunction, but it's much easier to read pre-recorded information
         TSharedPtr<FKismetTerminal> VariableTerminal = MakeShareable(new FKismetTerminal());
-        VariableTerminal->Type = FPropertyTypeHelper::DeserializeGraphPinType(VariableType.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
+        VariableTerminal->Type = UPropertyTypeHelper::DeserializeGraphPinType(VariableType.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
         VariableTerminal->AssociatedVarProperty = VariableName;
 
         if (InstructionName == TEXT("DefaultVariable")) {
@@ -720,7 +720,7 @@ TSharedPtr<FKismetTerminal> FKismetBytecodeTransformer::ProcessLiteralExpression
         for (const TPair<FString, TSharedPtr<FJsonValue>>& Pair : Properties->Values) {
             const TArray<TSharedPtr<FJsonValue>> PropertyValueArray = Pair.Value->AsArray();
             const FString& PropertyName = Pair.Key;
-            FProperty* Property = ScriptStruct->FindPropertyByName(*PropertyName);
+            UProperty* Property = ScriptStruct->FindPropertyByName(*PropertyName);
             checkf(Property, TEXT("Cannot resolve struct property %s in %s"), *PropertyName, *ScriptStruct->GetPathName());
 
             for (int32 ArrayIter = 0; ArrayIter < Property->ArrayDim; ++ArrayIter) {
@@ -843,7 +843,7 @@ TSharedPtr<FKismetTerminal> FKismetBytecodeTransformer::ProcessLiteralExpression
         const TArray<TSharedPtr<FJsonValue>> Values = Expression->GetArrayField(TEXT("Values"));
 
         //Set array type from recorded instruction, container type is either a set or an array (depending on the opcode)
-        FEdGraphPinType ArrayPropertyType = FPropertyTypeHelper::DeserializeGraphPinType(InnerPropertyObject.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
+        FEdGraphPinType ArrayPropertyType = UPropertyTypeHelper::DeserializeGraphPinType(InnerPropertyObject.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
         if (InstructionName == TEXT("ArrayConst")) {
             ArrayPropertyType.ContainerType = EPinContainerType::Array;
         } else {
@@ -879,8 +879,8 @@ TSharedPtr<FKismetTerminal> FKismetBytecodeTransformer::ProcessLiteralExpression
         const TArray<TSharedPtr<FJsonValue>> Values = Expression->GetArrayField(TEXT("Values"));
 
         //Set map type from two recorded key and value pin types
-        FEdGraphPinType ValuePropertyType = FPropertyTypeHelper::DeserializeGraphPinType(ValuePropertyObject.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
-        FEdGraphPinType KeyPropertyType = FPropertyTypeHelper::DeserializeGraphPinType(KeyPropertyObject.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
+        FEdGraphPinType ValuePropertyType = UPropertyTypeHelper::DeserializeGraphPinType(ValuePropertyObject.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
+        FEdGraphPinType KeyPropertyType = UPropertyTypeHelper::DeserializeGraphPinType(KeyPropertyObject.ToSharedRef(), OwnerBlueprint->SkeletonGeneratedClass);
         
         FEdGraphPinType MapPropertyType = KeyPropertyType;
         MapPropertyType.PinValueType = FEdGraphTerminalType::FromPinType(ValuePropertyType);
@@ -1012,8 +1012,8 @@ TSharedPtr<FKismetCompiledStatement> FKismetBytecodeTransformer::ProcessFunction
     int32 NumParams = 0;
     int32 LatentInfoParameterIndex = -1;
     
-    for (TFieldIterator<FProperty> PropIt(Result->FunctionToCall); PropIt && (PropIt->PropertyFlags & CPF_Parm); ++PropIt) {
-        FProperty* FuncParamProperty = *PropIt;
+    for (TFieldIterator<UProperty> PropIt(Result->FunctionToCall); PropIt && (PropIt->PropertyFlags & CPF_Parm); ++PropIt) {
+        UProperty* FuncParamProperty = *PropIt;
 
         //Skip return values because they are handled in a special way when we happened to be an expression in EX_Let statement
         if (!FuncParamProperty->HasAnyPropertyFlags(CPF_ReturnParm)) {
@@ -1164,11 +1164,11 @@ TSharedPtr<FKismetTerminal> FKismetBytecodeTransformer::ProcessFunctionParameter
         //so we can retrieve return value type only after performing UFunction resolution of virtual function
         //We *could* do it during the bytecode disassembly, but it would be more difficult provided
         //that Kismet VM bytecode is much more flexible than compiled statement representation
-        FProperty* ReturnProperty = InlineFunctionCall->FunctionToCall->GetReturnProperty();
+        UProperty* ReturnProperty = InlineFunctionCall->FunctionToCall->GetReturnProperty();
         check(ReturnProperty);
 
         ParameterTerminal = MakeShareable(new FKismetTerminal());
-        FPropertyTypeHelper::ConvertPropertyToPinType(ReturnProperty, ParameterTerminal->Type);
+        UPropertyTypeHelper::ConvertPropertyToPinType(ReturnProperty, ParameterTerminal->Type);
         ParameterTerminal->InlineGeneratedParameter = InlineFunctionCall;
     }
     else {
