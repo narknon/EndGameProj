@@ -39,6 +39,8 @@ public class EndGame : ModuleRules
 			"GameplayTags",
             "GameplayTasks",
             "InputCore",
+			"Json",
+			"JsonUtilities",
 			"KBDRt",
 			"KineDriverEd",
 			"KineDriverRt",
