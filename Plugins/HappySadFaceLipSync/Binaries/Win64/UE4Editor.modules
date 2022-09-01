@@ -1,0 +1,8 @@
+{
+	"BuildId": "0e4ea553-6c8a-4e0f-a9e7-71746cd4b6ff",
+	"Modules": 
+	{
+		"HSFLipSyncEditor": "UE4Editor-HSFLipSyncEditor.dll",
+		"HSFLipSyncRuntime": "UE4Editor-HSFLipSyncRuntime.dll"
+	}
+}
