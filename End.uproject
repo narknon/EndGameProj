@@ -31,10 +31,6 @@
 	],
 	"Plugins": [
 		{
-			"Name": "MacGraphicsSwitching",
-			"Enabled": false
-		},
-		{
 			"Name": "IOSDeviceProfileSelector",
 			"Enabled": false
 		},
@@ -112,11 +108,17 @@
 		},
 		{
 			"Name": "UdpMessaging",
-			"Enabled": false
+			"Enabled": true,
+			"WhitelistTargets": [
+				"Editor"
+			]
 		},
 		{
 			"Name": "TcpMessaging",
-			"Enabled": false
+			"Enabled": true,
+			"WhitelistTargets": [
+				"Editor"
+			]
 		},
 		{
 			"Name": "CharacterAI",
@@ -124,27 +126,27 @@
 		},
 		{
 			"Name": "WebMMedia",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "OnlineSubsystemEOS",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "OnlineSubsystemSteam",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "OSDKCore",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "OSDKMembership",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "BugSubmitHelper",
-			"Enabled": false
+			"Enabled": true
 		}
 	],
 	"TargetPlatforms": [
