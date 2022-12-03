@@ -7,10 +7,10 @@ UCLASS(Blueprintable, CollapseCategories, MinimalAPI)
 class USQEX_AnimNotify_Bonamik_SpeedRate : public UAnimNotify {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_SpeedRate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Time;
     
     USQEX_AnimNotify_Bonamik_SpeedRate();

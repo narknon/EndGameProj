@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBikeLaserPointerCharacterType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBikeLaserPointerCharacterType : uint8 {
     Vehicle,
     MainRider,

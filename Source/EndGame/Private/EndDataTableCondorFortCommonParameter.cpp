@@ -1,6 +1,6 @@
 #include "EndDataTableCondorFortCommonParameter.h"
 
 FEndDataTableCondorFortCommonParameter::FEndDataTableCondorFortCommonParameter() {
-    this->ParamFloat = 1;
+    this->ParamFloat = 0.00f;
 }
 

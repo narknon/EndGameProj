@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCrossSaveJob.generated.h"
 
-UENUM()
-enum class EEndCrossSaveJob {
+UENUM(BlueprintType)
+enum class EEndCrossSaveJob : uint8 {
     None,
     Read,
     Upload,

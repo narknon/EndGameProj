@@ -2,6 +2,6 @@
 
 FBikeTrikeRandomIdleGestureParam::FBikeTrikeRandomIdleGestureParam() {
     this->TargetCharacterType = EBikeAllyCharacterType::Default;
-    this->IntervalTime = 1;
+    this->IntervalTime = 0.00f;
 }
 

@@ -1,7 +1,7 @@
 #include "EndEmissiveControlComponent.h"
 
 UEndEmissiveControlComponent::UEndEmissiveControlComponent() {
-    this->Intensity = 1;
-    this->Temperature = 1;
+    this->Intensity = 0.00f;
+    this->Temperature = 0.00f;
 }
 

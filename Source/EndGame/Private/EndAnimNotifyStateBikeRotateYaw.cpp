@@ -1,12 +1,12 @@
 #include "EndAnimNotifyStateBikeRotateYaw.h"
 
 UEndAnimNotifyStateBikeRotateYaw::UEndAnimNotifyStateBikeRotateYaw() {
-    this->Type = EEndBikeRotateYawType::None;
+    this->Type = EEndBikeRotateYawType::LookAtTarget;
     this->bUseAcceleration = false;
-    this->RotateSpeed = 1;
-    this->RotateMaxSpeed = 1;
-    this->RotateAcceleration = 1;
-    this->RotateArrivalTime = 1;
-    this->FloatParam1 = 1;
+    this->RotateSpeed = 1.00f;
+    this->RotateMaxSpeed = 90.00f;
+    this->RotateAcceleration = 60.00f;
+    this->RotateArrivalTime = 0.50f;
+    this->FloatParam1 = 0.00f;
 }
 

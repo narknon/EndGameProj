@@ -1,6 +1,6 @@
 #include "EndBikeAITruckDamageLoopEffectParam.h"
 
 FEndBikeAITruckDamageLoopEffectParam::FEndBikeAITruckDamageLoopEffectParam() {
-    this->HitPointRate = 1;
+    this->HitPointRate = 0.00f;
 }
 

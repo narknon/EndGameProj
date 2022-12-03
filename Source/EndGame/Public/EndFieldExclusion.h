@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EndFieldExclusion.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EndFieldExclusion : uint8 {
     EndFieldExclusion_DisableController,
     EndFieldExclusion_DisableController_2nd,

@@ -8,7 +8,7 @@ FVector2D UEndNaviMapOctagon::ConvertToPosition2D(const FVector& InPos) {
 }
 
 UEndNaviMapOctagon::UEndNaviMapOctagon() {
-    this->PixelPerCm = 1;
+    this->PixelPerCm = 0.08f;
     this->PrototypeData = NULL;
     this->PrototypeDataV2 = NULL;
     this->RenderTexture = NULL;

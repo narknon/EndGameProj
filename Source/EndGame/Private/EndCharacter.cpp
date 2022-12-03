@@ -1,8 +1,7 @@
 #include "EndCharacter.h"
-#include "EndFootAttributeComponent.h"
 #include "EndCapsuleOverlapComponent.h"
 #include "EndEnvQueryComponent.h"
-#include "EndSkeletalMeshComponent.h"
+#include "EndFootAttributeComponent.h"
 
 void AEndCharacter::UseHookShotSimple(const FVector& landingLocation, const FRotator& LandingRotation) {
 }
@@ -91,7 +90,7 @@ void AEndCharacter::DisableRagdollPhysics(float FadeOutTime, bool bCenterActorTo
 void AEndCharacter::DisableKineDriver() {
 }
 
-AEndCharacter::AEndCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UEndSkeletalMeshComponent>(ACharacter::MeshComponentName)) {
+AEndCharacter::AEndCharacter() {
     this->bResidentEffectIgnoreWorldPause = false;
     this->FieldAIControllerClass = NULL;
     this->FieldAIController = NULL;
@@ -101,7 +100,7 @@ AEndCharacter::AEndCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->ActiveAiController = NULL;
     this->ActorLocationStackPoint = 0;
     this->ActorRotationStackPoint = 0;
-    this->WorkDeltaTime = 1;
+    this->WorkDeltaTime = 0.00f;
     this->bRecreatePhysicsOnEnableRagdoll = false;
     this->FootAttributeComponent = CreateDefaultSubobject<UEndFootAttributeComponent>(TEXT("EndFootAttributeComponent"));
     this->EndCapsuleOverlapComponent = CreateDefaultSubobject<UEndCapsuleOverlapComponent>(TEXT("CapsuleOverlapComponent"));
@@ -117,18 +116,18 @@ AEndCharacter::AEndCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->AIPersonalityData = NULL;
     this->AITemplateData = NULL;
     this->ExistOverrideAnimSet = false;
-    this->LookAtSpeedBias = 1;
-    this->LookAtAngleBias = 1;
-    this->LookAtClampHorizontalDistanceBias = 1;
+    this->LookAtSpeedBias = 1.00f;
+    this->LookAtAngleBias = 1.00f;
+    this->LookAtClampHorizontalDistanceBias = 1.00f;
     this->bOverrideAdjustOrientationSetting = false;
-    this->AdjustOrientationTransRate = 1;
+    this->AdjustOrientationTransRate = 1.00f;
     this->bAdjustSkeletalMeshLocation = true;
     this->bForceUpdateAnimation = false;
     this->bForceUpdateKinematicBonesUpdateToPhysics = false;
     this->EmissiveColorComponent = NULL;
     this->bCanFieldAttack = false;
-    this->FieldExtraRadius = 1;
-    this->BattleExtraRadius = 1;
+    this->FieldExtraRadius = 0.00f;
+    this->BattleExtraRadius = 0.00f;
     this->IgnoreRagdollPhysics = false;
 }
 

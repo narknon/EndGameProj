@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "UObject/Object.h"
 #include "EEndEnvironmentSetOverritePriority.h"
 #include "EWeaponSlot.h"
-#include "UObject/Object.h"
 #include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "EndSceneAPI.generated.h"
 
-class AActor;
 class AEndNavModifierVolume;
+class AActor;
 
 UCLASS(Blueprintable)
 class ENDGAME_API UEndSceneAPI : public UObject {

@@ -1,6 +1,6 @@
 #include "EndLocationTitle.h"
 
 UEndLocationTitle::UEndLocationTitle() {
-    this->LoopTime = 1;
+    this->LoopTime = 3.00f;
 }
 

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndDanceMiniGameInputKey.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EEndDanceMiniGameInputKey {
     enum Type {
         NONE = -0x1,

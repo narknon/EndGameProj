@@ -13,7 +13,7 @@ FSQEX_BonamikSolverDesc::FSQEX_BonamikSolverDesc() {
     this->m_TagId = 0;
     this->m_CollisionTagId = 0;
     this->m_EnableGround = false;
-    this->m_LODdistance = 1;
+    this->m_LODdistance = 0.00f;
     this->m_RefUpVec = 0;
 }
 

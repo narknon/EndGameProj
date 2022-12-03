@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleSpecialStatusChangeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleSpecialStatusChangeType : uint8 {
     None,
     Barrier,

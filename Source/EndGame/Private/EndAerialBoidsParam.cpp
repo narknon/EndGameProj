@@ -1,15 +1,15 @@
 #include "EndAerialBoidsParam.h"
 
 FEndAerialBoidsParam::FEndAerialBoidsParam() {
-    this->AccuracyX = 1;
-    this->AccuracyY = 1;
-    this->AccuracyZ = 1;
-    this->PersonalSpace = 1;
-    this->Prediction = 1;
+    this->AccuracyX = 0.00f;
+    this->AccuracyY = 0.00f;
+    this->AccuracyZ = 0.00f;
+    this->PersonalSpace = 0.00f;
+    this->Prediction = 0.00f;
     this->FlatUcpc = false;
     this->FlatTarget = false;
     this->bHorizontal = false;
     this->CountZ = 0;
-    this->QuantityZ = 1;
+    this->QuantityZ = 0.00f;
 }
 

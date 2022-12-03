@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Widgets/Layout/Anchors.h"
 #include "Components/PanelSlot.h"
 #include "Components/CanvasPanelSlot.h"
 #include "UObject/NoExportTypes.h"
 #include "Layout/Margin.h"
-#include "Widgets/Layout/Anchors.h"
 #include "EndCanvasPanelSlot.generated.h"
 
 UCLASS(Blueprintable)
@@ -23,10 +23,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 ZOrder;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float XAngle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float YAngle;
     
     UEndCanvasPanelSlot();
@@ -69,10 +69,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetZOrder() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetYAngle() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetXAngle() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

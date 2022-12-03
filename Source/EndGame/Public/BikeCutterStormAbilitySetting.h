@@ -7,7 +7,7 @@ USTRUCT(BlueprintType)
 struct FBikeCutterStormAbilitySetting {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LoopTime;
     
     UPROPERTY(EditAnywhere)
@@ -22,13 +22,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName AddMotion_Attack;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MoveRange;
     
     UPROPERTY(EditAnywhere)
     int8 FirstMoveDirectionSign;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MoveSpeed;
     
     ENDGAME_API FBikeCutterStormAbilitySetting();

@@ -7,7 +7,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEndEventProgressDisplay : public UEndUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OffsetForNaviMap;
     
     UEndEventProgressDisplay();

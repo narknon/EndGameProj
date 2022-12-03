@@ -18,7 +18,7 @@ AEndGameMode::AEndGameMode() {
     this->TotalTickTime = 0;
     this->FrameTickTime = 0;
     this->FrameTickCount = 0;
-    this->SystemDeltaTimeSeconds = 1;
+    this->SystemDeltaTimeSeconds = 0.00f;
     this->CrossSaveManager = NULL;
 }
 

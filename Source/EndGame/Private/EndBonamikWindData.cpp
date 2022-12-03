@@ -2,7 +2,7 @@
 
 UEndBonamikWindData::UEndBonamikWindData() {
     this->Type = EEndBonamikWindType::Directional;
-    this->Power = 1;
-    this->RandomTime = 1;
+    this->Power = 100.00f;
+    this->RandomTime = 0.00f;
 }
 

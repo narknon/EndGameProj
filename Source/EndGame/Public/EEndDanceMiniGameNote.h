@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndDanceMiniGameNote.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EEndDanceMiniGameNote {
     enum Type {
         SINGLE_TAP,

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndAerialNavAreaType.generated.h"
 
-UENUM()
-enum class EEndAerialNavAreaType {
+UENUM(BlueprintType)
+enum class EEndAerialNavAreaType : uint8 {
     Default,
     Max,
 };

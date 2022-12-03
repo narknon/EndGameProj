@@ -16,10 +16,10 @@ void AEndBattleAISU0002Controller::DisableEndShivaMove() {
 }
 
 AEndBattleAISU0002Controller::AEndBattleAISU0002Controller() {
-    this->ShivaMoveSpeed = 1;
-    this->ShivaMoveRange = 1;
-    this->ShivaMoveAngle = 1;
-    this->ShivaMoveDirectionTime = 1;
-    this->IfritRoarTime = 1;
+    this->ShivaMoveSpeed = 500.00f;
+    this->ShivaMoveRange = 500.00f;
+    this->ShivaMoveAngle = 45.00f;
+    this->ShivaMoveDirectionTime = 0.50f;
+    this->IfritRoarTime = 10.00f;
 }
 

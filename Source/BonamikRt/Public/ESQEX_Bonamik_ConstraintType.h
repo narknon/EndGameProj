@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEX_Bonamik_ConstraintType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum ESQEX_Bonamik_ConstraintType {
     ESQEX_Bonamik_ConstraintType_None,
     ESQEX_Bonamik_ConstraintType_Sphere,

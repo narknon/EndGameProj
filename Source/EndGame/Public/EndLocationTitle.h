@@ -7,7 +7,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEndLocationTitle : public UEndUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LoopTime;
     
     UEndLocationTitle();

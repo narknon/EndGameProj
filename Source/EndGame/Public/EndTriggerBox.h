@@ -12,7 +12,7 @@ UCLASS(Blueprintable)
 class ENDGAME_API AEndTriggerBox : public ATriggerBox {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndTextRenderComponent* TextRenderComponent;
     
     AEndTriggerBox();

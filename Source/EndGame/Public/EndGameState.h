@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/GameStateBase.h"
+#include "Engine/LatentActionManager.h"
 #include "EGameState.h"
 #include "GameStateChange.h"
 #include "EGameMode.h"
 #include "EGamePause.h"
-#include "Engine/LatentActionManager.h"
 #include "EEndSystemPauseMenuKind.h"
 #include "EGameStatus.h"
 #include "EGameSpeed.h"
@@ -93,13 +93,13 @@ public:
     float GameSpeed[11];
     
     AEndGameState();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void WaitGameState(const UObject* WorldContextObject, EGameState toState, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void WaitGameDifferentStateList(const UObject* WorldContextObject, TArray<EGameState> toStateList, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void WaitGameDifferentState(const UObject* WorldContextObject, EGameState toState, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
@@ -111,7 +111,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetGameSpeed(EGameSpeed Type, float Speed);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void SendGameTrigger(const UObject* WorldContextObject, EGameTrigger Trigger, EGameState toState, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable, Exec)

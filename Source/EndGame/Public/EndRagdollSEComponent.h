@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/EngineTypes.h"
 #include "Components/ActorComponent.h"
 #include "EndRagdollSEData.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "EndRagdollSEComponent.generated.h"
 
 class UPrimitiveComponent;

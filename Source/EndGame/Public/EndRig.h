@@ -3,16 +3,16 @@
 #include "UObject/Object.h"
 #include "CommonAnimTypes.h"
 #include "UObject/NoExportTypes.h"
+#include "EndBoneBlendRateGroup.h"
 #include "EndPhysicalDamageReactionSetting.h"
 #include "EndAdjustOrientationSetting.h"
-#include "EndBoneBlendRateGroup.h"
 #include "EndRig.generated.h"
 
 class UEndJoint;
 class UEndLookAtSolver;
 class UEndAimSolver;
-class UEndFootEffectorSolver;
 class UEndBalancingSolver;
+class UEndFootEffectorSolver;
 class UEndHandEffectorSolver;
 class UEndLipSyncSolver;
 
@@ -26,7 +26,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName HeadBoneName;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAxis HeadBoneForwardAxis;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -41,16 +41,16 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector2D AimAngleBasedVelocityBiasValueRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AimAngleBasedVelocityBiasInterpSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VibrationRestoreSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VibrationImpactBias;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VibrationAttenuationRate;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

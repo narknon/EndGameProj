@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
 #include "EEndActivityInitResult.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
 #include "Engine/LatentActionManager.h"
 #include "EndActivityAPI.generated.h"
 
@@ -16,7 +16,7 @@ private:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static EEndActivityInitResult GetActivityInitResult();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void ActivityInit(UObject* WorldContextObject, FLatentActionInfo LatentInfo);
     
 };

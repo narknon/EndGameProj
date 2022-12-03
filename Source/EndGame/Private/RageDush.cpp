@@ -1,9 +1,9 @@
 #include "RageDush.h"
 
 FRageDush::FRageDush() {
-    this->TurnSpeed = 1;
-    this->HitTargetRadius = 1;
-    this->HitStopRadius = 1;
-    this->HitStopTime = 1;
+    this->TurnSpeed = 0.00f;
+    this->HitTargetRadius = 0.00f;
+    this->HitStopRadius = 0.00f;
+    this->HitStopTime = 0.00f;
 }
 

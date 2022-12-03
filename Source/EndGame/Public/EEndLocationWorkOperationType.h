@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndLocationWorkOperationType.generated.h"
 
-UENUM()
-enum class EEndLocationWorkOperationType {
+UENUM(BlueprintType)
+enum class EEndLocationWorkOperationType : uint8 {
     Set,
     Add,
     Sub,

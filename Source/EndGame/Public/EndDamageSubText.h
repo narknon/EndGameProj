@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EndPopupMessageColors.h"
 #include "EndUserWidget.h"
+#include "EndPopupMessageColors.h"
 #include "EndDamageSubText.generated.h"
 
 UCLASS(Blueprintable, EditInlineNew)

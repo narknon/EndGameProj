@@ -2,13 +2,13 @@
 #include "CoreMinimal.h"
 #include "EndFieldActionActorBase.h"
 #include "EDoorType.h"
-#include "UObject/NoExportTypes.h"
 #include "EDoorActiveEffectType.h"
+#include "UObject/NoExportTypes.h"
 #include "EndFieldActionActorDoor.generated.h"
 
-class UEndSwitchAreaBoxComponent;
-class UEndNavModifierComponent;
 class UEndFieldActionTriggerComponent;
+class UEndNavModifierComponent;
+class UEndSwitchAreaBoxComponent;
 
 UCLASS(Blueprintable, Placeable)
 class AEndFieldActionActorDoor : public AEndFieldActionActorBase {
@@ -56,31 +56,31 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName CameraFlavorDatatableName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndFieldActionTriggerComponent* PressVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndFieldActionTriggerComponent* PullVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndSwitchAreaBoxComponent* DividedVersatileVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndSwitchAreaBoxComponent* DividedImpassableVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndSwitchAreaBoxComponent* OpendDoorVolumeLeft;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndSwitchAreaBoxComponent* OpendDoorVolumeRight;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndSwitchAreaBoxComponent* OpendDoorVolumeLeft2;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndSwitchAreaBoxComponent* OpendDoorVolumeRight2;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndNavModifierComponent* ModifierVolume;
     
     AEndFieldActionActorDoor();

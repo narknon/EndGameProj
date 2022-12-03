@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EndBikeSplineJumpAreaData.h"
 #include "Components/SplineComponent.h"
 #include "EndBikeSplineMetaData.h"
+#include "EndBikeSplineJumpAreaData.h"
 #include "EndBikeSplineComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

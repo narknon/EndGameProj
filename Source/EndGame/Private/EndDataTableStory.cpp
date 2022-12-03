@@ -10,10 +10,10 @@ FEndDataTableStory::FEndDataTableStory() {
     this->ViewIndex = 0;
     this->AdditionalGroupViewOption = 0;
     this->InvNaviIcon_ViewFlagIconOperationStatus = 0;
-    this->InvNaviIcon_IconVisibleStartDistance = 1;
+    this->InvNaviIcon_IconVisibleStartDistance = 0.00f;
     this->InvNaviIcon_IconKind = 0;
     this->InvNaviIcon_IconTargetType = 0;
-    this->InvNaviIcon_IconLineLength = 1;
+    this->InvNaviIcon_IconLineLength = 0.00f;
     this->FractionView = 0;
     this->ScenarioType = 0;
 }

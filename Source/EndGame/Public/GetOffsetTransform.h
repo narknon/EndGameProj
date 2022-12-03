@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "GetOffsetTransform.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace GetOffsetTransform {
     enum Type {
         Stay,

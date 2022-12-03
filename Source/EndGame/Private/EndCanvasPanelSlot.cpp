@@ -80,7 +80,7 @@ UEndCanvasPanelSlot::UEndCanvasPanelSlot() {
     this->bAutoSize = false;
     this->bDelayedBuild = false;
     this->ZOrder = 0;
-    this->XAngle = 1;
-    this->YAngle = 1;
+    this->XAngle = 0.00f;
+    this->YAngle = 0.00f;
 }
 

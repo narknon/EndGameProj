@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndTakeDamageDirectionType.generated.h"
 
-UENUM()
-enum class EEndTakeDamageDirectionType {
+UENUM(BlueprintType)
+enum class EEndTakeDamageDirectionType : uint8 {
     None,
     GiveCharacter,
     HitPosition,

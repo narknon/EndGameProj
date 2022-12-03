@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndLocomotionAnim.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndLocomotionAnim : uint8 {
     IdleLoop,
     WalkStart,

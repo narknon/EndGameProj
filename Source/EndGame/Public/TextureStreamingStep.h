@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "TextureStreamingStep.generated.h"
 
-UENUM()
-enum class TextureStreamingStep {
+UENUM(BlueprintType)
+enum class TextureStreamingStep : uint8 {
     None,
     Wait,
     Finish,

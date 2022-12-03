@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/AssetUserData.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkeletalMeshUserData -FallbackName=SkeletalMeshUserData
 #include "EndEmissiveColorUserData.generated.h"
 
 class UEndColorPalette;
 
 UCLASS(Blueprintable, EditInlineNew)
-class ENDGAME_API UEndEmissiveColorUserData : public UAssetUserData {
+class ENDGAME_API UEndEmissiveColorUserData : public USkeletalMeshUserData {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

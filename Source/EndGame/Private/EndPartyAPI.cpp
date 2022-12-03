@@ -1,8 +1,8 @@
 #include "EndPartyAPI.h"
 
 class UObject;
-class AEndCharacter;
 class AActor;
+class AEndCharacter;
 
 void UEndPartyAPI::WaitPlayerStream(const UObject* WorldContextObject, FLatentActionInfo LatentInfo) {
 }

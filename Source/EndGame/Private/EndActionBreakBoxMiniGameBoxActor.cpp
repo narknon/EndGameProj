@@ -1,8 +1,8 @@
 #include "EndActionBreakBoxMiniGameBoxActor.h"
 
 class AActor;
-class USceneComponent;
 class UStaticMeshComponent;
+class USceneComponent;
 class UPrimitiveComponent;
 
 void AEndActionBreakBoxMiniGameBoxActor::SetReferenceStaticMesh(EEndBreakBoxMiniGameBoxType Type, UStaticMeshComponent* StaticMeshComp) {
@@ -41,7 +41,7 @@ AEndActionBreakBoxMiniGameBoxActor::AEndActionBreakBoxMiniGameBoxActor() {
     this->m_BoxType = EEndBreakBoxMiniGameBoxType::NORMAL;
     this->m_bHighGreadL = false;
     this->m_GroupIndex = 0;
-    this->m_Radius = 1;
+    this->m_Radius = 0.00f;
     this->m_Effect[0] = NULL;
     this->m_Effect[1] = NULL;
     this->m_Effect[2] = NULL;

@@ -8,13 +8,13 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ENDGAME_API UEndEmissiveControlComponent : public USceneComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float Intensity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     FLinearColor EmissiveColor;
     
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float Temperature;
     
     UEndEmissiveControlComponent();

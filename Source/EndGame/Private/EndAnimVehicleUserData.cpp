@@ -1,6 +1,6 @@
 #include "EndAnimVehicleUserData.h"
 
 UEndAnimVehicleUserData::UEndAnimVehicleUserData() {
-    this->Mass = 1;
+    this->Mass = 1.00f;
 }
 

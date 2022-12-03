@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EndBattleExitBattleSceneType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EndBattleExitBattleSceneType : uint8 {
     EndBattleMode_Finish,
     EndBattleMode_Escape,

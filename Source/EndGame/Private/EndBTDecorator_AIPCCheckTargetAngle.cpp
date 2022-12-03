@@ -2,6 +2,6 @@
 
 UEndBTDecorator_AIPCCheckTargetAngle::UEndBTDecorator_AIPCCheckTargetAngle() {
     this->targetType = ETargetType::Normal;
-    this->SpecifiedAngle = 1;
+    this->SpecifiedAngle = 0.00f;
 }
 

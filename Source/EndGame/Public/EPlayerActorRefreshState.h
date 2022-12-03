@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPlayerActorRefreshState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPlayerActorRefreshState : uint8 {
     EPlayerActorRefreshState_NONE,
     EPlayerActorRefreshState_BUILD,

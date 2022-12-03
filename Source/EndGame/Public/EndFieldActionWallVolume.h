@@ -10,7 +10,7 @@ class AEndFieldActionWallVolume : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBoxComponent* BoxComponent;
     
 public:

@@ -10,12 +10,12 @@ void AEndBattleAISU0005Controller::OverrideTargetLocation(bool enableOverride, F
 }
 
 AEndBattleAISU0005Controller::AEndBattleAISU0005Controller() {
-    this->MeteorDivePrepareRotateYaw = 1;
-    this->MeteorDivePrepareRotatePitch = 1;
-    this->MeteorDiveLoopRotateYaw = 1;
-    this->MeteorDiveLoopRotatePitch = 1;
-    this->MeteorDiveBeginSpeed = 1;
-    this->MeteorDiveAddSpeed = 1;
-    this->MeteorDiveOffsetZ = 1;
+    this->MeteorDivePrepareRotateYaw = 360.00f;
+    this->MeteorDivePrepareRotatePitch = 360.00f;
+    this->MeteorDiveLoopRotateYaw = 180.00f;
+    this->MeteorDiveLoopRotatePitch = 180.00f;
+    this->MeteorDiveBeginSpeed = 1000.00f;
+    this->MeteorDiveAddSpeed = 1000.00f;
+    this->MeteorDiveOffsetZ = 200.00f;
 }
 

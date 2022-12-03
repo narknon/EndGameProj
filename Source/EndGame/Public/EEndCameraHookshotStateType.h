@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCameraHookshotStateType.generated.h"
 
-UENUM()
-enum class EEndCameraHookshotStateType {
+UENUM(BlueprintType)
+enum class EEndCameraHookshotStateType : uint8 {
     Enter,
     Move,
     Leave,

@@ -2,6 +2,6 @@
 
 FEndAIBehaviorTurn::FEndAIBehaviorTurn() {
     this->bContinueTurn = false;
-    this->TurnTime = 1;
+    this->TurnTime = 0.00f;
 }
 

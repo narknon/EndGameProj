@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "EEndBattleSceneCharaStateType.h"
-#include "EEndBattleStatusChangeType.h"
 #include "EPlayerType.h"
+#include "EEndBattleSceneCharaStateType.h"
+#include "UObject/NoExportTypes.h"
+#include "EEndBattleStatusChangeType.h"
 #include "EEndBattleAttributeType.h"
 #include "EEndBattleSpecialStatusChangeType.h"
-#include "UObject/NoExportTypes.h"
 #include "EEndBattleCountLogType.h"
 #include "EndDataTableBattleScene.h"
 #include "EndDataTableBattleDamageSource.h"
@@ -41,10 +41,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void RemoveStatusChange(const FName CharaName, const TArray<EEndBattleStatusChangeType>& Types);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTakeDamageSpecialStatus(FName characterName, EEndBattleSpecialStatusChangeType specialStatus, FName abilityName, float damageParcent);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTakeDamage(int32 Damage, const FName& CauserCharaName, const FName& DamagedCharaName, const FName& AbilityID, bool bBind, bool bGuard, bool bDodge, const FName& hitBoneName, bool bAttributeHit, const FName& DamageSourceID, EEndBattleAttributeType DmgSrcAttributeType, float justHitRotYaw, const FVector& hitPosition, bool bHeal);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -98,10 +98,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnCharaSyncAction(const FName& AttackedCharaName, const FName& ReceivedCharaName, const FName& StateId, int32 StateCount, const FName& syncActionID, const FName& CauserCharaName);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnCharaSpecialStatusChange(const FName& ownerCharaName, const FName& SpecialStatusChangeID, EEndBattleSpecialStatusChangeType Type, const FName& StateId, const TArray<float>& Params, const TArray<FName>& ParamIDs, const TArray<AActor*>& ParamActors);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnCharaPartsDamage(FName CauserCharaName, FName DamagedCharaName, FName partsID, FName CategoryID, int32 RemainHP, float RemainHPPer);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
@@ -125,7 +125,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ChangePhase(int32 _phase);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     void BattleSceneDelay(float Duration, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

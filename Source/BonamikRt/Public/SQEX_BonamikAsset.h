@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "SQEX_BonamikGroupLOD.h"
 #include "SQEX_BonamikSceneManagerDesc.h"
+#include "SQEX_BonamikPlaneDesc.h"
 #include "SQEX_BonamikSolverDesc.h"
 #include "SQEX_BonamikShapeMatchingDesc.h"
 #include "SQEX_BonamikBodyDesc.h"
 #include "SQEX_BonamikLinkDesc.h"
-#include "SQEX_BonamikPlaneDesc.h"
 #include "SQEX_BonamikPossessionDesc.h"
+#include "SQEX_BonamikGroupLOD.h"
 #include "SQEX_BonamikAsset.generated.h"
 
 class USkeletalMesh;
@@ -77,7 +77,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_IgnoreEffectors;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TeleportDistance;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

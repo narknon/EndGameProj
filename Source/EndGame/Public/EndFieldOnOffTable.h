@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EndFieldOnOffTable.generated.h"
 
-UENUM()
-enum class EndFieldOnOffTable {
+UENUM(BlueprintType)
+enum class EndFieldOnOffTable : uint8 {
     EndFieldOnOffTable_HideFieldMenu,
     EndFieldOnOffTable_ReleaseEncount,
     EndFieldOnOffTable_DisableUpdateBattleParameter,

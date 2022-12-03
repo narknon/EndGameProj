@@ -1,6 +1,6 @@
 #include "EndNaviMapTexturePrototypeData.h"
 
 FEndNaviMapTexturePrototypeData::FEndNaviMapTexturePrototypeData() {
-    this->PixelPerCm = 1;
+    this->PixelPerCm = 0.00f;
 }
 

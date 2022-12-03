@@ -1,9 +1,9 @@
 #include "EndDataTableLocationResidentEnvironment.h"
 
 FEndDataTableLocationResidentEnvironment::FEndDataTableLocationResidentEnvironment() {
-    this->PlayerLocX = 1;
-    this->PlayerLocY = 1;
-    this->PlayerLocZ = 1;
-    this->PlayerYaw = 1;
+    this->PlayerLocX = 0.00f;
+    this->PlayerLocY = 0.00f;
+    this->PlayerLocZ = 0.00f;
+    this->PlayerYaw = 0.00f;
 }
 

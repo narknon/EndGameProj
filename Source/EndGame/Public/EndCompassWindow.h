@@ -8,7 +8,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEndCompassWindow : public UEndUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float CompassMarginX;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

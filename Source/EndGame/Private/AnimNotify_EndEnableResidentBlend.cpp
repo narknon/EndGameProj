@@ -2,6 +2,6 @@
 
 UAnimNotify_EndEnableResidentBlend::UAnimNotify_EndEnableResidentBlend() {
     this->Enabled = false;
-    this->BlendTime = 1;
+    this->BlendTime = 0.20f;
 }
 

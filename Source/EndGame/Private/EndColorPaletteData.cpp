@@ -1,8 +1,8 @@
 #include "EndColorPaletteData.h"
 
 FEndColorPaletteData::FEndColorPaletteData() {
-    this->Intensity = 1;
-    this->VelocityIntensity = 1;
-    this->AnimateTimeFrequency = 1;
+    this->Intensity = 0.00f;
+    this->VelocityIntensity = 0.00f;
+    this->AnimateTimeFrequency = 0.00f;
 }
 

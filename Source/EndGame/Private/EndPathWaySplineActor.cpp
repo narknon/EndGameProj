@@ -2,12 +2,12 @@
 #include "Components/SplineComponent.h"
 
 AEndPathWaySplineActor::AEndPathWaySplineActor() {
-    this->PathWayBaseWidth = 1;
-    this->PathWayOffsetWidth = 1;
-    this->PathWaySpace = 1;
-    this->ArrowLength = 1;
-    this->ArrowSize = 1;
-    this->ArrowThickness = 1;
+    this->PathWayBaseWidth = 100.00f;
+    this->PathWayOffsetWidth = 0.00f;
+    this->PathWaySpace = 10.00f;
+    this->ArrowLength = 100.00f;
+    this->ArrowSize = 20.00f;
+    this->ArrowThickness = 5.00f;
     this->PathWayComponent = CreateDefaultSubobject<USplineComponent>(TEXT("SplineComponent"));
 }
 

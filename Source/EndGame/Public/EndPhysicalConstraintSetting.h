@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EndPhysicalConstraintSetting_AnimPosition.h"
+#include "Engine/DataAsset.h"
 #include "EndPhysicalConstraintSetting_ContactCharacter.h"
 #include "EndPhysicalConstraintSetting_AnimPositionVelocity.h"
 #include "EndPhysicalConstraintBoneSetting.h"
-#include "Engine/DataAsset.h"
 #include "EndPhysicalConstraintSetting_LastPosition.h"
-#include "EndPhysicalConstraintSetting_AnimPosition.h"
 #include "EndPhysicalConstraintSetting_Distance.h"
 #include "EndPhysicalConstraintSetting_RandomImpulse.h"
 #include "EndPhysicalConstraintSetting.generated.h"
@@ -35,10 +35,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUseConstantDeltaTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SimulationDeltaTimePowBias;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ContactTargetRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

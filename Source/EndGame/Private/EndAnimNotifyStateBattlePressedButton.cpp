@@ -1,7 +1,7 @@
 #include "EndAnimNotifyStateBattlePressedButton.h"
 
 UEndAnimNotifyStateBattlePressedButton::UEndAnimNotifyStateBattlePressedButton() {
-    this->Power = 1;
-    this->MaxPower = 1;
+    this->Power = 0.00f;
+    this->MaxPower = 100.00f;
 }
 

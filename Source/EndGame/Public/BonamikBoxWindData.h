@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EEndBonamikWindType.h"
 #include "UObject/NoExportTypes.h"
+#include "EEndBonamikWindType.h"
 #include "UObject/NoExportTypes.h"
 #include "BonamikBoxWindData.generated.h"
 
@@ -24,7 +24,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector RandomRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RandomTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

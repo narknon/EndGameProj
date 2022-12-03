@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "SQEX_Bonamik_AlterBodyParameter.h"
 #include "Animation/AnimNotifies/AnimNotifyState.h"
+#include "SQEX_Bonamik_AlterBodyParameter.h"
 #include "SQEX_AnimNotifyState_Bonamik_AlterBodyParams.generated.h"
 
 UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)

@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "EEndInterestPointTemplate.h"
 #include "EndInteractorInterface.h"
 #include "EEndInterestPointReactionActorType.h"
+#include "EEndInterestPointTemplate.h"
 #include "EndInterestPoint.generated.h"
 
 class UEndTextRenderComponent;
@@ -16,7 +16,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EEndInterestPointReactionActorType Type;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float InterestRadius;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -28,7 +28,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool IsForcedRecognition;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndTextRenderComponent* TextRenderComponent;
     
 public:

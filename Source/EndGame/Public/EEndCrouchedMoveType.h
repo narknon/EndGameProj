@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndCrouchedMoveType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndCrouchedMoveType : uint8 {
     Default,
     Wind,

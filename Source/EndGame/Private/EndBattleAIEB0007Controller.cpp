@@ -25,11 +25,11 @@ void AEndBattleAIEB0007Controller::GetSprinkleWaterInAnglePointNames(const TArra
 
 AEndBattleAIEB0007Controller::AEndBattleAIEB0007Controller() {
     this->EnableOverrideHeight = false;
-    this->OverrideHeight = 1;
+    this->OverrideHeight = 0.00f;
     this->EnableOverridePeakBias = false;
-    this->OverridePeakBias = 1;
+    this->OverridePeakBias = 0.00f;
     this->EnableOverrideTurningDuration = false;
-    this->OverrideTurningDuration = 1;
+    this->OverrideTurningDuration = 0.00f;
     this->EnableSprinkleWaterDraw = false;
 }
 

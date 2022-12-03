@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndStateTriggerSaveDataType.generated.h"
 
-UENUM()
-enum class EEndStateTriggerSaveDataType {
+UENUM(BlueprintType)
+enum class EEndStateTriggerSaveDataType : uint8 {
     None,
     SnapSaveData,
     SafetySaveData_AutoSaveData,

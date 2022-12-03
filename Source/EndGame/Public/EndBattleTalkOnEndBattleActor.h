@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
 #include "EndSoundHandle.h"
+#include "GameFramework/Actor.h"
 #include "EndBattleExitBattleSceneType.h"
 #include "EndBattleTalkOnEndBattleActor.generated.h"
 
@@ -9,10 +9,10 @@ UCLASS(Blueprintable)
 class AEndBattleTalkOnEndBattleActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DelayMinSeconds;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DelayMaxSeconds;
     
 private:

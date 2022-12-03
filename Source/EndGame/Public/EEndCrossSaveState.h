@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCrossSaveState.generated.h"
 
-UENUM()
-enum class EEndCrossSaveState {
+UENUM(BlueprintType)
+enum class EEndCrossSaveState : uint8 {
     None,
     Read,
     Read_WaitSaveData,

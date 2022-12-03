@@ -3,9 +3,9 @@
 #include "EndNavModifierComponent.h"
 
 AEndFieldActionActorLadder::AEndFieldActionActorLadder() {
-    this->RungCount = 0;
-    this->UpperSpace = 1;
-    this->LowerSpace = 1;
+    this->RungCount = 20;
+    this->UpperSpace = 60.00f;
+    this->LowerSpace = 60.00f;
     this->IsBrokenLadder = false;
     this->ExceptionFlg = false;
     this->UpperVolume = CreateDefaultSubobject<UEndFieldActionTriggerComponent>(TEXT("UpperVolume"));

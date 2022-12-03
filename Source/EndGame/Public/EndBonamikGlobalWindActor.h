@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "EndBonamikGlobalWindActor.generated.h"
 
-class USQEX_BonamikWind;
 class UEndBonamikWindData;
+class USQEX_BonamikWind;
 
 UCLASS(Blueprintable)
 class AEndBonamikGlobalWindActor : public AActor {

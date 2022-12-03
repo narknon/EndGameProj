@@ -1,6 +1,6 @@
 #include "EndAnimNotifyStateBikeExtraRadius.h"
 
 UEndAnimNotifyStateBikeExtraRadius::UEndAnimNotifyStateBikeExtraRadius() {
-    this->ExtraRadius = 1;
+    this->ExtraRadius = 10.00f;
 }
 

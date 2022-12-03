@@ -3,8 +3,8 @@
 #include "UObject/NoExportTypes.h"
 #include "UObject/Object.h"
 #include "Engine/LatentActionManager.h"
-#include "UObject/NoExportTypes.h"
 #include "EndWaveBattleSceneType.h"
+#include "UObject/NoExportTypes.h"
 #include "EEndDebugFlag.h"
 #include "EndFieldBGMLayer.h"
 #include "EndFieldExclusion.h"
@@ -18,7 +18,7 @@ class UEndFieldAPI : public UObject {
     GENERATED_BODY()
 public:
     UEndFieldAPI();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void WaitStable(const UObject* WorldContextObject, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)

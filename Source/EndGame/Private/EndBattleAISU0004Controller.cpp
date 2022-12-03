@@ -7,6 +7,6 @@ void AEndBattleAISU0004Controller::RequestTornadoFollowLocation(int32 InIndex, F
 }
 
 AEndBattleAISU0004Controller::AEndBattleAISU0004Controller() {
-    this->Su0004AirTurnThreshold = 1;
+    this->Su0004AirTurnThreshold = 45.00f;
 }
 

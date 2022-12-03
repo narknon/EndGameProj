@@ -1,10 +1,10 @@
 #include "EndPolygon.h"
 
-class UMaterialInterface;
+class USlateBrushAsset;
 class UMaterialInstanceDynamic;
 class UTexture2DDynamic;
 class UTexture2D;
-class USlateBrushAsset;
+class UMaterialInterface;
 
 void UEndPolygon::SetOpacity(float InOpacity) {
 }

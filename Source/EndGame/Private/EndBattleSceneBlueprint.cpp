@@ -56,7 +56,7 @@ void AEndBattleSceneBlueprint::BattleSceneDelay(float Duration, FLatentActionInf
 
 
 AEndBattleSceneBlueprint::AEndBattleSceneBlueprint() {
-    this->Phase = 0;
+    this->Phase = 1;
     this->bTickNewlySpawned = true;
 }
 

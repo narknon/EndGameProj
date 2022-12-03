@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBikeDangerousPointType.generated.h"
 
-UENUM()
-enum class EEndBikeDangerousPointType {
+UENUM(BlueprintType)
+enum class EEndBikeDangerousPointType : uint8 {
     None,
     DamageSource,
     AnimNotify,

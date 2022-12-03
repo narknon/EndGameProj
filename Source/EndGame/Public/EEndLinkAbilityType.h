@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndLinkAbilityType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndLinkAbilityType : uint8 {
     None,
     Nomal,

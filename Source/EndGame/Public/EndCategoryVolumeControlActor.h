@@ -10,7 +10,7 @@ class ENDGAME_API AEndCategoryVolumeControlActor : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndCategoryVolumeControlComponent* ControllerComponent;
     
 public:

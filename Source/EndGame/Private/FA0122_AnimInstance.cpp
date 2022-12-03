@@ -30,18 +30,18 @@ UFA0122_AnimInstance::UFA0122_AnimInstance() {
     this->ArmBones.AddDefaulted(4);
     this->TransformCacheBones.AddDefaulted(1);
     this->PoseReferenceAnimation = NULL;
-    this->PoseReferenceAnimationFrameRate = 1;
+    this->PoseReferenceAnimationFrameRate = 30.00f;
     this->CurrentArmState = EFA0122_ArmState::Deactive;
-    this->RequestedBasementAngle = 1;
-    this->CurrentBasementAngle = 1;
-    this->BasementAngleSpeed = 1;
-    this->RequestedArmHeightRate = 1;
-    this->CurrentArmHeightRate = 1;
-    this->ArmHeightRateSpeed = 1;
-    this->MinArmHeight = 1;
-    this->MaxArmHeight = 1;
-    this->RequestedHandGrabRate = 1;
-    this->CurrentHandGrabRate = 1;
-    this->HandGrabRateSpeed = 1;
+    this->RequestedBasementAngle = 0.00f;
+    this->CurrentBasementAngle = 0.00f;
+    this->BasementAngleSpeed = 30.00f;
+    this->RequestedArmHeightRate = 1.00f;
+    this->CurrentArmHeightRate = 1.00f;
+    this->ArmHeightRateSpeed = 1.00f;
+    this->MinArmHeight = 0.00f;
+    this->MaxArmHeight = 0.00f;
+    this->RequestedHandGrabRate = 0.00f;
+    this->CurrentHandGrabRate = 0.00f;
+    this->HandGrabRateSpeed = 1.00f;
 }
 

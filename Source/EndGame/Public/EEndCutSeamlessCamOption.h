@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCutSeamlessCamOption.generated.h"
 
-UENUM()
-enum class EEndCutSeamlessCamOption {
+UENUM(BlueprintType)
+enum class EEndCutSeamlessCamOption : uint8 {
     Default,
     LastCamTransOnCut,
     CSCO_Max,

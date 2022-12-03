@@ -1,16 +1,16 @@
 #include "EndBikeAIHelicopterMoveParam_MoveAround.h"
 
 FEndBikeAIHelicopterMoveParam_MoveAround::FEndBikeAIHelicopterMoveParam_MoveAround() {
-    this->TargetOppositeSlide = 1;
-    this->SlideInterpSpeed = 1;
-    this->RelativeForwardMileage = 1;
-    this->RelativeBackwardMileage = 1;
-    this->RelativeForwardMileageSecond = 1;
-    this->ForwardArrivalTime = 1;
-    this->SwitchYawSlide = 1;
-    this->Height = 1;
-    this->HeightOnForward = 1;
-    this->HeightArrivalTime = 1;
+    this->TargetOppositeSlide = 0.00f;
+    this->SlideInterpSpeed = 0.00f;
+    this->RelativeForwardMileage = 0.00f;
+    this->RelativeBackwardMileage = 0.00f;
+    this->RelativeForwardMileageSecond = 0.00f;
+    this->ForwardArrivalTime = 0.00f;
+    this->SwitchYawSlide = 0.00f;
+    this->Height = 0.00f;
+    this->HeightOnForward = 0.00f;
+    this->HeightArrivalTime = 0.00f;
     this->MoveBackwardRate = 0;
     this->MoveBackwardLimitCount = 0;
 }

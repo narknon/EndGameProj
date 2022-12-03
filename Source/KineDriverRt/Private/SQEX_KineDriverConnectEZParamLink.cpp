@@ -6,18 +6,18 @@ FSQEX_KineDriverConnectEZParamLink::FSQEX_KineDriverConnectEZParamLink() {
     this->OutOperator = 0;
     this->OutParameterType = ESQEX_KD_ParameterType_Other;
     this->OtherTargetParamIndex = 0;
-    this->PX0 = 1;
-    this->VX1_0 = 1;
-    this->VX2_1 = 1;
-    this->Grad0 = 1;
-    this->Grad1 = 1;
-    this->PY0 = 1;
-    this->PY0A = 1;
-    this->PY0B = 1;
-    this->PY1 = 1;
-    this->PY1A = 1;
-    this->PY1B = 1;
-    this->PY2 = 1;
+    this->PX0 = 0.00f;
+    this->VX1_0 = 0.00f;
+    this->VX2_1 = 0.00f;
+    this->Grad0 = 0.00f;
+    this->Grad1 = 0.00f;
+    this->PY0 = 0.00f;
+    this->PY0A = 0.00f;
+    this->PY0B = 0.00f;
+    this->PY1 = 0.00f;
+    this->PY1A = 0.00f;
+    this->PY1B = 0.00f;
+    this->PY2 = 0.00f;
     this->ByCoef = false;
 }
 

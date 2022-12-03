@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ELineWarpType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ELineWarpType : uint8 {
     None,
     Approach,

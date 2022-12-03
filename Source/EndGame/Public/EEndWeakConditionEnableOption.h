@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndWeakConditionEnableOption.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndWeakConditionEnableOption : uint8 {
     ParameterReset,
     ParameterKeep,

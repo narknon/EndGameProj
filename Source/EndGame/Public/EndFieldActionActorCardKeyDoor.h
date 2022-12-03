@@ -5,8 +5,8 @@
 #include "EEndCardKeyDoorType.h"
 #include "EndFieldActionActorCardKeyDoor.generated.h"
 
-class UEndSwitchAreaBoxComponent;
 class UEndFieldActionTriggerComponent;
+class UEndSwitchAreaBoxComponent;
 class UEndNavModifierComponent;
 
 UCLASS(Blueprintable, Placeable)
@@ -40,25 +40,25 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName HaveCardKeyTrigger;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndFieldActionTriggerComponent* OpenVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndFieldActionTriggerComponent* CloseVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndFieldActionTriggerComponent* TargetIconFirstVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndFieldActionTriggerComponent* TargetIconSecondVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndSwitchAreaBoxComponent* DividedVersatileVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndNavModifierComponent* ModifierVolume;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AutoClosingTime;
     
     AEndFieldActionActorCardKeyDoor();

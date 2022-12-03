@@ -1,9 +1,9 @@
 #include "EndDataTablePlannerEvent.h"
 
 FEndDataTablePlannerEvent::FEndDataTablePlannerEvent() {
-    this->Time = 1;
-    this->MinSubtitleTime = 1;
-    this->TimeAfterVoice = 1;
+    this->Time = 0.00f;
+    this->MinSubtitleTime = 0.00f;
+    this->TimeAfterVoice = 0.00f;
     this->OutputType = 0;
     this->CanSkip = 0;
     this->VoiceType = 0;

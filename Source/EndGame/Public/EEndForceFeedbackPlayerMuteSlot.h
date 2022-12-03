@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndForceFeedbackPlayerMuteSlot.generated.h"
 
-UENUM()
-enum class EEndForceFeedbackPlayerMuteSlot {
+UENUM(BlueprintType)
+enum class EEndForceFeedbackPlayerMuteSlot : uint8 {
     Standard,
     Extra1,
     Extra2,

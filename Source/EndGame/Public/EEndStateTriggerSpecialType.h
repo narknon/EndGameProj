@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndStateTriggerSpecialType.generated.h"
 
-UENUM()
-enum class EEndStateTriggerSpecialType {
+UENUM(BlueprintType)
+enum class EEndStateTriggerSpecialType : uint8 {
     None,
     EnvironmentAnimationLastFrame,
     IgnoreDelay,

@@ -7,10 +7,10 @@ USTRUCT(BlueprintType)
 struct ENDGAME_API FEndPhysicalConstraintWireEvaluator : public FEndPhysicalConstraintEvaluator {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReleaseWireSpeed;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ReleaseVelocityStiffness;
     
     FEndPhysicalConstraintWireEvaluator();

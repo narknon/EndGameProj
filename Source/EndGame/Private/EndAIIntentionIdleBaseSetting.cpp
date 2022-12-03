@@ -1,9 +1,9 @@
 #include "EndAIIntentionIdleBaseSetting.h"
 
 UEndAIIntentionIdleBaseSetting::UEndAIIntentionIdleBaseSetting() {
-    this->LookAtWeight = 1;
-    this->SaccadeWaitTimeAfterLookAt = 1;
-    this->SaccadeUpdateCycle = 1;
-    this->SaccadeUpRate = 1;
+    this->LookAtWeight = 0.80f;
+    this->SaccadeWaitTimeAfterLookAt = 1.00f;
+    this->SaccadeUpdateCycle = 0.10f;
+    this->SaccadeUpRate = 0.80f;
 }
 

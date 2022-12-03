@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EHookShotSeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EHookShotSeType : uint8 {
     Concrete,
     IronPlate,

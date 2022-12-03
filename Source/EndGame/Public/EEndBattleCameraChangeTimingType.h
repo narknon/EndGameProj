@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleCameraChangeTimingType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBattleCameraChangeTimingType : uint8 {
     None,
     DamageSourceGenerated,

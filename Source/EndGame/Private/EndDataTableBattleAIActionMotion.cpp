@@ -1,7 +1,7 @@
 #include "EndDataTableBattleAIActionMotion.h"
 
 FEndDataTableBattleAIActionMotion::FEndDataTableBattleAIActionMotion() {
-    this->InTime = 1;
+    this->InTime = 0.00f;
     this->InOverrideKeep = 0;
 }
 

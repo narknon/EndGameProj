@@ -1,6 +1,6 @@
 #include "EndFieldActionActorDoor.h"
-#include "EndNavModifierComponent.h"
 #include "EndFieldActionTriggerComponent.h"
+#include "EndNavModifierComponent.h"
 #include "EndSwitchAreaBoxComponent.h"
 
 AEndFieldActionActorDoor::AEndFieldActionActorDoor() {
@@ -9,7 +9,7 @@ AEndFieldActionActorDoor::AEndFieldActionActorDoor() {
     this->DisableForceAutoClose = false;
     this->DoorActiveEffectType = EDoorActiveEffectType::ActiveNone;
     this->bTargetIconAdjustment = false;
-    this->FindControllerKey = 0;
+    this->FindControllerKey = -1;
     this->CameraFlavorDatatableName = TEXT("WalkThroughDoorAction");
     this->PressVolume = CreateDefaultSubobject<UEndFieldActionTriggerComponent>(TEXT("PressVolume"));
     this->PullVolume = CreateDefaultSubobject<UEndFieldActionTriggerComponent>(TEXT("PullVolume"));

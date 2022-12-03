@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Animation/AnimNotifies/AnimNotifyState.h"
-#include "UObject/NoExportTypes.h"
 #include "ESQEX_Bonamik_EmissiveDirection.h"
+#include "UObject/NoExportTypes.h"
 #include "SQEX_AnimNotifyState_Bonamik_CharaWind.generated.h"
 
 UCLASS(Blueprintable, CollapseCategories, EditInlineNew, MinimalAPI)
@@ -12,19 +12,19 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_Groups;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ESQEX_Bonamik_EmissiveDirection> m_DirectionSpace;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_DirectionVec;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_BaseStrength;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WaveAmplitude;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_WavePeriod;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

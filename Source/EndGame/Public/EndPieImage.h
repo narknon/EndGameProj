@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Engine/EngineTypes.h"
 #include "Components/Widget.h"
 #include "Styling/SlateBrush.h"
 #include "Components/Widget.h"
 #include "UObject/NoExportTypes.h"
 #include "Components/Widget.h"
-#include "Engine/EngineTypes.h"
 #include "Components/Widget.h"
 #include "EndPieImage.generated.h"
 
@@ -31,16 +31,16 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetLinearColor ColorAndOpacityDelegate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EBlendMode> BlendMode;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float StartAngle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetFloat StartAngleDelegate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float EndAngle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -4,7 +4,7 @@
 #include "EndNavModifierComponent.h"
 
 AEndFieldActionActorHeavyDoor::AEndFieldActionActorHeavyDoor() {
-    this->LongPushTime = 1;
+    this->LongPushTime = 2.00f;
     this->DisableForceAutoClose = false;
     this->PressVolume = CreateDefaultSubobject<UEndFieldActionTriggerComponent>(TEXT("PressVolume"));
     this->PullVolume = CreateDefaultSubobject<UEndFieldActionTriggerComponent>(TEXT("PullVolume"));

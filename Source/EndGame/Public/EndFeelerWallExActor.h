@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Engine/TriggerBox.h"
-#include "EndActorBaseInterface.h"
 #include "EndFeelerActorInterface.h"
-#include "EndFeelerWallExWave.h"
 #include "EndFeelerWallExSetting.h"
+#include "EndActorBaseInterface.h"
+#include "EndFeelerWallExWave.h"
 #include "EndFeelerWallExActor.generated.h"
 
 UCLASS(Blueprintable)
@@ -23,13 +23,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEndFeelerWallExSetting Setting;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FadeInWaitTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OverrideFadeInTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float OverrideFadeOutTime;
     
     AEndFeelerWallExActor();

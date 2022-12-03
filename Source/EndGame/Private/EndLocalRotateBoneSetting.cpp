@@ -1,9 +1,9 @@
 #include "EndLocalRotateBoneSetting.h"
 
 FEndLocalRotateBoneSetting::FEndLocalRotateBoneSetting() {
-    this->RotationSpeed = 1;
-    this->BlendInTime = 1;
-    this->BlendOutTime = 1;
+    this->RotationSpeed = 0.00f;
+    this->BlendInTime = 0.00f;
+    this->BlendOutTime = 0.00f;
     this->bForceBlend = false;
 }
 

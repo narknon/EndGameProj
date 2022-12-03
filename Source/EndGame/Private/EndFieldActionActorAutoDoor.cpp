@@ -1,8 +1,8 @@
 #include "EndFieldActionActorAutoDoor.h"
-#include "EndFieldActionTriggerComponent.h"
-#include "Components/StaticMeshComponent.h"
 #include "EndSwitchAreaBoxComponent.h"
+#include "EndFieldActionTriggerComponent.h"
 #include "EndNavModifierComponent.h"
+#include "Components/StaticMeshComponent.h"
 
 AEndFieldActionActorAutoDoor::AEndFieldActionActorAutoDoor() {
     this->AutoDoorActiveEffectType = EAutoDoorActiveEffectType::AutoDoorActiveNone;
@@ -13,7 +13,7 @@ AEndFieldActionActorAutoDoor::AEndFieldActionActorAutoDoor() {
     this->PcWallComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PcWallComponent"));
     this->PartyWallComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PartyWallComponent"));
     this->EnemyWallComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("EnemyWallComponent"));
-    this->AutoClosingTime = 1;
+    this->AutoClosingTime = 3.00f;
     this->DisablePartyWall = false;
     this->DisableEnemyWall = false;
     this->Type = EEndOneWayType::RightToLeft;

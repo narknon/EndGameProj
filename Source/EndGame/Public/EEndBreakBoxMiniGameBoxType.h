@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBreakBoxMiniGameBoxType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBreakBoxMiniGameBoxType : uint8 {
     NORMAL,
     ABILITY,

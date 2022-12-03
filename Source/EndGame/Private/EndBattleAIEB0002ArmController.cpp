@@ -42,27 +42,27 @@ EArmPhase AEndBattleAIEB0002ArmController::GetArmPhase() {
 }
 
 AEndBattleAIEB0002ArmController::AEndBattleAIEB0002ArmController() {
-    this->ArmHeightIdle = 1;
-    this->ArmHeightAroundIdle = 1;
-    this->ArmHeightSideAttack1 = 1;
-    this->ArmHeightSideAttack2 = 1;
-    this->ArmHeightTargetAroundIdle = 1;
-    this->ArmRotateSpeedIdle = 1;
-    this->ArmDistanceIdle = 1;
-    this->ArmDistanceAroundIdle = 1;
-    this->ArmDistanceSideAttack1 = 1;
-    this->ArmDistanceSideAttack2 = 1;
-    this->ArmDistanceTargetAroundIdle = 1;
-    this->ArmHeightCatch = 1;
-    this->ArmDistanceCatch = 1;
-    this->ArmThrowHeight = 1;
-    this->ArmThrowAngle = 1;
-    this->ArmThrowRollAngle = 1;
-    this->ArmThrowRollSpeed = 1;
-    this->ArmPointAngle = 1;
-    this->ArmPointHeight = 1;
-    this->ArmPointDistance = 1;
-    this->ArmRotateSpec = 1;
+    this->ArmHeightIdle = 0.00f;
+    this->ArmHeightAroundIdle = 50.00f;
+    this->ArmHeightSideAttack1 = 150.00f;
+    this->ArmHeightSideAttack2 = 150.00f;
+    this->ArmHeightTargetAroundIdle = 150.00f;
+    this->ArmRotateSpeedIdle = 0.00f;
+    this->ArmDistanceIdle = 600.00f;
+    this->ArmDistanceAroundIdle = 1200.00f;
+    this->ArmDistanceSideAttack1 = 700.00f;
+    this->ArmDistanceSideAttack2 = 700.00f;
+    this->ArmDistanceTargetAroundIdle = 700.00f;
+    this->ArmHeightCatch = 0.00f;
+    this->ArmDistanceCatch = 100.00f;
+    this->ArmThrowHeight = 200.00f;
+    this->ArmThrowAngle = 0.00f;
+    this->ArmThrowRollAngle = 0.00f;
+    this->ArmThrowRollSpeed = 1.00f;
+    this->ArmPointAngle = 0.00f;
+    this->ArmPointHeight = 100.00f;
+    this->ArmPointDistance = 100.00f;
+    this->ArmRotateSpec = 1.00f;
     this->bAutoArmPhase = true;
 }
 

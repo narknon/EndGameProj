@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EndOnOffStatus.generated.h"
 
-UENUM()
-enum class EndOnOffStatus {
+UENUM(BlueprintType)
+enum class EndOnOffStatus : uint8 {
     EndOnOffStatus_On,
     EndOnOffStatus_Off,
     EndOnOffStatus_OnOverrideHide,

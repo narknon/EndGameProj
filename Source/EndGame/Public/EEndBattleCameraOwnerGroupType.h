@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBattleCameraOwnerGroupType.generated.h"
 
-UENUM()
-enum class EEndBattleCameraOwnerGroupType {
+UENUM(BlueprintType)
+enum class EEndBattleCameraOwnerGroupType : uint8 {
     Owner,
     World,
     MAX,

@@ -2,6 +2,6 @@
 
 UEndAerialIgnoreComponent::UEndAerialIgnoreComponent() {
     this->MeshShapeType = EAerialIgnoreShapeType::Box;
-    this->SphereRadius = 1;
+    this->SphereRadius = 50.00f;
 }
 

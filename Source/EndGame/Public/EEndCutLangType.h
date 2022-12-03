@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCutLangType.generated.h"
 
-UENUM()
-enum class EEndCutLangType {
+UENUM(BlueprintType)
+enum class EEndCutLangType : uint8 {
     JP,
     US,
     DE,

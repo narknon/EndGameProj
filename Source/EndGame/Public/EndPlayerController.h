@@ -7,8 +7,8 @@
 
 class AActor;
 class AEndCharacter;
-class UEndPlayerExistNavAreaComponent;
 class UEndCapsuleOverlapComponent;
+class UEndPlayerExistNavAreaComponent;
 class AEndBattleTalkOnEndBattleActor;
 
 UCLASS(Blueprintable)
@@ -18,10 +18,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* PlayerTrigger;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndCapsuleOverlapComponent* EndCapsuleOverlapComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndPlayerExistNavAreaComponent* PlayerExistNavAreaComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -34,10 +34,10 @@ public:
     AEndBattleTalkOnEndBattleActor* BattleTalkOnEndBattle;
     
 private:
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxMouseSensitivity;
     
-    UPROPERTY(Config, EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, Config, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinMouseSensitivity;
     
 public:

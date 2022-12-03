@@ -1,19 +1,19 @@
 #include "EndDataTableCameraFlavor.h"
 
 FEndDataTableCameraFlavor::FEndDataTableCameraFlavor() {
-    this->BeginBlendTime = 1;
+    this->BeginBlendTime = 0.00f;
     this->BeginBlendType = 0;
-    this->EndBlendTime = 1;
+    this->EndBlendTime = 0.00f;
     this->EndBlendType = 0;
-    this->Param0 = 1;
-    this->Param1 = 1;
-    this->Param2 = 1;
-    this->Param3 = 1;
-    this->Param4 = 1;
-    this->Param5 = 1;
-    this->Param6 = 1;
-    this->Param7 = 1;
-    this->Param8 = 1;
+    this->Param0 = 0.00f;
+    this->Param1 = 0.00f;
+    this->Param2 = 0.00f;
+    this->Param3 = 0.00f;
+    this->Param4 = 0.00f;
+    this->Param5 = 0.00f;
+    this->Param6 = 0.00f;
+    this->Param7 = 0.00f;
+    this->Param8 = 0.00f;
     this->ParamFlag = 0;
 }
 

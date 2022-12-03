@@ -29,9 +29,9 @@ void AEndBattleAITown7WedgeController::BeginRootMovement() {
 }
 
 AEndBattleAITown7WedgeController::AEndBattleAITown7WedgeController() {
-    this->Level = 0;
-    this->FleeMovementGoalRadius = 1;
-    this->FleeLocationResetDuration = 1;
-    this->FleeLocationResetDistance = 1;
+    this->Level = 1;
+    this->FleeMovementGoalRadius = 0.00f;
+    this->FleeLocationResetDuration = 2.00f;
+    this->FleeLocationResetDistance = 500.00f;
 }
 

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCameraDuctStateType.generated.h"
 
-UENUM()
-enum class EEndCameraDuctStateType {
+UENUM(BlueprintType)
+enum class EEndCameraDuctStateType : uint8 {
     RotateIn,
     Enter,
     Move,

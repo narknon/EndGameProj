@@ -5,12 +5,12 @@ UEndBTDecorator_Field_ArithmeticComparison::UEndBTDecorator_Field_ArithmeticComp
     this->bUseBlackboardA = true;
     this->bUsePropertyOrFunctionA = false;
     this->bUseLiteralA = false;
-    this->LiteralValueA = 1;
+    this->LiteralValueA = 0.00f;
     this->ArithmeticOperation = EEndAiMathCmp::Equal;
-    this->ValueTypeB = EBTDecorator_Field_ArithmeticComparisonSource::Blackboard;
+    this->ValueTypeB = EBTDecorator_Field_ArithmeticComparisonSource::LiteralValue;
     this->bUseBlackboardB = false;
     this->bUsePropertyOrFunctionB = false;
     this->bUseLiteralB = true;
-    this->LiteralValueB = 1;
+    this->LiteralValueB = 0.00f;
 }
 

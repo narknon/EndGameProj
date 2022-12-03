@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "BikeSeAsset.h"
 #include "Components/ActorComponent.h"
+#include "BikeSeAsset.h"
 #include "AccelModifier.h"
 #include "EndBikeZeroOneSeComponent.generated.h"
 
@@ -33,7 +33,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FBikeSeAsset HitObject;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float VelocityZeroOneFadeTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -42,10 +42,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FAccelModifier ExhaustionModifier;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BodyRoughnessThreshold;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float RandomPitchRange;
     
     UEndBikeZeroOneSeComponent();

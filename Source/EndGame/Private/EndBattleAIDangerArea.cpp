@@ -2,8 +2,8 @@
 
 FEndBattleAIDangerArea::FEndBattleAIDangerArea() {
     this->DangerAreaType = EEndBattleAIDangerAreaType::eNone;
-    this->Radius = 1;
-    this->Length = 1;
-    this->Width = 1;
+    this->Radius = 0.00f;
+    this->Length = 0.00f;
+    this->Width = 0.00f;
 }
 

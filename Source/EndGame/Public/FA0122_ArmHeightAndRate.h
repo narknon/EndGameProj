@@ -6,10 +6,10 @@ USTRUCT(BlueprintType)
 struct FFA0122_ArmHeightAndRate {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Rate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Height;
     
     ENDGAME_API FFA0122_ArmHeightAndRate();

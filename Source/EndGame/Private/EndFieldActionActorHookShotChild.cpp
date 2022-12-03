@@ -1,7 +1,7 @@
 #include "EndFieldActionActorHookShotChild.h"
 #include "EndFieldActionTriggerComponent.h"
-#include "EndNavModifierComponent.h"
 #include "EndHoocShotTriggerComponent.h"
+#include "EndNavModifierComponent.h"
 
 AEndFieldActionActorHookShotChild::AEndFieldActionActorHookShotChild() {
     this->PressVolume = CreateDefaultSubobject<UEndFieldActionTriggerComponent>(TEXT("PressVolume"));

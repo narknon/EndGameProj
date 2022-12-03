@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "StreamLevelSetSlot.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class StreamLevelSetSlot : uint8 {
     StreamLevelSet_NONE,
     StreamLevelSet_SLOT1,

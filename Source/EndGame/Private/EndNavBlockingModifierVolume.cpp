@@ -1,7 +1,7 @@
 #include "EndNavBlockingModifierVolume.h"
 
-AEndNavBlockingModifierVolume::AEndNavBlockingModifierVolume(const FObjectInitializer& ObjectInitializer) : AEndNavSwitchingVolume(ObjectInitializer) {
+AEndNavBlockingModifierVolume::AEndNavBlockingModifierVolume() {
     this->IsFirstStart = true;
-    this->NavAreaType = EEndNavAreaType::NullArea;
+    this->NavAreaType = EEndNavAreaType::Impassable;
 }
 

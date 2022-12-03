@@ -10,10 +10,10 @@ enum class EEndBattleSummonType : uint8 {
     DebuChocobo,
     Leviathan,
     Bahamut,
-    Carbuncle,
+    Carbuncle = 0xC,
     Cactuar,
     Hinachocobo,
     Ramuh,
-    None,
+    None = 0x1F,
 };
 

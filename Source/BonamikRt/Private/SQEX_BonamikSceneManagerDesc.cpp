@@ -4,11 +4,11 @@ FSQEX_BonamikSceneManagerDesc::FSQEX_BonamikSceneManagerDesc() {
     this->m_IsEnable = false;
     this->m_IsUseGPU = false;
     this->m_SubStep = 0;
-    this->m_Dt = 1;
+    this->m_Dt = 0.00f;
     this->m_TotalGroup = 0;
     this->m_IsEnableLSS = false;
-    this->m_LSScoeff_tran = 1;
-    this->m_LSScoeff_rot = 1;
+    this->m_LSScoeff_tran = 0.00f;
+    this->m_LSScoeff_rot = 0.00f;
     this->m_IsEnableLocalForce = false;
     this->m_TotalLinkBatches = 0;
     this->m_TotalLinksInBatch[0] = 0;

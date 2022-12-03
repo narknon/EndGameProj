@@ -8,8 +8,8 @@
 #include "ESQEX_Bonamik_EmissiveDirection.h"
 #include "SQEX_Bonamik_Component.generated.h"
 
-class USkeletalMeshComponent;
 class USQEX_BonamikAsset;
+class USkeletalMeshComponent;
 class UCharacterMovementComponent;
 class USQEX_Bonamik_Component;
 
@@ -26,10 +26,10 @@ public:
     USQEX_BonamikAsset* m_BonamikAsset;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* SkeletalMeshComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UCharacterMovementComponent* CharacterMovementComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -44,7 +44,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     int32 PreRollStepOnResume;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float PrevScreenSize;
     
 public:
@@ -172,7 +172,7 @@ public:
     UFUNCTION(BlueprintCallable)
     float SQEX_Bonamik_GetTeleportDistance();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float SQEX_Bonamik_GetSpeedRate() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

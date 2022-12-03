@@ -1,6 +1,6 @@
 #include "EndAISensorTactileSense.h"
 
 FEndAISensorTactileSense::FEndAISensorTactileSense() {
-    this->HeatDistance = 1;
+    this->HeatDistance = 0.00f;
 }
 

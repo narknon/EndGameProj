@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EVfxTrajectoryRenderAxisOption.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EVfxTrajectoryRenderAxisOption : uint8 {
     EVTRAO_RightVector,
     EVTRAO_UpVector,

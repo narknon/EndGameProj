@@ -13,7 +13,7 @@ FEndDataTableBattleSummonConditions::FEndDataTableBattleSummonConditions() {
     this->EnableCallSummon13 = 0;
     this->EnableCallSummon14 = 0;
     this->EnableCallSummon15 = 0;
-    this->SummonCoefficient = 1;
+    this->SummonCoefficient = 0.00f;
     this->CallMaximumNumber = 0;
     this->SummonCorrection = 0;
     this->TriggerBitField = 0;

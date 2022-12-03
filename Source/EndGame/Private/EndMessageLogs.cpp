@@ -8,8 +8,8 @@ void UEndMessageLogs::AddMessage(const FString& Message) {
 
 UEndMessageLogs::UEndMessageLogs() {
     this->ContentClass = NULL;
-    this->ScrollTime = 1;
-    this->WaitTime = 1;
-    this->GradientSize = 1;
+    this->ScrollTime = 0.50f;
+    this->WaitTime = 2.00f;
+    this->GradientSize = 0.25f;
 }
 

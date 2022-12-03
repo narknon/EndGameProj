@@ -1,6 +1,6 @@
 #include "EndBikeAIStunRayController.h"
 
 AEndBikeAIStunRayController::AEndBikeAIStunRayController() {
-    this->AvoidJumpPointDistance = 1;
+    this->AvoidJumpPointDistance = 40.00f;
 }
 

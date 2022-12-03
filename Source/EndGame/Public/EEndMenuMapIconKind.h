@@ -1,0 +1,46 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "EEndMenuMapIconKind.generated.h"
+
+UENUM(BlueprintType)
+enum class EEndMenuMapIconKind : uint8 {
+    PartyMember,
+    Enemy,
+    MainStory,
+    SubStory,
+    Elevator,
+    Up,
+    Down,
+    Shop,
+    Location,
+    Inn,
+    Reserved2,
+    MainStoryIntermediate,
+    SideDestination,
+    VendingMachine,
+    WeaponShop,
+    MateriaShop,
+    Chadley,
+    ChocoboCarriage,
+    VRBattle,
+    Colosseum,
+    MogShop,
+    PHS,
+    CorneoTreasure,
+    Jukebox,
+    RoadClosed,
+    CondorR1,
+    CondorR1Cleared,
+    CondorR2,
+    CondorR2Cleared,
+    CondorR3,
+    CondorR3Cleared,
+    CondorR4,
+    CondorR4Cleared,
+    CondorR5,
+    CondorR5Cleared,
+    CondorR6,
+    CondorR6Cleared,
+    Lift,
+};
+

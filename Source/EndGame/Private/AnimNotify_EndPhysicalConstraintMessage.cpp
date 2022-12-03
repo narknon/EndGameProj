@@ -1,7 +1,7 @@
 #include "AnimNotify_EndPhysicalConstraintMessage.h"
 
 UAnimNotify_EndPhysicalConstraintMessage::UAnimNotify_EndPhysicalConstraintMessage() {
-    this->Message = EEndPhysicalConstraintMessage::Deactivate;
-    this->Parameter0 = 1;
+    this->Message = EEndPhysicalConstraintMessage::Activate;
+    this->Parameter0 = 0.00f;
 }
 

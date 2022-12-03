@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EndBattleBreakableAttachData.h"
 #include "Components/ActorComponent.h"
+#include "EndBattleBreakableAttachData.h"
 #include "EndBattleBreakableCharacterComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

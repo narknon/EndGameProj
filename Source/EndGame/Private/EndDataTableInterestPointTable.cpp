@@ -8,7 +8,7 @@ FEndDataTableInterestPointTable::FEndDataTableInterestPointTable() {
     this->Incidence = 0;
     this->IsOnly = 0;
     this->IsBehaviorToLast = 0;
-    this->RemainTime = 1;
+    this->RemainTime = 0.00f;
     this->Command = 0;
 }
 

@@ -1,6 +1,6 @@
 #include "EndAISensorHearing.h"
 
 FEndAISensorHearing::FEndAISensorHearing() {
-    this->HearDistance = 1;
+    this->HearDistance = 0.00f;
 }
 

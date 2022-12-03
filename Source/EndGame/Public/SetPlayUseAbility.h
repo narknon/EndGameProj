@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SetPlayUseAbility.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace SetPlayUseAbility {
     enum Type {
         Succeeded,

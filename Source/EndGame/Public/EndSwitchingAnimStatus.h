@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EndSwitchingAnimStatus.generated.h"
 
-UENUM()
-enum class EndSwitchingAnimStatus {
+UENUM(BlueprintType)
+enum class EndSwitchingAnimStatus : uint8 {
     EndSwitchingAnimStatus_Outer,
     EndSwitchingAnimStatus_Inner,
     EndSwitchingAnimStatus_OuterInner,

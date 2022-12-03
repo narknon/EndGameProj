@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEqsType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EEqsType {
     enum Type {
         CommonEnemyTarget,

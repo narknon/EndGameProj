@@ -12,13 +12,13 @@ bool AEndBattleAISU0004_02Controller::IsFollowLocation() {
 }
 
 AEndBattleAISU0004_02Controller::AEndBattleAISU0004_02Controller() {
-    this->TornadoMaxSpeed = 1;
-    this->UcpcDistance = 1;
-    this->RepulsiveDistance = 1;
-    this->RepulsiveAccQuantity = 1;
-    this->TornadoMoveInterval = 1;
-    this->RepulsiveOriginInterval = 1;
+    this->TornadoMaxSpeed = 100.00f;
+    this->UcpcDistance = 150.00f;
+    this->RepulsiveDistance = 150.00f;
+    this->RepulsiveAccQuantity = 1.00f;
+    this->TornadoMoveInterval = 0.00f;
+    this->RepulsiveOriginInterval = 0.00f;
     this->bCanFollow = true;
-    this->MoveEndQuantity = 1;
+    this->MoveEndQuantity = 0.90f;
 }
 

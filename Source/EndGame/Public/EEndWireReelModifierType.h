@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndWireReelModifierType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndWireReelModifierType : uint8 {
     Attach,
     Launch,

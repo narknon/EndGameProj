@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndWireReelState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndWireReelState : uint8 {
     Idle,
     Launch,

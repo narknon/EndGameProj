@@ -1,12 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Layout/Margin.h"
-#include "Components/Widget.h"
 #include "Framework/Text/TextLayout.h"
+#include "Components/Widget.h"
+#include "Layout/Margin.h"
+#include "UObject/NoExportTypes.h"
 #include "Styling/SlateColor.h"
 #include "Components/Widget.h"
 #include "Components/Widget.h"
-#include "UObject/NoExportTypes.h"
 #include "UObject/NoExportTypes.h"
 #include "Engine/EngineTypes.h"
 #include "EndTextBlock.generated.h"
@@ -19,7 +19,7 @@ class ENDGAME_API UEndTextBlock : public UWidget {
 public:
     DECLARE_DYNAMIC_DELEGATE_RetVal(FString, FGetString);
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ETextJustify::Type> Justification;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -28,13 +28,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool AutoShrinkText;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WrapTextAt;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMargin Margin;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LineHeightPercentage;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -76,10 +76,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetLinearColor ShadowColorAndOpacityDelegate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinDesiredWidth;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EBlendMode> BlendMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

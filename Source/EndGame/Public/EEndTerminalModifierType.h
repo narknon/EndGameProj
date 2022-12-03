@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndTerminalModifierType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndTerminalModifierType : uint8 {
     FixAttach,
 };

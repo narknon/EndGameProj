@@ -1,10 +1,10 @@
 #include "EndCircle.h"
 
-class UMaterialInterface;
+class USlateBrushAsset;
 class UMaterialInstanceDynamic;
 class UTexture2DDynamic;
 class UTexture2D;
-class USlateBrushAsset;
+class UMaterialInterface;
 
 void UEndCircle::SetStartAngle(float InAngle) {
 }
@@ -48,9 +48,9 @@ UMaterialInstanceDynamic* UEndCircle::GetDynamicMaterial() {
 
 UEndCircle::UEndCircle() {
     this->BlendMode = BLEND_Translucent;
-    this->Radius = 1;
-    this->NumSides = 0;
-    this->StartAngle = 1;
-    this->EndAngle = 1;
+    this->Radius = 50.00f;
+    this->NumSides = 32;
+    this->StartAngle = 0.00f;
+    this->EndAngle = 360.00f;
 }
 

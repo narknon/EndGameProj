@@ -1,14 +1,14 @@
 #include "EndDataTablePlannerEventRelativeCamera.h"
 
 FEndDataTablePlannerEventRelativeCamera::FEndDataTablePlannerEventRelativeCamera() {
-    this->MainTargetOffsetZ = 1;
-    this->SubTargetOffsetZ = 1;
-    this->RotatePitch = 1;
-    this->RotateYaw = 1;
-    this->RelativeRate = 1;
-    this->RelativeZRate = 1;
-    this->CameraDist = 1;
-    this->FOV = 1;
+    this->MainTargetOffsetZ = 0.00f;
+    this->SubTargetOffsetZ = 0.00f;
+    this->RotatePitch = 0.00f;
+    this->RotateYaw = 0.00f;
+    this->RelativeRate = 0.00f;
+    this->RelativeZRate = 0.00f;
+    this->CameraDist = 0.00f;
+    this->FOV = 0.00f;
     this->PlayTime = 0;
 }
 

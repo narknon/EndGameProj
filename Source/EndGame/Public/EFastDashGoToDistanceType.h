@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFastDashGoToDistanceType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFastDashGoToDistanceType : uint8 {
     Short,
     Middle,

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EndFieldStateTriggerScope.generated.h"
 
-UENUM()
-enum class EndFieldStateTriggerScope {
+UENUM(BlueprintType)
+enum class EndFieldStateTriggerScope : uint8 {
     EndFieldStateTriggerScope_Self,
     EndFieldStateTriggerScope_Location,
     EndFieldStateTriggerScope_ResidentAndLocation,

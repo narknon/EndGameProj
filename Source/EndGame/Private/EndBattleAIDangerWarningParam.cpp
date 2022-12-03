@@ -2,7 +2,7 @@
 
 FEndBattleAIDangerWarningParam::FEndBattleAIDangerWarningParam() {
     this->Instigator = NULL;
-    this->Duration = 1;
+    this->Duration = 0.00f;
     this->DebugDraw = false;
 }
 

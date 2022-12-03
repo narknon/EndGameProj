@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EIOGameDataState.generated.h"
 
-UENUM()
-enum class EIOGameDataState {
+UENUM(BlueprintType)
+enum class EIOGameDataState : uint8 {
     EIOGameDataState_NONE,
     EIOGameDataState_SAVE,
     EIOGameDataState_LOAD,

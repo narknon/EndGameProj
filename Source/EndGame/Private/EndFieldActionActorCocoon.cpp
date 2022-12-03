@@ -1,7 +1,7 @@
 #include "EndFieldActionActorCocoon.h"
-#include "Components/BoxComponent.h"
 #include "EndFieldActionTriggerComponent.h"
 #include "EndSwitchAreaBoxComponent.h"
+#include "Components/BoxComponent.h"
 #include "EndNavModifierComponent.h"
 
 AEndFieldActionActorCocoon::AEndFieldActionActorCocoon() {

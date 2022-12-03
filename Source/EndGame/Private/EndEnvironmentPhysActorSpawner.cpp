@@ -5,6 +5,6 @@ AEndEnvironmentPhysActorSpawner::AEndEnvironmentPhysActorSpawner() {
     this->bSpawnWithImpulse = false;
     this->bEnableImpulse = false;
     this->ImpulseScale = EEndEnvironmentPhysForceScale::Scale0;
-    this->ImpulseRadius = 1;
+    this->ImpulseRadius = 0.00f;
 }
 

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndLookAtLayer.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndLookAtLayer : uint8 {
     Body,
     Head,

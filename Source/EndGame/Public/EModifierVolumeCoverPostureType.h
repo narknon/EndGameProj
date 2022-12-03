@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EModifierVolumeCoverPostureType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EModifierVolumeCoverPostureType {
     enum Type {
         Stand,

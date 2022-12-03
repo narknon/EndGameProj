@@ -12,6 +12,6 @@ AEndFieldActionActorCardKeyDoor::AEndFieldActionActorCardKeyDoor() {
     this->TargetIconSecondVolume = CreateDefaultSubobject<UEndFieldActionTriggerComponent>(TEXT("TargetIconSecondVolume"));
     this->DividedVersatileVolume = CreateDefaultSubobject<UEndSwitchAreaBoxComponent>(TEXT("DividedVersatileVolume"));
     this->ModifierVolume = CreateDefaultSubobject<UEndNavModifierComponent>(TEXT("Modifier"));
-    this->AutoClosingTime = 1;
+    this->AutoClosingTime = 3.00f;
 }
 

@@ -58,16 +58,16 @@ AEndGameState::AEndGameState() {
     this->RequestGamePauseOff = 0;
     this->NextPauseMenuKind = EEndSystemPauseMenuKind::None;
     this->HideWorld = false;
-    this->GameSpeed[0] = 1;
-    this->GameSpeed[1] = 1;
-    this->GameSpeed[2] = 1;
-    this->GameSpeed[3] = 1;
-    this->GameSpeed[4] = 1;
-    this->GameSpeed[5] = 1;
-    this->GameSpeed[6] = 1;
-    this->GameSpeed[7] = 1;
-    this->GameSpeed[8] = 1;
-    this->GameSpeed[9] = 1;
-    this->GameSpeed[10] = 1;
+    this->GameSpeed[0] = 1.00f;
+    this->GameSpeed[1] = 1.00f;
+    this->GameSpeed[2] = 1.00f;
+    this->GameSpeed[3] = 1.00f;
+    this->GameSpeed[4] = 1.00f;
+    this->GameSpeed[5] = 1.00f;
+    this->GameSpeed[6] = 1.00f;
+    this->GameSpeed[7] = 1.00f;
+    this->GameSpeed[8] = 1.00f;
+    this->GameSpeed[9] = 1.00f;
+    this->GameSpeed[10] = 1.00f;
 }
 

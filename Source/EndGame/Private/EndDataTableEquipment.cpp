@@ -39,10 +39,10 @@ FEndDataTableEquipment::FEndDataTableEquipment() {
     this->PropertyResist0 = 0;
     this->PropertyResist1 = 0;
     this->BreakDead = 0;
-    this->MateriaGrowScale = 1;
+    this->MateriaGrowScale = 0.00f;
     this->MateriaSlotDouble = 0;
     this->MateriaSlotSingle = 0;
-    this->LongAttackRange = 1;
+    this->LongAttackRange = 0.00f;
     this->NormalAttackReach = 0;
     this->GuardBeginSequeceBoneFilter = 0;
     this->UniqueActionType = 0;

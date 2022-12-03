@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Components/BoxComponent.h"
-#include "EFieldActionActorType.h"
 #include "UObject/NoExportTypes.h"
+#include "EFieldActionActorType.h"
 #include "UObject/NoExportTypes.h"
 #include "EndFieldActionTriggerComponent.generated.h"
 

@@ -1,7 +1,7 @@
 #include "EndSceneAPI.h"
 
-class AActor;
 class AEndNavModifierVolume;
+class AActor;
 
 bool UEndSceneAPI::ValidateSimpleCameraWall(FName TargetActorName) {
     return false;

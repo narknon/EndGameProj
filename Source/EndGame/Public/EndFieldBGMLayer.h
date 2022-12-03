@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EndFieldBGMLayer.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EndFieldBGMLayer : uint8 {
     EndFieldBGMLayer_Debug,
     EndFieldBGMLayer_CutScene,

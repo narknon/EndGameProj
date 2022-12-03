@@ -14,18 +14,18 @@ FEndDataTableAIParameter::FEndDataTableAIParameter() {
     this->InterpolationMove = 0;
     this->WalkRange = 0;
     this->GoalRadius = 0;
-    this->FollowUpDashDistance = 1;
+    this->FollowUpDashDistance = 0.00f;
     this->ForceWalk = 0;
-    this->FlightMaxSpeed = 1;
-    this->FlightAcceleration = 1;
+    this->FlightMaxSpeed = 0.00f;
+    this->FlightAcceleration = 0.00f;
     this->NoOverTaking = 0;
-    this->NoOverTakingDistance = 1;
-    this->StopDistance = 1;
+    this->NoOverTakingDistance = 0.00f;
+    this->StopDistance = 0.00f;
     this->LeadTurn = 0;
-    this->RangeRadius = 1;
+    this->RangeRadius = 0.00f;
     this->StayTimeMIn = 0;
     this->StayTimeRand = 0;
-    this->TurnBackDistance = 1;
-    this->MoveStartDistance = 1;
+    this->TurnBackDistance = 0.00f;
+    this->MoveStartDistance = 0.00f;
 }
 

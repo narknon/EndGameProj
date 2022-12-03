@@ -1,6 +1,6 @@
 #include "AnimNotify_EndSkipAnimIfLaunched.h"
 
 UAnimNotify_EndSkipAnimIfLaunched::UAnimNotify_EndSkipAnimIfLaunched() {
-    this->BlendTime = 1;
+    this->BlendTime = 0.00f;
 }
 

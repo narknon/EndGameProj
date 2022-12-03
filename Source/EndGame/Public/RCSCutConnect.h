@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "RCSCutConnect.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class RCSCutConnect : uint8 {
     None,
     InputWait,

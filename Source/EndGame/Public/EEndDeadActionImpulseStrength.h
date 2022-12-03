@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndDeadActionImpulseStrength.generated.h"
 
-UENUM()
-enum class EEndDeadActionImpulseStrength {
+UENUM(BlueprintType)
+enum class EEndDeadActionImpulseStrength : uint8 {
     Weak,
     Medium,
     Strong,

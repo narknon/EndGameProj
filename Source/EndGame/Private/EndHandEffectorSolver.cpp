@@ -2,9 +2,9 @@
 
 UEndHandEffectorSolver::UEndHandEffectorSolver() {
     this->HandMaxIterations.AddDefaulted(6);
-    this->HandReachPrecision = 1;
-    this->TargetReachStepPercent = 1;
-    this->PullDistribution = 1;
-    this->AlwaysLockRate = 1;
+    this->HandReachPrecision = 0.01f;
+    this->TargetReachStepPercent = 0.70f;
+    this->PullDistribution = 0.50f;
+    this->AlwaysLockRate = 0.00f;
 }
 

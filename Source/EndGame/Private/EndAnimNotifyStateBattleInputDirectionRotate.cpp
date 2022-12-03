@@ -1,7 +1,7 @@
 #include "EndAnimNotifyStateBattleInputDirectionRotate.h"
 
 UEndAnimNotifyStateBattleInputDirectionRotate::UEndAnimNotifyStateBattleInputDirectionRotate() {
-    this->Angle = 1;
+    this->Angle = 0.00f;
     this->bForce = false;
 }
 

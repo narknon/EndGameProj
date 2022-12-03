@@ -2,6 +2,6 @@
 
 FEndDataTableBattleAICharaSpec::FEndDataTableBattleAICharaSpec() {
     this->TargetSelectType = 0;
-    this->LightAttachATBIntervalTime = 1;
+    this->LightAttachATBIntervalTime = 0.00f;
 }
 

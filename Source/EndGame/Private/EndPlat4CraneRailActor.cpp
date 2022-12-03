@@ -2,9 +2,9 @@
 
 AEndPlat4CraneRailActor::AEndPlat4CraneRailActor() {
     this->UniqueIndex = 0;
-    this->ForwardLength = 1;
-    this->BackwardLength = 1;
-    this->PlaySeconds = 1;
-    this->CurrentPositionInSeconds = 1;
+    this->ForwardLength = 0.00f;
+    this->BackwardLength = 0.00f;
+    this->PlaySeconds = 10.00f;
+    this->CurrentPositionInSeconds = 0.00f;
 }
 

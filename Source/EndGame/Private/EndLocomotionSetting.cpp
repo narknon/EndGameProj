@@ -1,13 +1,13 @@
 #include "EndLocomotionSetting.h"
 
 FEndLocomotionSetting::FEndLocomotionSetting() {
-    this->BlendTime = 1;
+    this->BlendTime = 0.00f;
     this->bOverrideUpperBodyBlend = false;
-    this->UpperBodyBlendTime = 1;
-    this->RotationRate = 1;
+    this->UpperBodyBlendTime = 0.00f;
+    this->RotationRate = 0.00f;
     this->bUseSmoothRotationRate = false;
-    this->SmoothRotationRateMax = 1;
-    this->SmoothRotationRateInputAngleMax = 1;
-    this->InputBlockTime = 1;
+    this->SmoothRotationRateMax = 0.00f;
+    this->SmoothRotationRateInputAngleMax = 0.00f;
+    this->InputBlockTime = 0.00f;
 }
 

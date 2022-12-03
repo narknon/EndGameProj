@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERufusGoToDistanceType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERufusGoToDistanceType : uint8 {
     Short,
     Middle,

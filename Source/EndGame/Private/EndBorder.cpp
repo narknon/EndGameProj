@@ -1,8 +1,8 @@
 #include "EndBorder.h"
 
-class UMaterialInterface;
 class UTexture2D;
 class USlateBrushAsset;
+class UMaterialInterface;
 class UMaterialInstanceDynamic;
 
 void UEndBorder::SetVerticalAlignment(TEnumAsByte<EVerticalAlignment> InVerticalAlignment) {

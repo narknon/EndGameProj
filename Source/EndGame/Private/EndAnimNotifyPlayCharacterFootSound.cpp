@@ -3,9 +3,9 @@
 UEndAnimNotifyPlayCharacterFootSound::UEndAnimNotifyPlayCharacterFootSound() {
     this->AutoSeMotionType = ESQEXSEADAutoSeMotionSoundType::Walk;
     this->bDirectAssign = false;
-    this->SwitchValue = 1;
-    this->ZeroOneSlotIndex = 0;
-    this->ZeroOneValue = 1;
+    this->SwitchValue = 0.00f;
+    this->ZeroOneSlotIndex = -1;
+    this->ZeroOneValue = 0.00f;
     this->bPlayOnlyCharecterLanded = true;
     this->bSyncOwnerHiddenState = true;
 }

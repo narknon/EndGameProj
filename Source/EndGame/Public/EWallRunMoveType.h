@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EWallRunMoveType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EWallRunMoveType : uint8 {
     MoveOneWay_CW,
     MoveOneWay_CCW,

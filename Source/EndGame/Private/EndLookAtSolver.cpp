@@ -5,20 +5,20 @@ UEndLookAtSolver::UEndLookAtSolver() {
     this->bComponentSpaceForwardAim = false;
     this->bUseSolveBoneAimVector = true;
     this->bEulerInterp = false;
-    this->ActiveBlendTime = 1;
-    this->DeactiveBlendTime = 1;
-    this->ActiveBlendTimeWarning = 1;
-    this->DeactiveBlendTimeWarning = 1;
-    this->ActiveAngle = 1;
-    this->DeactiveAngle = 1;
-    this->ActiveAngleWarning = 1;
-    this->DeactiveAngleWarning = 1;
+    this->ActiveBlendTime = 0.50f;
+    this->DeactiveBlendTime = 0.80f;
+    this->ActiveBlendTimeWarning = 0.40f;
+    this->DeactiveBlendTimeWarning = 0.50f;
+    this->ActiveAngle = 75.00f;
+    this->DeactiveAngle = 95.00f;
+    this->ActiveAngleWarning = 75.00f;
+    this->DeactiveAngleWarning = 95.00f;
     this->bClampAtActiveAngle = false;
-    this->ClampHorizontalDistanceMin = 1;
-    this->ActivityDurationMin = 1;
-    this->WeightBias = 1;
-    this->WeightBiasWarning = 1;
-    this->UpWeightBias = 1;
-    this->UpWeightBiasWarning = 1;
+    this->ClampHorizontalDistanceMin = 100.00f;
+    this->ActivityDurationMin = 1.00f;
+    this->WeightBias = 1.00f;
+    this->WeightBiasWarning = 0.70f;
+    this->UpWeightBias = 1.00f;
+    this->UpWeightBiasWarning = 0.50f;
 }
 

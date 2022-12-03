@@ -9,18 +9,18 @@
 #include "UObject/NoExportTypes.h"
 #include "EndPartyAPI.generated.h"
 
-class AEndCharacter;
 class AActor;
+class AEndCharacter;
 
 UCLASS(Blueprintable)
 class ENDGAME_API UEndPartyAPI : public UObject {
     GENERATED_BODY()
 public:
     UEndPartyAPI();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void WaitPlayerStream(const UObject* WorldContextObject, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void WaitLoadCache(const UObject* WorldContextObject, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
@@ -68,7 +68,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsCurrentCharaSpecListPreloadFinished();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static void InitPartyLevel(const UObject* WorldContextObject, AActor* InPlayerTrigger);
     
     UFUNCTION(BlueprintCallable)
@@ -122,7 +122,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void FinishPlayerStream();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void CheckPlayerStream(const UObject* WorldContextObject, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)

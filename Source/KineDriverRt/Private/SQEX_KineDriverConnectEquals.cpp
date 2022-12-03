@@ -6,6 +6,6 @@ FSQEX_KineDriverConnectEquals::FSQEX_KineDriverConnectEquals() {
     this->OutOperator = 0;
     this->OutParameterType = ESQEX_KD_ParameterType_Other;
     this->OtherTargetParamIndex = 0;
-    this->Coef = 1;
+    this->Coef = 0.00f;
 }
 

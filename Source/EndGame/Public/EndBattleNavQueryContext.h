@@ -7,8 +7,6 @@
 class UObject;
 class AActor;
 
-
-
 UCLASS(Blueprintable, EditInlineNew)
 class UEndBattleNavQueryContext : public UEnvQueryContext_BlueprintBase {
     GENERATED_BODY()

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndInterestPointReactionActorType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndInterestPointReactionActorType : uint8 {
     Player,
     Party,

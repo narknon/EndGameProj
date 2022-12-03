@@ -4,8 +4,8 @@
 AEndEnvironmentInstancedStaticMeshActor::AEndEnvironmentInstancedStaticMeshActor() {
     this->InstancedMeshComponent = CreateDefaultSubobject<UInstancedStaticMeshComponent>(TEXT("InstancedStaticMesh"));
     this->bUseAnimation = false;
-    this->AnimateTime = 1;
-    this->AnimateTimeRate = 1;
-    this->AnimateTimeMax = 1;
+    this->AnimateTime = 0.00f;
+    this->AnimateTimeRate = 1.00f;
+    this->AnimateTimeMax = 1000000.00f;
 }
 

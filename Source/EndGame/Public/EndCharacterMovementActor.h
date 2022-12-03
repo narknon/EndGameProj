@@ -10,7 +10,7 @@ class ENDGAME_API AEndCharacterMovementActor : public AActor {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Instanced)
     UEndDuringCharacterMovementComponent* DuringCharacterMovementComponentList[12];
     
 public:

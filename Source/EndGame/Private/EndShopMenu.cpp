@@ -15,6 +15,6 @@ void UEndShopMenu::OnShopChadolyCellSetup(UWidget* ItemWidget, int32 ItemIndex) 
 }
 
 UEndShopMenu::UEndShopMenu() {
-    this->_SelectNumberSpan = 1;
+    this->_SelectNumberSpan = 0.00f;
 }
 

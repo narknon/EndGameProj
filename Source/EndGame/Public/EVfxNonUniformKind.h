@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EVfxNonUniformKind.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EVfxNonUniformKind : uint8 {
     None,
     Linear,

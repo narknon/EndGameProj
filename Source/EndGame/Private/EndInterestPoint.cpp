@@ -1,9 +1,9 @@
 #include "EndInterestPoint.h"
 
 AEndInterestPoint::AEndInterestPoint() {
-    this->Type = EEndInterestPointReactionActorType::Player;
-    this->InterestRadius = 1;
-    this->InterestTemplateID = EEndInterestPointTemplate::None;
+    this->Type = EEndInterestPointReactionActorType::Npc;
+    this->InterestRadius = 300.00f;
+    this->InterestTemplateID = EEndInterestPointTemplate::Template00;
     this->IsForcedRecognition = false;
     this->TextRenderComponent = NULL;
 }

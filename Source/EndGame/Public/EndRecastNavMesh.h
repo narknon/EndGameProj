@@ -1,6 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AI/Navigation/RecastNavMesh.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=RecastNavMesh -FallbackName=RecastNavMesh
 #include "EndRecastNavMesh.generated.h"
 

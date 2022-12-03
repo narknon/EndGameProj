@@ -2,11 +2,11 @@
 
 FEndAnimVehicleAngularSuspension::FEndAnimVehicleAngularSuspension() {
     this->bRestrictSuspensionLength = false;
-    this->Mass = 1;
-    this->Stiffness = 1;
+    this->Mass = 0.00f;
+    this->Stiffness = 0.00f;
     this->bKeepWheelRotation = false;
-    this->KeepWheelLerpAlpha = 1;
-    this->Length = 1;
-    this->KeepWheelLength = 1;
+    this->KeepWheelLerpAlpha = 0.00f;
+    this->Length = 0.00f;
+    this->KeepWheelLength = 0.00f;
 }
 

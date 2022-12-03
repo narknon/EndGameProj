@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndTarzanJumpType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndTarzanJumpType : uint8 {
     Chandelier,
     ChandelierCross,

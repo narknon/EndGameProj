@@ -1,13 +1,13 @@
 #include "EndBattleCameraShakeNotifyState.h"
 
 UEndBattleCameraShakeNotifyState::UEndBattleCameraShakeNotifyState() {
-    this->Cycle = 1;
-    this->Power = 1;
-    this->Decay = 1;
-    this->BlendInTime = 1;
-    this->BlendOutTime = 1;
-    this->Inner = 1;
-    this->Outer = 1;
+    this->Cycle = 1.00f;
+    this->Power = 1.00f;
+    this->Decay = 0.00f;
+    this->BlendInTime = 0.00f;
+    this->BlendOutTime = 0.50f;
+    this->Inner = 100.00f;
+    this->Outer = 5000.00f;
     this->EnableLoop = false;
 }
 

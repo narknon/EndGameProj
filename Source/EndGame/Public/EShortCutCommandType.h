@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EShortCutCommandType.generated.h"
 
-UENUM()
-enum class EShortCutCommandType {
+UENUM(BlueprintType)
+enum class EShortCutCommandType : uint8 {
     EShortCutCommandType_FACEBUTTON_LEFT,
     EShortCutCommandType_L1_FACEBUTTON_TOP,
     EShortCutCommandType_L1_FACEBUTTON_BOTTOM,

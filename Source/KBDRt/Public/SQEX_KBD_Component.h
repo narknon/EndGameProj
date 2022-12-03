@@ -19,10 +19,10 @@ class KBDRT_API USQEX_KBD_Component : public USceneComponent, public IBonamikWor
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* SkeletalMeshComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UCharacterMovementComponent* CharacterMovementComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
@@ -159,7 +159,7 @@ public:
     UFUNCTION(BlueprintCallable)
     float SQEX_Bonamik_GetTeleportDistance();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float SQEX_Bonamik_GetSpeedRate() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

@@ -3,7 +3,7 @@
 FSQEX_BonamikShapeMatchingDesc::FSQEX_BonamikShapeMatchingDesc() {
     this->m_TotalParticle = 0;
     this->m_RegionSize = 0;
-    this->m_Stiffness = 1;
+    this->m_Stiffness = 0.00f;
     this->m_ParticleIds[0] = 0;
     this->m_ParticleIds[1] = 0;
     this->m_ParticleIds[2] = 0;

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndLookAtForceDeactiveType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndLookAtForceDeactiveType : uint8 {
     Field,
     FieldAttack,

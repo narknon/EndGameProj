@@ -4,9 +4,9 @@ class AEndCharacter;
 class AActor;
 class AEndBattleAIController;
 class UObject;
+class UEndBattleDamageSourceComponent;
 class AEndNavModifierVolume;
 class AEndEnvironmentPhysicsStaticMeshActor;
-class UEndBattleDamageSourceComponent;
 
 float UEndBattleAPI::VecToYaw(const FVector& InVec) {
     return 0.0f;

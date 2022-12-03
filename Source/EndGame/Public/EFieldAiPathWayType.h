@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFieldAiPathWayType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFieldAiPathWayType : uint8 {
     None,
     Center,

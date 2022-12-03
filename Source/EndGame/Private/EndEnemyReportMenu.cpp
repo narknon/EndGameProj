@@ -57,12 +57,12 @@ void UEndEnemyReportMenu::OnAbilityListSetupItem(UWidget* ItemWidget, int32 Cell
 UEndEnemyReportMenu::UEndEnemyReportMenu() {
     this->_DetailFlavorTipsDescriptionScrollBox = NULL;
     this->_DetailScrollTextBlock = NULL;
-    this->DetailFadeInOutLenght = 1;
-    this->CharacterDitherFadeInLenght = 1;
-    this->RotationYMin = 1;
-    this->RotationYMax = 1;
-    this->RotationYDefault = 1;
-    this->RotationXSpeed = 1;
-    this->RotationYSpeed = 1;
+    this->DetailFadeInOutLenght = 0.20f;
+    this->CharacterDitherFadeInLenght = 0.50f;
+    this->RotationYMin = -20.00f;
+    this->RotationYMax = 5.00f;
+    this->RotationYDefault = 0.00f;
+    this->RotationXSpeed = 80.00f;
+    this->RotationYSpeed = 80.00f;
 }
 

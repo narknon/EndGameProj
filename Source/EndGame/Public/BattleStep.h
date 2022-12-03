@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "BattleStep.generated.h"
 
-UENUM()
-enum class BattleStep {
+UENUM(BlueprintType)
+enum class BattleStep : uint8 {
     NormalStep,
     EscapingStep,
     WarningStep,

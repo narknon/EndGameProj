@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "EndChapterSelectMenu.generated.h"
 
-class UEndImage;
 class UPaperSprite;
+class UEndImage;
 class UWidget;
 
 UCLASS(Blueprintable, EditInlineNew)
@@ -31,7 +31,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FString> _PlusChapterInfos;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndUserWidget* Throbber;
     
 public:

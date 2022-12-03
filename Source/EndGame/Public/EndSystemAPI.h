@@ -12,7 +12,7 @@ class ENDGAME_API UEndSystemAPI : public UObject {
     GENERATED_BODY()
 public:
     UEndSystemAPI();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void WaitTaskId(const UObject* WorldContextObject, int32 taskid, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
@@ -96,7 +96,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool IsAppContentsAdded();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void InitAppContents(const UObject* WorldContextObject, FLatentActionInfo LatentInfo);
     
     UFUNCTION(BlueprintCallable)
@@ -171,7 +171,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static void ClearReservedPVPreviewName();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void CheckAppContents(const UObject* WorldContextObject, int32 taskid, FLatentActionInfo LatentInfo);
     
 };

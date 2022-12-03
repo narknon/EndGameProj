@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCutForceFeedBackMode.generated.h"
 
-UENUM()
-enum class EEndCutForceFeedBackMode {
+UENUM(BlueprintType)
+enum class EEndCutForceFeedBackMode : uint8 {
     Play,
     PlayLoop,
     Stop,

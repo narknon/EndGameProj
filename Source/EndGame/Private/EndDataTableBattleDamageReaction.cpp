@@ -1,30 +1,30 @@
 #include "EndDataTableBattleDamageReaction.h"
 
 FEndDataTableBattleDamageReaction::FEndDataTableBattleDamageReaction() {
-    this->KnockBackDistance = 1;
-    this->KnockBackDistanceMin = 1;
-    this->KnockBackDistanceMax = 1;
-    this->KnockBackTime = 1;
-    this->KnockBackRagidTime = 1;
-    this->KnockBackRagidTimeMin = 1;
-    this->KnockBackRagidTimeMax = 1;
-    this->LaunchHeight = 1;
-    this->LaunchHeightMin = 1;
-    this->LaunchHeightMax = 1;
-    this->RiseGravityScale = 1;
-    this->FallGravityScale = 1;
-    this->AirKnockBackDistance = 1;
-    this->AirKnockBackDistanceMin = 1;
-    this->AirKnockBackDistanceMax = 1;
-    this->AirLaunchHeight = 1;
-    this->AirLaunchHeightMin = 1;
-    this->AirLaunchHeightMax = 1;
-    this->AirRiseGravityScale = 1;
-    this->AirFallGravityScale = 1;
-    this->AirStrikeSpeed = 1;
-    this->AirStrikeSpeedMin = 1;
-    this->AirStrikeSpeedMax = 1;
-    this->CutKeepAddReactionKnockBackDistance = 1;
-    this->FieldKnockBackDistance = 1;
+    this->KnockBackDistance = 0.00f;
+    this->KnockBackDistanceMin = 0.00f;
+    this->KnockBackDistanceMax = 0.00f;
+    this->KnockBackTime = 0.00f;
+    this->KnockBackRagidTime = 0.00f;
+    this->KnockBackRagidTimeMin = 0.00f;
+    this->KnockBackRagidTimeMax = 0.00f;
+    this->LaunchHeight = 0.00f;
+    this->LaunchHeightMin = 0.00f;
+    this->LaunchHeightMax = 0.00f;
+    this->RiseGravityScale = 0.00f;
+    this->FallGravityScale = 0.00f;
+    this->AirKnockBackDistance = 0.00f;
+    this->AirKnockBackDistanceMin = 0.00f;
+    this->AirKnockBackDistanceMax = 0.00f;
+    this->AirLaunchHeight = 0.00f;
+    this->AirLaunchHeightMin = 0.00f;
+    this->AirLaunchHeightMax = 0.00f;
+    this->AirRiseGravityScale = 0.00f;
+    this->AirFallGravityScale = 0.00f;
+    this->AirStrikeSpeed = 0.00f;
+    this->AirStrikeSpeedMin = 0.00f;
+    this->AirStrikeSpeedMax = 0.00f;
+    this->CutKeepAddReactionKnockBackDistance = 0.00f;
+    this->FieldKnockBackDistance = 0.00f;
 }
 

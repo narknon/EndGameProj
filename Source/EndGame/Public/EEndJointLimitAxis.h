@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndJointLimitAxis.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndJointLimitAxis : uint8 {
     X,
     Y,

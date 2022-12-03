@@ -1,8 +1,8 @@
 #include "EndCharacterPushCollisionData.h"
 
 FEndCharacterPushCollisionData::FEndCharacterPushCollisionData() {
-    this->CapsuleHalfHeight = 1;
-    this->CapsuleRadius = 1;
+    this->CapsuleHalfHeight = 0.00f;
+    this->CapsuleRadius = 0.00f;
     this->bIgnoreDodgeRoll = false;
 }
 

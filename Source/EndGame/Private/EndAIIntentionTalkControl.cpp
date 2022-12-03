@@ -4,15 +4,15 @@ FEndAIIntentionTalkControl::FEndAIIntentionTalkControl() {
     this->Setting = NULL;
     this->SentenceId = 0;
     this->CurrentPosingStateIndex = 0;
-    this->CurrentPosingWaitTimer = 1;
+    this->CurrentPosingWaitTimer = 0.00f;
     this->TalkInRequestId = 0;
     this->TalkOutRequestId = 0;
-    this->TotalInterest = 1;
-    this->SnapTotalInterest = 1;
-    this->InterestLocationOffsetHeight = 1;
+    this->TotalInterest = 0.00f;
+    this->SnapTotalInterest = 0.00f;
+    this->InterestLocationOffsetHeight = 0.00f;
     this->ManualLookAtId = 0;
-    this->LookAtTurnWaitTimer = 1;
-    this->LookAtTurnWaitTimeMax = 1;
+    this->LookAtTurnWaitTimer = 0.00f;
+    this->LookAtTurnWaitTimeMax = 0.00f;
     this->LookAtTurnSentenceId = 0;
 }
 

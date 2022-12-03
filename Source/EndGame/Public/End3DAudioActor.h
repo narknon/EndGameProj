@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EEnd3DAudioActorUseType.h"
 #include "GameFramework/Actor.h"
 #include "End3DAudioSimpleCylinder.h"
+#include "EEnd3DAudioActorUseType.h"
 #include "End3DAudioActor.generated.h"
 
 class USoundAttenuation;
@@ -20,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName _jbId;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float _autoPlayDist;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SetPlayFallAction.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace SetPlayFallAction {
     enum Type {
         Succeeded,

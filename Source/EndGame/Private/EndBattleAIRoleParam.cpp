@@ -2,13 +2,13 @@
 
 FEndBattleAIRoleParam::FEndBattleAIRoleParam() {
     this->bRoleUpdateSetting = false;
-    this->DistanceNear = 1;
-    this->DistanceConfront = 1;
-    this->DistanceFar = 1;
+    this->DistanceNear = 0.00f;
+    this->DistanceConfront = 0.00f;
+    this->DistanceFar = 0.00f;
     this->bCanPositionAngle = false;
-    this->PositionAngle = 1;
+    this->PositionAngle = 0.00f;
     this->Strafe = false;
-    this->DistanceStrafe = 1;
-    this->ATBSpeed = 1;
+    this->DistanceStrafe = 0.00f;
+    this->ATBSpeed = 0.00f;
 }
 

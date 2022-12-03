@@ -1,0 +1,33 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "2.0.0",
+	"FriendlyName": "OSDK",
+	"Description": "Contains OSDK's libs v6.3.0 For additional support, please contact SEE-OS-Service@eidosmontreal.com",
+	"Category": "OSDK",
+	"CreatedBy": "Square-Enix OnlineSuite",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "OSDKCore",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "OnlineSubsystem",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemEOS",
+			"Enabled": true
+		}
+	]
+}

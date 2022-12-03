@@ -7,10 +7,10 @@ void AEndFeelerWallExActor::Play(float BlendTime) {
 }
 
 AEndFeelerWallExActor::AEndFeelerWallExActor() {
-    this->WaveCount = 0;
+    this->WaveCount = 6;
     this->bRefreshInstance = true;
-    this->FadeInWaitTime = 1;
-    this->OverrideFadeInTime = 1;
-    this->OverrideFadeOutTime = 1;
+    this->FadeInWaitTime = 0.00f;
+    this->OverrideFadeInTime = -1.00f;
+    this->OverrideFadeOutTime = -1.00f;
 }
 

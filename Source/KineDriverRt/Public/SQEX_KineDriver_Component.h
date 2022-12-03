@@ -1,12 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/EngineBaseTypes.h"
 #include "Components/SceneComponent.h"
+#include "Engine/EngineBaseTypes.h"
 #include "SQEX_KineDriver_Component.generated.h"
 
-class USkeletalMeshComponent;
 class USQEX_KineDriverData;
-
+class USkeletalMeshComponent;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class KINEDRIVERRT_API USQEX_KineDriver_Component : public USceneComponent {
@@ -21,7 +20,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool EnableScaleOpChildSSC;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ETickingGroup> TickGroup;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -33,7 +32,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool EnableLOD;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinScreenSize;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -43,7 +42,7 @@ public:
     bool EnableCheckDrawn;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* SkeletalMeshComponent;
     
 public:

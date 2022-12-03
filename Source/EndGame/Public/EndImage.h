@@ -1,18 +1,18 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Engine/EngineTypes.h"
 #include "Components/Widget.h"
 #include "Styling/SlateBrush.h"
 #include "Components/Widget.h"
 #include "UObject/NoExportTypes.h"
 #include "Components/Widget.h"
-#include "Engine/EngineTypes.h"
 #include "Components/Widget.h"
 #include "EndImage.generated.h"
 
 class UTexture2DDynamic;
-class USlateBrushAsset;
 class UTexture2D;
 class UMaterialInterface;
+class USlateBrushAsset;
 class UMaterialInstanceDynamic;
 
 UCLASS(Blueprintable)
@@ -31,7 +31,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetLinearColor ColorAndOpacityDelegate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EBlendMode> BlendMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

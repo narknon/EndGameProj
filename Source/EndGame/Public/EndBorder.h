@@ -1,30 +1,30 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Styling/SlateBrush.h"
 #include "Components/ContentWidget.h"
+#include "Layout/Margin.h"
+#include "Types/SlateEnums.h"
 #include "Components/Widget.h"
 #include "Types/SlateEnums.h"
 #include "UObject/NoExportTypes.h"
-#include "Types/SlateEnums.h"
 #include "Components/Widget.h"
-#include "Layout/Margin.h"
+#include "Styling/SlateBrush.h"
 #include "UObject/NoExportTypes.h"
 #include "Components/Widget.h"
 #include "EndBorder.generated.h"
 
-class USlateBrushAsset;
 class UTexture2D;
 class UMaterialInterface;
+class USlateBrushAsset;
 class UMaterialInstanceDynamic;
 
 UCLASS(Blueprintable)
 class ENDGAME_API UEndBorder : public UContentWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EHorizontalAlignment> HorizontalAlignment;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EVerticalAlignment> VerticalAlignment;
     
     UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

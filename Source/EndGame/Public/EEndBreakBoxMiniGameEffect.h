@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBreakBoxMiniGameEffect.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBreakBoxMiniGameEffect : uint8 {
     BREAK,
     ATB_DROP,

@@ -1,8 +1,8 @@
 #include "EndFeelerBarrierTimeRateAndSize.h"
 
 FEndFeelerBarrierTimeRateAndSize::FEndFeelerBarrierTimeRateAndSize() {
-    this->TimeRate = 1;
-    this->TimeRateSpeed = 1;
-    this->Size = 1;
+    this->TimeRate = 0.00f;
+    this->TimeRateSpeed = 0.00f;
+    this->Size = 0.00f;
 }
 

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EInterSense.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EInterSense : uint8 {
     Vision,
     Hearing,

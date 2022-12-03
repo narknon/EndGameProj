@@ -70,14 +70,14 @@ AEndBattleAISpline* AEndBattleAIFitSplineController::FindNearestSplineNodeActor(
 }
 
 AEndBattleAIFitSplineController::AEndBattleAIFitSplineController() {
-    this->FitSplineMinVelocity = 1;
-    this->FitSplineMaxVelocity = 1;
-    this->FitSplineAcceleration = 1;
-    this->FitSplineDeceleration = 1;
-    this->FitSplineAccelerationAngularVelocityThreshold = 1;
-    this->FitSplineTurningRollRate = 1;
-    this->FitSplineTurningRollInterpSpeed = 1;
-    this->FitSplineConnectMargin = 1;
+    this->FitSplineMinVelocity = 0.10f;
+    this->FitSplineMaxVelocity = 5.00f;
+    this->FitSplineAcceleration = 1.00f;
+    this->FitSplineDeceleration = 1.00f;
+    this->FitSplineAccelerationAngularVelocityThreshold = 180.00f;
+    this->FitSplineTurningRollRate = 1.00f;
+    this->FitSplineTurningRollInterpSpeed = 1.00f;
+    this->FitSplineConnectMargin = 200.00f;
     this->FitSplineConnectUseInterpolation = true;
     this->FitSplineUseSplineAnimInterpolation = false;
     this->FitSplineConnectUseSplineAnimInterpolation = false;

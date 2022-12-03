@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndNotifyBattleCameraChangeTimingType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndNotifyBattleCameraChangeTimingType : uint8 {
     Branch0,
     Branch1,

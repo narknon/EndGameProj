@@ -1,6 +1,6 @@
 #include "EndAnimVehicleTurnBone.h"
 
 FEndAnimVehicleTurnBone::FEndAnimVehicleTurnBone() {
-    this->TurnScale = 1;
+    this->TurnScale = 0.00f;
 }
 

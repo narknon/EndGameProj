@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndQueryFilterType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndQueryFilterType : uint8 {
     Default,
     Battle,

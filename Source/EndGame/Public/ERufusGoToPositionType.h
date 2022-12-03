@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERufusGoToPositionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERufusGoToPositionType : uint8 {
     Front,
     LeftSide,

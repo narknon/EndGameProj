@@ -1,9 +1,9 @@
 #include "BikeCutterStormAbilitySetting.h"
 
 FBikeCutterStormAbilitySetting::FBikeCutterStormAbilitySetting() {
-    this->LoopTime = 1;
-    this->MoveRange = 1;
+    this->LoopTime = 0.00f;
+    this->MoveRange = 0.00f;
     this->FirstMoveDirectionSign = 0;
-    this->MoveSpeed = 1;
+    this->MoveSpeed = 0.00f;
 }
 

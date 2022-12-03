@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "Styling/SlateTypes.h"
 #include "Components/Widget.h"
-#include "Widgets/Notifications/SProgressBar.h"
 #include "UObject/NoExportTypes.h"
+#include "Widgets/Notifications/SProgressBar.h"
 #include "Components/Widget.h"
 #include "Styling/SlateBrush.h"
 #include "EndGauge.generated.h"
@@ -17,22 +17,22 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FProgressBarStyle WidgetStyle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float Value;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetFloat ValueDelegate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PreviewValue;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxValue;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetFloat MaxValueDelegate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EProgressBarFillType::Type> BarFillType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -1,8 +1,8 @@
 #include "EndBattleDamageSourceCollisionDataBox.h"
 
 FEndBattleDamageSourceCollisionDataBox::FEndBattleDamageSourceCollisionDataBox() {
-    this->X = 1;
-    this->Y = 1;
-    this->Z = 1;
+    this->X = 0.00f;
+    this->Y = 0.00f;
+    this->Z = 0.00f;
 }
 

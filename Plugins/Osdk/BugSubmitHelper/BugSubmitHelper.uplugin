@@ -1,0 +1,26 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "2.0.0",
+	"FriendlyName": "Bug submit helper",
+	"Description": "",
+	"Category": "OSDK",
+	"CreatedBy": "Square-Enix Advanced Technology Division",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Plugins": [
+		{
+			"Name": "OSDKCore",
+			"Enabled": true
+		},
+		{
+			"Name": "OSDKMembership",
+			"Enabled": true
+		}
+	]
+}

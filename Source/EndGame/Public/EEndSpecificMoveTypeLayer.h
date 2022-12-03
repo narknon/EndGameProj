@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndSpecificMoveTypeLayer.generated.h"
 
-UENUM()
-enum class EEndSpecificMoveTypeLayer {
+UENUM(BlueprintType)
+enum class EEndSpecificMoveTypeLayer : uint8 {
     StateChange,
     ActionPlayerMoveType,
     ActionPlayerAfterGlowMoveType,

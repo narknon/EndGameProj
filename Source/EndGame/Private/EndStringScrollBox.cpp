@@ -73,8 +73,8 @@ int32 UEndStringScrollBox::GetLineCount() const {
 UEndStringScrollBox::UEndStringScrollBox() {
     this->ScrollBarVisibility = ESlateVisibility::Visible;
     this->AlwaysShowScrollbar = false;
-    this->ScrollBarPosition = EEndMenuScrollBarPosition::None;
-    this->WrapTextAt = 1;
+    this->ScrollBarPosition = EEndMenuScrollBarPosition::RightOrBottom;
+    this->WrapTextAt = 0.00f;
     this->Font = NULL;
     this->Outline = true;
     this->DesiredCount = 0;

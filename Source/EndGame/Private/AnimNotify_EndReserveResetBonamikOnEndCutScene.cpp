@@ -2,6 +2,6 @@
 
 UAnimNotify_EndReserveResetBonamikOnEndCutScene::UAnimNotify_EndReserveResetBonamikOnEndCutScene() {
     this->bResetPose = true;
-    this->PreRoll = 0;
+    this->PreRoll = 10;
 }
 

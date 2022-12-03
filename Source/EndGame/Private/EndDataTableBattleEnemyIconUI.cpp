@@ -1,6 +1,6 @@
 #include "EndDataTableBattleEnemyIconUI.h"
 
 FEndDataTableBattleEnemyIconUI::FEndDataTableBattleEnemyIconUI() {
-    this->Value = 1;
+    this->Value = 0.00f;
 }
 

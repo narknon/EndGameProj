@@ -6,24 +6,24 @@ AEndCameraRail::AEndCameraRail() {
     this->PlayerRailComponent = CreateDefaultSubobject<USplineComponent>(TEXT("PlayerRailComponent"));
     this->RailCameraSequencerData = NULL;
     this->ReverseRailCameraSequencerData = NULL;
-    this->RCSMinDist = 1;
-    this->RCSMaxDist = 1;
+    this->RCSMinDist = 100.00f;
+    this->RCSMaxDist = 200.00f;
     this->UpdateControlRotation = false;
     this->UpdateControlRotOnWeightDecrease = false;
     this->StopInputBlend = false;
     this->UseHorizontalFollow = false;
     this->CutConnectType = RCSCutConnect::None;
     this->UseDOFActor = false;
-    this->DebugTime = 1;
+    this->DebugTime = 0.00f;
     this->ShowCamera = false;
     this->DebugPreview = false;
     this->ShowNumber = false;
     this->UseCameraCut = true;
-    this->_PrevWeight = 1;
-    this->PlayTime = 1;
-    this->DistThreshold = 1;
-    this->StartBlend = 1;
-    this->EndBlend = 1;
+    this->_PrevWeight = -1.00f;
+    this->PlayTime = 5.00f;
+    this->DistThreshold = 10.00f;
+    this->StartBlend = 0.10f;
+    this->EndBlend = 0.10f;
     this->CanSkip = false;
 }
 

@@ -10,7 +10,7 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEndShopMenu : public UEndUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float _SelectNumberSpan;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

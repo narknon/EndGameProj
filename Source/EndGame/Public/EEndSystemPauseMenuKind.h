@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndSystemPauseMenuKind.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndSystemPauseMenuKind : uint8 {
     None,
     Simple,

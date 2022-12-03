@@ -2,6 +2,6 @@
 
 UEndBattleAIMessageNotify::UEndBattleAIMessageNotify() {
     this->IntValue = 0;
-    this->FloatValue = 1;
+    this->FloatValue = 0.00f;
 }
 

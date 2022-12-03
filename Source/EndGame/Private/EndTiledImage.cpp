@@ -1,10 +1,10 @@
 #include "EndTiledImage.h"
 
-class UMaterialInterface;
+class USlateBrushAsset;
 class UMaterialInstanceDynamic;
 class UTexture2DDynamic;
 class UTexture2D;
-class USlateBrushAsset;
+class UMaterialInterface;
 
 void UEndTiledImage::SetOpacity(float InOpacity) {
 }
@@ -35,8 +35,8 @@ UMaterialInstanceDynamic* UEndTiledImage::GetDynamicMaterial() {
 }
 
 UEndTiledImage::UEndTiledImage() {
-    this->HorizontalCount = 0;
-    this->VerticalCount = 0;
+    this->HorizontalCount = 1;
+    this->VerticalCount = 1;
     this->BlendMode = BLEND_Translucent;
 }
 

@@ -1,8 +1,8 @@
 #include "EndFieldActionActorCrack.h"
-#include "EndNavModifierComponent.h"
 #include "EndFieldActionSplineComponent.h"
 #include "EndFieldActionTriggerComponent.h"
 #include "EndSwitchAreaBoxComponent.h"
+#include "EndNavModifierComponent.h"
 
 AEndFieldActionActorCrack::AEndFieldActionActorCrack() {
     this->CrackComponent = CreateDefaultSubobject<UEndFieldActionSplineComponent>(TEXT("CrackComponent"));
@@ -13,8 +13,8 @@ AEndFieldActionActorCrack::AEndFieldActionActorCrack() {
     this->ModifierVolume = CreateDefaultSubobject<UEndNavModifierComponent>(TEXT("Modifier"));
     this->bWalkPathMove = false;
     this->CrackMoveType = EEndCrackMoveType::FrontWall;
-    this->GoalDistanceOffsetLeft = 1;
-    this->GoalDistanceOffsetRight = 1;
+    this->GoalDistanceOffsetLeft = 0.00f;
+    this->GoalDistanceOffsetRight = 0.00f;
     this->ExceptionFlg = false;
 }
 

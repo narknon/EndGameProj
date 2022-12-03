@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EGameDataResult.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EGameDataResult : uint8 {
     EGameDataResult_NONE,
     EGameDataResult_SUCCESS,

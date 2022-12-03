@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "Templates/SubclassOf.h"
+#include "Components/SlateWrapperTypes.h"
+#include "Components/Widget.h"
+#include "Types/SlateEnums.h"
+#include "UObject/NoExportTypes.h"
 #include "Layout/Margin.h"
 #include "Styling/SlateTypes.h"
-#include "Components/Widget.h"
-#include "UObject/NoExportTypes.h"
 #include "Styling/SlateTypes.h"
-#include "Types/SlateEnums.h"
-#include "Components/SlateWrapperTypes.h"
 #include "EEndMenuScrollBarPosition.h"
 #include "Input/Events.h"
 #include "EndVirtualScrollBox.generated.h"
@@ -27,7 +27,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FScrollBarStyle WidgetBarStyle;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EOrientation> Orientation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -88,16 +88,16 @@ public:
     FOnSelectedIndexChanged OnSelectedIndexChanged;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UWidget*> ContentWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UWidget*> CachedWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UWidget* CursorWidget;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UWidget* CachedCursor;
     
 public:
@@ -156,13 +156,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     int32 GetSelectedIndex(int32 UserIndex) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetScrollOffset() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ESlateVisibility GetScrollBarVisibility() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxScrollOffset() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

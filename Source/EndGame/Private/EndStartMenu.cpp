@@ -50,8 +50,8 @@ UEndStartMenu::UEndStartMenu() {
     this->OptionsMenuWidgetClass = NULL;
     this->DlcWindowWidgetClass = NULL;
     this->MembershipWindowWidgetClass = NULL;
-    this->ButtonAnimationStartTime = 1;
-    this->ButtonAnimationDelay = 1;
+    this->ButtonAnimationStartTime = 0.77f;
+    this->ButtonAnimationDelay = 0.20f;
     this->Throbber = NULL;
     this->CachedLoadMenu = NULL;
     this->MainMenu = NULL;

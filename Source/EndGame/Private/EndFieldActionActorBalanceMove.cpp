@@ -1,8 +1,8 @@
 #include "EndFieldActionActorBalanceMove.h"
-#include "EndNavModifierComponent.h"
 #include "EndFieldActionSplineComponent.h"
 #include "EndFieldActionTriggerComponent.h"
 #include "EndSwitchAreaBoxComponent.h"
+#include "EndNavModifierComponent.h"
 
 AEndFieldActionActorBalanceMove::AEndFieldActionActorBalanceMove() {
     this->BalanceMoveComponent = CreateDefaultSubobject<UEndFieldActionSplineComponent>(TEXT("BalanceMoveComponent"));

@@ -19,9 +19,9 @@ void UEndGauge::SetFillColorAndOpacity(FLinearColor InColor) {
 }
 
 UEndGauge::UEndGauge() {
-    this->Value = 1;
-    this->PreviewValue = 1;
-    this->MaxValue = 1;
+    this->Value = 0.00f;
+    this->PreviewValue = 0.00f;
+    this->MaxValue = 0.00f;
     this->BarFillType = EProgressBarFillType::LeftToRight;
 }
 

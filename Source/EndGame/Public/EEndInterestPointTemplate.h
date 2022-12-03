@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndInterestPointTemplate.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndInterestPointTemplate : uint8 {
     None,
     Template00,

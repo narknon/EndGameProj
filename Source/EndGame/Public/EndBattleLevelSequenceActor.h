@@ -14,7 +14,7 @@ private:
     AEndBattleCameraActor* CameraActor;
     
 public:
-    AEndBattleLevelSequenceActor(const FObjectInitializer& ObjectInitializer);
+    AEndBattleLevelSequenceActor();
 private:
     UFUNCTION(BlueprintCallable)
     void OnStop();

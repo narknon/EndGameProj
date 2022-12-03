@@ -4,7 +4,7 @@ void AEndBattleAISU0009BaseController::CreateFlareDamage(const FName ToTargetDam
 }
 
 AEndBattleAISU0009BaseController::AEndBattleAISU0009BaseController() {
-    this->AreaAbilityCoefficient = 1;
+    this->AreaAbilityCoefficient = -60.00f;
     this->WinningPoseMotionName = TEXT("B_Idle02_1");
 }
 

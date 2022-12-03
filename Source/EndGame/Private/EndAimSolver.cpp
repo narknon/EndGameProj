@@ -1,6 +1,6 @@
 #include "EndAimSolver.h"
 
 UEndAimSolver::UEndAimSolver() {
-    this->ClampHorizontalDistanceMin = 1;
+    this->ClampHorizontalDistanceMin = 100.00f;
 }
 

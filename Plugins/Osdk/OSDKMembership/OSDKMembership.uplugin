@@ -1,0 +1,29 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "2.0.0",
+	"FriendlyName": "OSDK Membership",
+	"Description": "",
+	"Category": "OSDK",
+	"CreatedBy": "Square-Enix OnlineSuite",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "OSDKMembership",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "OSDKCore",
+			"Enabled": true
+		}
+	]
+}

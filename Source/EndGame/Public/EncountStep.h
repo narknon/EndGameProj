@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EncountStep.generated.h"
 
-UENUM()
-enum class EncountStep {
+UENUM(BlueprintType)
+enum class EncountStep : uint8 {
     ActorPopWait,
     ReadyEncount,
     EncountEnd,

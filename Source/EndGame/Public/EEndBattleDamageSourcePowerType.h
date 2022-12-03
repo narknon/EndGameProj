@@ -6,9 +6,9 @@ UENUM(BlueprintType)
 enum class EEndBattleDamageSourcePowerType : uint8 {
     Normal,
     Constant,
-    MaxHpPercent,
-    HpPercent,
-    ATBPercent,
+    MaxHpPercent = 0x3,
+    HpPercent = 0x5,
+    ATBPercent = 0xA,
     HPOneSingleDigit,
 };
 

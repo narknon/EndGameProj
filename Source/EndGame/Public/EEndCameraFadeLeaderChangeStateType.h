@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCameraFadeLeaderChangeStateType.generated.h"
 
-UENUM()
-enum class EEndCameraFadeLeaderChangeStateType {
+UENUM(BlueprintType)
+enum class EEndCameraFadeLeaderChangeStateType : uint8 {
     Enter,
     Leave,
     MAX,

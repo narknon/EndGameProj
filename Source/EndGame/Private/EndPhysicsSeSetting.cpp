@@ -2,14 +2,14 @@
 
 FEndPhysicsSeSetting::FEndPhysicsSeSetting() {
     this->bEnable = false;
-    this->HitImpulseThreshold = 1;
-    this->HitDistanceThreshold = 1;
-    this->HitImpulseSizeMax = 1;
+    this->HitImpulseThreshold = 0.00f;
+    this->HitDistanceThreshold = 0.00f;
+    this->HitImpulseSizeMax = 0.00f;
     this->HitAttenuationSetting = NULL;
     this->HitConcurrencySetting = NULL;
-    this->FractureImpulseSizeMax = 1;
+    this->FractureImpulseSizeMax = 0.00f;
     this->FractureAttenuationSetting = NULL;
     this->bHitSensitive = false;
-    this->HitSensitiveScalingValue = 1;
+    this->HitSensitiveScalingValue = 0.00f;
 }
 

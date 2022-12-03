@@ -1,6 +1,6 @@
 #include "EndBattleAIRedXIIIAttackAbility.h"
 
 FEndBattleAIRedXIIIAttackAbility::FEndBattleAIRedXIIIAttackAbility() {
-    this->Weight = 1;
+    this->Weight = 0.00f;
 }
 

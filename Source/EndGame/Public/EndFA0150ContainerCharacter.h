@@ -39,6 +39,6 @@ private:
     USQEXSEADSound* ContainerHitSoundAsset;
     
 public:
-    AEndFA0150ContainerCharacter(const FObjectInitializer& ObjectInitializer);
+    AEndFA0150ContainerCharacter();
 };
 

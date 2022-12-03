@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndDataTableDebugFlag.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndDataTableDebugFlag : uint8 {
     NextLocationReimport,
     NextLocationSaveLocationSaveData,

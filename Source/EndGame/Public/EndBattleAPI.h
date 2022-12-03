@@ -1,30 +1,33 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
-#include "Engine/EngineTypes.h"
-#include "UObject/Object.h"
-#include "UObject/NoExportTypes.h"
 #include "EEndAiBattleTargetType.h"
+#include "UObject/NoExportTypes.h"
 #include "EEndBattleRewardType.h"
+#include "EEndBattleAIActionAbility.h"
+#include "EModifierVolumeType.h"
+#include "EBattleMessageTarget.h"
+#include "UObject/Object.h"
 #include "EPlayerType.h"
-#include "EEndAiMathCmp.h"
-#include "EndBattleAIMateriaParam.h"
+#include "EEndAIBranch2Other.h"
+#include "UObject/NoExportTypes.h"
 #include "EEndBattleSceneCountLifeCycleType.h"
 #include "EEndBattleBreakableRelationVolumeType.h"
+#include "EEndBattleSummonType.h"
 #include "EndCharacterAttachEffectArguments.h"
 #include "ETargetChoosingTag.h"
 #include "ETargetChoosingSort.h"
+#include "EEndBattleCompareDistanceType.h"
 #include "UObject/NoExportTypes.h"
+#include "GetOffsetTransform.h"
 #include "EndBattleAIDangerWarningParam.h"
 #include "EEndBattleAIDangerAreaType.h"
-#include "EEndBattleAIActionAbility.h"
-#include "EBattleMessageTarget.h"
 #include "EndWaveBattleSceneType.h"
 #include "EEndBattleAttributeType.h"
 #include "EEndAiBattleSceneFlag.h"
 #include "EEndBattleSyncActionEndType.h"
 #include "EEndBattleStatusChangeType.h"
 #include "EEndBattleSpecialStatusChangeType.h"
+#include "Engine/EngineTypes.h"
 #include "EEndAIBranch8.h"
 #include "EEndLocomotionState.h"
 #include "EEndAIBranch5.h"
@@ -36,11 +39,8 @@
 #include "EEndAIBranch4Other.h"
 #include "EEndAIBranchBit.h"
 #include "EEndAIBranch3Other.h"
-#include "EEndAIBranch2Other.h"
-#include "EModifierVolumeType.h"
-#include "EEndBattleSummonType.h"
-#include "GetOffsetTransform.h"
-#include "EEndBattleCompareDistanceType.h"
+#include "EEndAiMathCmp.h"
+#include "EndBattleAIMateriaParam.h"
 #include "EEndBattleCharaCategoryType.h"
 #include "EEndBattleSceneSituationType.h"
 #include "EEndBattleCountLogType.h"
@@ -49,19 +49,19 @@
 class AEndCharacter;
 class AActor;
 class AEndBattleAIController;
+class UEndBattleDamageSourceComponent;
 class AEndNavModifierVolume;
 class AEndEnvironmentPhysicsStaticMeshActor;
-class UEndBattleDamageSourceComponent;
 
 UCLASS(Blueprintable)
 class UEndBattleAPI : public UObject {
     GENERATED_BODY()
 public:
     UEndBattleAPI();
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float VecToYaw(const FVector& InVec);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float VecToPitch(const FVector& InVec);
     
     UFUNCTION(BlueprintCallable)
@@ -274,10 +274,10 @@ public:
     UFUNCTION(BlueprintCallable)
     static void ResetActiveBattleAIController(AEndCharacter* InChara);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static FName RequestWaveBattleSceneWithPopTransform(UObject* WorldContextObject, FName baseBattleSceneId, AEndCharacter* causerChara, EndWaveBattleSceneType Type, int32 IntegerArgument00, int32 IntegerArgument01, int32 IntegerArgument02, int32 IntegerArgument03, TArray<FTransform> popTransforms);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject"))
     static FName RequestWaveBattleScene(UObject* WorldContextObject, FName baseBattleSceneId, AEndCharacter* causerChara, EndWaveBattleSceneType Type, int32 IntegerArgument00, int32 IntegerArgument01, int32 IntegerArgument02, int32 IntegerArgument03);
     
     UFUNCTION(BlueprintCallable)
@@ -478,7 +478,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsInScreen(AActor* Actor);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsInFanRange(AEndCharacter* OwnerCharacter, float baseYaw, float angleRange, float RadiusMin, float RadiusMax, FVector targetPosition);
     
     UFUNCTION(BlueprintCallable)
@@ -493,7 +493,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsExistCurrentAerialVolume();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsEntryNavVolumeArea(AEndCharacter* InChara, TEnumAsByte<EModifierVolumeType::Type> InType);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -538,7 +538,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsCloudOffensiveMode();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool IsCheckBattleSceneFlag(TEnumAsByte<EEndAiBattleSceneFlag::Type> InType);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -598,13 +598,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool HasAbilityElement(FName InAbilityName, EEndBattleAttributeType InType);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetWorldLocationAngle(const FVector& BaseLocation, const FVector& TargetLocation);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetWaveCount(FName InName);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FVector GetVectorRange(float X, float Y, float Z, float IgnoreX, float IgnoreY, float IgnoreZ);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -628,7 +628,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static AEndCharacter* GetSummonMaster(AEndCharacter* InChara);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetSummonAvilableTime();
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -688,19 +688,19 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<AEndNavModifierVolume*> GetOverlapVolumes(AEndCharacter* InChara);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static FTransform GetOffsetTransform(const FTransform& Transform, const FVector& Offset, TEnumAsByte<GetOffsetTransform::Type> RotationType);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetObstractDistanceFromAngle(AEndCharacter* chara, float Angle);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetObstractDistanceAvarage(AEndCharacter* chara);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetObstractDistance(AEndCharacter* chara);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static AEndCharacter* GetNearestRangePartyCharacter(AEndCharacter* InChara, float Range, bool ZVisible);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -727,10 +727,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetNearestActor(AActor*& outActor, AActor* baseActor, const TArray<AActor*>& compareActorList, const TArray<AActor*>& ignoreActorList);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<AEndNavModifierVolume*> GetNavVolumeFromType(FName InBattleSceneID, TEnumAsByte<EModifierVolumeType::Type> InType);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static AEndNavModifierVolume* GetNavVolumeFromAngle(AEndCharacter* InChara, float InAngleRange, EEndBattleCompareDistanceType InType, int32 InGroup, bool InBehind);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -754,7 +754,7 @@ public:
     UFUNCTION(BlueprintCallable)
     static bool GetHiddenBreakable(FName BreakableID);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetGuardTime(AEndCharacter* InChara);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -805,10 +805,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static TArray<AEndCharacter*> GetDummyEnemies();
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetDamageSourceInfoFromDamage(FName InDamageSourceID, int32& OutTarget, int32& OutTargetParty, int32& OutCut, int32& OutProperty, int32& OutCollision, bool& OutDisableFinish, float& OutCreateDelay);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static void GetDamageSourceInfo(FName InAbilityName, int32& OutTarget, int32& OutTargetParty, int32& OutCut, int32& OutProperty, int32& OutCollision, bool& OutDisableFinish, float& OutCreateDelay);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -820,7 +820,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FName GetCurrentAbilityID(AEndCharacter* InChara);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetCommandLinkageMagnificate(AEndCharacter* chara);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -868,10 +868,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetBattleCountLogIntByBP(FName ownerCharaName, EEndBattleCountLogType Type, FName TargetCharaName, FName subTypeName, const FName& battleScenId);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetBattleCountLogFloatForUCPCByBP(EEndBattleCountLogType Type, FName TargetCharaName, FName subTypeName, const FName& battleScenId);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetBattleCountLogFloatByBP(FName ownerCharaName, EEndBattleCountLogType Type, FName TargetCharaName, FName subTypeName, const FName& battleScenId);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -886,7 +886,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FName GetBattleCharaSpec_DataTableID(AEndCharacter* InChara);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetBattleAreaDistanceFromAngle(AEndCharacter* InCharacter, AEndCharacter* InTargetCharacter, float InAngle);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
@@ -910,13 +910,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 GetAIActionAbilityTableInt(FName InName, EEndBattleAIActionAbility InElem);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetAIActionAbilityTableFloat(FName InName, EEndBattleAIActionAbility InElem);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FName GetActorName(AEndCharacter* InChara);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float GetActorDistance(AActor* From, AActor* To);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

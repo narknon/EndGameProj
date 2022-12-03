@@ -25,14 +25,14 @@ bool AEndBattleAIEB0006Controller::IsHHFly() {
 }
 
 AEndBattleAIEB0006Controller::AEndBattleAIEB0006Controller() {
-    this->JumpTurnTime = 1;
-    this->JumpTurnBias = 1;
-    this->DivePrepareRotateYaw = 1;
-    this->DivePrepareRotatePitch = 1;
-    this->DiveLoopRotateYaw = 1;
-    this->DiveLoopRotatePitch = 1;
-    this->DiveBeginSpeed = 1;
-    this->DiveAddSpeed = 1;
-    this->DiveOffsetZ = 1;
+    this->JumpTurnTime = 1.00f;
+    this->JumpTurnBias = 4000.00f;
+    this->DivePrepareRotateYaw = 360.00f;
+    this->DivePrepareRotatePitch = 360.00f;
+    this->DiveLoopRotateYaw = 180.00f;
+    this->DiveLoopRotatePitch = 180.00f;
+    this->DiveBeginSpeed = 1000.00f;
+    this->DiveAddSpeed = 1000.00f;
+    this->DiveOffsetZ = 200.00f;
 }
 

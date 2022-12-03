@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Engine/EngineTypes.h"
 #include "Engine/StaticMeshActor.h"
 #include "EndBreakBoxMiniGameBoxPhysicsSe.h"
 #include "EEndBreakBoxMiniGameEffect.h"
 #include "EEndBreakBoxMiniGameBoxType.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "EndActionBreakBoxMiniGameBoxActor.generated.h"
 
-class USQEXSEADSound;
 class UParticleSystem;
-class USceneComponent;
 class UStaticMeshComponent;
+class USQEXSEADSound;
+class USceneComponent;
 class UPrimitiveComponent;
 class AActor;
 
@@ -38,16 +38,16 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_GroupIndex;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_Radius;
     
     UPROPERTY(EditAnywhere)
     UParticleSystem* m_Effect[4];
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Instanced)
     UStaticMeshComponent* m_StaticMeshComponent[11];
     
-    UPROPERTY(EditAnywhere, Export)
+    UPROPERTY(EditAnywhere, Instanced)
     USceneComponent* m_EffectDummyPoint[4];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

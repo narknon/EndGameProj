@@ -6,14 +6,14 @@ FEndDataTableBattleSyncAction::FEndDataTableBattleSyncAction() {
     this->CameraSequenceNotify = 0;
     this->StopCameraDetach = 0;
     this->AttachType = 0;
-    this->AttachInterpTime = 1;
-    this->AttachRotInterpTime = 1;
+    this->AttachInterpTime = 0.00f;
+    this->AttachRotInterpTime = 0.00f;
     this->AttachLocationType = 0;
     this->AttachRotationType = 0;
     this->AttachRootOffsetType = 0;
     this->NoAttach = 0;
     this->AlongSlope = 0;
-    this->OwnerPartDamageToTargetRate = 1;
+    this->OwnerPartDamageToTargetRate = 0.00f;
     this->TargetMotionType = 0;
     this->TargetDisableFromEnemy = 0;
     this->TargetDoesntGetTrophy = 0;
@@ -30,7 +30,7 @@ FEndDataTableBattleSyncAction::FEndDataTableBattleSyncAction() {
     this->TargetMagicHitCount = 0;
     this->TargetLimitHitCount = 0;
     this->TargetLoopDetachDamageSourceIDEffect = 0;
-    this->LoopTime = 1;
+    this->LoopTime = 0.00f;
     this->OwnerFailureAnimBlend = 0;
     this->TargetFailureAnimBlend = 0;
     this->OwnerSuccessAnimBlend = 0;

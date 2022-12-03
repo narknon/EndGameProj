@@ -1,26 +1,26 @@
 #include "EndFootEffectorSolver.h"
 
 UEndFootEffectorSolver::UEndFootEffectorSolver() {
-    this->FloorTraceToOffsetHeight = 1;
-    this->FootTraceBeginOffsetHeight = 1;
-    this->FootTraceEndOffsetHeight = 1;
+    this->FloorTraceToOffsetHeight = -100.00f;
+    this->FootTraceBeginOffsetHeight = 100.00f;
+    this->FootTraceEndOffsetHeight = -30.00f;
     this->FootMaxIterations.AddDefaulted(6);
-    this->FootReachPrecision = 1;
-    this->TargetReachStepPercent = 1;
-    this->PullDistribution = 1;
-    this->FloorAdjustRotationInterpSpeed = 1;
-    this->HipAdjustFloorRate = 1;
-    this->HipAdjustFloorRotationRate = 1;
-    this->PitchHipOffsetFloorAngleRate = 1;
-    this->RollHipOffsetFloorAngleRate = 1;
-    this->FootAdjustFloorRate = 1;
-    this->PitchAdjustFloorAngleRate = 1;
-    this->RollAdjustFloorAngleRate = 1;
-    this->FootAdjustFloorOrientationRate = 1;
-    this->FootAdjustFloorTranslationAngleRate = 1;
-    this->CollisionOffsetHeightMin = 1;
-    this->FootAdjustTranslationHeightMax = 1;
-    this->FootLandingThreshold = 1;
+    this->FootReachPrecision = 0.01f;
+    this->TargetReachStepPercent = 0.70f;
+    this->PullDistribution = 0.50f;
+    this->FloorAdjustRotationInterpSpeed = 4.00f;
+    this->HipAdjustFloorRate = 0.40f;
+    this->HipAdjustFloorRotationRate = 1.00f;
+    this->PitchHipOffsetFloorAngleRate = 0.00f;
+    this->RollHipOffsetFloorAngleRate = 0.00f;
+    this->FootAdjustFloorRate = 0.20f;
+    this->PitchAdjustFloorAngleRate = 0.00f;
+    this->RollAdjustFloorAngleRate = 0.00f;
+    this->FootAdjustFloorOrientationRate = 0.50f;
+    this->FootAdjustFloorTranslationAngleRate = 0.00f;
+    this->CollisionOffsetHeightMin = -30.00f;
+    this->FootAdjustTranslationHeightMax = 40.00f;
+    this->FootLandingThreshold = 10.00f;
     this->bEffective = true;
     this->bAllowedHipOnly = false;
     this->bTraceToeOnly = false;

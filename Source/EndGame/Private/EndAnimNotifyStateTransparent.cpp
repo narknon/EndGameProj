@@ -1,7 +1,7 @@
 #include "EndAnimNotifyStateTransparent.h"
 
 UEndAnimNotifyStateTransparent::UEndAnimNotifyStateTransparent() {
-    this->TurnTransparentTime = 1;
-    this->TurnOpaqueTime = 1;
+    this->TurnTransparentTime = 0.00f;
+    this->TurnOpaqueTime = 0.00f;
 }
 

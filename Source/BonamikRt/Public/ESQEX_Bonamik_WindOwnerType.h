@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEX_Bonamik_WindOwnerType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum ESQEX_Bonamik_WindOwnerType {
     ESQEX_Bonamik_WindOwnerType_Actor,
     ESQEX_Bonamik_WindOwnerType_Preset,

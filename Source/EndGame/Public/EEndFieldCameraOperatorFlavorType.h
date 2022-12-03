@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndFieldCameraOperatorFlavorType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndFieldCameraOperatorFlavorType : uint8 {
     Corner,
     Slope,

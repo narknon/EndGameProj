@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEX_Bonamik_CollisionShape.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum ESQEX_Bonamik_CollisionShape {
     ESQEX_Bonamik_CollisionShape_None,
     ESQEX_Bonamik_CollisionShape_Sphere,

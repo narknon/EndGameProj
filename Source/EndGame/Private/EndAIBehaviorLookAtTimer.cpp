@@ -1,6 +1,6 @@
 #include "EndAIBehaviorLookAtTimer.h"
 
 FEndAIBehaviorLookAtTimer::FEndAIBehaviorLookAtTimer() {
-    this->LookAtTime = 1;
+    this->LookAtTime = 0.00f;
 }
 

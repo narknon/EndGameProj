@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EndActorInterface.h"
 #include "Engine/StaticMeshActor.h"
+#include "EndActorInterface.h"
 #include "EndActorBaseInterface.h"
 #include "EndStaticMeshActor.generated.h"
 

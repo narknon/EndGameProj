@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEX_KD_OperatorType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum ESQEX_KD_OperatorType {
     ESQEX_KD_OperatorType_Unknown,
     ESQEX_KD_OperatorType_ComputeSpaceBases,

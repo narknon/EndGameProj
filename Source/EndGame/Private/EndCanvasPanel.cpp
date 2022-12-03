@@ -1,7 +1,7 @@
 #include "EndCanvasPanel.h"
 
-class UWidget;
 class UEndCanvasPanelSlot;
+class UWidget;
 
 void UEndCanvasPanel::SetProjectionMode(TEnumAsByte<ECameraProjectionMode::Type> InProjectionMode) {
 }
@@ -22,6 +22,6 @@ UEndCanvasPanelSlot* UEndCanvasPanel::AddChildToCanvas(UWidget* Content) {
 UEndCanvasPanel::UEndCanvasPanel() {
     this->bExplicitChildZOrder = false;
     this->ProjectionMode = ECameraProjectionMode::Orthographic;
-    this->FieldOfView = 1;
+    this->FieldOfView = 90.00f;
 }
 

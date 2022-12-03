@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EndActorBaseInterface.h"
 #include "GameFramework/Actor.h"
 #include "EndActorInterface.h"
+#include "EndActorBaseInterface.h"
 #include "EndSwitchHiddenActor.generated.h"
 
 UCLASS(Blueprintable)

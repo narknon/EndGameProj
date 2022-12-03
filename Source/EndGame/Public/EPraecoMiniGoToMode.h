@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPraecoMiniGoToMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPraecoMiniGoToMode : uint8 {
     Owner,
     Target,

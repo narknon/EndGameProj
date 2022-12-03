@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBikeLaserPointerEffectResourceCategory.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBikeLaserPointerEffectResourceCategory : uint8 {
     Resident,
     Character,

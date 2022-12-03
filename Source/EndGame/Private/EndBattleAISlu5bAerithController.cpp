@@ -34,10 +34,10 @@ void AEndBattleAISlu5bAerithController::ChangeAerithState(EGuestAerithState NewS
 }
 
 AEndBattleAISlu5bAerithController::AEndBattleAISlu5bAerithController() {
-    this->EncourageRecastTime = 1;
-    this->CheeringRecastTime = 1;
-    this->WorryRecastTime = 1;
-    this->MinimumHideTime = 1;
-    this->ATBIncreasment = 1;
+    this->EncourageRecastTime = 5.00f;
+    this->CheeringRecastTime = 5.00f;
+    this->WorryRecastTime = 3.00f;
+    this->MinimumHideTime = 1.00f;
+    this->ATBIncreasment = 100.00f;
 }
 

@@ -1,10 +1,10 @@
 #include "EndMenuBPAPI.h"
 
-class UUserWidget;
 class UEndListBox;
 class UEndMainMateriaListBoxWindow;
 class UEndVirtualScrollBox;
 class UWorld;
+class UUserWidget;
 
 void UEndMenuBPAPI::UpdateLinkedMateria(const TArray<UEndMainMateriaListBoxWindow*>& MateriaLists) {
 }

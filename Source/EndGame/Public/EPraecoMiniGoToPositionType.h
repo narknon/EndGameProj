@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPraecoMiniGoToPositionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPraecoMiniGoToPositionType : uint8 {
     Front,
     LeftSide,

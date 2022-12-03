@@ -11,12 +11,12 @@ FEndCharacterAttachEffectArguments::FEndCharacterAttachEffectArguments() {
     this->bBeamTargetContactWall = false;
     this->bBeamTargetContactOwnerChara = false;
     this->bLineEffect = false;
-    this->LineEffectTangentLength = 1;
-    this->CreateSecondMin = 1;
-    this->CreateSecondMax = 1;
-    this->LoopOffSecondMin = 1;
-    this->LoopOffSecondMax = 1;
-    this->ReCreateSecondMin = 1;
-    this->ReCreateSecondMax = 1;
+    this->LineEffectTangentLength = 0.00f;
+    this->CreateSecondMin = 0.00f;
+    this->CreateSecondMax = 0.00f;
+    this->LoopOffSecondMin = 0.00f;
+    this->LoopOffSecondMax = 0.00f;
+    this->ReCreateSecondMin = 0.00f;
+    this->ReCreateSecondMax = 0.00f;
 }
 

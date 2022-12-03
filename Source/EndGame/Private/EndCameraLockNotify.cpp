@@ -1,6 +1,6 @@
 #include "EndCameraLockNotify.h"
 
 UEndCameraLockNotify::UEndCameraLockNotify() {
-    this->LockTime = 1;
+    this->LockTime = 0.00f;
 }
 

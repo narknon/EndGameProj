@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EEndBenchType.h"
 #include "EndFieldActionActorBase.h"
+#include "EEndBenchType.h"
 #include "EndFieldActionActorBenchBreak.generated.h"
 
 class UEndFieldActionTriggerComponent;
@@ -11,10 +11,10 @@ UCLASS(Blueprintable, Placeable)
 class AEndFieldActionActorBenchBreak : public AEndFieldActionActorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndFieldActionTriggerComponent* PressVolume;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndNavModifierComponent* ModifierVolume;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

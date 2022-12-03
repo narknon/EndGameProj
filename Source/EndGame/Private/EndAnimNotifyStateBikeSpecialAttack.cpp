@@ -1,6 +1,6 @@
 #include "EndAnimNotifyStateBikeSpecialAttack.h"
 
 UEndAnimNotifyStateBikeSpecialAttack::UEndAnimNotifyStateBikeSpecialAttack() {
-    this->RollAngle = 1;
+    this->RollAngle = 10.00f;
 }
 

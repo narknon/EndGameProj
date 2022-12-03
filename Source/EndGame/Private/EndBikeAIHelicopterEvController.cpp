@@ -2,7 +2,7 @@
 
 AEndBikeAIHelicopterEvController::AEndBikeAIHelicopterEvController() {
     this->ExecOnlyFirstAttack = true;
-    this->FirstAttackSplineInputKey = 1;
-    this->FirstAttackDistance = 1;
+    this->FirstAttackSplineInputKey = 0.00f;
+    this->FirstAttackDistance = 10.00f;
 }
 

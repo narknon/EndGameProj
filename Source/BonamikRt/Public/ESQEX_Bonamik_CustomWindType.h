@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEX_Bonamik_CustomWindType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum ESQEX_Bonamik_CustomWindType {
     ESQEX_Bonamik_CustomWindType_Directional,
     ESQEX_Bonamik_CustomWindType_Wave,

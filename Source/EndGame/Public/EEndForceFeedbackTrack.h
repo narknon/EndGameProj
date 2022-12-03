@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndForceFeedbackTrack.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndForceFeedbackTrack : uint8 {
     FFB_Track0,
     FFB_Track1,

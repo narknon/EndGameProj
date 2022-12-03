@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Components/SlateWrapperTypes.h"
+#include "Components/Widget.h"
 #include "Layout/Margin.h"
 #include "Styling/SlateTypes.h"
-#include "Components/Widget.h"
 #include "Styling/SlateTypes.h"
-#include "Components/SlateWrapperTypes.h"
 #include "UObject/NoExportTypes.h"
-#include "EEndMenuScrollBarPosition.h"
 #include "Styling/SlateColor.h"
+#include "EEndMenuScrollBarPosition.h"
 #include "UObject/NoExportTypes.h"
 #include "EndStringScrollBox.generated.h"
 
@@ -38,7 +38,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMargin ClippingPadding;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WrapTextAt;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -72,10 +72,10 @@ public:
     FMargin CullingBoundsExtension;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UWidget*> ContentWidgets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UWidget*> CachedWidgets;
     
 public:
@@ -131,13 +131,13 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     FString GetText() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetScrollOffset() const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     ESlateVisibility GetScrollBarVisibility() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetMaxScrollOffset(float InScrollHeight) const;
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

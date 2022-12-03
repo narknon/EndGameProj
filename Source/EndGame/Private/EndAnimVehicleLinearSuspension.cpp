@@ -1,8 +1,8 @@
 #include "EndAnimVehicleLinearSuspension.h"
 
 FEndAnimVehicleLinearSuspension::FEndAnimVehicleLinearSuspension() {
-    this->Mass = 1;
-    this->Stiffness = 1;
+    this->Mass = 0.00f;
+    this->Stiffness = 0.00f;
     this->MovementAxis = X;
 }
 

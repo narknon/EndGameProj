@@ -13,16 +13,16 @@ UCLASS(Blueprintable)
 class ENDGAME_API AEndBikeManagerActor : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UEndBikeNormalPopupComponent* pNormalPopupComponent;
     
     UPROPERTY(EditAnywhere, Export, Transient)
     TMap<int32, TWeakObjectPtr<UEndBikeEndlessPopupComponent>> pEndlessPopupComponents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UEndBikeCutSceneComponent* pCutSceneComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UEndBikeScoreComponent* pScoreComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBattleDamageSourceDisableBackgroundType.generated.h"
 
-UENUM()
-enum class EEndBattleDamageSourceDisableBackgroundType {
+UENUM(BlueprintType)
+enum class EEndBattleDamageSourceDisableBackgroundType : uint8 {
     All,
     NoHit,
     WallOnly,

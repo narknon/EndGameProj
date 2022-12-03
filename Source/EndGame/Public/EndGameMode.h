@@ -38,7 +38,7 @@ public:
     UPROPERTY(EditAnywhere)
     uint64 FrameTickCount;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float SystemDeltaTimeSeconds;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -51,10 +51,10 @@ public:
     UEndCrossSaveManager* CrossSaveManager;
     
     AEndGameMode();
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void InitEditorPreviewGameMode(const UObject* WorldContextObject, FLatentActionInfo LatentInfo);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo", WorldContext="WorldContextObject"))
     static void InitEditorGameMode(const UObject* WorldContextObject, FName LocationName, bool QuickStart, FName OverRideEnvName, FName InCutName, FLatentActionInfo LatentInfo);
     
 };

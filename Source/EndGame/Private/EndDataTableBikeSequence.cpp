@@ -1,8 +1,8 @@
 #include "EndDataTableBikeSequence.h"
 
 FEndDataTableBikeSequence::FEndDataTableBikeSequence() {
-    this->StartLocationX = 1;
-    this->StartLocationY = 1;
-    this->StartLocationZ = 1;
+    this->StartLocationX = 0.00f;
+    this->StartLocationY = 0.00f;
+    this->StartLocationZ = 0.00f;
 }
 

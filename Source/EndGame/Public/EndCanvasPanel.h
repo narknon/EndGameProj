@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Components/PanelWidget.h"
 #include "UObject/NoExportTypes.h"
-#include "Camera/CameraTypes.h"
 #include "Components/Widget.h"
+#include "Camera/CameraTypes.h"
 #include "EndCanvasPanel.generated.h"
 
 class UEndCanvasPanelSlot;
@@ -22,10 +22,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bExplicitChildZOrder;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ECameraProjectionMode::Type> ProjectionMode;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FieldOfView;
     
     UEndCanvasPanel();

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndSpecificMoveType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndSpecificMoveType : uint8 {
     Walk,
     HighWalk,

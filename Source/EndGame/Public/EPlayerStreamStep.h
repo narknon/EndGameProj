@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EPlayerStreamStep.generated.h"
 
-UENUM()
-enum class EPlayerStreamStep {
+UENUM(BlueprintType)
+enum class EPlayerStreamStep : uint8 {
     EPlayerStreamStep_WAIT,
     EPlayerStreamStep_REQUEST,
     EPlayerStreamStep_STREAMING,

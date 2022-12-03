@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEX_KD_ParameterType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum ESQEX_KD_ParameterType {
     ESQEX_KD_ParameterType_Other,
     ESQEX_KD_ParameterType_TranslateX,

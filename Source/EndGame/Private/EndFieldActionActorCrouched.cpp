@@ -1,8 +1,8 @@
 #include "EndFieldActionActorCrouched.h"
-#include "EndNavModifierComponent.h"
 #include "EndFieldActionSplineComponent.h"
 #include "EndFieldActionTriggerComponent.h"
 #include "EndSwitchAreaBoxComponent.h"
+#include "EndNavModifierComponent.h"
 
 AEndFieldActionActorCrouched::AEndFieldActionActorCrouched() {
     this->CrouchedType = ECrouchedType::FixCoordinates;
@@ -15,8 +15,8 @@ AEndFieldActionActorCrouched::AEndFieldActionActorCrouched() {
     this->bWalkPathMove = false;
     this->bEnablePassing = false;
     this->CrouchedMoveType = EEndCrouchedMoveType::Default;
-    this->GoalDistanceOffsetLeft = 1;
-    this->GoalDistanceOffsetRight = 1;
+    this->GoalDistanceOffsetLeft = 0.00f;
+    this->GoalDistanceOffsetRight = 0.00f;
     this->AutoBoxRotation = true;
     this->NavAttributeChange = false;
 }

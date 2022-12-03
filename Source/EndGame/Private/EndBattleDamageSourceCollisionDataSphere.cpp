@@ -1,6 +1,6 @@
 #include "EndBattleDamageSourceCollisionDataSphere.h"
 
 FEndBattleDamageSourceCollisionDataSphere::FEndBattleDamageSourceCollisionDataSphere() {
-    this->Radius = 1;
+    this->Radius = 0.00f;
 }
 

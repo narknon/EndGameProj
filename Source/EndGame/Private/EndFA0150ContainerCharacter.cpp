@@ -1,8 +1,6 @@
 #include "EndFA0150ContainerCharacter.h"
 
-#include "EndSkeletalMeshComponent.h"
-
-AEndFA0150ContainerCharacter::AEndFA0150ContainerCharacter(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer.SetDefaultSubobjectClass<UEndSkeletalMeshComponent>(ACharacter::MeshComponentName)) {
+AEndFA0150ContainerCharacter::AEndFA0150ContainerCharacter() {
     this->PutOnFloorSoundAsset = NULL;
     this->PutOnContainerSoundAsset = NULL;
     this->EnvironmentHitSoundAsset = NULL;

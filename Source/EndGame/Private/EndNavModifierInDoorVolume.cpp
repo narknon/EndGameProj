@@ -1,8 +1,8 @@
 #include "EndNavModifierInDoorVolume.h"
 
-AEndNavModifierInDoorVolume::AEndNavModifierInDoorVolume(const FObjectInitializer& ObjectInitializer) : AEndNavModifierVolumeBase(ObjectInitializer){
-    this->CameraType = EEndFieldCameraInDoorType::Town;
-    this->OverridePriorityType = EEndFieldCameraInDoorPriorityType::Town;
+AEndNavModifierInDoorVolume::AEndNavModifierInDoorVolume() {
+    this->CameraType = EEndFieldCameraInDoorType::Narrow;
+    this->OverridePriorityType = EEndFieldCameraInDoorPriorityType::InDoor;
     this->SpecificMoveType = EEndSpecificMoveType::Walk;
     this->DashType = EEndDashType::Enable;
 }

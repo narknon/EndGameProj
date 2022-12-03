@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndMovementModeLayer.generated.h"
 
-UENUM()
-enum class EEndMovementModeLayer {
+UENUM(BlueprintType)
+enum class EEndMovementModeLayer : uint8 {
     EEndMovementModeLayer_Debug = 0xC000,
     EEndMovementModeLayer_Interrupt = 0xB000,
     EEndMovementModeLayer_Cinema = 0xA000,

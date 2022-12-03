@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EEndCharacterZeroOneSeProperties.h"
 #include "Components/ActorComponent.h"
+#include "EEndCharacterZeroOneSeProperties.h"
 #include "EndCharacterZeroOneSeComponent.generated.h"
 
 class USoundBase;
@@ -16,13 +16,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName SoundName;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float PropertyValueMax;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FadeInTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FadeOutTime;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

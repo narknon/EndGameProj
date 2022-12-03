@@ -2,19 +2,19 @@
 #include "CoreMinimal.h"
 #include "EndEnvironmentStaticMeshActor.h"
 #include "EndPhysicsChangeCollisionResponseData.h"
-#include "Engine/EngineTypes.h"
 #include "EndPhysicsSeSetting.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/EngineTypes.h"
 #include "EndEnvironmentPhysicsStaticMeshActor.generated.h"
 
+class AActor;
 class UStaticMeshComponent;
-class UEndItemDropComponent;
 class UStaticMesh;
-class UObject;
 class UCapsuleComponent;
+class UEndItemDropComponent;
+class UObject;
 class USQEXSEADSound;
 class UPrimitiveComponent;
-class AActor;
 
 UCLASS(Blueprintable)
 class ENDGAME_API AEndEnvironmentPhysicsStaticMeshActor : public AEndEnvironmentStaticMeshActor {
@@ -38,7 +38,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<UStaticMesh*> OtherStaticMeshs;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UStaticMeshComponent*> OtherStaticMeshComponents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -57,10 +57,10 @@ public:
     bool bNeverAwake;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndItemDropComponent* ItemDropComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UCapsuleComponent* BattleOverlapCapsuleComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ERufusGunMode.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ERufusGunMode : uint8 {
     ShotGun,
     TwoHandguns,

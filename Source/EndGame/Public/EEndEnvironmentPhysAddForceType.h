@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndEnvironmentPhysAddForceType.generated.h"
 
-UENUM()
-enum class EEndEnvironmentPhysAddForceType {
+UENUM(BlueprintType)
+enum class EEndEnvironmentPhysAddForceType : uint8 {
     OriginToSphere,
     OriginToCone,
 };

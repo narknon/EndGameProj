@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBikeDifficultyType.generated.h"
 
-UENUM()
-enum class EEndBikeDifficultyType {
+UENUM(BlueprintType)
+enum class EEndBikeDifficultyType : uint8 {
     All,
     Easy,
     Normal,

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBreakBoxMiniGameBoxTypePhysics.generated.h"
 
-UENUM()
-enum class EEndBreakBoxMiniGameBoxTypePhysics {
+UENUM(BlueprintType)
+enum class EEndBreakBoxMiniGameBoxTypePhysics : uint8 {
     NORMAL,
     ABILITY,
     HIGH_GREAD,

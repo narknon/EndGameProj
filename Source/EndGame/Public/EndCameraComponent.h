@@ -7,16 +7,16 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ENDGAME_API UEndCameraComponent : public UCameraComponent {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float FocalLength;
     
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float FocusDistance;
     
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float FilmWidth;
     
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float Roll;
     
     UEndCameraComponent();

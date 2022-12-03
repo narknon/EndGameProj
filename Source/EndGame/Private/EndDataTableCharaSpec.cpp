@@ -5,8 +5,8 @@ FEndDataTableCharaSpec::FEndDataTableCharaSpec() {
     this->WeightType = 0;
     this->PhysiqueSize = 0;
     this->MoveType = 0;
-    this->RootMotionTranslationScale = 1;
-    this->AnimationPlayRate = 1;
+    this->RootMotionTranslationScale = 0.00f;
+    this->AnimationPlayRate = 0.00f;
     this->UseMasterPose = 0;
     this->IgnoreRagdollPhysics = 0;
     this->FlyAnimationBattlePackIndex = 0;

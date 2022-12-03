@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SetPlayGraviticJump.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace SetPlayGraviticJump {
     enum Type {
         Succeeded,

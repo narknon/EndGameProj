@@ -2,6 +2,6 @@
 
 UEndAnimNotifyReserveAfterWalkType::UEndAnimNotifyReserveAfterWalkType() {
     this->AfterWalkType = EEndAnimWalkType::Idle;
-    this->AfterLimitedRunningTimer = 1;
+    this->AfterLimitedRunningTimer = 0.00f;
 }
 

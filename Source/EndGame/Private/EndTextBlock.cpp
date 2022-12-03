@@ -70,11 +70,11 @@ UEndTextBlock::UEndTextBlock() {
     this->Justification = ETextJustify::Left;
     this->AutoWrapText = false;
     this->AutoShrinkText = true;
-    this->WrapTextAt = 1;
-    this->LineHeightPercentage = 1;
+    this->WrapTextAt = 0.00f;
+    this->LineHeightPercentage = 1.00f;
     this->Gradient = false;
     this->Font = NULL;
-    this->MinDesiredWidth = 1;
+    this->MinDesiredWidth = 0.00f;
     this->BlendMode = BLEND_Translucent;
     this->Outline = true;
     this->AllowMacro = true;

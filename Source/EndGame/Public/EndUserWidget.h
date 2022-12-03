@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "Blueprint/UserWidget.h"
 #include "UObject/NoExportTypes.h"
 #include "Blueprint/UserWidget.h"
+#include "UObject/NoExportTypes.h"
 #include "Input/Events.h"
 #include "EndUserWidget.generated.h"
 
@@ -134,16 +134,16 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UWidget* GetFocusedChildWidget() const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAnimationStartTimeByName(FName InAnimationName) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetAnimationEndTimeByName(FName InAnimationName) const;
     
-    UFUNCTION(BlueprintCosmetic, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintPure)
     float GetAnimationCurrentTimeEx(const UWidgetAnimation* InAnimation) const;
     
-    UFUNCTION(BlueprintCosmetic, BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintCosmetic, BlueprintPure)
     float GetAnimationCurrentTimeByName(FName InAnimationName) const;
     
     UFUNCTION(BlueprintCallable, BlueprintCosmetic)

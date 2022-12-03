@@ -81,7 +81,7 @@ UEndVirtualScrollBox::UEndVirtualScrollBox() {
     this->Orientation = Orient_Vertical;
     this->ScrollBarVisibility = ESlateVisibility::Visible;
     this->AlwaysShowScrollbar = false;
-    this->ScrollBarPosition = EEndMenuScrollBarPosition::None;
+    this->ScrollBarPosition = EEndMenuScrollBarPosition::RightOrBottom;
     this->SupportsPageScroll = false;
     this->SupportsKeyDown = false;
     this->VariableSizeItem = false;

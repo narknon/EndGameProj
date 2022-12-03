@@ -9,11 +9,11 @@ void AEndBattleAISU0002_02Controller::SetTargetDamageSource(UEndBattleDamageSour
 
 
 AEndBattleAISU0002_02Controller::AEndBattleAISU0002_02Controller() {
-    this->BarrierSpeed = 1;
-    this->BarrierRange = 1;
-    this->BarrierForceRange = 1;
-    this->SpinRadius = 1;
-    this->SpinSpeed = 1;
-    this->SpinAxisSpeed = 1;
+    this->BarrierSpeed = 5000.00f;
+    this->BarrierRange = 1000.00f;
+    this->BarrierForceRange = 300.00f;
+    this->SpinRadius = 300.00f;
+    this->SpinSpeed = 180.00f;
+    this->SpinAxisSpeed = 30.00f;
 }
 

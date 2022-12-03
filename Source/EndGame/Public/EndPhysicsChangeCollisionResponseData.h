@@ -8,10 +8,10 @@ USTRUCT(BlueprintType)
 struct ENDGAME_API FEndPhysicsChangeCollisionResponseData {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ECollisionChannel> CollisionChannel;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ECollisionResponse> CollisionResponse;
     
     FEndPhysicsChangeCollisionResponseData();

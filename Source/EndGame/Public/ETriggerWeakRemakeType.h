@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ETriggerWeakRemakeType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ETriggerWeakRemakeType : uint8 {
     Remake,
     Retain,

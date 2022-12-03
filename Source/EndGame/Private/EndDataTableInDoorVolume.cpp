@@ -1,6 +1,6 @@
 #include "EndDataTableInDoorVolume.h"
 
 FEndDataTableInDoorVolume::FEndDataTableInDoorVolume() {
-    this->DashRootMotionTranslationScale = 1;
+    this->DashRootMotionTranslationScale = 0.00f;
 }
 

@@ -6,8 +6,8 @@ FSQEX_BonamikPlaneDesc::FSQEX_BonamikPlaneDesc() {
     this->m_ParticleB = 0;
     this->m_ParticleC = 0;
     this->m_Index = 0;
-    this->m_Thickness = 1;
-    this->m_Offset = 1;
+    this->m_Thickness = 0.00f;
+    this->m_Offset = 0.00f;
     this->m_IsCollision = false;
     this->m_CollisionBatchNo = 0;
     this->m_ColId[0] = 0;

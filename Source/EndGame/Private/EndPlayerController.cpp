@@ -7,7 +7,7 @@ AEndPlayerController::AEndPlayerController() {
     this->LeaderCharacter = NULL;
     this->BattleTalkOnEndBattleClass = NULL;
     this->BattleTalkOnEndBattle = NULL;
-    this->MaxMouseSensitivity = 1;
-    this->MinMouseSensitivity = 1;
+    this->MaxMouseSensitivity = 2.00f;
+    this->MinMouseSensitivity = 0.10f;
 }
 

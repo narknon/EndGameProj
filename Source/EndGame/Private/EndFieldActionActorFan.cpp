@@ -1,8 +1,8 @@
 #include "EndFieldActionActorFan.h"
-#include "EndNavModifierComponent.h"
 #include "EndFieldActionSplineComponent.h"
 #include "EndFieldActionTriggerComponent.h"
 #include "EndSwitchAreaBoxComponent.h"
+#include "EndNavModifierComponent.h"
 
 AEndFieldActionActorFan::AEndFieldActionActorFan() {
     this->FanComponent = CreateDefaultSubobject<UEndFieldActionSplineComponent>(TEXT("FanComponent"));

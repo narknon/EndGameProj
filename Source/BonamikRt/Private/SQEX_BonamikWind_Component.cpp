@@ -14,11 +14,11 @@ USQEX_BonamikWind_Component::USQEX_BonamikWind_Component() {
     this->m_BonamikWindDesc = NULL;
     this->m_BonamikWindAreaType = ESQEX_Bonamik_WindAreaType_Global;
     this->m_BonamikWindGlobalAddition = true;
-    this->m_BonamikWindSphereAreaRadius = 1;
-    this->m_BonamikWindAreaMargin = 1;
+    this->m_BonamikWindSphereAreaRadius = 50.00f;
+    this->m_BonamikWindAreaMargin = 0.00f;
     this->m_BonamikWindAbsoluteDirection = false;
-    this->m_BonamikWindDirectionYaw = 1;
-    this->m_BonamikWindDirectionPitch = 1;
+    this->m_BonamikWindDirectionYaw = 0.00f;
+    this->m_BonamikWindDirectionPitch = 0.00f;
     this->m_BonamikWind = NULL;
 }
 

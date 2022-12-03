@@ -1,8 +1,8 @@
 #include "EndRangeSwitchParam.h"
 
 FEndRangeSwitchParam::FEndRangeSwitchParam() {
-    this->Min = 1;
-    this->Max = 1;
+    this->Min = 0.00f;
+    this->Max = 0.00f;
     this->Equal = false;
 }
 

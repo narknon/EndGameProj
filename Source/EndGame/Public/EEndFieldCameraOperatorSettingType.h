@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndFieldCameraOperatorSettingType.generated.h"
 
-UENUM()
-enum class EEndFieldCameraOperatorSettingType {
+UENUM(BlueprintType)
+enum class EEndFieldCameraOperatorSettingType : uint8 {
     Default,
     Town,
     InDoor,

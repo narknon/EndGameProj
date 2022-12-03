@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBehaviorLaunchFsmState.generated.h"
 
-UENUM()
-enum class EEndBehaviorLaunchFsmState {
+UENUM(BlueprintType)
+enum class EEndBehaviorLaunchFsmState : uint8 {
     Pending,
     Launch,
     InAir,

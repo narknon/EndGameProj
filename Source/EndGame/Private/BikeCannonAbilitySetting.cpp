@@ -1,9 +1,9 @@
 #include "BikeCannonAbilitySetting.h"
 
 FBikeCannonAbilitySetting::FBikeCannonAbilitySetting() {
-    this->LoopTime = 1;
-    this->WaitTime_First = 1;
+    this->LoopTime = 0.00f;
+    this->WaitTime_First = 0.00f;
     this->FireNum = 0;
-    this->IntervalTime = 1;
+    this->IntervalTime = 0.00f;
 }
 

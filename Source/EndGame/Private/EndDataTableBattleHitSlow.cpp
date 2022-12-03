@@ -1,7 +1,7 @@
 #include "EndDataTableBattleHitSlow.h"
 
 FEndDataTableBattleHitSlow::FEndDataTableBattleHitSlow() {
-    this->SpeedScale = 1;
-    this->Time = 1;
+    this->SpeedScale = 0.00f;
+    this->Time = 0.00f;
 }
 

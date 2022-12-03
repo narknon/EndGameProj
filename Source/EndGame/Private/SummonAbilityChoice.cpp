@@ -2,15 +2,15 @@
 
 FSummonAbilityChoice::FSummonAbilityChoice() {
     this->Priority = 0;
-    this->MinDistance = 1;
-    this->MaxDistance = 1;
-    this->MinHeight = 1;
-    this->MaxHeight = 1;
+    this->MinDistance = 0.00f;
+    this->MaxDistance = 0.00f;
+    this->MinHeight = 0.00f;
+    this->MaxHeight = 0.00f;
     this->InfluenceCenter = ESummonAbilityInfluenceCenter::eNone;
-    this->InfluenceRadius = 1;
+    this->InfluenceRadius = 0.00f;
     this->InfluenceTargets = 0;
-    this->SelfToGroundDist = 1;
-    this->TargetToGroundDist = 1;
-    this->Probability = 1;
+    this->SelfToGroundDist = 0.00f;
+    this->TargetToGroundDist = 0.00f;
+    this->Probability = 0.00f;
 }
 

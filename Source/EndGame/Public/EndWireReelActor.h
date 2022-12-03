@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EndSkeletalMeshActor.h"
-#include "EndPhysicalConstraintWireEvaluator.h"
 #include "EEndWireReelState.h"
+#include "EndPhysicalConstraintWireEvaluator.h"
 #include "EndWireReelActor.generated.h"
 
 class UEndBoneAttachComponent;
@@ -11,7 +11,7 @@ UCLASS(Blueprintable)
 class AEndWireReelActor : public AEndSkeletalMeshActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndBoneAttachComponent* BoneAttach;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

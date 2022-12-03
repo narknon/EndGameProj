@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBikeRotateYawType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBikeRotateYawType : uint8 {
     None,
     LookAtTarget,

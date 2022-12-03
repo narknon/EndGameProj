@@ -1,10 +1,10 @@
 #include "EndAIModelPersonalityData.h"
 
 UEndAIModelPersonalityData::UEndAIModelPersonalityData() {
-    this->InitialUpdatePriority = EEndAIUpdatePriority::VelyHigh_Talking;
-    this->PersonalType = EEndAIPersonalType::PC;
-    this->ExperienceSpeed = 1;
-    this->CautionCalmSpeed = 1;
-    this->RemoveRecognitionTime = 1;
+    this->InitialUpdatePriority = EEndAIUpdatePriority::Middle;
+    this->PersonalType = EEndAIPersonalType::Mob;
+    this->ExperienceSpeed = 10.00f;
+    this->CautionCalmSpeed = -5.00f;
+    this->RemoveRecognitionTime = 180.00f;
 }
 

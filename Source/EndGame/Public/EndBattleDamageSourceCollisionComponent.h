@@ -1,13 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EndBattleDamageSourceCollisionDataCapsule.h"
 #include "Components/ActorComponent.h"
 #include "EndBattleDamageSourceCollisionDataSphere.h"
 #include "EndBattleDamageSourceCollisionDataBox.h"
-#include "EndBattleDamageSourceCollisionDataCapsule.h"
 #include "EndBattleDamageSourceCollisionComponent.generated.h"
 
-class AActor;
 class AEndEnvironmentPhysicsStaticMeshActor;
+class AActor;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ENDGAME_API UEndBattleDamageSourceCollisionComponent : public UActorComponent {

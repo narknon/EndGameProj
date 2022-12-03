@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCutBattleCharaStateType.generated.h"
 
-UENUM()
-enum class EEndCutBattleCharaStateType {
+UENUM(BlueprintType)
+enum class EEndCutBattleCharaStateType : uint8 {
     None,
     Idle,
     Action,

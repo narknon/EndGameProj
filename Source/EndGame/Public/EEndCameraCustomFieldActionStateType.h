@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCameraCustomFieldActionStateType.generated.h"
 
-UENUM()
-enum class EEndCameraCustomFieldActionStateType {
+UENUM(BlueprintType)
+enum class EEndCameraCustomFieldActionStateType : uint8 {
     Enter,
     Move,
     Leave,

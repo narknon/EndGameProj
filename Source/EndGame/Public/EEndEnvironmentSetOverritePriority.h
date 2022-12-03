@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndEnvironmentSetOverritePriority.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndEnvironmentSetOverritePriority : uint8 {
     Default,
     LevelOverrideAction,

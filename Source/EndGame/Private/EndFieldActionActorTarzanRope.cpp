@@ -1,6 +1,6 @@
 #include "EndFieldActionActorTarzanRope.h"
-#include "Components/BoxComponent.h"
 #include "EndFieldActionTriggerComponent.h"
+#include "Components/BoxComponent.h"
 #include "EndNavModifierComponent.h"
 
 AEndFieldActionActorTarzanRope::AEndFieldActionActorTarzanRope() {

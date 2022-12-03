@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndCustomCompositeReturnCondition.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndCustomCompositeReturnCondition : uint8 {
     FirstSuccess,
     FirstFailure,

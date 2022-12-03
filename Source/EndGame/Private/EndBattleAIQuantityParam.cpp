@@ -2,6 +2,6 @@
 
 FEndBattleAIQuantityParam::FEndBattleAIQuantityParam() {
     this->bConstant = false;
-    this->Quantity = 1;
+    this->Quantity = 0.00f;
 }
 

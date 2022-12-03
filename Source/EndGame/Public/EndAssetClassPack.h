@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/Object.h"
 #include "Interfaces/Interface_AssetUserData.h"
+#include "UObject/Object.h"
 #include "EndAssetClassPack.generated.h"
 
 UCLASS(Blueprintable, MinimalAPI)

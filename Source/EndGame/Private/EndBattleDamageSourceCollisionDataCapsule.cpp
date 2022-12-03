@@ -1,7 +1,7 @@
 #include "EndBattleDamageSourceCollisionDataCapsule.h"
 
 FEndBattleDamageSourceCollisionDataCapsule::FEndBattleDamageSourceCollisionDataCapsule() {
-    this->Radius = 1;
-    this->Length = 1;
+    this->Radius = 0.00f;
+    this->Length = 0.00f;
 }
 

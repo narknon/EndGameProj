@@ -10,10 +10,10 @@ UCLASS(Blueprintable, EditInlineNew)
 class UEndPlayerStatusPanel : public UEndUserWidget {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndCanvasPanel* All_TopStatus_List;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndCanvasPanel* Nut_Sp;
     
     UEndPlayerStatusPanel();

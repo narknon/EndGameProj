@@ -1,6 +1,6 @@
 #include "EndFeelerBarrierBaseAndRandomBias.h"
 
 FEndFeelerBarrierBaseAndRandomBias::FEndFeelerBarrierBaseAndRandomBias() {
-    this->Base = 1;
+    this->Base = 0.00f;
 }
 

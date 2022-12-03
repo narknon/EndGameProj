@@ -1,7 +1,7 @@
 #include "EndBikeAIHelicopterLockOnInfo.h"
 
 FEndBikeAIHelicopterLockOnInfo::FEndBikeAIHelicopterLockOnInfo() {
-    this->DelayTime = 1;
+    this->DelayTime = 0.00f;
     this->Tracking = false;
 }
 

@@ -2,21 +2,21 @@
 
 FEndDataTableBattleAIActionAbility::FEndDataTableBattleAIActionAbility() {
     this->InID = 0;
-    this->InTime = 1;
-    this->InTimeout = 1;
-    this->InATB = 1;
-    this->InRandomATB = 1;
-    this->InMinRange = 1;
-    this->InMaxRange = 1;
-    this->InActionMin = 1;
-    this->InActionMax = 1;
-    this->InActionHeightMin = 1;
-    this->InActionHeightMax = 1;
-    this->InViewRange = 1;
+    this->InTime = 0.00f;
+    this->InTimeout = 0.00f;
+    this->InATB = 0.00f;
+    this->InRandomATB = 0.00f;
+    this->InMinRange = 0.00f;
+    this->InMaxRange = 0.00f;
+    this->InActionMin = 0.00f;
+    this->InActionMax = 0.00f;
+    this->InActionHeightMin = 0.00f;
+    this->InActionHeightMax = 0.00f;
+    this->InViewRange = 0.00f;
     this->ViewReverse = false;
-    this->InDelayMove = 1;
-    this->InDelayAbility = 1;
-    this->InRandomDelayAbility = 1;
+    this->InDelayMove = 0.00f;
+    this->InDelayAbility = 0.00f;
+    this->InRandomDelayAbility = 0.00f;
     this->InNeedMove = false;
     this->InNeedBetterMove = false;
     this->InAerialNeedMove = false;

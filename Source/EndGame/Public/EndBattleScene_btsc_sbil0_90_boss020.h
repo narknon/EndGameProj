@@ -1,15 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EndBattleSceneBlueprint.h"
-#include "Engine/LatentActionManager.h"
 #include "SetPlayStartSetPlay.h"
+#include "UObject/NoExportTypes.h"
+#include "Engine/LatentActionManager.h"
 #include "SetPlayUseAbility.h"
 #include "SetPlayJumpTo.h"
 #include "UObject/NoExportTypes.h"
-#include "SetPlayFallAction.h"
-#include "UObject/NoExportTypes.h"
 #include "SetPlayGraviticJump.h"
 #include "SetPlayForceChangeIdleAction.h"
+#include "SetPlayFallAction.h"
 #include "SetPlayAerialAttackJump.h"
 #include "EndBattleScene_btsc_sbil0_90_boss020.generated.h"
 
@@ -48,7 +48,7 @@ private:
     UFUNCTION(BlueprintCallable)
     static void ResetForceLookAt(AEndCharacter* Character);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     void RequestUseAbility(FName AbilityID, AEndCharacter* Executor, AEndCharacter* Target, float Timeout, bool ImmediatelyUseAerial, FLatentActionInfo LatentInfo, TEnumAsByte<SetPlayUseAbility::Type>& OutSignal);
     
     UFUNCTION(BlueprintCallable)
@@ -57,25 +57,25 @@ private:
     UFUNCTION(BlueprintCallable)
     static void KeepRelativePositionWarp(AEndCharacter* BaseCharacter, FVector BaseLocation, FRotator BaseRotation, const TArray<AEndCharacter*>& Characters);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     void JumpTo(AEndCharacter* Character, FVector TargetLocation, FRotator TargetRotation, float Duration, FName StartMotionName, FName LoopMotionName, FName OnCompleteMotionName, FName MotionOwnerCharaSpecId, FLatentActionInfo LatentInfo, TEnumAsByte<SetPlayJumpTo::Type>& OutSignal);
     
     UFUNCTION(BlueprintCallable)
     static bool IsReadySetPlay();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     void GraviticJump(AEndCharacter* Character, const FVector& landingLocation, float Height, float PeakBias, float turningDuration, FVector LandingForward, FName BeginSequenceName, FName LoopSequenceName, FName EndSequenceName, FName MotionOwnerCharaSpecId, FLatentActionInfo LatentInfo, TEnumAsByte<SetPlayGraviticJump::Type>& OutSignal);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     void ForceChangeIdleAction(AEndCharacter* Character, FLatentActionInfo LatentInfo, TEnumAsByte<SetPlayForceChangeIdleAction::Type>& OutSignal);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     void FallAction(AEndCharacter* Character, float GravityScale, FName FallSequenceName, FName LandSequenceName, FName MotionOwnerCharaSpecId, FLatentActionInfo LatentInfo, TEnumAsByte<SetPlayFallAction::Type>& OutSignal);
     
     UFUNCTION(BlueprintCallable)
     static void EndSetPlay();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION(BlueprintCallable, meta=(Latent, LatentInfo="LatentInfo"))
     void AerialAttackJump(FName StartMotionName, FName LoopMotionName, FName NextAbilityID, AEndCharacter* Executor, AEndCharacter* Target, float JumpTime, float Timeout, FName MotionOwnerCharaSpecId, FLatentActionInfo LatentInfo, TEnumAsByte<SetPlayAerialAttackJump::Type>& OutSignal);
     
 };

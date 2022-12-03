@@ -1,8 +1,8 @@
 #include "EndMenuViewport.h"
 #include "Templates/SubclassOf.h"
 
-class UWorld;
 class AActor;
+class UWorld;
 
 AActor* UEndMenuViewport::Spawn(TSubclassOf<AActor> ActorClass) {
     return NULL;

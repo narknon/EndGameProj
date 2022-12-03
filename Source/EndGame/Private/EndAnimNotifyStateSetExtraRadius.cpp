@@ -1,10 +1,10 @@
 #include "EndAnimNotifyStateSetExtraRadius.h"
 
 UEndAnimNotifyStateSetExtraRadius::UEndAnimNotifyStateSetExtraRadius() {
-    this->FieldExtraRadius = 1;
-    this->BattleExtraRadius = 1;
-    this->ElapsedTime = 1;
-    this->OriginalFieldExtraRadius = 1;
-    this->OriginalBattleExtraRadius = 1;
+    this->FieldExtraRadius = 0.00f;
+    this->BattleExtraRadius = 0.00f;
+    this->ElapsedTime = 0.00f;
+    this->OriginalFieldExtraRadius = 0.00f;
+    this->OriginalBattleExtraRadius = 0.00f;
 }
 

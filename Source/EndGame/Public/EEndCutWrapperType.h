@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndCutWrapperType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EEndCutWrapperType {
     enum Type {
         Event,

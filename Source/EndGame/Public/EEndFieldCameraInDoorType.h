@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndFieldCameraInDoorType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndFieldCameraInDoorType : uint8 {
     Town,
     Narrow,

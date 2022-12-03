@@ -2,10 +2,10 @@
 
 UAnimNotify_EndEmissiveAnimationRange::UAnimNotify_EndEmissiveAnimationRange() {
     this->Modifier = EEndEmissiveModifierType::Overlay;
-    this->Curve = EEndEmissiveCurveType::Curve00;
-    this->Duration = 1;
-    this->BlendInTime = 1;
-    this->BlendOutTime = 1;
+    this->Curve = EEndEmissiveCurveType::Curve01;
+    this->Duration = 1.00f;
+    this->BlendInTime = 0.20f;
+    this->BlendOutTime = 0.20f;
     this->bCallStopOnEnd = true;
 }
 

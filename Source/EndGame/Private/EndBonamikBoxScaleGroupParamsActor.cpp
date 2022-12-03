@@ -11,17 +11,17 @@ void AEndBonamikBoxScaleGroupParamsActor::OnOverlapBegin(UPrimitiveComponent* Ov
 
 AEndBonamikBoxScaleGroupParamsActor::AEndBonamikBoxScaleGroupParamsActor() {
     this->m_ChangeInnerCone = true;
-    this->m_InnerConeScale = 1;
+    this->m_InnerConeScale = 1.00f;
     this->m_ChangeOuterCone = true;
-    this->m_OuterConeScale = 1;
+    this->m_OuterConeScale = 1.00f;
     this->m_ChangeLocalForce = true;
-    this->m_LocalForceScale = 1;
+    this->m_LocalForceScale = 1.00f;
     this->m_ChangeWindScale = true;
-    this->m_GroupWindScale = 1;
+    this->m_GroupWindScale = 1.00f;
     this->m_ChangeCharaWindScale = true;
-    this->m_GroupCharaWindScale = 1;
+    this->m_GroupCharaWindScale = 1.00f;
     this->m_ChangeMassScale = true;
-    this->m_GroupMassScale = 1;
+    this->m_GroupMassScale = 1.00f;
     this->m_ApplyToAttachments = false;
 }
 

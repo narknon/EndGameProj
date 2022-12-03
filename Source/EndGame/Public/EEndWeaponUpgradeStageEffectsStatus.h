@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndWeaponUpgradeStageEffectsStatus.generated.h"
 
-UENUM()
-enum class EEndWeaponUpgradeStageEffectsStatus {
+UENUM(BlueprintType)
+enum class EEndWeaponUpgradeStageEffectsStatus : uint8 {
     None,
     PlayStage,
     WaitCameraMove,

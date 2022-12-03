@@ -13,9 +13,9 @@ void UEndCameraComponent::SetFocalLength(float NewValue) {
 }
 
 UEndCameraComponent::UEndCameraComponent() {
-    this->FocalLength = 1;
-    this->FocusDistance = 1;
-    this->FilmWidth = 1;
-    this->Roll = 1;
+    this->FocalLength = 0.00f;
+    this->FocusDistance = 0.00f;
+    this->FilmWidth = 0.00f;
+    this->Roll = 0.00f;
 }
 

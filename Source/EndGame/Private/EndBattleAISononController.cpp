@@ -11,13 +11,13 @@ bool AEndBattleAISononController::RequestLinkAbility(FName ID, EEndLinkAbilityTy
 }
 
 AEndBattleAISononController::AEndBattleAISononController() {
-    this->LinkCommandMaxDistanceToLeader = 1;
-    this->LinkCommandBestDistanceToLeader = 1;
-    this->LinkCommandTeleportMinDistance = 1;
-    this->LinkCommandFirstStrikeDistance = 1;
-    this->LinkCommandFirstStrikeDiffHeight = 1;
-    this->LinkAfterEscortWarpDeterTime = 1;
-    this->DummyTargetDistanceDefault = 1;
+    this->LinkCommandMaxDistanceToLeader = 800.00f;
+    this->LinkCommandBestDistanceToLeader = 200.00f;
+    this->LinkCommandTeleportMinDistance = 1000.00f;
+    this->LinkCommandFirstStrikeDistance = 800.00f;
+    this->LinkCommandFirstStrikeDiffHeight = 220.00f;
+    this->LinkAfterEscortWarpDeterTime = 1.50f;
+    this->DummyTargetDistanceDefault = 400.00f;
     this->SacrificeDamageSourceID_Heal = TEXT("PC0006_00_Sacrifice_Heal_01");
     this->SacrificeDamageSourceID_ATB = TEXT("PC0006_00_Sacrifice_ATB_01");
     this->SacrificeDamageSourceID_Damage = TEXT("PC0006_00_Sacrifice_Damage_01");

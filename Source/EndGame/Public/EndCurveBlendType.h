@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EndCurveBlendType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum EndCurveBlendType {
     Linear,
     Curve,

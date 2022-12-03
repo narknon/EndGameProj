@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndEnvironmentPhysForceScale.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndEnvironmentPhysForceScale : uint8 {
     Scale0,
     Scale1,

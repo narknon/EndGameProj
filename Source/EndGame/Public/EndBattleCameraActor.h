@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Camera/CameraActor.h"
-#include "UObject/NoExportTypes.h"
 #include "EndCameraShakeParam.h"
 #include "EEndBattleCameraRelativeLocationRotateType.h"
+#include "Camera/CameraActor.h"
 #include "EEndBattleCameraTargetType.h"
+#include "UObject/NoExportTypes.h"
 #include "EEndBattleCameraSLerpType.h"
 #include "EndBattleCameraInputOffsetType.h"
 #include "EEndBattleCameraEyeToAimTargetRotateType.h"
@@ -17,7 +17,7 @@ UCLASS(Blueprintable)
 class ENDGAME_API AEndBattleCameraActor : public ACameraActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float AimTarget0_to1_Rate;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
@@ -89,7 +89,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     EEndBattleCameraSLerpType EyeTargetRelativeLocationSLerpType;
     
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float EyeTargetMovableFOV;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
@@ -116,19 +116,19 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     bool bEyeToAimTargetRot_Fix;
     
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float AimLeapTime;
     
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float EyeLeapTime;
     
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float Roll;
     
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float OthersGameSpeed;
     
-    UPROPERTY(EditAnywhere, Interp)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))
     float NoOthersGameSpeed;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Interp, meta=(AllowPrivateAccess=true))

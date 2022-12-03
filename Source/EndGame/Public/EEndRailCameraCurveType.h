@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndRailCameraCurveType.generated.h"
 
-UENUM()
-enum class EEndRailCameraCurveType {
+UENUM(BlueprintType)
+enum class EEndRailCameraCurveType : uint8 {
     Linear,
     Curve,
     SlowInFastOut,

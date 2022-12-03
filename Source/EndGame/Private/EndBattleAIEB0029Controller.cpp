@@ -24,14 +24,14 @@ FVector AEndBattleAIEB0029Controller::GetGotoPosition(EPlayerType PlayerType, EP
 }
 
 AEndBattleAIEB0029Controller::AEndBattleAIEB0029Controller() {
-    this->FastNextBlendTime = 1;
-    this->FastBeginToLoopBlendTime = 1;
-    this->FastLoopToEndBlendTime = 1;
-    this->rotateLengthTime = 1;
+    this->FastNextBlendTime = 0.20f;
+    this->FastBeginToLoopBlendTime = 0.05f;
+    this->FastLoopToEndBlendTime = 0.05f;
+    this->rotateLengthTime = 20.00f;
     this->ShowDashPoint = false;
     this->ShowGoalPoint = false;
     this->ShowGoalRangePoints = false;
-    this->RangePointsYaw = 1;
+    this->RangePointsYaw = 0.00f;
     this->HideGoalRangePoints_ = false;
 }
 

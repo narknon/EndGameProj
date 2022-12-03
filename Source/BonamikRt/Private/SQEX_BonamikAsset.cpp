@@ -13,7 +13,7 @@ USQEX_BonamikAsset::USQEX_BonamikAsset() {
     this->m_TotalPCLinkCones = 0;
     this->m_TotalLateralLinkCones = 0;
     this->m_bAlwaysUse60FPSsetting = false;
-    this->m_TeleportDistance = 1;
+    this->m_TeleportDistance = 0.00f;
     this->m_BonamikAccurateBoundsUpdate = false;
     this->m_PreRollStepOnResume = 0;
 }

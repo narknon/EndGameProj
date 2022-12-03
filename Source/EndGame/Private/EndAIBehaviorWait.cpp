@@ -1,6 +1,6 @@
 #include "EndAIBehaviorWait.h"
 
 FEndAIBehaviorWait::FEndAIBehaviorWait() {
-    this->WaitTime = 1;
+    this->WaitTime = 0.00f;
 }
 

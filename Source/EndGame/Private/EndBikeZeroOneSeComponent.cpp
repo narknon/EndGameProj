@@ -1,8 +1,8 @@
 #include "EndBikeZeroOneSeComponent.h"
 
 UEndBikeZeroOneSeComponent::UEndBikeZeroOneSeComponent() {
-    this->VelocityZeroOneFadeTime = 1;
-    this->BodyRoughnessThreshold = 1;
-    this->RandomPitchRange = 1;
+    this->VelocityZeroOneFadeTime = 0.50f;
+    this->BodyRoughnessThreshold = 0.50f;
+    this->RandomPitchRange = 0.20f;
 }
 

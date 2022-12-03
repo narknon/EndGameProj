@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndPhysicalConstraintMessage.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndPhysicalConstraintMessage : uint8 {
     Deactivate,
     Activate,

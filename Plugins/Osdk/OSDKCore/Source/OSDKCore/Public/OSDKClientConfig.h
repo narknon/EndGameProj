@@ -1,0 +1,29 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "OSDKClientConfig.generated.h"
+
+USTRUCT(BlueprintType)
+struct OSDKCORE_API FOSDKClientConfig {
+    GENERATED_BODY()
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString ProjectName;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString LoginUrl;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString SignupURL;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString Revision;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString ConfigSandbox;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FString UserSandbox;
+    
+    FOSDKClientConfig();
+};
+

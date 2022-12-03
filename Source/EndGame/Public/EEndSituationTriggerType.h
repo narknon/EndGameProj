@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndSituationTriggerType.generated.h"
 
-UENUM()
-enum class EEndSituationTriggerType {
+UENUM(BlueprintType)
+enum class EEndSituationTriggerType : uint8 {
     BoxOverlap,
     BoxOverlapDirection,
     BoxOverlapDirectionBoth,

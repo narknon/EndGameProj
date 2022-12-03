@@ -20,7 +20,7 @@ void UEndImageSet::SetBlendMode(TEnumAsByte<EBlendMode> InBlendMode) {
 
 UEndImageSet::UEndImageSet() {
     this->BlendMode = BLEND_Translucent;
-    this->SelectedIndex = 0;
+    this->SelectedIndex = -1;
     this->bSimpleMode = false;
 }
 

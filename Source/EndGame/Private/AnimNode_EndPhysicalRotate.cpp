@@ -1,19 +1,19 @@
 #include "AnimNode_EndPhysicalRotate.h"
 
 FAnimNode_EndPhysicalRotate::FAnimNode_EndPhysicalRotate() {
-    this->EndPointDistance = 1;
+    this->EndPointDistance = 0.00f;
     this->bEnabledEndPointGravity = false;
-    this->AnimatedPositionStiffness = 1;
-    this->VelocityFriction = 1;
-    this->ConstraintAngle = 1;
-    this->ConstraintAngleStiffness = 1;
-    this->ContactPadding = 1;
-    this->ContactPaddingToAnimPositionRate = 1;
-    this->ContactPositionStiffness = 1;
-    this->ContactVelocityStiffness = 1;
+    this->AnimatedPositionStiffness = 0.00f;
+    this->VelocityFriction = 0.00f;
+    this->ConstraintAngle = 0.00f;
+    this->ConstraintAngleStiffness = 0.00f;
+    this->ContactPadding = 0.00f;
+    this->ContactPaddingToAnimPositionRate = 0.00f;
+    this->ContactPositionStiffness = 0.00f;
+    this->ContactVelocityStiffness = 0.00f;
     this->PositionIterationCount = 0;
     this->VelocityIterationCount = 0;
-    this->WeightSmoothRate = 1;
-    this->ActiveDuringTime = 1;
+    this->WeightSmoothRate = 0.00f;
+    this->ActiveDuringTime = 0.00f;
 }
 

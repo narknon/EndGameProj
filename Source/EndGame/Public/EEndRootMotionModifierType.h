@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndRootMotionModifierType.generated.h"
 
-UENUM()
-enum class EEndRootMotionModifierType {
+UENUM(BlueprintType)
+enum class EEndRootMotionModifierType : uint8 {
     None,
     FieldAction,
     TalkControl,

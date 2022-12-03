@@ -1,7 +1,7 @@
 #include "EndEnvQueryComponent.h"
 
-class UEnvQuery;
 class AActor;
+class UEnvQuery;
 
 void UEndEnvQueryComponent::SetQueryAllActive(TEnumAsByte<EEqsType::Type> Index, bool Flag) {
 }

@@ -1,10 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EndNavActorInterface.h"
 #include "EndNavLinkProxy.h"
+#include "EndNavActorInterface.h"
 #include "UObject/NoExportTypes.h"
 #include "AffectedActorGroup.h"
-#include "EndBattleAreaActor.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavPriorRegistInfo -FallbackName=NavPriorRegistInfo
 #include "EndFieldActionActorBase.generated.h"
 
@@ -68,7 +67,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName CameraOffTriggerName;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndTextRenderComponent* TextRenderComponent;
     
 protected:

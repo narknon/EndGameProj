@@ -1,7 +1,7 @@
 #include "BattleParamShortRange.h"
 
 FBattleParamShortRange::FBattleParamShortRange() {
-    this->CombatDistance = 1;
-    this->CautionDistance = 1;
+    this->CombatDistance = 0.00f;
+    this->CautionDistance = 0.00f;
 }
 

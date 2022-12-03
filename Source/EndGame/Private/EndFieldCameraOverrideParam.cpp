@@ -2,17 +2,17 @@
 
 FEndFieldCameraOverrideParam::FEndFieldCameraOverrideParam() {
     this->bOverrideFOV = false;
-    this->OverrideFOV = 1;
+    this->OverrideFOV = 0.00f;
     this->bOverrideDistance = false;
-    this->OverrideDistance = 1;
+    this->OverrideDistance = 0.00f;
     this->bAddAimHeight = false;
-    this->AddAimHeight = 1;
+    this->AddAimHeight = 0.00f;
     this->bOverrideRotate = false;
     this->bOverrideFollowInverseSpeed = false;
-    this->OverrideFollowInverseSpeed = 1;
+    this->OverrideFollowInverseSpeed = 0.00f;
     this->bOverrideLocationInverseSpeed = false;
-    this->OverrideLocationInverseSpeed = 1;
+    this->OverrideLocationInverseSpeed = 0.00f;
     this->bOverrideAimOffsetY = false;
-    this->OverrideAimOffsetY = 1;
+    this->OverrideAimOffsetY = 0.00f;
 }
 

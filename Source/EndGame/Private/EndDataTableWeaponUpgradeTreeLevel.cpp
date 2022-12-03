@@ -2,6 +2,6 @@
 
 FEndDataTableWeaponUpgradeTreeLevel::FEndDataTableWeaponUpgradeTreeLevel() {
     this->TreeLevel = 0;
-    this->Percent = 1;
+    this->Percent = 0.00f;
 }
 

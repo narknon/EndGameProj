@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EndFieldSkipType.generated.h"
 
-UENUM()
-enum class EndFieldSkipType {
+UENUM(BlueprintType)
+enum class EndFieldSkipType : uint8 {
     CutScene,
     PlannerEvent,
     Other,

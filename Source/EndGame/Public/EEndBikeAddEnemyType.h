@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBikeAddEnemyType.generated.h"
 
-UENUM()
-enum class EEndBikeAddEnemyType {
+UENUM(BlueprintType)
+enum class EEndBikeAddEnemyType : uint8 {
     None,
     RateHp,
 };

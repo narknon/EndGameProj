@@ -1,11 +1,11 @@
 #include "EndAIIntentionIdleSetting.h"
 
 UEndAIIntentionIdleSetting::UEndAIIntentionIdleSetting() {
-    this->LookAtCancelTimeMin = 1;
-    this->LookAtWaitTimeBiasInCaution = 1;
-    this->LookAtBlendTimeBiasInCaution = 1;
-    this->LookAtTargetRotationMinClampAngleInCaution = 1;
-    this->LookAtTargetAdditiveRotationBiasInCaution = 1;
-    this->SaccadeTargetRotationBiasInCaution = 1;
+    this->LookAtCancelTimeMin = 0.30f;
+    this->LookAtWaitTimeBiasInCaution = 0.40f;
+    this->LookAtBlendTimeBiasInCaution = 0.50f;
+    this->LookAtTargetRotationMinClampAngleInCaution = 40.00f;
+    this->LookAtTargetAdditiveRotationBiasInCaution = 3.00f;
+    this->SaccadeTargetRotationBiasInCaution = 2.00f;
 }
 

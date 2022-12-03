@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "AI/Navigation/NavRelevantInterface.h"
 #include "Engine/TargetPoint.h"
+#include "AI/Navigation/NavRelevantInterface.h"
 #include "EndTargetPoint.generated.h"
 
 class UEndTextRenderComponent;
@@ -11,7 +11,7 @@ class ENDGAME_API AEndTargetPoint : public ATargetPoint, public INavRelevantInte
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndTextRenderComponent* TextRenderComponent;
     
 public:

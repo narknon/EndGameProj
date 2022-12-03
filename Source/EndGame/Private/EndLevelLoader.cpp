@@ -1,8 +1,8 @@
 #include "EndLevelLoader.h"
 
 class UObject;
-class AEndCharacter;
 class AActor;
+class AEndCharacter;
 
 void UEndLevelLoader::WaitStreamLevelEmpty(const UObject* WorldContextObject, FLatentActionInfo LatentInfo) {
 }

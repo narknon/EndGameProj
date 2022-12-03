@@ -176,6 +176,6 @@ USQEX_Bonamik_Component::USQEX_Bonamik_Component() {
     this->m_BonamikAutoDisable = false;
     this->bAccurateBoundsUpdate = false;
     this->PreRollStepOnResume = 0;
-    this->PrevScreenSize = 1;
+    this->PrevScreenSize = 100000002004087734272.00f;
 }
 

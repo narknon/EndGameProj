@@ -2,9 +2,9 @@
 
 FEnd3DAudioSimpleCylinder::FEnd3DAudioSimpleCylinder() {
     this->Enable = false;
-    this->Radius = 1;
-    this->HalfHeight = 1;
-    this->HeightOffset = 1;
+    this->Radius = 0.00f;
+    this->HalfHeight = 0.00f;
+    this->HeightOffset = 0.00f;
     this->IsSendStateTriggerPlayingOnly = false;
 }
 

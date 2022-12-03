@@ -2,7 +2,7 @@
 
 UEndBTTask_CarbuncleRubyHeal::UEndBTTask_CarbuncleRubyHeal() {
     this->AbilityID = TEXT("SU0007_00_Atk000");
-    this->BonusAbilityRate = 1;
-    this->BonusAbilityInterval = 1;
+    this->BonusAbilityRate = 0.10f;
+    this->BonusAbilityInterval = 10.00f;
 }
 

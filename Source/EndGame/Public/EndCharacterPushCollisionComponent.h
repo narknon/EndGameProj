@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EndCharacterPushCollisionData.h"
 #include "Components/ActorComponent.h"
+#include "EndCharacterPushCollisionData.h"
 #include "EndCharacterPushCollisionComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))

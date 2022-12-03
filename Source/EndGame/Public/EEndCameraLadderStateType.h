@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndCameraLadderStateType.generated.h"
 
-UENUM()
-enum class EEndCameraLadderStateType {
+UENUM(BlueprintType)
+enum class EEndCameraLadderStateType : uint8 {
     Enter,
     Move,
     Leave,

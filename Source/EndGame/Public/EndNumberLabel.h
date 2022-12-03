@@ -1,11 +1,11 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Framework/Text/TextLayout.h"
+#include "Engine/EngineTypes.h"
 #include "Components/Widget.h"
 #include "Styling/SlateBrush.h"
 #include "UObject/NoExportTypes.h"
 #include "Components/Widget.h"
-#include "Engine/EngineTypes.h"
-#include "Framework/Text/TextLayout.h"
 #include "EndNumberLabel.generated.h"
 
 UCLASS(Blueprintable)
@@ -21,13 +21,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWidget::FGetLinearColor ColorAndOpacityDelegate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EBlendMode> BlendMode;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Value;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<ETextJustify::Type> Justification;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

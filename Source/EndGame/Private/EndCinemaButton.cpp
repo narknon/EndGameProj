@@ -1,8 +1,8 @@
 #include "EndCinemaButton.h"
 
 UEndCinemaButton::UEndCinemaButton() {
-    this->SkipWaitTime = 1;
-    this->MenuWaitTime = 1;
-    this->MenuOutTime = 1;
+    this->SkipWaitTime = 3.00f;
+    this->MenuWaitTime = 3.00f;
+    this->MenuOutTime = 5.00f;
 }
 

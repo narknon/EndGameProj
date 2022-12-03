@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SHAPEMATCHING_MODE.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum SHAPEMATCHING_MODE {
     ESQEX_Bonamik_SMMODE_CHAINSHAPEMATCH,
     ESQEX_Bonamik_SMMODE_SEQCHAINMATCH,

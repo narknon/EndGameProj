@@ -28,8 +28,8 @@ bool AEndBattleAIEB0000Controller::IsGSFly() {
 }
 
 AEndBattleAIEB0000Controller::AEndBattleAIEB0000Controller() {
-    this->JumpTurnTime = 1;
-    this->JumpTurnBias = 1;
-    this->JumpTurnAngle = 1;
+    this->JumpTurnTime = 1.00f;
+    this->JumpTurnBias = 4000.00f;
+    this->JumpTurnAngle = 90.00f;
 }
 

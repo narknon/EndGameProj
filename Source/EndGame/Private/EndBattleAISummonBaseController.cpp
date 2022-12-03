@@ -18,11 +18,11 @@ void AEndBattleAISummonBaseController::OnAppearNotify() {
 }
 
 AEndBattleAISummonBaseController::AEndBattleAISummonBaseController() {
-    this->WarpMoveDistance = 1;
-    this->UseWarpPointDistance = 1;
-    this->CoolDownDistance = 1;
-    this->EscortDistance = 1;
-    this->SightAngle = 1;
-    this->MaxDistanceFromOwner = 1;
+    this->WarpMoveDistance = 1200.00f;
+    this->UseWarpPointDistance = 600.00f;
+    this->CoolDownDistance = 600.00f;
+    this->EscortDistance = 600.00f;
+    this->SightAngle = 60.00f;
+    this->MaxDistanceFromOwner = 1500.00f;
 }
 

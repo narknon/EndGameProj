@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBattleCameraCutEndType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EEndBattleCameraCutEndType {
     enum Type {
         None,

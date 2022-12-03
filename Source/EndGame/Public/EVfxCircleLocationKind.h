@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EVfxCircleLocationKind.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EVfxCircleLocationKind : uint8 {
     XZ,
     XY,

@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EndFieldActionActorBase.h"
 #include "MonkeyBarPoint.h"
+#include "EndFieldActionActorBase.h"
 #include "MonkeyBarLinkPoint.h"
 #include "EndFieldActionActorMonkeyBars.generated.h"
 
@@ -11,7 +11,7 @@ UCLASS(Blueprintable, Placeable)
 class AEndFieldActionActorMonkeyBars : public AEndFieldActionActorBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndNavModifierComponent* ModifierVolume;
     
     UPROPERTY(EditAnywhere)

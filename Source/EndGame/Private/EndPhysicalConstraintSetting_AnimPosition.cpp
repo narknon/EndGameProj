@@ -1,8 +1,8 @@
 #include "EndPhysicalConstraintSetting_AnimPosition.h"
 
 FEndPhysicalConstraintSetting_AnimPosition::FEndPhysicalConstraintSetting_AnimPosition() {
-    this->BoneInvMassBias0 = 1;
-    this->BoneInvMassBias1 = 1;
-    this->Stiffness = 1;
+    this->BoneInvMassBias0 = 0.00f;
+    this->BoneInvMassBias1 = 0.00f;
+    this->Stiffness = 0.00f;
 }
 

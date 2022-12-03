@@ -1,6 +1,6 @@
 #include "EndAIBehaviorDirectMoveTimer.h"
 
 FEndAIBehaviorDirectMoveTimer::FEndAIBehaviorDirectMoveTimer() {
-    this->MoveTime = 1;
+    this->MoveTime = 0.00f;
 }
 

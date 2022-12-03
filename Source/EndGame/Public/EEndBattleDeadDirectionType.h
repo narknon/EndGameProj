@@ -12,7 +12,7 @@ enum class EEndBattleDeadDirectionType : uint8 {
     BlackSmoke,
     WhiteSmoke,
     Digital,
-    FeelerNormal,
+    FeelerNormal = 0x32,
     FeelerSpecial,
     PraecoMiniNormal,
     PraecoMiniFinish,

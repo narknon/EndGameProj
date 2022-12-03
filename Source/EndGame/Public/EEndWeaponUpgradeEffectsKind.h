@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndWeaponUpgradeEffectsKind.generated.h"
 
-UENUM()
-enum class EEndWeaponUpgradeEffectsKind {
+UENUM(BlueprintType)
+enum class EEndWeaponUpgradeEffectsKind : uint8 {
     None,
     BeginMenu,
     FadeInFadeOut,

@@ -2,11 +2,11 @@
 
 AEndEnvironmentPhysAddForceActor::AEndEnvironmentPhysAddForceActor() {
     this->AddForceScale = EEndEnvironmentPhysForceScale::Scale0;
-    this->AppliedRadius = 1;
+    this->AppliedRadius = 512.00f;
     this->bLimitAngle = false;
-    this->AppliedAngle = 1;
+    this->AppliedAngle = 60.00f;
     this->bImmediate = true;
-    this->AppliedSeconds = 1;
+    this->AppliedSeconds = 2.00f;
     this->bIgnoreZ = false;
 }
 

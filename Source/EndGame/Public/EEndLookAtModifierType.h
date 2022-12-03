@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndLookAtModifierType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndLookAtModifierType : uint8 {
     None,
     ForceEnableLookAt,

@@ -2,6 +2,6 @@
 
 FEndDataTableBattleCommandLinkage::FEndDataTableBattleCommandLinkage() {
     this->Bonus = 0;
-    this->Second = 1;
+    this->Second = 0.00f;
 }
 

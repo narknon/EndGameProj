@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndFieldManagerSetupWaitRetryType.generated.h"
 
-UENUM()
-enum class EEndFieldManagerSetupWaitRetryType {
+UENUM(BlueprintType)
+enum class EEndFieldManagerSetupWaitRetryType : uint8 {
     None,
     WaitCharaAttach,
     WaitTextureStreaming,

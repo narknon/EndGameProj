@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndJointLimitType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndJointLimitType : uint8 {
     Free,
     Swing,

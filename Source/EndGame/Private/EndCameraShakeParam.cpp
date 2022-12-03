@@ -1,12 +1,12 @@
 #include "EndCameraShakeParam.h"
 
 FEndCameraShakeParam::FEndCameraShakeParam() {
-    this->ShakeScale = 1;
-    this->Duration = 1;
-    this->BlendInTime = 1;
-    this->BlendOutTime = 1;
-    this->InnerRadius = 1;
-    this->OuterRadius = 1;
-    this->Falloff = 1;
+    this->ShakeScale = 0.00f;
+    this->Duration = 0.00f;
+    this->BlendInTime = 0.00f;
+    this->BlendOutTime = 0.00f;
+    this->InnerRadius = 0.00f;
+    this->OuterRadius = 0.00f;
+    this->Falloff = 0.00f;
 }
 

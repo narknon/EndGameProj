@@ -1,7 +1,7 @@
 #include "EndAnimNotifyStateBikeKeepRelativePosition.h"
 
 UEndAnimNotifyStateBikeKeepRelativePosition::UEndAnimNotifyStateBikeKeepRelativePosition() {
-    this->Type = EEndBikeKeepRelativePositionType::None;
-    this->Position = 1;
+    this->Type = EEndBikeKeepRelativePositionType::DirectValue;
+    this->Position = 0.00f;
 }
 

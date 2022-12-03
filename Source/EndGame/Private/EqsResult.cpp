@@ -2,8 +2,8 @@
 
 FEqsResult::FEqsResult() {
     this->Actor = NULL;
-    this->Score = 1;
-    this->Distance = 1;
+    this->Score = 0.00f;
+    this->Distance = 0.00f;
     this->UniqueID = 0;
 }
 

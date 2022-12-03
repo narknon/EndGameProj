@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SetPlayStartSetPlay.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace SetPlayStartSetPlay {
     enum Type {
         Succeeded,

@@ -1,10 +1,10 @@
 #include "EndPieImage.h"
 
-class UMaterialInterface;
+class USlateBrushAsset;
 class UMaterialInstanceDynamic;
 class UTexture2DDynamic;
 class UTexture2D;
-class USlateBrushAsset;
+class UMaterialInterface;
 
 void UEndPieImage::SetStartAngle(float InAngle) {
 }
@@ -42,7 +42,7 @@ UMaterialInstanceDynamic* UEndPieImage::GetDynamicMaterial() {
 
 UEndPieImage::UEndPieImage() {
     this->BlendMode = BLEND_Translucent;
-    this->StartAngle = 1;
-    this->EndAngle = 1;
+    this->StartAngle = 0.00f;
+    this->EndAngle = 360.00f;
 }
 

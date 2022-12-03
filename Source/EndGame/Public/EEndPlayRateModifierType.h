@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndPlayRateModifierType.generated.h"
 
-UENUM()
-enum class EEndPlayRateModifierType {
+UENUM(BlueprintType)
+enum class EEndPlayRateModifierType : uint8 {
     Field,
     Battle,
     CharaSpec,

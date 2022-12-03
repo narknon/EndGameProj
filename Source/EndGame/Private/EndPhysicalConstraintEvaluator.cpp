@@ -5,8 +5,8 @@ FEndPhysicalConstraintEvaluator::FEndPhysicalConstraintEvaluator() {
     this->DefaultConstraintSetting = NULL;
     this->bEnabledSimulation = false;
     this->bActive = false;
-    this->BlendRate = 1;
-    this->BlendSpeed = 1;
+    this->BlendRate = 0.00f;
+    this->BlendSpeed = 0.00f;
     this->bDebugDraw = false;
     this->OwnerCharacter = NULL;
     this->OwnerMeshActor = NULL;

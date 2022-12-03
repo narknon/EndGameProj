@@ -1,6 +1,6 @@
 #include "EndEnvironmentPhysicsStaticMeshActor.h"
-#include "EndItemDropComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "EndItemDropComponent.h"
 
 class UPrimitiveComponent;
 class AActor;

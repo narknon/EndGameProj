@@ -2,9 +2,9 @@
 #include "CoreMinimal.h"
 #include "EEndMovieClipMode.generated.h"
 
-UENUM()
-enum class EEndMovieClipMode {
-    Load,
+UENUM(BlueprintType)
+enum class EEndMovieClipMode : uint8 {
+    Load = 0x1,
     Play,
     Draw,
 };

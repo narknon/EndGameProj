@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEX_KD_InterpolateType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum ESQEX_KD_InterpolateType {
     ESQEX_KD_InterpolateType_Step,
     ESQEX_KD_InterpolateType_Linear,

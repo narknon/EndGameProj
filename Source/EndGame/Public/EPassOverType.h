@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPassOverType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPassOverType : uint8 {
     PassOverShort,
     PassOverLong,

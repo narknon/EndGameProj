@@ -2,10 +2,10 @@
 
 FEndFeelerBarrierInstanceContext::FEndFeelerBarrierInstanceContext() {
     this->InstanceIndex = 0;
-    this->VerticalHeightOffset = 1;
-    this->TargetExtrusionDistance = 1;
-    this->CurrentExtrusionDistance = 1;
-    this->ExtrusionWaitTimer = 1;
-    this->DeactiveUpSpeed = 1;
+    this->VerticalHeightOffset = 0.00f;
+    this->TargetExtrusionDistance = 0.00f;
+    this->CurrentExtrusionDistance = 0.00f;
+    this->ExtrusionWaitTimer = 0.00f;
+    this->DeactiveUpSpeed = 0.00f;
 }
 

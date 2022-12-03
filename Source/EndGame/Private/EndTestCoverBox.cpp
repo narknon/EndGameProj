@@ -1,6 +1,6 @@
 #include "EndTestCoverBox.h"
-#include "Components/StaticMeshComponent.h"
 #include "Components/BoxComponent.h"
+#include "Components/StaticMeshComponent.h"
 
 AEndTestCoverBox::AEndTestCoverBox() {
     this->StaticMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent"));

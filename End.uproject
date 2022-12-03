@@ -14,58 +14,137 @@
 			]
 		},
 		{
-			"Name": "KineDriverEd",
-			"Type": "Editor",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"UnrealEd"
-			]
-		},
-		{
 			"Name": "KineDriverRt",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"UnrealEd"
-			]
+			"LoadingPhase": "Default"
 		},
 		{
 			"Name": "BonamikRt",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"UnrealEd"
-			]
+			"LoadingPhase": "Default"
 		},
 		{
 			"Name": "KBDRt",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"UnrealEd"
-			]
+			"LoadingPhase": "Default"
 		}
 	],
 	"Plugins": [
 		{
-			"Name": "AnimationBudgetAllocator",
-			"Enabled": true
+			"Name": "MacGraphicsSwitching",
+			"Enabled": false
 		},
 		{
-			"Name": "BodyDriverPlugin",
-			"Enabled": true
+			"Name": "IOSDeviceProfileSelector",
+			"Enabled": false
 		},
 		{
-			"Name": "HappySadFaceLipSync",
-			"Enabled": true
+			"Name": "AndroidMedia",
+			"Enabled": false
 		},
 		{
-			"Name": "Paper2D",
-			"Enabled": true
+			"Name": "AndroidMoviePlayer",
+			"Enabled": false
 		},
 		{
-			"Name": "SQEXSEAD",
-			"Enabled": true
+			"Name": "AppleMoviePlayer",
+			"Enabled": false
+		},
+		{
+			"Name": "HTML5Networking",
+			"Enabled": false
+		},
+		{
+			"Name": "SlateRemote",
+			"Enabled": false
+		},
+		{
+			"Name": "AndroidDeviceProfileSelector",
+			"Enabled": false
+		},
+		{
+			"Name": "SteamVR",
+			"Enabled": false
+		},
+		{
+			"Name": "LinuxDeviceProfileSelector",
+			"Enabled": false
+		},
+		{
+			"Name": "LocationServicesBPLibrary",
+			"Enabled": false
+		},
+		{
+			"Name": "MobileLauncherProfileWizard",
+			"Enabled": false
+		},
+		{
+			"Name": "MobilePatchingUtils",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemGooglePlay",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemIOS",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemNull",
+			"Enabled": false
+		},
+		{
+			"Name": "PhysXVehicles",
+			"Enabled": false
+		},
+		{
+			"Name": "AndroidPermission",
+			"Enabled": false
+		},
+		{
+			"Name": "GoogleCloudMessaging",
+			"Enabled": false
+		},
+		{
+			"Name": "OculusVR",
+			"Enabled": false
+		},
+		{
+			"Name": "UdpMessaging",
+			"Enabled": false
+		},
+		{
+			"Name": "TcpMessaging",
+			"Enabled": false
+		},
+		{
+			"Name": "CharacterAI",
+			"Enabled": false
+		},
+		{
+			"Name": "WebMMedia",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemEOS",
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemSteam",
+			"Enabled": false
+		},
+		{
+			"Name": "OSDKCore",
+			"Enabled": false
+		},
+		{
+			"Name": "OSDKMembership",
+			"Enabled": false
+		},
+		{
+			"Name": "BugSubmitHelper",
+			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [

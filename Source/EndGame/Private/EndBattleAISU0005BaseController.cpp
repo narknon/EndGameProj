@@ -4,7 +4,7 @@ void AEndBattleAISU0005BaseController::OnTurnRed() {
 }
 
 AEndBattleAISU0005BaseController::AEndBattleAISU0005BaseController() {
-    this->EXModeTime = 1;
-    this->PathFindHeight = 1;
+    this->EXModeTime = 10.00f;
+    this->PathFindHeight = 600.00f;
 }
 

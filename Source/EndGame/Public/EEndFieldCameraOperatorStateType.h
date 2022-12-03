@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndFieldCameraOperatorStateType.generated.h"
 
-UENUM()
-enum class EEndFieldCameraOperatorStateType {
+UENUM(BlueprintType)
+enum class EEndFieldCameraOperatorStateType : uint8 {
     Free,
     Lock,
     MAX,

@@ -26,13 +26,13 @@ void AEndBattleAIEB0003Controller::CleanFlashDash() {
 }
 
 AEndBattleAIEB0003Controller::AEndBattleAIEB0003Controller() {
-    this->FastMoveSpeed = 1;
-    this->FastMoveRange = 1;
-    this->FastMoveLoopAngleQuantity = 1;
-    this->FastMoveFriction = 1;
-    this->FastNextBlendTime = 1;
-    this->FastBeginToLoopBlendTime = 1;
-    this->FastLoopToEndBlendTime = 1;
+    this->FastMoveSpeed = 10000.00f;
+    this->FastMoveRange = 2000.00f;
+    this->FastMoveLoopAngleQuantity = 0.00f;
+    this->FastMoveFriction = 1000.00f;
+    this->FastNextBlendTime = 0.00f;
+    this->FastBeginToLoopBlendTime = 0.05f;
+    this->FastLoopToEndBlendTime = 0.05f;
     this->FastMoveStartAnimRotate = false;
 }
 

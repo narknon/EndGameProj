@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBikeKeepRelativePositionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBikeKeepRelativePositionType : uint8 {
     None,
     DirectValue,

@@ -2,15 +2,15 @@
 #include "CoreMinimal.h"
 #include "EEndWeaponUpgradeKind.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndWeaponUpgradeKind : uint8 {
-    UnKnown,
-    Core,
+    UnKnown = 0xFF,
+    Core = 0x0,
     Skill,
     Upgrade,
-    MaxUpgrade,
-    MaxMainCoreResource,
-    MaxSubCoreResource,
-    EEndWeaponUpgradeKind_MAX,
+    MaxUpgrade = 0x1,
+    MaxMainCoreResource = 0x6,
+    MaxSubCoreResource = 0x6,
+    EEndWeaponUpgradeKind_MAX = 0x100,
 };
 

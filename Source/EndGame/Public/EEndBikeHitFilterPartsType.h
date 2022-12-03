@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndBikeHitFilterPartsType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndBikeHitFilterPartsType : uint8 {
     None,
     RightWheels,

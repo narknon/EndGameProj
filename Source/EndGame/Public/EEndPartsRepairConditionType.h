@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndPartsRepairConditionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndPartsRepairConditionType : uint8 {
     Default,
     UnbrokenPartsFullRecovery,

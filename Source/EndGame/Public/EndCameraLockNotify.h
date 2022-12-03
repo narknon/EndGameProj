@@ -7,7 +7,7 @@ UCLASS(Blueprintable, CollapseCategories)
 class UEndCameraLockNotify : public UAnimNotify {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LockTime;
     
     UEndCameraLockNotify();

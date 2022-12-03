@@ -2,6 +2,6 @@
 
 UFA0222_AnimInstance::UFA0222_AnimInstance() {
     this->PoseReferenceAnimation = NULL;
-    this->PoseReferenceAnimationFrameRate = 1;
+    this->PoseReferenceAnimationFrameRate = 30.00f;
 }
 

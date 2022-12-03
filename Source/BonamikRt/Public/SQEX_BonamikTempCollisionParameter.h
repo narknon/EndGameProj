@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "ESQEX_BonamikTempCollisionShape.h"
 #include "UObject/NoExportTypes.h"
+#include "ESQEX_BonamikTempCollisionShape.h"
 #include "UObject/NoExportTypes.h"
 #include "SQEX_BonamikTempCollisionParameter.generated.h"
 
@@ -18,7 +18,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ESQEX_BonamikTempCollisionShape m_ShapeType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_ShapeParam0;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

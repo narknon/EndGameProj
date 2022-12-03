@@ -5,7 +5,7 @@ void AEndBattleTalkOnEndBattleActor::PlayVoice(bool bUnuseDefaultDelay, float Ov
 
 
 AEndBattleTalkOnEndBattleActor::AEndBattleTalkOnEndBattleActor() {
-    this->DelayMinSeconds = 1;
-    this->DelayMaxSeconds = 1;
+    this->DelayMinSeconds = 0.00f;
+    this->DelayMaxSeconds = 0.00f;
 }
 

@@ -8,7 +8,7 @@ FVector2D UEndNaviMap::ConvertToPosition2D(const FVector& InPos) {
 }
 
 UEndNaviMap::UEndNaviMap() {
-    this->PixelPerCm = 1;
+    this->PixelPerCm = 0.08f;
     this->PrototypeData = NULL;
     this->PrototypeDataV2 = NULL;
     this->MaskTexture = NULL;

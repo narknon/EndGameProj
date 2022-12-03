@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndCutExtraClipType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace EEndCutExtraClipType {
     enum Type {
         SendStateTrigger = 0x1,

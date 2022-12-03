@@ -162,3 +162,9 @@ obj/
 
 # Explcitly ignore Mac DS_Store files, regardless of where they are
 .DS_Store
+Binaries/Win64/TresGame.exe
+Binaries/Win64/TresGame.exp
+Binaries/Win64/TresGame.lib
+Binaries/Win64/TresGame.target
+Build/WindowsNoEditor/ChunkLayerInfo/pakchunklayers.txt
+*.lib

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBikeAbilityType.generated.h"
 
-UENUM()
-enum class EEndBikeAbilityType {
+UENUM(BlueprintType)
+enum class EEndBikeAbilityType : uint8 {
     None,
     PlayerNormal,
     PlayerATB,

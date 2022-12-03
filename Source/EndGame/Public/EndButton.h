@@ -1,14 +1,14 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Components/Button.h"
 #include "Types/SlateEnums.h"
+#include "Components/Button.h"
+#include "Sound/SlateSound.h"
 #include "Types/SlateEnums.h"
 #include "Components/ContentWidget.h"
 #include "Styling/SlateTypes.h"
-#include "UObject/NoExportTypes.h"
 #include "Types/SlateEnums.h"
-#include "Components/Button.h"
-#include "Components/Button.h"
-#include "Sound/SlateSound.h"
+#include "UObject/NoExportTypes.h"
 #include "Components/Button.h"
 #include "Components/Button.h"
 #include "EndButton.generated.h"
@@ -26,13 +26,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FLinearColor BackgroundColor;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EButtonClickMethod::Type> ClickMethod;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EButtonTouchMethod::Type> TouchMethod;
     
-    UPROPERTY(AdvancedDisplay, EditAnywhere)
+    UPROPERTY(AdvancedDisplay, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EButtonPressMethod::Type> PressMethod;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -3,7 +3,7 @@
 #include "EndNavModifierComponent.h"
 
 AEndFieldActionActorJukeBox::AEndFieldActionActorJukeBox() {
-    this->InterestRadius = 1;
+    this->InterestRadius = 300.00f;
     this->PressVolume = CreateDefaultSubobject<UEndFieldActionTriggerComponent>(TEXT("PressVolume"));
     this->Party01BoxComponent = CreateDefaultSubobject<UEndFieldActionTriggerComponent>(TEXT("Party01BoxComponent"));
     this->Party02BoxComponent = CreateDefaultSubobject<UEndFieldActionTriggerComponent>(TEXT("Party02BoxComponent"));

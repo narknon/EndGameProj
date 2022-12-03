@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EndFieldObjectProgramIds.generated.h"
 
-UENUM()
-enum class EndFieldObjectProgramIds {
+UENUM(BlueprintType)
+enum class EndFieldObjectProgramIds : uint8 {
     objCmn_Prog00_DelayAutoSave,
     objCmn_Prog01,
     objCmn_Prog02,

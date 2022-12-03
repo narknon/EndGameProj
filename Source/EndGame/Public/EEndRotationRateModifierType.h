@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndRotationRateModifierType.generated.h"
 
-UENUM()
-enum class EEndRotationRateModifierType {
+UENUM(BlueprintType)
+enum class EEndRotationRateModifierType : uint8 {
     Field,
     Action,
 };

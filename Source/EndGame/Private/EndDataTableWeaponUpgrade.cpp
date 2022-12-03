@@ -6,7 +6,7 @@ FEndDataTableWeaponUpgrade::FEndDataTableWeaponUpgrade() {
     this->NodeType = 0;
     this->RootIndex = 0;
     this->UseSP = 0;
-    this->OverrideParameter = 1;
+    this->OverrideParameter = 0.00f;
     this->PlanetEffectType = 0;
     this->OpenPlanetEffectType = 0;
     this->PriorityAuto1 = 0;

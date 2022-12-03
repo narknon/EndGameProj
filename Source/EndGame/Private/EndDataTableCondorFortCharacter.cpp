@@ -2,14 +2,14 @@
 
 FEndDataTableCondorFortCharacter::FEndDataTableCondorFortCharacter() {
     this->Role = 0;
-    this->MoveSpeed = 1;
+    this->MoveSpeed = 0.00f;
     this->MoveType = 0;
-    this->SpawnTime = 1;
-    this->MoveInterval = 1;
-    this->MoveDistance = 1;
-    this->SearchRange = 1;
-    this->AttackRange = 1;
-    this->AttackInterval = 1;
+    this->SpawnTime = 0.00f;
+    this->MoveInterval = 0.00f;
+    this->MoveDistance = 0.00f;
+    this->SearchRange = 0.00f;
+    this->AttackRange = 0.00f;
+    this->AttackInterval = 0.00f;
     this->TargetBase = 0;
     this->TargetGround = 0;
     this->TargetAir = 0;
@@ -18,9 +18,9 @@ FEndDataTableCondorFortCharacter::FEndDataTableCondorFortCharacter() {
     this->KeepValue = 0;
     this->DisableLaunch = 0;
     this->DisableKnockback = 0;
-    this->OffsetX = 1;
-    this->OffsetY = 1;
-    this->OffsetZ = 1;
+    this->OffsetX = 0.00f;
+    this->OffsetY = 0.00f;
+    this->OffsetZ = 0.00f;
     this->DisableTargetLine = 0;
 }
 

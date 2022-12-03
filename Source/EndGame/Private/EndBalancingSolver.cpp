@@ -1,6 +1,6 @@
 #include "EndBalancingSolver.h"
 
 UEndBalancingSolver::UEndBalancingSolver() {
-    this->AngleInterpSpeed = 1;
+    this->AngleInterpSpeed = 5.00f;
 }
 

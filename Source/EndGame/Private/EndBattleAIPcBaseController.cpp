@@ -13,13 +13,13 @@ bool AEndBattleAIPcBaseController::RequestUseAbility(FName AbilityID) {
 }
 
 AEndBattleAIPcBaseController::AEndBattleAIPcBaseController() {
-    this->GroundTargetReachableHeight = 1;
-    this->AirTargetReachableHeight = 1;
-    this->GroundTargetReachableHeightRangedWeapon = 1;
-    this->AirTargetReachableHeightRangedWeapon = 1;
+    this->GroundTargetReachableHeight = 300.00f;
+    this->AirTargetReachableHeight = 500.00f;
+    this->GroundTargetReachableHeightRangedWeapon = 3000.00f;
+    this->AirTargetReachableHeightRangedWeapon = 3000.00f;
     this->bCanTeleportWhenCommandApproach = false;
-    this->StandbyTimeMax = 1;
-    this->StandbyTimeMin = 1;
-    this->DangerDamagerSensorRadiusCoe = 1;
+    this->StandbyTimeMax = 2.00f;
+    this->StandbyTimeMin = 1.00f;
+    this->DangerDamagerSensorRadiusCoe = 1.00f;
 }
 

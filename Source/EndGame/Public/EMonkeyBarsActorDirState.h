@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMonkeyBarsActorDirState.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMonkeyBarsActorDirState : uint8 {
     Front,
     Back,

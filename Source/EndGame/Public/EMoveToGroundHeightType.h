@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EMoveToGroundHeightType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EMoveToGroundHeightType : uint8 {
     Ground,
     SpecifiedHeight,

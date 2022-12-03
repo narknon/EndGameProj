@@ -11,7 +11,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static int32 RandomIntegerInRange(int32 Min, int32 Max);
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     static float RandomFloatInRange(float Min, float Max);
     
 };

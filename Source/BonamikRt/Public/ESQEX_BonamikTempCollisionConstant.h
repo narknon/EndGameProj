@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ESQEX_BonamikTempCollisionConstant.generated.h"
 
-UENUM()
-enum class ESQEX_BonamikTempCollisionConstant {
+UENUM(BlueprintType)
+enum class ESQEX_BonamikTempCollisionConstant : uint8 {
     BodyMaximumNum = 0xA,
     ESQEX_MAX UMETA(Hidden),
 };

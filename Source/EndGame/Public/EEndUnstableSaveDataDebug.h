@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndUnstableSaveDataDebug.generated.h"
 
-UENUM()
-enum class EEndUnstableSaveDataDebug {
+UENUM(BlueprintType)
+enum class EEndUnstableSaveDataDebug : uint8 {
     Difference,
     AddObject,
 };

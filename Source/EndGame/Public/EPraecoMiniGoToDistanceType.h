@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EPraecoMiniGoToDistanceType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EPraecoMiniGoToDistanceType : uint8 {
     Short,
     Middle,

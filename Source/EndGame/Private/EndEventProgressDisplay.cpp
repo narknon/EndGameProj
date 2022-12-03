@@ -1,6 +1,6 @@
 #include "EndEventProgressDisplay.h"
 
 UEndEventProgressDisplay::UEndEventProgressDisplay() {
-    this->OffsetForNaviMap = 1;
+    this->OffsetForNaviMap = 0.00f;
 }
 

@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "ERouteSearchType.generated.h"
 
-UENUM()
-enum class ERouteSearchType {
+UENUM(BlueprintType)
+enum class ERouteSearchType : uint8 {
     SEARCH_TYPE_GROUND,
     SEARCH_TYPE_AERIAL,
     SEARCH_TYPE_OTHER,

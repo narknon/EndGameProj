@@ -1,9 +1,9 @@
 #include "EndAnimVehicleWheel.h"
 
 FEndAnimVehicleWheel::FEndAnimVehicleWheel() {
-    this->WheelRadius = 1;
-    this->WheelRotation = 1;
-    this->GroundHeight = 1;
-    this->MaxAngularSpeed = 1;
+    this->WheelRadius = 0.00f;
+    this->WheelRotation = 0.00f;
+    this->GroundHeight = 0.00f;
+    this->MaxAngularSpeed = 0.00f;
 }
 

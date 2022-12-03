@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EndActorBaseInterface.h"
 #include "GameFramework/Actor.h"
 #include "EndActorInterface.h"
+#include "EndActorBaseInterface.h"
 #include "UObject/NoExportTypes.h"
 #include "EndEnvironmentInstancedStaticMeshActor.generated.h"
 
@@ -13,7 +13,7 @@ class ENDGAME_API AEndEnvironmentInstancedStaticMeshActor : public AActor, publi
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInstancedStaticMeshComponent* InstancedMeshComponent;
     
 public:
@@ -23,13 +23,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector AnimateDirection;
     
-    UPROPERTY(EditAnywhere, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float AnimateTime;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AnimateTimeRate;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AnimateTimeMax;
     
     AEndEnvironmentInstancedStaticMeshActor();

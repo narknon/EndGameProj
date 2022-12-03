@@ -1,10 +1,10 @@
 #include "EndBikeAIFunnelMoveParameter.h"
 
 FEndBikeAIFunnelMoveParameter::FEndBikeAIFunnelMoveParameter() {
-    this->ApproachRate = 1;
-    this->LimitZ = 1;
-    this->LimitXY = 1;
-    this->CurveInterval = 1;
+    this->ApproachRate = 0.00f;
+    this->LimitZ = 0.00f;
+    this->LimitXY = 0.00f;
+    this->CurveInterval = 0.00f;
     this->CurveAsset = NULL;
 }
 

@@ -9,10 +9,10 @@ void AEndBattleAIEB0005Controller::BlowSunglass(AEndCharacter* damageCauserChara
 }
 
 AEndBattleAIEB0005Controller::AEndBattleAIEB0005Controller() {
-    this->FastMoveSpeed = 1;
-    this->FastMoveRange = 1;
-    this->FastBeginToLoopBlendTime = 1;
-    this->FastLoopToEndBlendTime = 1;
-    this->FastNextBlendTime = 1;
+    this->FastMoveSpeed = 10000.00f;
+    this->FastMoveRange = 2000.00f;
+    this->FastBeginToLoopBlendTime = 0.05f;
+    this->FastLoopToEndBlendTime = 0.05f;
+    this->FastNextBlendTime = 0.00f;
 }
 

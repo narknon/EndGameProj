@@ -4,8 +4,8 @@ FEndBoidsTypeParam::FEndBoidsTypeParam() {
     this->InfluencersType = EEndAiCharaType::None;
     this->RoleCheck = false;
     this->bBoids = false;
-    this->BoidsRadius = 1;
+    this->BoidsRadius = 0.00f;
     this->bRepulsive = false;
-    this->RepulsiveRadius = 1;
+    this->RepulsiveRadius = 0.00f;
 }
 

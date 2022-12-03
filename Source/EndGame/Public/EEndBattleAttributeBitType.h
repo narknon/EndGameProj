@@ -4,12 +4,12 @@
 
 UENUM(BlueprintType)
 enum class EEndBattleAttributeBitType : uint8 {
-    Fire,
+    Fire = 0x1,
     Ice,
-    Thunder,
-    Wind,
-    Earth,
-    Holy,
-    Dark,
+    Thunder = 0x4,
+    Wind = 0x8,
+    Earth = 0x10,
+    Holy = 0x20,
+    Dark = 0x40,
 };
 

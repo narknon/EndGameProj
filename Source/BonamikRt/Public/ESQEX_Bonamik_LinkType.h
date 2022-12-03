@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESQEX_Bonamik_LinkType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum ESQEX_Bonamik_LinkType {
     ESQEX_Bonamik_LinkType_Lateral,
     ESQEX_Bonamik_LinkType_ParentChild,

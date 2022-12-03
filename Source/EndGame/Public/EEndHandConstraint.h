@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndHandConstraint.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndHandConstraint : uint8 {
     None,
     ManualPlacement,

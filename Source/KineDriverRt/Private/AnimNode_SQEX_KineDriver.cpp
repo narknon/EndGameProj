@@ -5,7 +5,7 @@ FAnimNode_SQEX_KineDriver::FAnimNode_SQEX_KineDriver() {
     this->EnableScaleOpChildSSC = false;
     this->Enabled = false;
     this->EnableLOD = false;
-    this->MinScreenSize = 1;
+    this->MinScreenSize = 0.00f;
     this->EnableCheckDrawn = false;
 }
 

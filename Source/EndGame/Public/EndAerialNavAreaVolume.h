@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "AerialPointData.h"
 #include "GameFramework/Actor.h"
 #include "UObject/NoExportTypes.h"
-#include "AerialPointData.h"
 #include "EndAerialNavAreaVolume.generated.h"
 
 class UEndAerialNavBoxComponent;
@@ -48,7 +48,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 Z_CM_SPACE_MAX;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndAerialNavBoxComponent* EndArealNavBox;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -57,13 +57,13 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FAerialPointData> PointDataList;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 XPointNum;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 YPointNum;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 ZPointNum;
     
     UPROPERTY(EditAnywhere)

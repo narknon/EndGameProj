@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "Types/SlateEnums.h"
 #include "Components/PanelSlot.h"
-#include "Layout/Margin.h"
 #include "Types/SlateEnums.h"
+#include "Layout/Margin.h"
 #include "EndButtonSlot.generated.h"
 
 UCLASS(Blueprintable)
@@ -13,10 +13,10 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMargin Padding;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EHorizontalAlignment> HorizontalAlignment;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EVerticalAlignment> VerticalAlignment;
     
     UEndButtonSlot();

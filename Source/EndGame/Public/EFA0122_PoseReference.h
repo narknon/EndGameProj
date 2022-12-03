@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFA0122_PoseReference.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFA0122_PoseReference : uint8 {
     PlaceOnCharacter,
     LiftCharacter,

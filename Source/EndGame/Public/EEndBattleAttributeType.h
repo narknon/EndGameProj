@@ -12,6 +12,6 @@ enum class EEndBattleAttributeType : uint8 {
     Holy,
     Dark,
     Max,
-    None,
+    None = 0x7,
 };
 

@@ -3,40 +3,42 @@
 #include "Templates/SubclassOf.h"
 #include "GameFramework/Character.h"
 #include "EndActorInterface.h"
+#include "EndInteractorInterface.h"
 #include "EndAnimActorInterface.h"
 #include "EndActorBaseInterface.h"
-#include "EndInteractorInterface.h"
 #include "EndAIModel.h"
 #include "EndCharacterResidentEffect.h"
-#include "EEndLookAtLayer.h"
-#include "InterestPointRequestContext.h"
-#include "EndCharacterPushCollisionData.h"
-#include "EEndEmissiveModifierType.h"
-#include "EEndEmissiveCurveType.h"
+#include "UObject/NoExportTypes.h"
 #include "EndInterSetting.h"
+#include "UObject/NoExportTypes.h"
+#include "InterestPointRequestContext.h"
+#include "EEndEmissiveModifierType.h"
+#include "EEndLookAtLayer.h"
 #include "EndAdjustOrientationSetting.h"
+#include "EndCharacterPushCollisionData.h"
+#include "EEndEmissiveCurveType.h"
 #include "EndCharacter.generated.h"
 
-class UActorComponent;
 class AEndBattleAIController;
-class AEndAIController;
+class UEndRig;
 class AEndFieldAIController;
+class UEndEnvQueryComponent;
+class UActorComponent;
+class USQEX_KineDriver_Component;
+class AEndAIController;
 class AEndBikeAIController;
 class AEndPlayerController;
 class AController;
+class USQEX_Bonamik_Component;
+class UEndAerialRouteSearchInstance;
 class UEndFootAttributeComponent;
 class UEndCapsuleOverlapComponent;
 class USQEX_KBD_Component;
-class USQEX_KineDriver_Component;
-class USQEX_Bonamik_Component;
-class UHSFLipSyncDataPack;
-class UEndEnvQueryComponent;
 class UEndBattleTalkCharacterComponent;
-class UEndAerialRouteSearchInstance;
-class UEndRig;
+class UEndAIModelTemplateData;
 class UEndFacialRig;
 class UEndAIModelPersonalityData;
-class UEndAIModelTemplateData;
+class UHSFLipSyncDataPack;
 class UEndEmissiveColorComponent;
 
 UCLASS(Blueprintable)
@@ -102,7 +104,7 @@ protected:
     FVector RelativeLocationCache_ForCut;
     
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float WorkDeltaTime;
     
 private:
@@ -113,25 +115,25 @@ private:
     bool bRecreatePhysicsOnEnableRagdoll;
     
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndFootAttributeComponent* FootAttributeComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndCapsuleOverlapComponent* EndCapsuleOverlapComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USQEX_KBD_Component* KBD;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USQEX_KineDriver_Component* KineDriver;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USQEX_Bonamik_Component* Bonamik;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndEnvQueryComponent* EnvironmentQueryComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndBattleTalkCharacterComponent* BattleTalkCharacterComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -170,13 +172,13 @@ public:
     UPROPERTY(EditAnywhere)
     FName OverrideLevelAnimSetAnimName[32];
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LookAtSpeedBias;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LookAtAngleBias;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float LookAtClampHorizontalDistanceBias;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -191,7 +193,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEndAdjustOrientationSetting AdjustOrientationSetting;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AdjustOrientationTransRate;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -203,17 +205,17 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bForceUpdateKinematicBonesUpdateToPhysics;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndEmissiveColorComponent* EmissiveColorComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bCanFieldAttack;
     
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FieldExtraRadius;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float BattleExtraRadius;
     
 public:
@@ -225,7 +227,7 @@ protected:
     bool IgnoreRagdollPhysics;
     
 public:
-    AEndCharacter(const FObjectInitializer& ObjectInitializer);
+    AEndCharacter();
     UFUNCTION(BlueprintCallable)
     void UseHookShotSimple(const FVector& landingLocation, const FRotator& LandingRotation);
     
@@ -271,7 +273,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnShowBreakMesh(const FName& meshName);
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnEndCutSceneToBP(const FName& CutsceneID, float animBlendTime, float ikBlendTime);
     
     UFUNCTION(BlueprintCallable)
@@ -280,7 +282,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnBodyDriverRagdollImpact();
     
-    UFUNCTION(BlueprintImplementableEvent)
+    UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnBeginCutSceneToBP(const FName& CutsceneID, float animBlendTime, float ikBlendTime);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

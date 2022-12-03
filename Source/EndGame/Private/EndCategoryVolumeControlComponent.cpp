@@ -10,8 +10,8 @@ void UEndCategoryVolumeControlComponent::InitializeCategoryVolume(const FName& T
 }
 
 UEndCategoryVolumeControlComponent::UEndCategoryVolumeControlComponent() {
-    this->Volume_Backup = 1;
-    this->Volume = 1;
-    this->FadeTime = 1;
+    this->Volume_Backup = 0.00f;
+    this->Volume = 0.00f;
+    this->FadeTime = 2.00f;
 }
 

@@ -2,11 +2,11 @@
 
 UEndBattleAbilityRotateState::UEndBattleAbilityRotateState() {
     this->Type = EBattleAbilityRotateNotifyState::None;
-    this->StartAngle = 1;
-    this->GoalAngle = 1;
-    this->RotateVelocity = 1;
+    this->StartAngle = 0.00f;
+    this->GoalAngle = 0.00f;
+    this->RotateVelocity = 360.00f;
     this->StartType = EBattleAbilityRotateStartType::Inheritance;
     this->InterpolationType = EBattleAbilityInterpolationType::Liner;
-    this->FrameDeltaTimeSpeed = 1;
+    this->FrameDeltaTimeSpeed = 1.00f;
 }
 

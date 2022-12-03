@@ -1,6 +1,6 @@
 #include "EndAdjustOrientationBoneSetting.h"
 
 FEndAdjustOrientationBoneSetting::FEndAdjustOrientationBoneSetting() {
-    this->AdjustSpeed = 1;
+    this->AdjustSpeed = 0.00f;
 }
 

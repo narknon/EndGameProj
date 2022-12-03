@@ -1,7 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
 #include "EndDataTableBattleAbility.h"
+#include "Components/ActorComponent.h"
 #include "EndBattleTalkCharacterComponent.generated.h"
 
 class AEndCharacter;

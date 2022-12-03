@@ -8,9 +8,9 @@
 #include "EEndEmissiveCurveType.h"
 #include "EndSkeletalMeshActor.generated.h"
 
-class USQEX_Bonamik_Component;
 class UActorComponent;
 class USQEX_KBD_Component;
+class USQEX_Bonamik_Component;
 class UEndEmissiveColorComponent;
 
 UCLASS(Blueprintable)
@@ -20,13 +20,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
     TMap<FName, UActorComponent*> ComponentTable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USQEX_KBD_Component* KBD;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USQEX_Bonamik_Component* Bonamik;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndEmissiveColorComponent* EmissiveColorComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -3,8 +3,8 @@
 FBikeAIHelicopterSpecialAttackParameter::FBikeAIHelicopterSpecialAttackParameter() {
     this->MoveOnNotAttackBarretTargetForPlayer = false;
     this->SpecialAttackCameraLinear = false;
-    this->SpecialAttackCameraTimer = 1;
-    this->SpecialAttackCameraFOV = 1;
-    this->SpecialAttackDelay = 1;
+    this->SpecialAttackCameraTimer = 0.00f;
+    this->SpecialAttackCameraFOV = 0.00f;
+    this->SpecialAttackDelay = 0.00f;
 }
 

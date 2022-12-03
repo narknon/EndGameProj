@@ -4,8 +4,8 @@
 #include "WireMovePointData.h"
 #include "EndFieldActionActorWireMeshMove.generated.h"
 
-class UEndWireMeshMoveDoorWayCreateComponent;
 class UEndTextRenderComponent;
+class UEndWireMeshMoveDoorWayCreateComponent;
 
 UCLASS(Blueprintable)
 class ENDGAME_API AEndFieldActionActorWireMeshMove : public AActor {
@@ -14,13 +14,13 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 PointSpaceLR;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndWireMeshMoveDoorWayCreateComponent* EndWireMeshMoveDoorWayCreate;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndWireMeshMoveDoorWayCreateComponent* EndWireMeshMoveDoorWayCreate1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndTextRenderComponent* TextRenderComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

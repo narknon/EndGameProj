@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndBikeAbilityPositionCondition.generated.h"
 
-UENUM()
-enum class EEndBikeAbilityPositionCondition {
+UENUM(BlueprintType)
+enum class EEndBikeAbilityPositionCondition : uint8 {
     None,
     Right,
     Left,

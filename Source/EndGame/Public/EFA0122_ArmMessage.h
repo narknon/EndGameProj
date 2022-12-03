@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFA0122_ArmMessage.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFA0122_ArmMessage : uint8 {
     BeginControl,
     EndControl,

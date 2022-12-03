@@ -4,8 +4,8 @@
 #include "UObject/NoExportTypes.h"
 #include "SQEX_BonamikWindController.generated.h"
 
-class UWorld;
 class USQEX_BonamikWind;
+class UWorld;
 
 USTRUCT(BlueprintType)
 struct BONAMIKRT_API FSQEX_BonamikWindController {
@@ -21,7 +21,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     FVector m_CurrentGlobalWindForce;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_GlobalWindScale;
     
     UPROPERTY(EditAnywhere, Transient)

@@ -1,6 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EndBattleNavQueryContext.h"
 #include "UObject/NoExportTypes.h"
 #include "EnvironmentQuery/Contexts/EnvQueryContext_BlueprintBase.h"
 #include "EndBattleEnvQueryContext.generated.h"
@@ -21,10 +20,10 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void ProvideActorsSet(UObject* QuerierObject, AActor* QuerierActor, TArray<AActor*>& ResultingActorsSet) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<FVector> GetTargetLocationContexts(UEndEnvQueryComponent* InQuery, bool InParty, float InDistance) const;
     
-    UFUNCTION(BlueprintPure)
+    UFUNCTION(BlueprintCallable, BlueprintPure)
     TArray<AEndCharacter*> GetTargetContexts(UEndEnvQueryComponent* InQuery, bool InParty, float InDistance) const;
     
 };

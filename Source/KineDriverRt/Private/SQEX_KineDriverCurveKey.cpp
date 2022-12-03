@@ -1,12 +1,12 @@
 #include "SQEX_KineDriverCurveKey.h"
 
 FSQEX_KineDriverCurveKey::FSQEX_KineDriverCurveKey() {
-    this->X = 1;
-    this->Y = 1;
-    this->LeftTanX = 1;
-    this->LeftTanY = 1;
-    this->RightTanX = 1;
-    this->RightTanY = 1;
+    this->X = 0.00f;
+    this->Y = 0.00f;
+    this->LeftTanX = 0.00f;
+    this->LeftTanY = 0.00f;
+    this->RightTanX = 0.00f;
+    this->RightTanY = 0.00f;
     this->InterpType = ESQEX_KD_InterpolateType_Step;
 }
 

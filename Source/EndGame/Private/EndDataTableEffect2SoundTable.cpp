@@ -2,6 +2,6 @@
 
 FEndDataTableEffect2SoundTable::FEndDataTableEffect2SoundTable() {
     this->ResourceType = 0;
-    this->FadeOutTime = 1;
+    this->FadeOutTime = 0.00f;
 }
 

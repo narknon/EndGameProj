@@ -1,7 +1,7 @@
 #include "BonamikHelicopterWindData.h"
 
 FBonamikHelicopterWindData::FBonamikHelicopterWindData() {
-    this->BaseStrength = 1;
+    this->BaseStrength = 0.00f;
     this->bIsAdditive = false;
 }
 

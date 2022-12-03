@@ -8,7 +8,7 @@ UCLASS(Blueprintable, CollapseCategories, EditInlineNew)
 class UEndBattleNotifyState : public UAnimNotifyState {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EBattleNotifyState::Type> State;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

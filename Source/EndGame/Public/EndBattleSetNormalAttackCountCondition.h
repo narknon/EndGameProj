@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EndBattleSetNormalAttackCountCondition.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EndBattleSetNormalAttackCountCondition : uint8 {
     None,
     TifaBuff,

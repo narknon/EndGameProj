@@ -2,7 +2,7 @@
 #include "EndFieldActionTriggerComponent.h"
 
 AEndFieldActionActorPushContainer::AEndFieldActionActorPushContainer() {
-    this->LongPushTime = 1;
+    this->LongPushTime = 2.00f;
     this->PushVolume = CreateDefaultSubobject<UEndFieldActionTriggerComponent>(TEXT("PushVolume"));
 }
 

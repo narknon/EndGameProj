@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFA0222_PoseReference.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFA0222_PoseReference : uint8 {
     CenterHandle,
     UpHandle,

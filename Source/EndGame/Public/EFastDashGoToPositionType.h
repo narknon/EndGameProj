@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EFastDashGoToPositionType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EFastDashGoToPositionType : uint8 {
     Front,
     LeftSide,

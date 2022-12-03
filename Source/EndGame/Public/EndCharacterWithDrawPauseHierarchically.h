@@ -7,6 +7,6 @@ UCLASS(Blueprintable)
 class AEndCharacterWithDrawPauseHierarchically : public AEndCharacter {
     GENERATED_BODY()
 public:
-    AEndCharacterWithDrawPauseHierarchically(const FObjectInitializer& ObjectInitializer);
+    AEndCharacterWithDrawPauseHierarchically();
 };
 

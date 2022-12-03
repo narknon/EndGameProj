@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SetPlayForceChangeIdleAction.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace SetPlayForceChangeIdleAction {
     enum Type {
         Succeeded,

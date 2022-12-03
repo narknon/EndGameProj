@@ -1,6 +1,6 @@
 #include "EndDuctActionSplineComponent.h"
 
 UEndDuctActionSplineComponent::UEndDuctActionSplineComponent() {
-    this->Index = 0;
+    this->Index = -1;
 }
 

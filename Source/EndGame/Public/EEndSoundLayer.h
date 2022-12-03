@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "EEndSoundLayer.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class EEndSoundLayer : uint8 {
     Pause_ON,
     Pause_OFF,

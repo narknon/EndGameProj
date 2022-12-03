@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "SetPlayAerialAttackJump.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 namespace SetPlayAerialAttackJump {
     enum Type {
         Succeeded,

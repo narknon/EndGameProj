@@ -13,8 +13,8 @@ void UEndProgressBar::SetFillColorAndOpacity(FLinearColor InColor) {
 }
 
 UEndProgressBar::UEndProgressBar() {
-    this->Percent = 1;
-    this->PreviewPercent = 1;
+    this->Percent = 0.00f;
+    this->PreviewPercent = 0.00f;
     this->BarFillType = EProgressBarFillType::LeftToRight;
 }
 

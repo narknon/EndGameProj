@@ -1,8 +1,8 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EMenuItemCategory.h"
 #include "EndUserWidget.h"
 #include "UObject/NoExportTypes.h"
-#include "EMenuItemCategory.h"
 #include "OptionInfos.h"
 #include "UObject/NoExportTypes.h"
 #include "EndNewOptionsMenu.generated.h"
@@ -24,7 +24,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FSoftObjectPath> _BillboardImagePaths;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UEndDescriptionWindow* DescriptionWindow;
     
 public:

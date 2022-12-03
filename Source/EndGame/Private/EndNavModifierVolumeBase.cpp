@@ -1,6 +1,6 @@
 #include "EndNavModifierVolumeBase.h"
 
-AEndNavModifierVolumeBase::AEndNavModifierVolumeBase(const FObjectInitializer& ObjectInitializer) : ANavModifierVolume(ObjectInitializer){
+AEndNavModifierVolumeBase::AEndNavModifierVolumeBase() {
     this->TextRenderComponent = NULL;
 }
 

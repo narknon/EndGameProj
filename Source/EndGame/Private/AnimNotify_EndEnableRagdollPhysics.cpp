@@ -4,12 +4,12 @@ UAnimNotify_EndEnableRagdollPhysics::UAnimNotify_EndEnableRagdollPhysics() {
     this->bAddImpulse = false;
     this->Type = EEndPhysicsImpulseType::Default;
     this->bApplyImpulseToAllBones = false;
-    this->Radius = 1;
-    this->Strength = 1;
+    this->Radius = 0.00f;
+    this->Strength = 0.00f;
     this->bBikeUseRoadForward = false;
     this->bUseSimpleBehaviorBodyDriverForRiders = false;
     this->bBodyDriverRagdoll = false;
-    this->MinActivationTime = 1;
-    this->MaxActivationTime = 1;
+    this->MinActivationTime = 0.30f;
+    this->MaxActivationTime = 0.70f;
 }
 

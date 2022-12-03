@@ -2,8 +2,8 @@
 #include "CoreMinimal.h"
 #include "EEndEquipmentSkillEffectType.generated.h"
 
-UENUM()
-enum class EEndEquipmentSkillEffectType {
+UENUM(BlueprintType)
+enum class EEndEquipmentSkillEffectType : uint8 {
     None,
     HPMaxAdd,
     MPMaxAdd,

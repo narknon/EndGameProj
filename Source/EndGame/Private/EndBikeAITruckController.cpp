@@ -1,6 +1,6 @@
 #include "EndBikeAITruckController.h"
 
 AEndBikeAITruckController::AEndBikeAITruckController() {
-    this->CutSceneLength = 1;
+    this->CutSceneLength = 2.00f;
 }
 

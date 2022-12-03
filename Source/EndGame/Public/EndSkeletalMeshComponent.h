@@ -1,17 +1,17 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "EndPhysicalConstraintEvaluator.h"
 #include "SkeletalMeshComponentBudgeted.h"
+#include "EndPhysicalConstraintEvaluator.h"
 #include "EndSkeletalMeshComponent.generated.h"
 
-class USkeletalMeshComponent;
 class USQEX_KBD_Component;
+class USkeletalMeshComponent;
 
 UCLASS(Blueprintable, EditInlineNew, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class ENDGAME_API UEndSkeletalMeshComponent : public USkeletalMeshComponentBudgeted {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* SyncPoseComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -24,13 +24,13 @@ public:
     uint8 bAutoLinkAttachChildren: 1;
     
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USkeletalMeshComponent* PrerequisiteMesh;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USQEX_KBD_Component* PrerequisiteKBD;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<USkeletalMeshComponent*> LinkedMeshes;
     
 public:

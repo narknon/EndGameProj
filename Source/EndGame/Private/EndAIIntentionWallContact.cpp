@@ -2,10 +2,10 @@
 
 FEndAIIntentionWallContact::FEndAIIntentionWallContact() {
     this->bPlayingAnimation = false;
-    this->AnimationTimer = 1;
-    this->AnimationCoolDownTime = 1;
+    this->AnimationTimer = 0.00f;
+    this->AnimationCoolDownTime = 0.00f;
     this->bPlayingHipMove = false;
-    this->HipMoveTimer = 1;
-    this->HipMoveCoolDownTime = 1;
+    this->HipMoveTimer = 0.00f;
+    this->HipMoveCoolDownTime = 0.00f;
 }
 

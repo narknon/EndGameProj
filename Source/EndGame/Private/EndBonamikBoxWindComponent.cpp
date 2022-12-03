@@ -5,7 +5,7 @@ bool UEndBonamikBoxWindComponent::IsActive() const {
 }
 
 UEndBonamikBoxWindComponent::UEndBonamikBoxWindComponent() {
-    this->AreaMargin = 1;
+    this->AreaMargin = 0.00f;
     this->BonamikWind = NULL;
 }
 

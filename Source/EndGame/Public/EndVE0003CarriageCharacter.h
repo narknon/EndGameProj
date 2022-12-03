@@ -10,10 +10,10 @@ UCLASS(Blueprintable)
 class AEndVE0003CarriageCharacter : public AEndCharacter {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndBoneAttachComponent* BoneAttachL;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UEndBoneAttachComponent* BoneAttachR;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -22,6 +22,6 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AEndCharacter* Rider;
     
-    AEndVE0003CarriageCharacter(const FObjectInitializer& ObjectInitializer);
+    AEndVE0003CarriageCharacter();
 };
 

@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ESuspensionAxisType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum ESuspensionAxisType {
     X,
     Y,

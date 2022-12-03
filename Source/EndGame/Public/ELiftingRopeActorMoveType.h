@@ -2,7 +2,7 @@
 #include "CoreMinimal.h"
 #include "ELiftingRopeActorMoveType.generated.h"
 
-UENUM()
+UENUM(BlueprintType)
 enum class ELiftingRopeActorMoveType : uint8 {
     UpperToLower,
     LowerToUpper,

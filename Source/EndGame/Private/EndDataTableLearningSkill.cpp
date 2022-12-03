@@ -1,6 +1,6 @@
 #include "EndDataTableLearningSkill.h"
 
 FEndDataTableLearningSkill::FEndDataTableLearningSkill() {
-    this->Probability = 1;
+    this->Probability = 0.00f;
 }
 

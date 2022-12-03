@@ -1,22 +1,22 @@
 #include "EndDataTableCameraSetting.h"
 
 FEndDataTableCameraSetting::FEndDataTableCameraSetting() {
-    this->BeginBlendTime = 1;
+    this->BeginBlendTime = 0.00f;
     this->BeginBlendType = 0;
-    this->EndBlendTime = 1;
+    this->EndBlendTime = 0.00f;
     this->EndBlendType = 0;
-    this->FOV = 1;
-    this->Distance = 1;
-    this->Height = 1;
-    this->AimOffsetX = 1;
-    this->AimOffsetY = 1;
-    this->AimOffsetZ = 1;
-    this->SpaceOffsetRun = 1;
-    this->SpaceOffsetRunSpeed = 1;
-    this->SpaceOffsetDash = 1;
-    this->SpaceOffsetDashSpeed = 1;
-    this->ResetPitch = 1;
-    this->MoveAddDistance = 1;
-    this->MoveAddDistanceSpeed = 1;
+    this->FOV = 0.00f;
+    this->Distance = 0.00f;
+    this->Height = 0.00f;
+    this->AimOffsetX = 0.00f;
+    this->AimOffsetY = 0.00f;
+    this->AimOffsetZ = 0.00f;
+    this->SpaceOffsetRun = 0.00f;
+    this->SpaceOffsetRunSpeed = 0.00f;
+    this->SpaceOffsetDash = 0.00f;
+    this->SpaceOffsetDashSpeed = 0.00f;
+    this->ResetPitch = 0.00f;
+    this->MoveAddDistance = 0.00f;
+    this->MoveAddDistanceSpeed = 0.00f;
 }
 

@@ -2,6 +2,6 @@
 
 FEndDataTableNaviMapInfo::FEndDataTableNaviMapInfo() {
     this->LayerNumber = 0;
-    this->PixcelPerCm = 1;
+    this->PixcelPerCm = 0.00f;
 }
 

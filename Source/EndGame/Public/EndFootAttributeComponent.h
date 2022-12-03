@@ -3,10 +3,10 @@
 #include "Components/ActorComponent.h"
 #include "EndFootAttributeComponent.generated.h"
 
-class UEndAutoSeComponentSoundIndexTable;
 class USQEXSEADAutoSeComponentSetting;
 class USQEXSEADSound;
 class USQEXSEADAutoSeDetectionSetting;
+class UEndAutoSeComponentSoundIndexTable;
 class USQEXSEADAutoSeComponent;
 class UEndAutoSeCallback;
 
@@ -26,7 +26,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UEndAutoSeComponentSoundIndexTable* SoundIndexTable;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USQEXSEADAutoSeComponent* AutoSeComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
