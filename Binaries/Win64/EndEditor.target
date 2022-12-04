@@ -32,6 +32,18 @@
 			"Type": "SymbolFile"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Runtime/AnimationBudgetAllocator/Binaries/Win64/UE4Editor-AnimationBudgetAllocator.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Runtime/AnimationBudgetAllocator/Binaries/Win64/UE4Editor-AnimationBudgetAllocator.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Runtime/AnimationBudgetAllocator/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-AnimationBudgetAllocator.lib",
+			"Type": "ImportLibrary"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Messaging/UdpMessaging/Binaries/Win64/UE4Editor-UdpMessaging.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -4508,16 +4520,8 @@
 			"Type": "ImportLibrary"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Runtime/AnimationBudgetAllocator/Binaries/Win64/UE4Editor-AnimationBudgetAllocator.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Runtime/AnimationBudgetAllocator/Binaries/Win64/UE4Editor-AnimationBudgetAllocator.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Runtime/AnimationBudgetAllocator/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-AnimationBudgetAllocator.lib",
-			"Type": "ImportLibrary"
+			"Path": "$(EngineDir)/Plugins/Runtime/AnimationBudgetAllocator/Binaries/Win64/UE4Editor.modules",
+			"Type": "RequiredResource"
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Messaging/UdpMessaging/Binaries/Win64/UE4Editor.modules",
@@ -4718,15 +4722,15 @@
 		{
 			"Path": "$(EngineDir)/Binaries/Win64/HTML5/UE4Editor.modules",
 			"Type": "RequiredResource"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Runtime/AnimationBudgetAllocator/Binaries/Win64/UE4Editor.modules",
-			"Type": "RequiredResource"
 		}
 	],
 	"RuntimeDependencies": [
 		{
 			"Path": "$(ProjectDir)/End.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Runtime/AnimationBudgetAllocator/AnimationBudgetAllocator.uplugin",
 			"Type": "UFS"
 		},
 		{

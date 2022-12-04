@@ -51,6 +51,10 @@
 			"Enabled": false
 		},
 		{
+			"Name": "AnimationBudgetAllocator",
+			"Enabled": true
+		},
+		{
 			"Name": "SlateRemote",
 			"Enabled": false
 		},
