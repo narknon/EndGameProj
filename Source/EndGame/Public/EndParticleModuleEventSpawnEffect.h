@@ -3,8 +3,9 @@
 #include "EndParticleModuleBase.h"
 #include "UObject/NoExportTypes.h"
 #include "EEndEffectEventKind.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EndEffectSocketName -FallbackName=EndEffectSocketName
+#include "EndEffectSocketName.h"
 #include "EndEffectAttachInfo.h"
+#include "Particles/End/EEndEffectLocationKind.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EEndEffectLocationKind -FallbackName=EEndEffectLocationKind
 #include "EndParticleModuleEventSpawnEffect.generated.h"
 
@@ -28,7 +29,7 @@ public:
     FEndEffectAttachInfo m_AttachInfo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TEnumAsByte<EEndEffectLocationKind> m_AttachActorKind;
+    EEndEffectLocationKind m_AttachActorKind;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FEndEffectSocketName m_AttachSocketName;

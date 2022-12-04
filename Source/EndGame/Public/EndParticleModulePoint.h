@@ -6,6 +6,9 @@
 #include "Distributions/DistributionVector.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EndEffectSocketName -FallbackName=EndEffectSocketName
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EVfxRotationMatrixOrder -FallbackName=EVfxRotationMatrixOrder
+#include "EndEffectSocketName.h"
+#include "Particles/End/EEndEffectLocationKind.h"
+#include "Particles/End/EVfxRotationMatrixOrder.h"
 #include "UObject/NoExportTypes.h"
 #include "EndParticleModulePoint.generated.h"
 

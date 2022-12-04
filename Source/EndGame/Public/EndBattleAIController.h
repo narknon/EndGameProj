@@ -1359,7 +1359,7 @@ public:
     void OnChangeStep(int32 InStep);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnChangeRole(TEnumAsByte<EEndAiBattleRole::Type> InRole);
+    void OnChangeRole(EEndAiBattleRole::Type InRole);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnChangePhase(int32 InNew, int32 InOld);

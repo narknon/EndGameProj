@@ -4,13 +4,13 @@
 
 UENUM(BlueprintType)
 enum class EEndWeaponUpgradeKind : uint8 {
-    UnKnown = 0xFF,
-    Core = 0x0,
+    UnKnown,
+    Core,
     Skill,
     Upgrade,
-    MaxUpgrade = 0x1,
-    MaxMainCoreResource = 0x6,
-    MaxSubCoreResource = 0x6,
-    EEndWeaponUpgradeKind_MAX = 0x100,
+    MaxUpgrade,
+    MaxMainCoreResource,
+    MaxSubCoreResource,
+    EEndWeaponUpgradeKind_MAX,
 };
 

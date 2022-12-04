@@ -4,6 +4,7 @@
 #include "EndNavActorInterface.h"
 #include "UObject/NoExportTypes.h"
 #include "AffectedActorGroup.h"
+#include "End/NavPriorRegistInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavPriorRegistInfo -FallbackName=NavPriorRegistInfo
 #include "EndFieldActionActorBase.generated.h"
 

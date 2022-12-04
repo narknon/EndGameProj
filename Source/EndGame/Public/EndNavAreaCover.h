@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavArea -FallbackName=NavArea
+#include "AI/Navigation/NavAreas/NavArea.h"
 #include "EEndNavAreaPermission.h"
 #include "EndNavAreaCover.generated.h"
 

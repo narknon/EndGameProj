@@ -1,10 +1,10 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EndBattleAIController.h"
 #include "Components/ActorComponent.h"
 #include "EndBattleAIBaseAsyncComponent.generated.h"
 
 class AEndCharacter;
-class AEndBattleAIController;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class UEndBattleAIBaseAsyncComponent : public UActorComponent {

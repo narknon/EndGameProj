@@ -5,7 +5,7 @@
 #include "ESQEX_Bonamik_GlobalOutOfCamera.h"
 #include "SQEX_BonamikGlobalConfig.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class BONAMIKRT_API USQEX_BonamikGlobalConfig : public UObject {
     GENERATED_BODY()
 public:

@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkeletalMeshUserData -FallbackName=SkeletalMeshUserData
+#include "End/SkeletalMeshUserData.h"
 #include "EndEmissiveColorUserData.generated.h"
 
 class UEndColorPalette;

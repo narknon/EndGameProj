@@ -3,6 +3,8 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavModifierVolume -FallbackName=NavModifierVolume
 #include "EndActorBaseInterface.h"
 #include "EndNavActorInterface.h"
+#include "AI/Navigation/NavModifierVolume.h"
+#include "End/NavPriorRegistInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavPriorRegistInfo -FallbackName=NavPriorRegistInfo
 #include "EndNavModifierVolumeBase.generated.h"
 

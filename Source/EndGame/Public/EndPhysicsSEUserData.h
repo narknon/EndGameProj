@@ -1,6 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=PhysicsSEUserData -FallbackName=PhysicsSEUserData
+#include "End/PhysicsSEUserData.h"
 #include "EndRagdollSEData.h"
 #include "EndPhysicsSEUserData.generated.h"
 

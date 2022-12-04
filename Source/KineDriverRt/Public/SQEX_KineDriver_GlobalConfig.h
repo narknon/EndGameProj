@@ -3,7 +3,7 @@
 #include "Engine/DeveloperSettings.h"
 #include "SQEX_KineDriver_GlobalConfig.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class KINEDRIVERRT_API USQEX_KineDriver_GlobalConfig : public UDeveloperSettings {
     GENERATED_BODY()
 public:

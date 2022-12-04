@@ -1,9 +1,9 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EndBattleCameraActor.h"
 #include "LevelSequenceActor.h"
 #include "EndBattleLevelSequenceActor.generated.h"
 
-class AEndBattleCameraActor;
 
 UCLASS(Blueprintable)
 class ENDGAME_API AEndBattleLevelSequenceActor : public ALevelSequenceActor {

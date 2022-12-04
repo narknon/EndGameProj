@@ -5,7 +5,7 @@
 #include "EOSDKLogLevel.h"
 #include "OSDKSettings.generated.h"
 
-UCLASS(Blueprintable, DefaultConfig)
+UCLASS(Blueprintable, DefaultConfig, Config=Engine)
 class OSDKCORE_API UOSDKSettings : public UObject {
     GENERATED_BODY()
 public:

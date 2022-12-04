@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EEndEffectCategory -FallbackName=EEndEffectCategory
+#include "Particles/End/EEndEffectCategory.h"
 #include "UObject/NoExportTypes.h"
 #include "EndEffectComponent.generated.h"
 

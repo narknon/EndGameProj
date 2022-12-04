@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "AI/Navigation/NavRelevantInterface.h"
+#include "End/NavPriorRegistInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavPriorRegistInfo -FallbackName=NavPriorRegistInfo
 #include "EndBattleAreaActor.generated.h"
 

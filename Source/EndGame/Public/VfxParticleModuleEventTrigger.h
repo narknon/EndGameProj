@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "Particles/End/EVfxParticleEventTriggerType.h"
 #include "Particles/Event/ParticleModuleEventBase.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EVfxParticleEventTriggerType -FallbackName=EVfxParticleEventTriggerType
 #include "VfxParticleModuleEventTrigger.generated.h"
