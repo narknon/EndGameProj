@@ -3,12 +3,13 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavModifierVolume -FallbackName=NavModifierVolume
 #include "EndActorBaseInterface.h"
 #include "EndNavActorInterface.h"
+#include "EndTextRenderComponent.h"
 #include "AI/Navigation/NavModifierVolume.h"
 #include "End/NavPriorRegistInfo.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=NavPriorRegistInfo -FallbackName=NavPriorRegistInfo
 #include "EndNavModifierVolumeBase.generated.h"
 
-class UEndTextRenderComponent;
+
 
 UCLASS(Blueprintable)
 class AEndNavModifierVolumeBase : public ANavModifierVolume, public IEndActorBaseInterface, public IEndNavActorInterface {
@@ -26,7 +27,7 @@ protected:
     FNavPriorRegistInfo NavPriorInfo;
     
 public:
-    AEndNavModifierVolumeBase();
+    AEndNavModifierVolumeBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
     
     // Fix for true pure virtual functions not being implemented
 };

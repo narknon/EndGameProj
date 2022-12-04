@@ -640,7 +640,7 @@ public:
     void SetSecondRoleTerm(TEnumAsByte<EEndAiBattleSecondRole::Type> InTerm);
     
     UFUNCTION(BlueprintCallable)
-    void SetRole(TEnumAsByte<EEndAiBattleRole::Type> InRole);
+    void SetRole(EEndAiBattleRole::Type InRole);
     
     UFUNCTION(BlueprintCallable)
     void SetPushCollisionEnable(FName partId, bool Enable);
@@ -1093,7 +1093,7 @@ public:
     void OverrideDamageHitReactionID(FName AbilityID, const FEndDataTableBattleAbility& dataTableBattleAbility, FName DamageSourceID, bool abilityFirstHit, FName& damageHitReactionID);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnUpdate(TEnumAsByte<EEndAiBattleRole::Type> InRole, int32 InStep, float DeltaTime);
+    void OnUpdate(EEndAiBattleRole::Type InRole, int32 InStep, float DeltaTime);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnTakeDamageOnce(AEndCharacter* InCauserChara, FName InAbilityID, bool InAttributeWeak, EEndBattleAbilityCommandType AbilityCommandType);
@@ -1195,7 +1195,7 @@ public:
     void OnPinchCondition(EPlayerType playerTyoe);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnPassiveUpdate(TEnumAsByte<EEndAiBattleRole::Type> InRole, int32 InStep, float DeltaTime);
+    void OnPassiveUpdate(EEndAiBattleRole::Type InRole, int32 InStep, float DeltaTime);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnPartsBreak(FName partsID);
@@ -1269,7 +1269,7 @@ public:
     bool OnGetCreateFieldPosition(FVector& outPosition, FName InBattleAbilityID, FName InDamageSourceID, FName InAnimationName);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnFirstUpdate(TEnumAsByte<EEndAiBattleRole::Type> InRole, int32 InStep);
+    void OnFirstUpdate(EEndAiBattleRole::Type InRole, int32 InStep);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnFear(AEndCharacter* InChara, FName InAbilityName, FVector InLocation, UEndBattleDamageSourceComponent* InDamageSourceComponent);

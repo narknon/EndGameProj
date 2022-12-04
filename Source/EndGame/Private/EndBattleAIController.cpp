@@ -177,7 +177,7 @@ void AEndBattleAIController::SetSpecialStatusStateChangeID(EEndBattleSpecialStat
 void AEndBattleAIController::SetSecondRoleTerm(TEnumAsByte<EEndAiBattleSecondRole::Type> InTerm) {
 }
 
-void AEndBattleAIController::SetRole(TEnumAsByte<EEndAiBattleRole::Type> InRole) {
+void AEndBattleAIController::SetRole(EEndAiBattleRole::Type InRole) {
 }
 
 void AEndBattleAIController::SetPushCollisionEnable(FName partId, bool Enable) {

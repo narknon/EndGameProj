@@ -24,6 +24,7 @@ public class EndGame : ModuleRules {
             "MovieScene",
             "MovieSceneTracks",
             "Paper2D",
+            "RenderCore",
             "SQEXSEAD",
             "Slate",
             "SlateCore",

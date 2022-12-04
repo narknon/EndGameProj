@@ -1,0 +1,10 @@
+{
+	"BuildId": "6043173a-e073-4e48-b537-599abe6bcd73",
+	"Modules": 
+	{
+		"BonamikRt": "UE4Editor-BonamikRt.dll",
+		"EndGame": "UE4Editor-EndGame.dll",
+		"KBDRt": "UE4Editor-KBDRt.dll",
+		"KineDriverRt": "UE4Editor-KineDriverRt.dll"
+	}
+}

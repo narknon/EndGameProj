@@ -10,7 +10,7 @@ class ENDGAME_API UVfxParticleModuleEventTrigger : public UParticleModuleEventBa
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TEnumAsByte<EVfxParticleEventTriggerType> m_TriggerType;
+    EVfxParticleEventTriggerType m_TriggerType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_TriggerTime;

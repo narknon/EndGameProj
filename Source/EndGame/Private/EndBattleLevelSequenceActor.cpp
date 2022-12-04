@@ -1,9 +1,12 @@
 #include "EndBattleLevelSequenceActor.h"
 
-void AEndBattleLevelSequenceActor::OnStop() {
+
+
+AEndBattleLevelSequenceActor::AEndBattleLevelSequenceActor(const FObjectInitializer& ObjectInitializer)
+	: Super(ObjectInitializer) {
+	this->CameraActor = NULL;
 }
 
-AEndBattleLevelSequenceActor::AEndBattleLevelSequenceActor() {
-    this->CameraActor = NULL;
+void AEndBattleLevelSequenceActor::OnStop() {
 }
 

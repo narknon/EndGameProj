@@ -20,7 +20,7 @@ public:
     FName m_PointName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TEnumAsByte<EEndEffectLocationKind> m_Kind;
+    EEndEffectLocationKind m_Kind;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRawDistributionVector m_Location;
