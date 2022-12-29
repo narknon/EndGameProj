@@ -35,6 +35,10 @@
 !*.exp
 !*.manifest
 
+
+# Mappings file
+!Mappings/FF7R.usmap
+
 # Java source files
 !*.java
 !*.java.template
